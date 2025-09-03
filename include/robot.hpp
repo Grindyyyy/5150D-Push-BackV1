@@ -2,6 +2,7 @@
 #include "dlib/controllers/error_derivative_settler.hpp"
 #include "dlib/dlib.hpp"
 #include "subsystems/intake.hpp"
+#include "subsystems/pneumatics.hpp"
 #include "au/au.hpp"
 
 using namespace au;
@@ -14,6 +15,9 @@ public:
 
     // Intake
     Intake intake;
+
+    // Pneumatics
+    Pneumatics pneumatics;
 
 	// Linear PID Controllers
 	dlib::Pid<au::Meters> linear_pid;

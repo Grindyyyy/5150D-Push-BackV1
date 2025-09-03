@@ -12,7 +12,7 @@ class Intake {
 public:
     pros::Motor intake_motor;
     pros::Motor intake_motor_2;
-    pros::Optical optical_sensor;
+    pros::Motor middle_motor;
     Alliance alliance;
     bool do_sort;
     int8_t direction = 1;
@@ -20,7 +20,7 @@ public:
     Intake(
         int8_t motor_port,
         int8_t bottom_motor,
-        uint8_t optical_port
+        int8_t middle_motor_p
     );
 
     void set_alliance(Alliance alliance);

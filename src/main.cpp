@@ -7,8 +7,8 @@
 using namespace au;
 
 dlib::ChassisConfig chassis_config {
-	{7},
-	{-2},
+	{-12,-13,-14},
+	{19,18,17},
 	pros::MotorGearset::blue,
 	rpm(400),
 	inches(3.25)
@@ -96,15 +96,21 @@ dlib::ErrorDerivativeSettler<Degrees> angular_feedforward_settler {
 };
 
 Intake intake {
-	-11,
-	-19, // 19 bottom 20 back
-	2
+	-15,
+	-6, // 19 bottom 20 back
+	-10
+};
+
+Pneumatics pneumatics {
+	'A',
+	'B'
 };
 
 Robot robor = {
 	chassis_config,
 	imu_config,
 	intake,
+	pneumatics,
 	linear_pid_config,
 	linear_pid_settler,
 	angular_pid_config,
@@ -143,12 +149,59 @@ void disabled() {}
 
 void competition_initialize() {}
 
+// autons start here:
+void left_elim(void){
+
+}
+
+void right_elim(void){
+
+}
+
+void left_wp(void){
+
+}
+
+void right_wp(void){
+
+}
+
+void skills(void){
+
+}
+
+void run_auton(){
+	if(get_selected() == 1){
+		left_elim();
+	}
+	else if(get_selected() == 2){
+		right_elim();
+	}
+	else if(get_selected() == 3){
+		left_elim();
+	}
+	else if(get_selected() == 4){
+		right_elim();
+	}
+	else if(get_selected() == 5){
+		left_wp();
+	}
+	else if(get_selected() == 6){
+		right_wp();
+	}
+	else if(get_selected() == 7){
+		left_wp();
+	}
+	else if(get_selected() == 8){
+		right_wp();
+	}
+	else if(get_selected() == 9){
+		skills();
+	}
+}
+
 void autonomous() { // all coords are in meters btw
-	robor.move(0.6076,0.324);
-	robor.intake.max();
-	robor.move(-0.6076,-0.324);
-	robor.move(0.3076,0.1524);
-	robor.move(-0.3076,-0.1524);
+	run_auton(); // runs the auton that is selected on the gui
 }
 
 void opcontrol() {
