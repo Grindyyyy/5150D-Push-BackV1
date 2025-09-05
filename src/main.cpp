@@ -1,4 +1,5 @@
 #include "main.h"
+#include "dlib/hardware/timer.hpp"
 #include "robot.hpp"
 #include "au/au.hpp"
 #include "subsystems/intake.hpp"
@@ -13,6 +14,8 @@ dlib::ChassisConfig chassis_config {
 	rpm(400),
 	inches(3.25)
 };
+
+dlib::Timer timer {};
 
 dlib::ImuConfig imu_config {
 	16,	// imu port
@@ -35,9 +38,9 @@ dlib::ErrorDerivativeSettler<Meters> linear_pid_settler {
 
 dlib::PidConfig angular_pid_config {
 	{
-		17,
+		30,
 		0,
-		1
+		1.6
 	},
 	volts(12)
 };
@@ -61,12 +64,14 @@ dlib::ErrorDerivativeSettler<Degrees> precise_angular_pid_settler {
 
 dlib::Feedforward<Meters> linear_feedforward {
 	{
-
+		1.300052053471457,
+		6.092168652842858,
+		1.25
 	}
 };
 
 dlib::PidConfig linear_feedforward_pid_config {
-	{
+	{25,0,0
 
 	},
 	volts(12)
@@ -95,6 +100,7 @@ dlib::ErrorDerivativeSettler<Degrees> angular_feedforward_settler {
 	degrees_per_second(20)
 };
 
+
 Intake intake {
 	-15,
 	-6, // 19 bottom 20 back
@@ -103,7 +109,8 @@ Intake intake {
 
 Pneumatics pneumatics {
 	'A',
-	'B'
+	'B',
+	'F'
 };
 
 Robot robor = {
@@ -200,9 +207,26 @@ void run_auton(){
 	}
 }
 
-void autonomous() { // all coords are in meters btw
-	run_auton(); // runs the auton that is selected on the gui
+void test_mp(){
+	timer.reset();
+	while(true){
+		double voltage = timer.get_elapsed_time().in(milli(seconds)) * 2.0;
+		robor.chassis.move_voltage(milli(volts)(voltage));
+		std::cout << timer.get_elapsed_time().in(milli(seconds)) << "," << voltage << "," << robor.chassis.forward_motor_displacement().in(meters) << "," << robor.chassis.forward_motor_velocity().in(meters_per_second) << std::endl;
+		pros::delay(20);
+	}
 }
+
+void autonomous() { // all coords are in meters btw
+	//test_mp(); // runs the auton that is selected on the gui
+	robor.turn_absolute(90);
+	robor.turn_absolute(180);
+	robor.turn_absolute(15);
+	robor.turn_absolute(25);
+	robor.turn_absolute(40);
+}
+
+bool nanner = false;
 
 void opcontrol() {
 	pros::Controller master = pros::Controller(pros::E_CONTROLLER_MASTER);
@@ -221,6 +245,11 @@ void opcontrol() {
 		}
 		if(master.get_digital_new_press(DIGITAL_L1)){
 			robor.intake.direction = -1;
+		}
+
+		if(master.get_digital_new_press(DIGITAL_A)){
+			nanner = !nanner;
+			pneumatics.set_nanner(nanner);
 		}
 
 

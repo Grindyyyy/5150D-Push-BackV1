@@ -68,6 +68,8 @@ void Robot::move_feedforward(double displacement, double max_velocity){
             break;
         }
 
+        std::cout << elapsed_time << "," << setpoint.velocity.in(meters_per_second) << "," << chassis.forward_motor_velocity().in(meters_per_second) << "\n";
+
         chassis.move_voltage(ff_voltage + pid_voltage);
         
         pros::delay(20);
