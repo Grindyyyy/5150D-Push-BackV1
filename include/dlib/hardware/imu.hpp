@@ -35,6 +35,8 @@ public:
      * @endcode
     */
     void initialize();
+
+    void tare_position();
     
     /**
      * @brief Get Imu rotation

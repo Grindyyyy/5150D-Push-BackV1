@@ -423,6 +423,6 @@ int get_selected(){
 void print_coords(Robot& robot){
 	dlib::Pose2d pose = robot.odom.get_position();
 
-	lv_label_set_text(coords_x, std::format("X: {:.2f}", pose.x.in(meters)).c_str());
-	lv_label_set_text(coords_y, std::format("Y: {:.2f}", pose.y.in(meters)).c_str());
+	lv_label_set_text(coords_x, std::format("X: {:.3f}", pose.x.in(meters)).c_str());
+	lv_label_set_text(coords_y, std::format("Y: {:.3f}", pose.y.in(meters)).c_str());
 }

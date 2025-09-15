@@ -1,21 +1,24 @@
 #include "subsystems/pneumatics.hpp"
 
 Pneumatics::Pneumatics(
-    char left_piston_port,
-    char right_piston_port,
-    char nanner_port
-) : left_piston(left_piston_port), right_piston(right_piston_port), nanner(nanner_port)
+    char loader_port,
+    char nanner_port,
+    char descore_port
+) : loader(loader_port), nanner(nanner_port), descore(descore_port)
 {
-    left_piston.set_value(false);
-    right_piston.set_value(false);
+    loader.set_value(false);
     nanner.set_value(false);
+    descore.set_value(false);
 };
 
-void Pneumatics::set_state(bool state){
-    left_piston.set_value(state);
-    right_piston.set_value(state);
+void Pneumatics::set_loader(bool state){
+    loader.set_value(state);
 }
 
 void Pneumatics::set_nanner(bool state){
     nanner.set_value(state);
+}
+
+void Pneumatics::set_descore(bool state){
+    descore.set_value(state);
 }

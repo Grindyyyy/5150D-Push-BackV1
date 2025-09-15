@@ -32,13 +32,28 @@ void Intake::max(void){
     middle_motor.move_voltage(12000);
 }
 
+void Intake::mid_intake(void){
+    intake_motor.move_voltage(7000);
+    intake_motor_2.move_voltage(7000);
+    middle_motor.move_voltage(7000);
+}
+
 void Intake::bottom_max_top_rev(void){
-    intake_motor.move_voltage(3000);
+    intake_motor.move_voltage(5500);
+    intake_motor_2.move_voltage(12000);
+}
+
+void Intake::bottom_max_back_rev(void){
+    intake_motor_2.move_voltage(12000);
+    middle_motor.move_voltage(-5000);
+}
+
+void Intake::bottom_max(){
     intake_motor_2.move_voltage(12000);
 }
 
 void Intake::bottom_rev(void){
-    intake_motor_2.move_voltage(12000);
+    intake_motor_2.move_voltage(-12000);
 }
 
 void Intake::reverse(void){

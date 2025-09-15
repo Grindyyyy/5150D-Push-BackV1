@@ -31,7 +31,13 @@ public:
 
     void max(void);
 
+    void mid_intake(void);
+
+    void bottom_max(void);
+
     void bottom_max_top_rev(void);
+
+    void bottom_max_back_rev(void);
 
     void bottom_rev(void);
 

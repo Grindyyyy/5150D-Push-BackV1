@@ -54,7 +54,7 @@ public:
     void move_feedforward(double displacement, double max_velocity);
     
     // turn controllers
-    void turn_absolute(au::Quantity<au::Degrees, double> heading);
+    void turn_absolute(au::Quantity<au::Degrees, double> heading, bool precise);
     void turn_absolute(double degrees);
 
     void turn_relative(au::Quantity<au::Degrees, double> heading);

@@ -70,28 +70,42 @@ void Robot::move_feedforward(double displacement, double max_velocity){
 
         std::cout << elapsed_time << "," << setpoint.velocity.in(meters_per_second) << "," << chassis.forward_motor_velocity().in(meters_per_second) << "\n";
 
-        chassis.move_voltage(ff_voltage + pid_voltage);
+        chassis.move_voltage(ff_voltage+pid_voltage);
         
         pros::delay(20);
     }
     chassis.move_voltage(volts(0));
 }
 
-void Robot::turn_absolute(Quantity<Degrees, double> heading) {
-    angular_pid.reset();
-    angular_pid_settler.reset();
+void Robot::turn_absolute(Quantity<Degrees, double> heading, bool precise) {
+    if(precise){
+        precise_angular_pid.reset();
+        precise_angular_pid_settler.reset();
 
-    while (!angular_pid_settler.is_settled(angular_pid.get_error(), angular_pid.get_derivative())) {
-        auto error = dlib::angular_error(heading, imu.get_rotation());
-        auto voltage = angular_pid.update(error, milli(seconds)(20));
-        chassis.turn_voltage(-voltage);
-        pros::delay(20);
+        while (!precise_angular_pid_settler.is_settled(precise_angular_pid.get_error(), precise_angular_pid.get_derivative())) {
+            auto error = dlib::angular_error(heading, imu.get_rotation());
+            auto voltage = precise_angular_pid.update(error, milli(seconds)(20));
+            chassis.turn_voltage(-voltage);
+            pros::delay(20);
+        }
     }
+    else{
+        angular_pid.reset();
+        angular_pid_settler.reset();
+
+        while (!angular_pid_settler.is_settled(angular_pid.get_error(), angular_pid.get_derivative())) {
+            auto error = dlib::angular_error(heading, imu.get_rotation());
+            auto voltage = angular_pid.update(error, milli(seconds)(20));
+            chassis.turn_voltage(-voltage);
+            pros::delay(20);
+        }
+    }
+
     chassis.brake();
 }
 
 void Robot::turn_absolute(double heading) {
-    turn_absolute(degrees(heading));
+    turn_absolute(degrees(heading),false);
 }
 
 void Robot::turn_relative(Quantity<Degrees, double> heading) {
@@ -127,7 +141,7 @@ void Robot::turn_precise(Quantity<Degrees, double> heading) {
 }
 
 void Robot::turn_precise(double heading) {
-    turn_absolute(degrees(heading));
+    turn_absolute(degrees(heading),true);
 }
 
 void Robot::move(double x, double y, double max_velocity, bool reverse, bool precise_turn) {
@@ -140,7 +154,7 @@ void Robot::move(double x, double y, double max_velocity, bool reverse, bool pre
     if(reverse){
         displacement = -displacement;
     }
-    move_pid(displacement.in(meters));
+    move_feedforward(displacement.in(meters),max_velocity);
 }
 
 void Robot::turn(double x, double y, bool reverse) {

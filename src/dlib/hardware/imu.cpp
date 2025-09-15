@@ -17,6 +17,10 @@ void Imu::initialize() {
     this->raw.reset(true);
 }
 
+void Imu::tare_position() {
+    this->raw.set_heading(0);
+}
+
 au::Quantity<au::Degrees, double> Imu::get_rotation() {
     auto raw_reading = au::degrees(this->raw.get_rotation());
     auto corrected_reading = raw_reading * this->scalar;
