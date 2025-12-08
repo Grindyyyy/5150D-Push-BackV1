@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="pid_8hpp" kind="file" language="C++">
+    <compoundname>pid.hpp</compoundname>
+    <includes local="yes">au/au.hpp</includes>
+    <includes refid="pid_8hpp" local="yes">dlib/controllers/pid.hpp</includes>
+    <includes local="yes">pros/rtos.hpp</includes>
+    <includedby refid="pid_8hpp" local="yes">C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp</includedby>
+    <includedby refid="dlib_8hpp" local="yes">C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/dlib.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp</label>
+        <link refid="pid_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>au/au.hpp</label>
+      </node>
+      <node id="3">
+        <label>pros/rtos.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp</label>
+        <link refid="pid_8hpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/dlib.hpp</label>
+        <link refid="dlib_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structdlib_1_1_pid_gains" prot="public">dlib::PidGains</innerclass>
+    <innerclass refid="structdlib_1_1_pid_config" prot="public">dlib::PidConfig</innerclass>
+    <innerclass refid="structdlib_1_1detail_1_1_pid_gains_with_units" prot="public">dlib::detail::PidGainsWithUnits</innerclass>
+    <innerclass refid="classdlib_1_1_pid" prot="public">dlib::Pid</innerclass>
+    <innernamespace refid="namespacedlib">dlib</innernamespace>
+    <innernamespace refid="namespacedlib_1_1detail">dlib::detail</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;au/au.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;dlib/controllers/pid.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pros/rtos.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">dlib<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>pid.hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="structdlib_1_1_pid_gains" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdlib_1_1_pid_gains" kindref="compound">PidGains</ref><sp/>{</highlight></codeline>
+<codeline lineno="16" refid="structdlib_1_1_pid_gains_1a6dcd1238bcd7c08379f3a1e3b2c08f66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structdlib_1_1_pid_gains_1a6dcd1238bcd7c08379f3a1e3b2c08f66" kindref="member">kp</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="18" refid="structdlib_1_1_pid_gains_1af68a8c34efb8f25bd55125c3505aad04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structdlib_1_1_pid_gains_1af68a8c34efb8f25bd55125c3505aad04" kindref="member">ki</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="20" refid="structdlib_1_1_pid_gains_1a76360ca3166a6f668589f618e0712844" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structdlib_1_1_pid_gains_1a76360ca3166a6f668589f618e0712844" kindref="member">kd</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="structdlib_1_1_pid_config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdlib_1_1_pid_config" kindref="compound">PidConfig</ref><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1_pid_gains" kindref="compound">PidGains</ref><sp/>gains{};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Volts,<sp/>double&gt;<sp/>max_voltage<sp/>=<sp/>au::volts(12);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">detail<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Units&gt;</highlight></codeline>
+<codeline lineno="30" refid="structdlib_1_1detail_1_1_pid_gains_with_units" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdlib_1_1detail_1_1_pid_gains_with_units" kindref="compound">PidGainsWithUnits</ref><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>au::Quantity&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(au::Volts{}<sp/>/<sp/>Units{}),<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;<sp/>kp;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>au::Quantity&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(au::Volts{}<sp/>/<sp/>au::TimeIntegral&lt;Units&gt;{}),<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;<sp/>ki;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>au::Quantity&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(au::Volts{}<sp/>/<sp/>au::TimeDerivative&lt;Units&gt;{}),<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;<sp/>kd;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1detail_1_1_pid_gains_with_units" kindref="compound">PidGainsWithUnits</ref>(</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1_pid_gains" kindref="compound">PidGains</ref><sp/>gains</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/>:<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>kp(au::make_quantity&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(au::Volts{}<sp/>/<sp/>Units{})&gt;(gains.<ref refid="structdlib_1_1_pid_gains_1a6dcd1238bcd7c08379f3a1e3b2c08f66" kindref="member">kp</ref>)),<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ki(au::make_quantity&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(au::Volts{}<sp/>/<sp/>au::TimeIntegral&lt;Units&gt;{})&gt;(gains.<ref refid="structdlib_1_1_pid_gains_1af68a8c34efb8f25bd55125c3505aad04" kindref="member">ki</ref>)),<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>kd(au::make_quantity&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(au::Volts{}<sp/>/<sp/>au::TimeDerivative&lt;Units&gt;{})&gt;(gains.<ref refid="structdlib_1_1_pid_gains_1a76360ca3166a6f668589f618e0712844" kindref="member">kd</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Units&gt;</highlight></codeline>
+<codeline lineno="47" refid="classdlib_1_1_pid" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdlib_1_1_pid" kindref="compound">Pid</ref><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdlib_1_1_pid" kindref="compound">Pid</ref>(<ref refid="structdlib_1_1_pid_config" kindref="compound">PidConfig</ref><sp/>config)<sp/>:<sp/>m_gains(config.gains),<sp/>m_max_voltage(config.max_voltage)<sp/>{};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classdlib_1_1_pid_1a8253a9bf3701e13cf5c49814ae57cdb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdlib_1_1_pid_1a8253a9bf3701e13cf5c49814ae57cdb4" kindref="member">reset</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_p<sp/>=<sp/>au::ZERO;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_i<sp/>=<sp/>au::ZERO;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_d<sp/>=<sp/>au::ZERO;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_last_error<sp/>=<sp/>au::ZERO;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_last_derivative<sp/>=<sp/>au::ZERO;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classdlib_1_1_pid_1a5bfcf3a44d62bb6fef34689fc0da74f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Volts,<sp/>double&gt;<sp/><ref refid="classdlib_1_1_pid_1a5bfcf3a44d62bb6fef34689fc0da74f6" kindref="member">update</ref>(</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>au::Quantity&lt;Units,<sp/>double&gt;<sp/>error,<sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Seconds,<sp/>double&gt;<sp/>period</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>delta_time<sp/>=<sp/>period;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>delta_error<sp/>=<sp/>error<sp/>-<sp/>m_last_error;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>derivative<sp/>=<sp/>(delta_error<sp/>/<sp/>delta_time);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>calculate<sp/>Pid<sp/>terms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>integral<sp/>reset<sp/>on<sp/>sign<sp/>flip</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((error<sp/>&lt;<sp/>au::ZERO)<sp/>!=<sp/>(m_last_error<sp/>&lt;<sp/>au::ZERO))<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_i<sp/>=<sp/>au::ZERO;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_i<sp/>&gt;<sp/>m_max_voltage)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_i<sp/>=<sp/>m_max_voltage;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_i<sp/>&lt;<sp/>-m_max_voltage)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_i<sp/>=<sp/>-m_max_voltage;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_p<sp/>=<sp/>error<sp/>*<sp/>m_gains.kp;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_i<sp/>=<sp/>m_i<sp/>+<sp/>error<sp/>*<sp/>delta_time<sp/>*<sp/>m_gains.ki;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_d<sp/>=<sp/>(delta_error<sp/>/<sp/>delta_time)<sp/>*<sp/>m_gains.kd;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>output<sp/>=<sp/>std::clamp(</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_p<sp/>+<sp/>m_i<sp/>+<sp/>m_d,<sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-m_max_voltage,<sp/>m_max_voltage</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>update<sp/>Pid<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_last_error<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>error;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_last_derivative<sp/>=<sp/>derivative;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>output;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="classdlib_1_1_pid_1afc0312e900c1ad133d88cec01fbc2dad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1_pid_gains" kindref="compound">PidGains</ref><sp/><ref refid="classdlib_1_1_pid_1afc0312e900c1ad133d88cec01fbc2dad" kindref="member">get_gains</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_gains;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="classdlib_1_1_pid_1a98c02d8fba954028835599a1a7f2993e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdlib_1_1_pid_1a98c02d8fba954028835599a1a7f2993e" kindref="member">set_gains</ref>(<ref refid="structdlib_1_1_pid_gains" kindref="compound">PidGains</ref><sp/>gains)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_gains<sp/>=<sp/>gains;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="classdlib_1_1_pid_1a6b488b2f3a47ea5f32dcfa32df73dfe4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;Units,<sp/>double&gt;<sp/><ref refid="classdlib_1_1_pid_1a6b488b2f3a47ea5f32dcfa32df73dfe4" kindref="member">get_error</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_last_error;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196" refid="classdlib_1_1_pid_1a2a6b072e784aef89243a89517b61a798" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::TimeDerivative&lt;Units&gt;,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;<sp/><ref refid="classdlib_1_1_pid_1a2a6b072e784aef89243a89517b61a798" kindref="member">get_derivative</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_last_derivative;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="classdlib_1_1_pid_1affdaffc1e93e448f0c788f746ad51050" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;Units,<sp/>double&gt;<sp/><ref refid="classdlib_1_1_pid_1affdaffc1e93e448f0c788f746ad51050" kindref="member">get_p</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_p;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="classdlib_1_1_pid_1a5e03e1693412204957f3ad521390cb2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::TimeIntegral&lt;Units&gt;,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;<sp/><ref refid="classdlib_1_1_pid_1a5e03e1693412204957f3ad521390cb2b" kindref="member">get_i</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_i;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223" refid="classdlib_1_1_pid_1afab9bdae6dcadf798247f538d7850285" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::TimeDerivative&lt;Units&gt;,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;<sp/><ref refid="classdlib_1_1_pid_1afab9bdae6dcadf798247f538d7850285" kindref="member">get_d</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_d;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">BaseUnits<sp/>=<sp/>au::UnitImpl&lt;au::detail::DimT&lt;Units&gt;&gt;;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1detail_1_1_pid_gains_with_units" kindref="compound">detail::PidGainsWithUnits&lt;BaseUnits&gt;</ref><sp/>m_gains;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>au::Quantity&lt;au::Volts,<sp/>double&gt;<sp/>m_max_voltage;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Volts,<sp/>double&gt;<sp/>m_p<sp/>=<sp/>au::ZERO;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Volts,<sp/>double&gt;<sp/>m_i<sp/>=<sp/>au::ZERO;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Volts,<sp/>double&gt;<sp/>m_d<sp/>=<sp/>au::ZERO;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;Units,<sp/>double&gt;<sp/>m_last_error;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::TimeDerivative&lt;Units&gt;,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;<sp/>m_last_derivative;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp"/>
+  </compounddef>
+</doxygen>

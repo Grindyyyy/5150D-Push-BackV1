@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="namespacedlib" kind="namespace" language="C++">
+    <compoundname>dlib</compoundname>
+    <innerclass refid="classdlib_1_1_chassis" prot="public">dlib::Chassis</innerclass>
+    <innerclass refid="structdlib_1_1_chassis_config" prot="public">dlib::ChassisConfig</innerclass>
+    <innerclass refid="classdlib_1_1_distance" prot="public">dlib::Distance</innerclass>
+    <innerclass refid="structdlib_1_1_distance_config" prot="public">dlib::DistanceConfig</innerclass>
+    <innerclass refid="classdlib_1_1_error_derivative_settler" prot="public">dlib::ErrorDerivativeSettler</innerclass>
+    <innerclass refid="classdlib_1_1_error_time_settler" prot="public">dlib::ErrorTimeSettler</innerclass>
+    <innerclass refid="classdlib_1_1_feedforward" prot="public">dlib::Feedforward</innerclass>
+    <innerclass refid="structdlib_1_1_feedforward_gains" prot="public">dlib::FeedforwardGains</innerclass>
+    <innerclass refid="classdlib_1_1_imu" prot="public">dlib::Imu</innerclass>
+    <innerclass refid="structdlib_1_1_imu_config" prot="public">dlib::ImuConfig</innerclass>
+    <innerclass refid="classdlib_1_1_motor" prot="public">dlib::Motor</innerclass>
+    <innerclass refid="structdlib_1_1_motor_config" prot="public">dlib::MotorConfig</innerclass>
+    <innerclass refid="classdlib_1_1_motor_group" prot="public">dlib::MotorGroup</innerclass>
+    <innerclass refid="structdlib_1_1_motor_group_config" prot="public">dlib::MotorGroupConfig</innerclass>
+    <innerclass refid="classdlib_1_1_odometry" prot="public">dlib::Odometry</innerclass>
+    <innerclass refid="classdlib_1_1_pid" prot="public">dlib::Pid</innerclass>
+    <innerclass refid="structdlib_1_1_pid_config" prot="public">dlib::PidConfig</innerclass>
+    <innerclass refid="structdlib_1_1_pid_gains" prot="public">dlib::PidGains</innerclass>
+    <innerclass refid="structdlib_1_1_pose2d" prot="public">dlib::Pose2d</innerclass>
+    <innerclass refid="structdlib_1_1_profile_setpoint" prot="public">dlib::ProfileSetpoint</innerclass>
+    <innerclass refid="classdlib_1_1_rotation" prot="public">dlib::Rotation</innerclass>
+    <innerclass refid="structdlib_1_1_rotation_config" prot="public">dlib::RotationConfig</innerclass>
+    <innerclass refid="classdlib_1_1_timer" prot="public">dlib::Timer</innerclass>
+    <innerclass refid="classdlib_1_1_trapezoid_profile" prot="public">dlib::TrapezoidProfile</innerclass>
+    <innerclass refid="structdlib_1_1_vector2d" prot="public">dlib::Vector2d</innerclass>
+    <innernamespace refid="namespacedlib_1_1detail">dlib::detail</innernamespace>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="trapezoid__profile_8hpp_1a576fa61ce5659b271554c10063d16dde" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>TrapezoidProfileStage</name>
+        <qualifiedname>dlib::TrapezoidProfileStage</qualifiedname>
+        <enumvalue id="trapezoid__profile_8hpp_1a576fa61ce5659b271554c10063d16ddea7154352563d75bfd6db32192c8e706c5" prot="public">
+          <name>Accelerating</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="trapezoid__profile_8hpp_1a576fa61ce5659b271554c10063d16ddeaf0706947aed8cf56e13e25ef6348ad6a" prot="public">
+          <name>Coasting</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="trapezoid__profile_8hpp_1a576fa61ce5659b271554c10063d16ddea77da5a8a3f64143490ba125dc7704ca7" prot="public">
+          <name>Decelerating</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="trapezoid__profile_8hpp_1a576fa61ce5659b271554c10063d16ddeaf92965e2c8a7afb3c1b9a5c09a263636" prot="public">
+          <name>Done</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/trajectories/trapezoid_profile.hpp" line="11" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/trajectories/trapezoid_profile.hpp" bodystart="11" bodyend="16"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="error__calculation_8hpp_1af21c9bd90fe0ea8d3e9fb241a913f59e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>au::Quantity&lt; au::Meters, double &gt;</type>
+        <definition>au::Quantity&lt; au::Meters, double &gt; dlib::linear_error</definition>
+        <argsstring>(const au::Quantity&lt; au::Meters, double &gt; target, const au::Quantity&lt; au::Meters, double &gt; reading)</argsstring>
+        <name>linear_error</name>
+        <qualifiedname>dlib::linear_error</qualifiedname>
+        <param>
+          <type>const au::Quantity&lt; au::Meters, double &gt;</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>const au::Quantity&lt; au::Meters, double &gt;</type>
+          <declname>reading</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/utilities/error_calculation.hpp" line="8" column="14" declfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/utilities/error_calculation.hpp" declline="8" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="error__calculation_8hpp_1adf62eb348ff1cf3332882e57e3d2b21f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>au::Quantity&lt; au::Degrees, double &gt;</type>
+        <definition>au::Quantity&lt; au::Degrees, double &gt; dlib::sanitize_angle</definition>
+        <argsstring>(const au::Quantity&lt; au::Degrees, double &gt; angle)</argsstring>
+        <name>sanitize_angle</name>
+        <qualifiedname>dlib::sanitize_angle</qualifiedname>
+        <param>
+          <type>const au::Quantity&lt; au::Degrees, double &gt;</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/utilities/error_calculation.hpp" line="13" column="14" declfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/utilities/error_calculation.hpp" declline="13" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="error__calculation_8hpp_1a59783fa4b7b94973278c4384454ac69e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>au::Quantity&lt; au::Degrees, double &gt;</type>
+        <definition>au::Quantity&lt; au::Degrees, double &gt; dlib::angular_error</definition>
+        <argsstring>(const au::Quantity&lt; au::Degrees, double &gt; target, const au::Quantity&lt; au::Degrees, double &gt; reading)</argsstring>
+        <name>angular_error</name>
+        <qualifiedname>dlib::angular_error</qualifiedname>
+        <param>
+          <type>const au::Quantity&lt; au::Degrees, double &gt;</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>const au::Quantity&lt; au::Degrees, double &gt;</type>
+          <declname>reading</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/utilities/error_calculation.hpp" line="17" column="14" declfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/utilities/error_calculation.hpp" declline="17" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="error__calculation_8hpp_1aa0a8ecb744c5933ed70c33673c1f17f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Units</type>
+          </param>
+        </templateparamlist>
+        <type>au::Quantity&lt; Units, double &gt;</type>
+        <definition>au::Quantity&lt; Units, double &gt; dlib::relative_target</definition>
+        <argsstring>(const au::Quantity&lt; Units, double &gt; start, const au::Quantity&lt; Units, double &gt; target)</argsstring>
+        <name>relative_target</name>
+        <qualifiedname>dlib::relative_target</qualifiedname>
+        <param>
+          <type>const au::Quantity&lt; Units, double &gt;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const au::Quantity&lt; Units, double &gt;</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/utilities/error_calculation.hpp" line="23" column="14" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/utilities/error_calculation.hpp" bodystart="23" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/error_derivative_settler.hpp" line="6" column="1"/>
+  </compounddef>
+</doxygen>

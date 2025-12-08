@@ -1,0 +1,71 @@
+\doxysection{odometry.\+hpp}
+\hypertarget{odometry_8hpp_source}{}\label{odometry_8hpp_source}\index{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/kinematics/odometry.hpp@{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/kinematics/odometry.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}au/au.hpp"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}pros/rtos.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }dlib\ \{}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ odometry.hpp}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdlib_1_1_vector2d}{Vector2d}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ au::Quantity<au::Meters,\ double>\ \mbox{\hyperlink{structdlib_1_1_vector2d_a8524d4cbdb52764417672da2debf29cc}{x}};\ \ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00018\ \ \ \ \ au::Quantity<au::Meters,\ double>\ \mbox{\hyperlink{structdlib_1_1_vector2d_a7287c4d6b2b95eae5c455c17a3bb1a87}{y}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_vector2d}{Vector2d}}(}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ au::Quantity<au::Meters,\ double>\ \mbox{\hyperlink{structdlib_1_1_vector2d_a8524d4cbdb52764417672da2debf29cc}{x}},\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ au::Quantity<au::Meters,\ double>\ \mbox{\hyperlink{structdlib_1_1_vector2d_a7287c4d6b2b95eae5c455c17a3bb1a87}{y}}}
+\DoxyCodeLine{00023\ \ \ \ \ );}
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdlib_1_1_pose2d}{Pose2d}}\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ au::Quantity<au::Meters,\ double>\ \mbox{\hyperlink{structdlib_1_1_pose2d_a20b1ca94389849bb5ba2a93edfc7129e}{x}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \ \ \ \ au::Quantity<au::Meters,\ double>\ \mbox{\hyperlink{structdlib_1_1_pose2d_ab516fb87072b85d8fbf3ae95549f644b}{y}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \ \ \ \ au::Quantity<au::Degrees,\ double>\ \mbox{\hyperlink{structdlib_1_1_pose2d_a222a9446f8024e980f1d01ccd3086d1a}{theta}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_pose2d}{Pose2d}}(}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ au::Quantity<au::Meters,\ double>\ \mbox{\hyperlink{structdlib_1_1_pose2d_a20b1ca94389849bb5ba2a93edfc7129e}{x}},\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ au::Quantity<au::Meters,\ double>\ \mbox{\hyperlink{structdlib_1_1_pose2d_ab516fb87072b85d8fbf3ae95549f644b}{y}},}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ au::Quantity<au::Degrees,\ double>\ \mbox{\hyperlink{structdlib_1_1_pose2d_a222a9446f8024e980f1d01ccd3086d1a}{theta}}}
+\DoxyCodeLine{00044\ \ \ \ \ );}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdlib_1_1_odometry}{Odometry}}\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{classdlib_1_1_odometry}{Odometry}}(\textcolor{keyword}{const}\ au::Quantity<au::Meters,\ double>\ horizontal\_wheel\_offset\ =\ au::ZERO);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdlib_1_1_odometry_abcff56aca6c963dda38d50d2324916e6}{update}}(}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<au::Meters,\ double>\ left\_displacement,}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<au::Meters,\ double>\ right\_displacement,}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<au::Meters,\ double>\ horizontal\_displacement,}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<au::Degrees,\ double>\ heading}
+\DoxyCodeLine{00064\ \ \ \ \ );}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_pose2d}{Pose2d}}\ \mbox{\hyperlink{classdlib_1_1_odometry_aff1bcf403d9f255dbb0a39212779ed0c}{get\_position}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdlib_1_1_odometry_a4da18633efe447f97983b0e6594acb95}{set\_position}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structdlib_1_1_pose2d}{Pose2d}}\ pose);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00087\ \ \ \ \ au::Quantity<au::Meters,\ double>\ \mbox{\hyperlink{classdlib_1_1_odometry_a309831aa5e212c91107e43d0c128ad04}{displacement\_to}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structdlib_1_1_vector2d}{Vector2d}}\ point,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ reverse\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00096\ \ \ \ \ au::Quantity<au::Degrees,\ double>\ \mbox{\hyperlink{classdlib_1_1_odometry_a1f7a238a917a1c464668660c7404983a}{angle\_to}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structdlib_1_1_vector2d}{Vector2d}}\ point,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ reverse\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_pose2d}{Pose2d}}\ position\ =\ \mbox{\hyperlink{structdlib_1_1_pose2d}{Pose2d}}(au::ZERO,\ au::ZERO,\ au::ZERO);}
+\DoxyCodeLine{00100\ \ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ au::Quantity<au::Meters,\ double>\ previous\_forward\ =\ au::ZERO;}
+\DoxyCodeLine{00102\ \ \ \ \ au::Quantity<au::Meters,\ double>\ previous\_horizontal\ =\ au::ZERO;}
+\DoxyCodeLine{00103\ \ \ \ \ au::Quantity<au::Radians,\ double>\ previous\_theta\ =\ au::ZERO;}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<au::Meters,\ double>\ horizontal\_wheel\_offset\ =\ au::ZERO;}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ pros::Mutex\ mutex\{\};}
+\DoxyCodeLine{00108\ \};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \}}
+
+\end{DoxyCode}

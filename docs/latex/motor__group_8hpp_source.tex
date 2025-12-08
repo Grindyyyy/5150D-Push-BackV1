@@ -1,0 +1,38 @@
+\doxysection{motor\+\_\+group.\+hpp}
+\hypertarget{motor__group_8hpp_source}{}\label{motor__group_8hpp_source}\index{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/hardware/motor\_group.hpp@{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/hardware/motor\_group.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}pros/motor\_group.hpp"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}au/au.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <initializer\_list>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ motor\_group.hpp}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }dlib\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdlib_1_1_motor_group_config}{MotorGroupConfig}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ std::vector<int8\_t>\ ports;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_motor_group_config}{MotorGroupConfig}}(std::initializer\_list<int8\_t>\ ports);}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_motor_group_config}{MotorGroupConfig}}(std::vector<int8\_t>\&\ ports);}
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdlib_1_1_motor_group}{MotorGroup}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdlib_1_1_motor_group_a9baf71907745a7bc220f936b950eb343}{move}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ power);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdlib_1_1_motor_group_a9ee9433f34c4865dea205c25b0cca1d6}{move\_voltage}}(\textcolor{keyword}{const}\ au::Quantity<au::Volts,\ double>\ voltage);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ au::Quantity<au::Revolutions,\ double>\ \mbox{\hyperlink{classdlib_1_1_motor_group_ac4bfcc515fadba0f5ba262acf5a367b5}{get\_position}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ au::Quantity<au::Rpm,\ double>\ \mbox{\hyperlink{classdlib_1_1_motor_group_abce7cc77262c1605aa29e0cd40704a09}{get\_velocity}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{classdlib_1_1_motor_group}{MotorGroup}}(\mbox{\hyperlink{structdlib_1_1_motor_group_config}{MotorGroupConfig}}\ config);}
+\DoxyCodeLine{00048\ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ pros::MotorGroup\ raw;}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \}}
+
+\end{DoxyCode}

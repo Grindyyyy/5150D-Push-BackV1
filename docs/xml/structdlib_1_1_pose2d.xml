@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structdlib_1_1_pose2d" kind="struct" language="C++" prot="public">
+    <compoundname>dlib::Pose2d</compoundname>
+    <includes refid="odometry_8hpp" local="no">odometry.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdlib_1_1_pose2d_1a20b1ca94389849bb5ba2a93edfc7129e" prot="public" static="no" mutable="no">
+        <type>au::Quantity&lt; au::Meters, double &gt;</type>
+        <definition>au::Quantity&lt;au::Meters, double&gt; dlib::Pose2d::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>dlib::Pose2d::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The x component of the pose </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" line="32" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdlib_1_1_pose2d_1ab516fb87072b85d8fbf3ae95549f644b" prot="public" static="no" mutable="no">
+        <type>au::Quantity&lt; au::Meters, double &gt;</type>
+        <definition>au::Quantity&lt;au::Meters, double&gt; dlib::Pose2d::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>dlib::Pose2d::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The y component of the pose </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" line="35" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdlib_1_1_pose2d_1a222a9446f8024e980f1d01ccd3086d1a" prot="public" static="no" mutable="no">
+        <type>au::Quantity&lt; au::Degrees, double &gt;</type>
+        <definition>au::Quantity&lt;au::Degrees, double&gt; dlib::Pose2d::theta</definition>
+        <argsstring></argsstring>
+        <name>theta</name>
+        <qualifiedname>dlib::Pose2d::theta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The heading of the pose </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" line="38" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structdlib_1_1_pose2d_1a93cc298fc4ad46db87a65e7e55078fea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dlib::Pose2d::Pose2d</definition>
+        <argsstring>(au::Quantity&lt; au::Meters, double &gt; x, au::Quantity&lt; au::Meters, double &gt; y, au::Quantity&lt; au::Degrees, double &gt; theta)</argsstring>
+        <name>Pose2d</name>
+        <qualifiedname>dlib::Pose2d::Pose2d</qualifiedname>
+        <param>
+          <type>au::Quantity&lt; au::Meters, double &gt;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>au::Quantity&lt; au::Meters, double &gt;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>au::Quantity&lt; au::Degrees, double &gt;</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" line="40" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A pose in 2d space. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" line="30" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" bodystart="30" bodyend="45"/>
+    <listofallmembers>
+      <member refid="structdlib_1_1_pose2d_1a93cc298fc4ad46db87a65e7e55078fea" prot="public" virt="non-virtual"><scope>dlib::Pose2d</scope><name>Pose2d</name></member>
+      <member refid="structdlib_1_1_pose2d_1a222a9446f8024e980f1d01ccd3086d1a" prot="public" virt="non-virtual"><scope>dlib::Pose2d</scope><name>theta</name></member>
+      <member refid="structdlib_1_1_pose2d_1a20b1ca94389849bb5ba2a93edfc7129e" prot="public" virt="non-virtual"><scope>dlib::Pose2d</scope><name>x</name></member>
+      <member refid="structdlib_1_1_pose2d_1ab516fb87072b85d8fbf3ae95549f644b" prot="public" virt="non-virtual"><scope>dlib::Pose2d</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

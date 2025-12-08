@@ -1,0 +1,41 @@
+\doxysection{profile\+\_\+setpoint.\+hpp}
+\hypertarget{profile__setpoint_8hpp_source}{}\label{profile__setpoint_8hpp_source}\index{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/trajectories/profile\_setpoint.hpp@{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/trajectories/profile\_setpoint.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}au/au.hpp"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }dlib\ \{}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ profile\_setpoint.hpp}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{template}<}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{typename}\ Units}
+\DoxyCodeLine{00010\ >\ \textcolor{keyword}{requires}\ }
+\DoxyCodeLine{00011\ \ \ \ \ au::HasSameDimension<Units,\ au::Meters>::value\ ||\ }
+\DoxyCodeLine{00012\ \ \ \ \ au::HasSameDimension<Units,\ au::Radians>::value}
+\DoxyCodeLine{00013\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdlib_1_1_profile_setpoint}{ProfileSetpoint}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ au::Quantity<Units,\ double>\ position;}
+\DoxyCodeLine{00015\ \ \ \ \ au::Quantity<au::TimeDerivative<Units>,\ \textcolor{keywordtype}{double}>\ velocity;}
+\DoxyCodeLine{00016\ \ \ \ \ au::Quantity<au::Time2ndDerivative<Units>,\ \textcolor{keywordtype}{double}>\ acceleration;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_profile_setpoint}{ProfileSetpoint}}(}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ au::Quantity<Units,\ double>\ position,\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ au::Quantity<au::TimeDerivative<Units>,\ \textcolor{keywordtype}{double}>\ velocity,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ au::Quantity<au::Time2ndDerivative<Units>,\ \textcolor{keywordtype}{double}>\ acceleration}
+\DoxyCodeLine{00022\ \ \ \ \ )\ :\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ position(position),\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ velocity(velocity),}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ acceleration(acceleration)\ \{}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_profile_setpoint}{ProfileSetpoint}}\ negative()\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structdlib_1_1_profile_setpoint}{ProfileSetpoint}}(-\/position,\ -\/velocity,\ -\/acceleration);}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}

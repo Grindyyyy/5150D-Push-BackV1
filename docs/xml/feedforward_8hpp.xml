@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="feedforward_8hpp" kind="file" language="C++">
+    <compoundname>feedforward.hpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="yes">au/au.hpp</includes>
+    <includedby refid="dlib_8hpp" local="yes">C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/dlib.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp</label>
+        <link refid="feedforward_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>au/au.hpp</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp</label>
+        <link refid="feedforward_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/dlib.hpp</label>
+        <link refid="dlib_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structdlib_1_1_feedforward_gains" prot="public">dlib::FeedforwardGains</innerclass>
+    <innerclass refid="structdlib_1_1detail_1_1_feedforward_gains_with_units" prot="public">dlib::detail::FeedforwardGainsWithUnits</innerclass>
+    <innerclass refid="classdlib_1_1_feedforward" prot="public">dlib::Feedforward</innerclass>
+    <innernamespace refid="namespacedlib">dlib</innernamespace>
+    <innernamespace refid="namespacedlib_1_1detail">dlib::detail</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;au/au.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">dlib<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>feedforward.hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="structdlib_1_1_feedforward_gains" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdlib_1_1_feedforward_gains" kindref="compound">FeedforwardGains</ref><sp/>{</highlight></codeline>
+<codeline lineno="15" refid="structdlib_1_1_feedforward_gains_1a189cb35d422a4de220fe002b98bff755" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structdlib_1_1_feedforward_gains_1a189cb35d422a4de220fe002b98bff755" kindref="member">ks</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="18" refid="structdlib_1_1_feedforward_gains_1a12719c6d3801277080236f8c096df11d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structdlib_1_1_feedforward_gains_1a12719c6d3801277080236f8c096df11d" kindref="member">kv</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="20" refid="structdlib_1_1_feedforward_gains_1a792d62e19c4af373b312f68f8b0babf4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structdlib_1_1_feedforward_gains_1a792d62e19c4af373b312f68f8b0babf4" kindref="member">ka</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">detail<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Units&gt;</highlight></codeline>
+<codeline lineno="25" refid="structdlib_1_1detail_1_1_feedforward_gains_with_units" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdlib_1_1detail_1_1_feedforward_gains_with_units" kindref="compound">FeedforwardGainsWithUnits</ref><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Volts,<sp/>double&gt;<sp/>ks;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>au::Quantity&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(au::Volts{}<sp/>/<sp/>au::TimeDerivative&lt;Units&gt;{}),<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;<sp/>kv;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>au::Quantity&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(au::Volts{}<sp/>/<sp/>au::Time2ndDerivative&lt;Units&gt;{}),<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;<sp/>ka;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1detail_1_1_feedforward_gains_with_units" kindref="compound">FeedforwardGainsWithUnits</ref>(</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1_feedforward_gains" kindref="compound">FeedforwardGains</ref><sp/>gains</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/>:<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ks(au::volts(gains.<ref refid="structdlib_1_1_feedforward_gains_1a189cb35d422a4de220fe002b98bff755" kindref="member">ks</ref>)),<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>kv(au::make_quantity&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(au::Volts{}<sp/>/<sp/>au::TimeDerivative&lt;Units&gt;{})&gt;(gains.<ref refid="structdlib_1_1_feedforward_gains_1a12719c6d3801277080236f8c096df11d" kindref="member">kv</ref>)),<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ka(au::make_quantity&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(au::Volts{}<sp/>/<sp/>au::Time2ndDerivative&lt;Units&gt;{})&gt;(gains.<ref refid="structdlib_1_1_feedforward_gains_1a792d62e19c4af373b312f68f8b0babf4" kindref="member">ka</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Units&gt;</highlight></codeline>
+<codeline lineno="42" refid="classdlib_1_1_feedforward" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdlib_1_1_feedforward" kindref="compound">Feedforward</ref><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdlib_1_1_feedforward" kindref="compound">Feedforward</ref>(<ref refid="structdlib_1_1_feedforward_gains" kindref="compound">FeedforwardGains</ref><sp/>gains)<sp/>:<sp/>gains(gains)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classdlib_1_1_feedforward_1a6197dd2774c291e6d0b4843f22ebf4d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Volts,<sp/>double&gt;<sp/><ref refid="classdlib_1_1_feedforward_1a6197dd2774c291e6d0b4843f22ebf4d9" kindref="member">calculate</ref>(</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>au::Quantity&lt;au::TimeDerivative&lt;Units&gt;,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;<sp/>target_velocity,<sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>au::Quantity&lt;au::Time2ndDerivative&lt;Units&gt;,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;<sp/>target_acceleration</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>s<sp/>=<sp/>au::copysign(gains.<ref refid="structdlib_1_1_feedforward_gains_1a189cb35d422a4de220fe002b98bff755" kindref="member">ks</ref>,<sp/>target_velocity);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>gains.<ref refid="structdlib_1_1_feedforward_gains_1a12719c6d3801277080236f8c096df11d" kindref="member">kv</ref><sp/>*<sp/>target_velocity;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>gains.<ref refid="structdlib_1_1_feedforward_gains_1a792d62e19c4af373b312f68f8b0babf4" kindref="member">ka</ref><sp/>*<sp/>target_acceleration;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>output<sp/>=<sp/>s<sp/>+<sp/>v<sp/>+<sp/>a;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>output;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classdlib_1_1_feedforward_1adf4976c390cbbda70371b71b43d1e1cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1_feedforward_gains" kindref="compound">FeedforwardGains</ref><sp/><ref refid="classdlib_1_1_feedforward_1adf4976c390cbbda70371b71b43d1e1cb" kindref="member">get_gains</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;gains;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="classdlib_1_1_feedforward_1a463de4825810bab936543a7a71d9059e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdlib_1_1_feedforward_1a463de4825810bab936543a7a71d9059e" kindref="member">set_gains</ref>(<ref refid="structdlib_1_1_feedforward_gains" kindref="compound">FeedforwardGains</ref><sp/>new_gains)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;gains<sp/>=<sp/>new_gains;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">BaseUnits<sp/>=<sp/>au::UnitImpl&lt;au::detail::DimT&lt;Units&gt;&gt;;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1detail_1_1_feedforward_gains_with_units" kindref="compound">detail::FeedforwardGainsWithUnits&lt;BaseUnits&gt;</ref><sp/>gains;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp"/>
+  </compounddef>
+</doxygen>

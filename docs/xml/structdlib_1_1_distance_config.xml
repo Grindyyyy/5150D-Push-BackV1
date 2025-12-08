@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structdlib_1_1_distance_config" kind="struct" language="C++" prot="public">
+    <compoundname>dlib::DistanceConfig</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdlib_1_1_distance_config_1a283e08a6a98c591a77a638731f3ecad2" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t dlib::DistanceConfig::port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <qualifiedname>dlib::DistanceConfig::port</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/distance.hpp" line="13" column="12" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/distance.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structdlib_1_1_distance_config_1a4e1b05422025594e2abace92f4d459c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dlib::DistanceConfig::DistanceConfig</definition>
+        <argsstring>(int8_t port)</argsstring>
+        <name>DistanceConfig</name>
+        <qualifiedname>dlib::DistanceConfig::DistanceConfig</qualifiedname>
+        <param>
+          <type>int8_t</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/distance.hpp" line="15" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/distance.hpp" line="12" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/distance.hpp" bodystart="12" bodyend="16"/>
+    <listofallmembers>
+      <member refid="structdlib_1_1_distance_config_1a4e1b05422025594e2abace92f4d459c7" prot="public" virt="non-virtual"><scope>dlib::DistanceConfig</scope><name>DistanceConfig</name></member>
+      <member refid="structdlib_1_1_distance_config_1a283e08a6a98c591a77a638731f3ecad2" prot="public" virt="non-virtual"><scope>dlib::DistanceConfig</scope><name>port</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

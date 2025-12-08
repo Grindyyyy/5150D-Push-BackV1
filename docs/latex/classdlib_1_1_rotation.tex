@@ -1,0 +1,91 @@
+\doxysection{dlib\+::Rotation Class Reference}
+\hypertarget{classdlib_1_1_rotation}{}\label{classdlib_1_1_rotation}\index{dlib::Rotation@{dlib::Rotation}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdlib_1_1_rotation_a6d454d4be43fb1e97c7fa6dff6f4b8f0}\label{classdlib_1_1_rotation_a6d454d4be43fb1e97c7fa6dff6f4b8f0} 
+void {\bfseries initialize} ()
+\begin{DoxyCompactList}\small\item\em Initialize the \doxylink{classdlib_1_1_rotation}{Rotation} sensor. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ au\+::\+Revolutions, double $>$ \mbox{\hyperlink{classdlib_1_1_rotation_ad6102faaf125a5190272d337edfb0c0d}{get\+\_\+position}} ()
+\begin{DoxyCompactList}\small\item\em Get the position of the rotation sensor in revolutions. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ au\+::\+Rpm, double $>$ \mbox{\hyperlink{classdlib_1_1_rotation_a5662f95336f9bfea36c4eef61b69820d}{get\+\_\+velocity}} ()
+\begin{DoxyCompactList}\small\item\em Get the velocity of the rotation sensor in rpm. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ au\+::\+Meters, double $>$ \mbox{\hyperlink{classdlib_1_1_rotation_a86faec8f32009f5755b6a8fbb8c2472d}{get\+\_\+linear\+\_\+displacement}} ()
+\begin{DoxyCompactList}\small\item\em Get the linear displacement of the rotation sensor. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ au\+::\+Meters\+Per\+Second, double $>$ \mbox{\hyperlink{classdlib_1_1_rotation_a5f0fe98bc229290ecda19efa6f73fcee}{get\+\_\+linear\+\_\+velocity}} ()
+\begin{DoxyCompactList}\small\item\em Get the linear velocity of the rotation sensor. \end{DoxyCompactList}\item 
+\Hypertarget{classdlib_1_1_rotation_acb99a7fadeb90517f44dde30e5286e84}\label{classdlib_1_1_rotation_acb99a7fadeb90517f44dde30e5286e84} 
+{\bfseries Rotation} (\mbox{\hyperlink{structdlib_1_1_rotation_config}{Rotation\+Config}} config)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdlib_1_1_rotation_a10a5f6e2ae7f7387cb99cc1915810e2f}\label{classdlib_1_1_rotation_a10a5f6e2ae7f7387cb99cc1915810e2f} 
+const au\+::\+Quantity$<$ au\+::\+Meters, double $>$ {\bfseries wheel\+\_\+diameter}
+\item 
+\Hypertarget{classdlib_1_1_rotation_a7ecbc1b9a3c55f6070579e934001ba23}\label{classdlib_1_1_rotation_a7ecbc1b9a3c55f6070579e934001ba23} 
+const double {\bfseries gear\+\_\+ratio}
+\item 
+\Hypertarget{classdlib_1_1_rotation_abe4b6f62c125e07da979cd9f27a6a71d}\label{classdlib_1_1_rotation_abe4b6f62c125e07da979cd9f27a6a71d} 
+pros\+::\+Rotation {\bfseries raw}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdlib_1_1_rotation_a86faec8f32009f5755b6a8fbb8c2472d}\index{dlib::Rotation@{dlib::Rotation}!get\_linear\_displacement@{get\_linear\_displacement}}
+\index{get\_linear\_displacement@{get\_linear\_displacement}!dlib::Rotation@{dlib::Rotation}}
+\doxysubsubsection{\texorpdfstring{get\_linear\_displacement()}{get\_linear\_displacement()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_rotation_a86faec8f32009f5755b6a8fbb8c2472d} 
+au\+::\+Quantity$<$ au\+::\+Meters, double $>$ dlib\+::\+Rotation\+::get\+\_\+linear\+\_\+displacement (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the linear displacement of the rotation sensor. 
+
+\begin{DoxyReturn}{Returns}
+linear displacement in meters 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_rotation_a5f0fe98bc229290ecda19efa6f73fcee}\index{dlib::Rotation@{dlib::Rotation}!get\_linear\_velocity@{get\_linear\_velocity}}
+\index{get\_linear\_velocity@{get\_linear\_velocity}!dlib::Rotation@{dlib::Rotation}}
+\doxysubsubsection{\texorpdfstring{get\_linear\_velocity()}{get\_linear\_velocity()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_rotation_a5f0fe98bc229290ecda19efa6f73fcee} 
+au\+::\+Quantity$<$ au\+::\+Meters\+Per\+Second, double $>$ dlib\+::\+Rotation\+::get\+\_\+linear\+\_\+velocity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the linear velocity of the rotation sensor. 
+
+\begin{DoxyReturn}{Returns}
+linear velocity in meters per second 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_rotation_ad6102faaf125a5190272d337edfb0c0d}\index{dlib::Rotation@{dlib::Rotation}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!dlib::Rotation@{dlib::Rotation}}
+\doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_rotation_ad6102faaf125a5190272d337edfb0c0d} 
+au\+::\+Quantity$<$ au\+::\+Revolutions, double $>$ dlib\+::\+Rotation\+::get\+\_\+position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the position of the rotation sensor in revolutions. 
+
+\begin{DoxyReturn}{Returns}
+revolutions 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_rotation_a5662f95336f9bfea36c4eef61b69820d}\index{dlib::Rotation@{dlib::Rotation}!get\_velocity@{get\_velocity}}
+\index{get\_velocity@{get\_velocity}!dlib::Rotation@{dlib::Rotation}}
+\doxysubsubsection{\texorpdfstring{get\_velocity()}{get\_velocity()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_rotation_a5662f95336f9bfea36c4eef61b69820d} 
+au\+::\+Quantity$<$ au\+::\+Rpm, double $>$ dlib\+::\+Rotation\+::get\+\_\+velocity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the velocity of the rotation sensor in rpm. 
+
+\begin{DoxyReturn}{Returns}
+rpm 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/super/\+Downloads/5150\+D-\/\+Push Back\+V1/include/dlib/hardware/rotation.\+hpp\end{DoxyCompactItemize}

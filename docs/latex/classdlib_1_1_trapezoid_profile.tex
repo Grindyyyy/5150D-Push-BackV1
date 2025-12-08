@@ -1,0 +1,52 @@
+\doxysection{dlib\+::Trapezoid\+Profile\texorpdfstring{$<$}{<} Units \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classdlib_1_1_trapezoid_profile}{}\label{classdlib_1_1_trapezoid_profile}\index{dlib::TrapezoidProfile$<$ Units $>$@{dlib::TrapezoidProfile$<$ Units $>$}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdlib_1_1_trapezoid_profile_a22e8df0a37ba4a9802fa306193c59bc5}\label{classdlib_1_1_trapezoid_profile_a22e8df0a37ba4a9802fa306193c59bc5} 
+{\bfseries Trapezoid\+Profile} (au\+::\+Quantity$<$ au\+::\+Time2nd\+Derivative$<$ Units $>$, double $>$ max\+\_\+acceleration, au\+::\+Quantity$<$ au\+::\+Time2nd\+Derivative$<$ Units $>$, double $>$ max\+\_\+deceleration, au\+::\+Quantity$<$ au\+::\+Time\+Derivative$<$ Units $>$, double $>$ max\+\_\+velocity, au\+::\+Quantity$<$ Units, double $>$ total\+\_\+distance)
+\item 
+\Hypertarget{classdlib_1_1_trapezoid_profile_ad1218d90c7b2e32f61afdebae3d3ee59}\label{classdlib_1_1_trapezoid_profile_ad1218d90c7b2e32f61afdebae3d3ee59} 
+double {\bfseries get\+\_\+time} ()
+\item 
+\Hypertarget{classdlib_1_1_trapezoid_profile_ace059a10af81388384ca86b23fa31653}\label{classdlib_1_1_trapezoid_profile_ace059a10af81388384ca86b23fa31653} 
+Trapezoid\+Profile\+Stage {\bfseries stage} (const au\+::\+Quantity$<$ au\+::\+Seconds, double $>$ elapsed\+\_\+time) const
+\item 
+\Hypertarget{classdlib_1_1_trapezoid_profile_a37cef8f519992e86fa2694007e63a333}\label{classdlib_1_1_trapezoid_profile_a37cef8f519992e86fa2694007e63a333} 
+\mbox{\hyperlink{structdlib_1_1_profile_setpoint}{Profile\+Setpoint}}$<$ Units $>$ {\bfseries calculate} (const au\+::\+Quantity$<$ au\+::\+Seconds, double $>$ elapsed\+\_\+time) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdlib_1_1_trapezoid_profile_a6ce81102b16067a66401575212062f41}\label{classdlib_1_1_trapezoid_profile_a6ce81102b16067a66401575212062f41} 
+const au\+::\+Quantity$<$ au\+::\+Time2nd\+Derivative$<$ Units $>$, double $>$ {\bfseries m\+\_\+max\+\_\+acceleration}
+\item 
+\Hypertarget{classdlib_1_1_trapezoid_profile_a8ecff6c7d7cc5e82efd66327466b4158}\label{classdlib_1_1_trapezoid_profile_a8ecff6c7d7cc5e82efd66327466b4158} 
+const au\+::\+Quantity$<$ au\+::\+Time2nd\+Derivative$<$ Units $>$, double $>$ {\bfseries m\+\_\+max\+\_\+deceleration}
+\item 
+\Hypertarget{classdlib_1_1_trapezoid_profile_a215505b8c240ab16fb3774e00c746bca}\label{classdlib_1_1_trapezoid_profile_a215505b8c240ab16fb3774e00c746bca} 
+const au\+::\+Quantity$<$ au\+::\+Time\+Derivative$<$ Units $>$, double $>$ {\bfseries m\+\_\+max\+\_\+velocity}
+\item 
+\Hypertarget{classdlib_1_1_trapezoid_profile_a25a4d549238299323a65a0b1005c24fb}\label{classdlib_1_1_trapezoid_profile_a25a4d549238299323a65a0b1005c24fb} 
+const au\+::\+Quantity$<$ Units, double $>$ {\bfseries m\+\_\+total\+\_\+distance}
+\item 
+\Hypertarget{classdlib_1_1_trapezoid_profile_a83156ce85b27d199562f3dbc0d113b1a}\label{classdlib_1_1_trapezoid_profile_a83156ce85b27d199562f3dbc0d113b1a} 
+au\+::\+Quantity$<$ au\+::\+Seconds, double $>$ {\bfseries total\+\_\+time}
+\item 
+\Hypertarget{classdlib_1_1_trapezoid_profile_a926132285c93fd3b6008f4d1ce6719e1}\label{classdlib_1_1_trapezoid_profile_a926132285c93fd3b6008f4d1ce6719e1} 
+au\+::\+Quantity$<$ au\+::\+Seconds, double $>$ {\bfseries accel\+\_\+cutoff}
+\item 
+\Hypertarget{classdlib_1_1_trapezoid_profile_a4b1790218b26f7e97f89a798b74b4e6d}\label{classdlib_1_1_trapezoid_profile_a4b1790218b26f7e97f89a798b74b4e6d} 
+au\+::\+Quantity$<$ au\+::\+Seconds, double $>$ {\bfseries coast\+\_\+cutoff}
+\item 
+\Hypertarget{classdlib_1_1_trapezoid_profile_adcd5acd8a195dfc87f75ce71b58c6b60}\label{classdlib_1_1_trapezoid_profile_adcd5acd8a195dfc87f75ce71b58c6b60} 
+au\+::\+Quantity$<$ au\+::\+Seconds, double $>$ {\bfseries decel\+\_\+cutoff}
+\item 
+\Hypertarget{classdlib_1_1_trapezoid_profile_ab2c6e550dfc3ff47a6830f59710364b4}\label{classdlib_1_1_trapezoid_profile_ab2c6e550dfc3ff47a6830f59710364b4} 
+bool {\bfseries invert} = false
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/super/\+Downloads/5150\+D-\/\+Push Back\+V1/include/dlib/trajectories/trapezoid\+\_\+profile.\+hpp\end{DoxyCompactItemize}

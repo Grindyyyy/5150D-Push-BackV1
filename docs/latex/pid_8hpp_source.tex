@@ -1,0 +1,138 @@
+\doxysection{pid.\+hpp}
+\hypertarget{pid_8hpp_source}{}\label{pid_8hpp_source}\index{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/controllers/pid.hpp@{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/controllers/pid.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}au/au.hpp"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}dlib/controllers/pid.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}pros/rtos.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }dlib\ \{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ pid.hpp}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdlib_1_1_pid_gains}{PidGains}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structdlib_1_1_pid_gains_a6dcd1238bcd7c08379f3a1e3b2c08f66}{kp}}\ =\ 0;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structdlib_1_1_pid_gains_af68a8c34efb8f25bd55125c3505aad04}{ki}}\ =\ 0;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structdlib_1_1_pid_gains_a76360ca3166a6f668589f618e0712844}{kd}}\ =\ 0;}
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdlib_1_1_pid_config}{PidConfig}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_pid_gains}{PidGains}}\ gains\{\};}
+\DoxyCodeLine{00025\ \ \ \ \ au::Quantity<au::Volts,\ double>\ max\_voltage\ =\ au::volts(12);}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{namespace\ }detail\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Units>}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdlib_1_1detail_1_1_pid_gains_with_units}{PidGainsWithUnits}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ au::Quantity<\textcolor{keyword}{decltype}(au::Volts\{\}\ /\ Units\{\}),\ \textcolor{keywordtype}{double}>\ kp;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ au::Quantity<\textcolor{keyword}{decltype}(au::Volts\{\}\ /\ au::TimeIntegral<Units>\{\}),\ \textcolor{keywordtype}{double}>\ ki;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ au::Quantity<\textcolor{keyword}{decltype}(au::Volts\{\}\ /\ au::TimeDerivative<Units>\{\}),\ \textcolor{keywordtype}{double}>\ kd;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structdlib_1_1detail_1_1_pid_gains_with_units}{PidGainsWithUnits}}(}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_pid_gains}{PidGains}}\ gains}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ )\ :\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ kp(au::make\_quantity<\textcolor{keyword}{decltype}(au::Volts\{\}\ /\ Units\{\})>(gains.\mbox{\hyperlink{structdlib_1_1_pid_gains_a6dcd1238bcd7c08379f3a1e3b2c08f66}{kp}})),\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ ki(au::make\_quantity<\textcolor{keyword}{decltype}(au::Volts\{\}\ /\ au::TimeIntegral<Units>\{\})>(gains.\mbox{\hyperlink{structdlib_1_1_pid_gains_af68a8c34efb8f25bd55125c3505aad04}{ki}})),\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ kd(au::make\_quantity<\textcolor{keyword}{decltype}(au::Volts\{\}\ /\ au::TimeDerivative<Units>\{\})>(gains.\mbox{\hyperlink{structdlib_1_1_pid_gains_a76360ca3166a6f668589f618e0712844}{kd}}))\ \{}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \};}
+\DoxyCodeLine{00044\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Units>}
+\DoxyCodeLine{00047\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdlib_1_1_pid}{Pid}}\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{classdlib_1_1_pid}{Pid}}(\mbox{\hyperlink{structdlib_1_1_pid_config}{PidConfig}}\ config)\ :\ m\_gains(config.gains),\ m\_max\_voltage(config.max\_voltage)\ \{\};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdlib_1_1_pid_a8253a9bf3701e13cf5c49814ae57cdb4}{reset}}()\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ m\_p\ =\ au::ZERO;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ m\_i\ =\ au::ZERO;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ m\_d\ =\ au::ZERO;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ m\_last\_error\ =\ au::ZERO;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ m\_last\_derivative\ =\ au::ZERO;}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00082\ \ \ \ \ au::Quantity<au::Volts,\ double>\ \mbox{\hyperlink{classdlib_1_1_pid_a5bfcf3a44d62bb6fef34689fc0da74f6}{update}}(}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ au::Quantity<Units,\ double>\ error,\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ au::Quantity<au::Seconds,\ double>\ period}
+\DoxyCodeLine{00085\ \ \ \ \ )\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ delta\_time\ =\ period;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ delta\_error\ =\ error\ -\/\ m\_last\_error;}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ derivative\ =\ (delta\_error\ /\ delta\_time);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ calculate\ Pid\ terms}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ integral\ reset\ on\ sign\ flip}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((error\ <\ au::ZERO)\ !=\ (m\_last\_error\ <\ au::ZERO))\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ m\_i\ =\ au::ZERO;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_i\ >\ m\_max\_voltage)\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ m\_i\ =\ m\_max\_voltage;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (m\_i\ <\ -\/m\_max\_voltage)\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ m\_i\ =\ -\/m\_max\_voltage;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ m\_p\ =\ error\ *\ m\_gains.kp;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ m\_i\ =\ m\_i\ +\ error\ *\ delta\_time\ *\ m\_gains.ki;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ m\_d\ =\ (delta\_error\ /\ delta\_time)\ *\ m\_gains.kd;}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ output\ =\ std::clamp(}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ m\_p\ +\ m\_i\ +\ m\_d,\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ -\/m\_max\_voltage,\ m\_max\_voltage}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ update\ Pid\ state}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ m\_last\_error\ \ \ \ \ \ =\ error;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ m\_last\_derivative\ =\ derivative;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ output;}
+\DoxyCodeLine{00118\ \ \ \ \ \};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00136\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_pid_gains}{PidGains}}\ \mbox{\hyperlink{classdlib_1_1_pid_afc0312e900c1ad133d88cec01fbc2dad}{get\_gains}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_gains;}
+\DoxyCodeLine{00138\ \ \ \ \ \}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdlib_1_1_pid_a98c02d8fba954028835599a1a7f2993e}{set\_gains}}(\mbox{\hyperlink{structdlib_1_1_pid_gains}{PidGains}}\ gains)\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ m\_gains\ =\ gains;}
+\DoxyCodeLine{00158\ \ \ \ \ \}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00176\ \ \ \ \ au::Quantity<Units,\ double>\ \mbox{\hyperlink{classdlib_1_1_pid_a6b488b2f3a47ea5f32dcfa32df73dfe4}{get\_error}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_last\_error;}
+\DoxyCodeLine{00178\ \ \ \ \ \}}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00196\ \ \ \ \ au::Quantity<au::TimeDerivative<Units>,\ \textcolor{keywordtype}{double}>\ \mbox{\hyperlink{classdlib_1_1_pid_a2a6b072e784aef89243a89517b61a798}{get\_derivative}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_last\_derivative;}
+\DoxyCodeLine{00198\ \ \ \ \ \}}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00205\ \ \ \ \ au::Quantity<Units,\ double>\ \mbox{\hyperlink{classdlib_1_1_pid_affdaffc1e93e448f0c788f746ad51050}{get\_p}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_p;}
+\DoxyCodeLine{00207\ \ \ \ \ \}}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00214\ \ \ \ \ au::Quantity<au::TimeIntegral<Units>,\ \textcolor{keywordtype}{double}>\ \mbox{\hyperlink{classdlib_1_1_pid_a5e03e1693412204957f3ad521390cb2b}{get\_i}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_i;}
+\DoxyCodeLine{00216\ \ \ \ \ \}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00223\ \ \ \ \ au::Quantity<au::TimeDerivative<Units>,\ \textcolor{keywordtype}{double}>\ \mbox{\hyperlink{classdlib_1_1_pid_afab9bdae6dcadf798247f538d7850285}{get\_d}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_d;}
+\DoxyCodeLine{00225\ \ \ \ \ \}}
+\DoxyCodeLine{00226\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keyword}{using\ }BaseUnits\ =\ au::UnitImpl<au::detail::DimT<Units>>;}
+\DoxyCodeLine{00228\ \ \ \ \ }
+\DoxyCodeLine{00229\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1detail_1_1_pid_gains_with_units}{detail::PidGainsWithUnits<BaseUnits>}}\ m\_gains;}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<au::Volts,\ double>\ m\_max\_voltage;}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \ \ \ \ au::Quantity<au::Volts,\ double>\ m\_p\ =\ au::ZERO;}
+\DoxyCodeLine{00233\ \ \ \ \ au::Quantity<au::Volts,\ double>\ m\_i\ =\ au::ZERO;}
+\DoxyCodeLine{00234\ \ \ \ \ au::Quantity<au::Volts,\ double>\ m\_d\ =\ au::ZERO;}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \ \ \ \ au::Quantity<Units,\ double>\ m\_last\_error;}
+\DoxyCodeLine{00237\ \ \ \ \ au::Quantity<au::TimeDerivative<Units>,\ \textcolor{keywordtype}{double}>\ m\_last\_derivative;}
+\DoxyCodeLine{00238\ \};}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \}}
+
+\end{DoxyCode}

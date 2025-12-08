@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structdlib_1_1detail_1_1_feedforward_gains_with_units" kind="struct" language="C++" prot="public">
+    <compoundname>dlib::detail::FeedforwardGainsWithUnits</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename Units</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdlib_1_1detail_1_1_feedforward_gains_with_units_1adf2b855775437ca043c96e2f705099cb" prot="public" static="no" mutable="no">
+        <type>au::Quantity&lt; au::Volts, double &gt;</type>
+        <definition>au::Quantity&lt;au::Volts, double&gt; dlib::detail::FeedforwardGainsWithUnits&lt; Units &gt;::ks</definition>
+        <argsstring></argsstring>
+        <name>ks</name>
+        <qualifiedname>dlib::detail::FeedforwardGainsWithUnits::ks</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" line="26" column="22" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdlib_1_1detail_1_1_feedforward_gains_with_units_1a6603a85da10b79e57a8b7148adff00c8" prot="public" static="no" mutable="no">
+        <type>au::Quantity&lt; decltype(au::Volts{}/au::TimeDerivative&lt; Units &gt;{}), double &gt;</type>
+        <definition>au::Quantity&lt;decltype(au::Volts{} / au::TimeDerivative&lt;Units&gt;{}), double&gt; dlib::detail::FeedforwardGainsWithUnits&lt; Units &gt;::kv</definition>
+        <argsstring></argsstring>
+        <name>kv</name>
+        <qualifiedname>dlib::detail::FeedforwardGainsWithUnits::kv</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" line="27" column="22" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdlib_1_1detail_1_1_feedforward_gains_with_units_1af5c9cf2d5cd1031099bbb0870df9d2e8" prot="public" static="no" mutable="no">
+        <type>au::Quantity&lt; decltype(au::Volts{}/au::Time2ndDerivative&lt; Units &gt;{}), double &gt;</type>
+        <definition>au::Quantity&lt;decltype(au::Volts{} / au::Time2ndDerivative&lt;Units&gt;{}), double&gt; dlib::detail::FeedforwardGainsWithUnits&lt; Units &gt;::ka</definition>
+        <argsstring></argsstring>
+        <name>ka</name>
+        <qualifiedname>dlib::detail::FeedforwardGainsWithUnits::ka</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" line="28" column="22" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structdlib_1_1detail_1_1_feedforward_gains_with_units_1a2c2f62c695bf18945a7569023bf55074" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dlib::detail::FeedforwardGainsWithUnits&lt; Units &gt;::FeedforwardGainsWithUnits</definition>
+        <argsstring>(FeedforwardGains gains)</argsstring>
+        <name>FeedforwardGainsWithUnits</name>
+        <qualifiedname>dlib::detail::FeedforwardGainsWithUnits::FeedforwardGainsWithUnits</qualifiedname>
+        <param>
+          <type><ref refid="structdlib_1_1_feedforward_gains" kindref="compound">FeedforwardGains</ref></type>
+          <declname>gains</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" line="30" column="9" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" bodystart="30" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" line="25" column="5" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" bodystart="25" bodyend="38"/>
+    <listofallmembers>
+      <member refid="structdlib_1_1detail_1_1_feedforward_gains_with_units_1a2c2f62c695bf18945a7569023bf55074" prot="public" virt="non-virtual"><scope>dlib::detail::FeedforwardGainsWithUnits</scope><name>FeedforwardGainsWithUnits</name></member>
+      <member refid="structdlib_1_1detail_1_1_feedforward_gains_with_units_1af5c9cf2d5cd1031099bbb0870df9d2e8" prot="public" virt="non-virtual"><scope>dlib::detail::FeedforwardGainsWithUnits</scope><name>ka</name></member>
+      <member refid="structdlib_1_1detail_1_1_feedforward_gains_with_units_1adf2b855775437ca043c96e2f705099cb" prot="public" virt="non-virtual"><scope>dlib::detail::FeedforwardGainsWithUnits</scope><name>ks</name></member>
+      <member refid="structdlib_1_1detail_1_1_feedforward_gains_with_units_1a6603a85da10b79e57a8b7148adff00c8" prot="public" virt="non-virtual"><scope>dlib::detail::FeedforwardGainsWithUnits</scope><name>kv</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

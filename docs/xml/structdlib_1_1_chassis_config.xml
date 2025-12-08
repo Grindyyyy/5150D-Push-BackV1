@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structdlib_1_1_chassis_config" kind="struct" language="C++" prot="public">
+    <compoundname>dlib::ChassisConfig</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdlib_1_1_chassis_config_1a9c22524cfe1f2cf476757df7b168fc8a" prot="public" static="no" mutable="no">
+        <type><ref refid="structdlib_1_1_motor_group_config" kindref="compound">MotorGroupConfig</ref></type>
+        <definition>MotorGroupConfig dlib::ChassisConfig::left_motors</definition>
+        <argsstring></argsstring>
+        <name>left_motors</name>
+        <qualifiedname>dlib::ChassisConfig::left_motors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/chassis.hpp" line="10" column="22" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/chassis.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdlib_1_1_chassis_config_1abec2c882d9573fc89cff8f1a75e4f413" prot="public" static="no" mutable="no">
+        <type><ref refid="structdlib_1_1_motor_group_config" kindref="compound">MotorGroupConfig</ref></type>
+        <definition>MotorGroupConfig dlib::ChassisConfig::right_motors</definition>
+        <argsstring></argsstring>
+        <name>right_motors</name>
+        <qualifiedname>dlib::ChassisConfig::right_motors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/chassis.hpp" line="11" column="22" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/chassis.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdlib_1_1_chassis_config_1a056f0e533eaf43b1ce78156a3c49c8bb" prot="public" static="no" mutable="no">
+        <type>pros::MotorGearset</type>
+        <definition>pros::MotorGearset dlib::ChassisConfig::drive_gearset</definition>
+        <argsstring></argsstring>
+        <name>drive_gearset</name>
+        <qualifiedname>dlib::ChassisConfig::drive_gearset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/chassis.hpp" line="13" column="24" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/chassis.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdlib_1_1_chassis_config_1a8dc66d1e8368e6ac682f24218666382a" prot="public" static="no" mutable="no">
+        <type>au::Quantity&lt; au::Rpm, double &gt;</type>
+        <definition>au::Quantity&lt;au::Rpm, double&gt; dlib::ChassisConfig::base_rpm</definition>
+        <argsstring></argsstring>
+        <name>base_rpm</name>
+        <qualifiedname>dlib::ChassisConfig::base_rpm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/chassis.hpp" line="15" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/chassis.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdlib_1_1_chassis_config_1a4dbd7fbb08c19a0ee0f20ff979c661e0" prot="public" static="no" mutable="no">
+        <type>au::Quantity&lt; au::Rpm, double &gt;</type>
+        <definition>au::Quantity&lt;au::Rpm, double&gt; dlib::ChassisConfig::total_rpm</definition>
+        <argsstring></argsstring>
+        <name>total_rpm</name>
+        <qualifiedname>dlib::ChassisConfig::total_rpm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/chassis.hpp" line="16" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/chassis.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdlib_1_1_chassis_config_1a8ea99c0bde5c35fe66ff8811ac12c4f9" prot="public" static="no" mutable="no">
+        <type>au::Quantity&lt; au::Meters, double &gt;</type>
+        <definition>au::Quantity&lt;au::Meters, double&gt; dlib::ChassisConfig::wheel_diameter</definition>
+        <argsstring></argsstring>
+        <name>wheel_diameter</name>
+        <qualifiedname>dlib::ChassisConfig::wheel_diameter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/chassis.hpp" line="17" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/chassis.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structdlib_1_1_chassis_config_1a4e1f390f4df733237038468de5766465" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dlib::ChassisConfig::ChassisConfig</definition>
+        <argsstring>(MotorGroupConfig left_motors_config, MotorGroupConfig right_motors_config, pros::MotorGearset drive_gearset, au::Quantity&lt; au::Rpm, double &gt; total_rpm, au::Quantity&lt; au::Meters, double &gt; wheel_diameter)</argsstring>
+        <name>ChassisConfig</name>
+        <qualifiedname>dlib::ChassisConfig::ChassisConfig</qualifiedname>
+        <param>
+          <type><ref refid="structdlib_1_1_motor_group_config" kindref="compound">MotorGroupConfig</ref></type>
+          <declname>left_motors_config</declname>
+        </param>
+        <param>
+          <type><ref refid="structdlib_1_1_motor_group_config" kindref="compound">MotorGroupConfig</ref></type>
+          <declname>right_motors_config</declname>
+        </param>
+        <param>
+          <type>pros::MotorGearset</type>
+          <declname>drive_gearset</declname>
+        </param>
+        <param>
+          <type>au::Quantity&lt; au::Rpm, double &gt;</type>
+          <declname>total_rpm</declname>
+        </param>
+        <param>
+          <type>au::Quantity&lt; au::Meters, double &gt;</type>
+          <declname>wheel_diameter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/chassis.hpp" line="19" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>dlib::ChassisConfig</label>
+        <link refid="structdlib_1_1_chassis_config"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>left_motors</edgelabel>
+          <edgelabel>right_motors</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dlib::MotorGroupConfig</label>
+        <link refid="structdlib_1_1_motor_group_config"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/chassis.hpp" line="9" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/chassis.hpp" bodystart="9" bodyend="26"/>
+    <listofallmembers>
+      <member refid="structdlib_1_1_chassis_config_1a8dc66d1e8368e6ac682f24218666382a" prot="public" virt="non-virtual"><scope>dlib::ChassisConfig</scope><name>base_rpm</name></member>
+      <member refid="structdlib_1_1_chassis_config_1a4e1f390f4df733237038468de5766465" prot="public" virt="non-virtual"><scope>dlib::ChassisConfig</scope><name>ChassisConfig</name></member>
+      <member refid="structdlib_1_1_chassis_config_1a056f0e533eaf43b1ce78156a3c49c8bb" prot="public" virt="non-virtual"><scope>dlib::ChassisConfig</scope><name>drive_gearset</name></member>
+      <member refid="structdlib_1_1_chassis_config_1a9c22524cfe1f2cf476757df7b168fc8a" prot="public" virt="non-virtual"><scope>dlib::ChassisConfig</scope><name>left_motors</name></member>
+      <member refid="structdlib_1_1_chassis_config_1abec2c882d9573fc89cff8f1a75e4f413" prot="public" virt="non-virtual"><scope>dlib::ChassisConfig</scope><name>right_motors</name></member>
+      <member refid="structdlib_1_1_chassis_config_1a4dbd7fbb08c19a0ee0f20ff979c661e0" prot="public" virt="non-virtual"><scope>dlib::ChassisConfig</scope><name>total_rpm</name></member>
+      <member refid="structdlib_1_1_chassis_config_1a8ea99c0bde5c35fe66ff8811ac12c4f9" prot="public" virt="non-virtual"><scope>dlib::ChassisConfig</scope><name>wheel_diameter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

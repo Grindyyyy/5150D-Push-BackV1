@@ -1,0 +1,351 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classdlib_1_1_odometry" kind="class" language="C++" prot="public">
+    <compoundname>dlib::Odometry</compoundname>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classdlib_1_1_odometry_1af6feb429804af618d1a62137e9096ba5" prot="protected" static="no" mutable="no">
+        <type><ref refid="structdlib_1_1_pose2d" kindref="compound">Pose2d</ref></type>
+        <definition>Pose2d dlib::Odometry::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <qualifiedname>dlib::Odometry::position</qualifiedname>
+        <initializer>= <ref refid="structdlib_1_1_pose2d" kindref="compound">Pose2d</ref>(au::ZERO, au::ZERO, au::ZERO)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" line="99" column="12" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdlib_1_1_odometry_1a38e24c50f810fa9c066324b74af6ba3a" prot="protected" static="no" mutable="no">
+        <type>au::Quantity&lt; au::Meters, double &gt;</type>
+        <definition>au::Quantity&lt;au::Meters, double&gt; dlib::Odometry::previous_forward</definition>
+        <argsstring></argsstring>
+        <name>previous_forward</name>
+        <qualifiedname>dlib::Odometry::previous_forward</qualifiedname>
+        <initializer>= au::ZERO</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" line="101" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdlib_1_1_odometry_1ace7d7cf0262dbe7eb7cac2678e7d1273" prot="protected" static="no" mutable="no">
+        <type>au::Quantity&lt; au::Meters, double &gt;</type>
+        <definition>au::Quantity&lt;au::Meters, double&gt; dlib::Odometry::previous_horizontal</definition>
+        <argsstring></argsstring>
+        <name>previous_horizontal</name>
+        <qualifiedname>dlib::Odometry::previous_horizontal</qualifiedname>
+        <initializer>= au::ZERO</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" line="102" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdlib_1_1_odometry_1a411dfb75318be6becef169a2a5534c37" prot="protected" static="no" mutable="no">
+        <type>au::Quantity&lt; au::Radians, double &gt;</type>
+        <definition>au::Quantity&lt;au::Radians, double&gt; dlib::Odometry::previous_theta</definition>
+        <argsstring></argsstring>
+        <name>previous_theta</name>
+        <qualifiedname>dlib::Odometry::previous_theta</qualifiedname>
+        <initializer>= au::ZERO</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" line="103" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdlib_1_1_odometry_1abd405d0ad590faf38d7839d141de0c39" prot="protected" static="no" mutable="no">
+        <type>const au::Quantity&lt; au::Meters, double &gt;</type>
+        <definition>const au::Quantity&lt;au::Meters, double&gt; dlib::Odometry::horizontal_wheel_offset</definition>
+        <argsstring></argsstring>
+        <name>horizontal_wheel_offset</name>
+        <qualifiedname>dlib::Odometry::horizontal_wheel_offset</qualifiedname>
+        <initializer>= au::ZERO</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" line="105" column="24" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdlib_1_1_odometry_1a37c96714fdca98cf67c2e8fd5403bf10" prot="protected" static="no" mutable="no">
+        <type>pros::Mutex</type>
+        <definition>pros::Mutex dlib::Odometry::mutex</definition>
+        <argsstring></argsstring>
+        <name>mutex</name>
+        <qualifiedname>dlib::Odometry::mutex</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" line="107" column="17" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" bodystart="107" bodyend="107"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdlib_1_1_odometry_1acc7cff963d2e5f84f474b338bc4d5e41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dlib::Odometry::Odometry</definition>
+        <argsstring>(const au::Quantity&lt; au::Meters, double &gt; horizontal_wheel_offset=au::ZERO)</argsstring>
+        <name>Odometry</name>
+        <qualifiedname>dlib::Odometry::Odometry</qualifiedname>
+        <param>
+          <type>const au::Quantity&lt; au::Meters, double &gt;</type>
+          <declname>horizontal_wheel_offset</declname>
+          <defval>au::ZERO</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" line="49" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdlib_1_1_odometry_1abcff56aca6c963dda38d50d2324916e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dlib::Odometry::update</definition>
+        <argsstring>(const au::Quantity&lt; au::Meters, double &gt; left_displacement, const au::Quantity&lt; au::Meters, double &gt; right_displacement, const au::Quantity&lt; au::Meters, double &gt; horizontal_displacement, const au::Quantity&lt; au::Degrees, double &gt; heading)</argsstring>
+        <name>update</name>
+        <qualifiedname>dlib::Odometry::update</qualifiedname>
+        <param>
+          <type>const au::Quantity&lt; au::Meters, double &gt;</type>
+          <declname>left_displacement</declname>
+        </param>
+        <param>
+          <type>const au::Quantity&lt; au::Meters, double &gt;</type>
+          <declname>right_displacement</declname>
+        </param>
+        <param>
+          <type>const au::Quantity&lt; au::Meters, double &gt;</type>
+          <declname>horizontal_displacement</declname>
+        </param>
+        <param>
+          <type>const au::Quantity&lt; au::Degrees, double &gt;</type>
+          <declname>heading</declname>
+        </param>
+        <briefdescription>
+<para>Update the odometry tracking state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left_displacement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the linear displacement of the left side of the <ref refid="classdlib_1_1_chassis" kindref="compound">Chassis</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right_displacement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the linear displacement of the right side of the <ref refid="classdlib_1_1_chassis" kindref="compound">Chassis</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>horizontal_displacement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the linear displacement from any horizontal tracking </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>heading</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current heading </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" line="59" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdlib_1_1_odometry_1aff1bcf403d9f255dbb0a39212779ed0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structdlib_1_1_pose2d" kindref="compound">Pose2d</ref></type>
+        <definition>Pose2d dlib::Odometry::get_position</definition>
+        <argsstring>()</argsstring>
+        <name>get_position</name>
+        <qualifiedname>dlib::Odometry::get_position</qualifiedname>
+        <briefdescription>
+<para>Get the current position of the robot. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structdlib_1_1_pose2d" kindref="compound">Pose2d</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" line="71" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdlib_1_1_odometry_1a4da18633efe447f97983b0e6594acb95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dlib::Odometry::set_position</definition>
+        <argsstring>(const Pose2d pose)</argsstring>
+        <name>set_position</name>
+        <qualifiedname>dlib::Odometry::set_position</qualifiedname>
+        <param>
+          <type>const <ref refid="structdlib_1_1_pose2d" kindref="compound">Pose2d</ref></type>
+          <declname>pose</declname>
+        </param>
+        <briefdescription>
+<para>Set the current position of the robot. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" line="78" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdlib_1_1_odometry_1a309831aa5e212c91107e43d0c128ad04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>au::Quantity&lt; au::Meters, double &gt;</type>
+        <definition>au::Quantity&lt; au::Meters, double &gt; dlib::Odometry::displacement_to</definition>
+        <argsstring>(const Vector2d point, const bool reverse=false)</argsstring>
+        <name>displacement_to</name>
+        <qualifiedname>dlib::Odometry::displacement_to</qualifiedname>
+        <param>
+          <type>const <ref refid="structdlib_1_1_vector2d" kindref="compound">Vector2d</ref></type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>reverse</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Calculate the displacement from the current position of the robot to a point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the end point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reverse</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the robot will move in reverse </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the displacement to the point </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" line="87" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdlib_1_1_odometry_1a1f7a238a917a1c464668660c7404983a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>au::Quantity&lt; au::Degrees, double &gt;</type>
+        <definition>au::Quantity&lt; au::Degrees, double &gt; dlib::Odometry::angle_to</definition>
+        <argsstring>(const Vector2d point, const bool reverse=false)</argsstring>
+        <name>angle_to</name>
+        <qualifiedname>dlib::Odometry::angle_to</qualifiedname>
+        <param>
+          <type>const <ref refid="structdlib_1_1_vector2d" kindref="compound">Vector2d</ref></type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>reverse</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Calculate the angle from the current position of the robot to a point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the end point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reverse</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the robot will move in reverse </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the angle to the point </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" line="96" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>dlib::Odometry</label>
+        <link refid="classdlib_1_1_odometry"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>position</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dlib::Pose2d</label>
+        <link refid="structdlib_1_1_pose2d"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" line="47" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp" bodystart="47" bodyend="108"/>
+    <listofallmembers>
+      <member refid="classdlib_1_1_odometry_1a1f7a238a917a1c464668660c7404983a" prot="public" virt="non-virtual"><scope>dlib::Odometry</scope><name>angle_to</name></member>
+      <member refid="classdlib_1_1_odometry_1a309831aa5e212c91107e43d0c128ad04" prot="public" virt="non-virtual"><scope>dlib::Odometry</scope><name>displacement_to</name></member>
+      <member refid="classdlib_1_1_odometry_1aff1bcf403d9f255dbb0a39212779ed0c" prot="public" virt="non-virtual"><scope>dlib::Odometry</scope><name>get_position</name></member>
+      <member refid="classdlib_1_1_odometry_1abd405d0ad590faf38d7839d141de0c39" prot="protected" virt="non-virtual"><scope>dlib::Odometry</scope><name>horizontal_wheel_offset</name></member>
+      <member refid="classdlib_1_1_odometry_1a37c96714fdca98cf67c2e8fd5403bf10" prot="protected" virt="non-virtual"><scope>dlib::Odometry</scope><name>mutex</name></member>
+      <member refid="classdlib_1_1_odometry_1acc7cff963d2e5f84f474b338bc4d5e41" prot="public" virt="non-virtual"><scope>dlib::Odometry</scope><name>Odometry</name></member>
+      <member refid="classdlib_1_1_odometry_1af6feb429804af618d1a62137e9096ba5" prot="protected" virt="non-virtual"><scope>dlib::Odometry</scope><name>position</name></member>
+      <member refid="classdlib_1_1_odometry_1a38e24c50f810fa9c066324b74af6ba3a" prot="protected" virt="non-virtual"><scope>dlib::Odometry</scope><name>previous_forward</name></member>
+      <member refid="classdlib_1_1_odometry_1ace7d7cf0262dbe7eb7cac2678e7d1273" prot="protected" virt="non-virtual"><scope>dlib::Odometry</scope><name>previous_horizontal</name></member>
+      <member refid="classdlib_1_1_odometry_1a411dfb75318be6becef169a2a5534c37" prot="protected" virt="non-virtual"><scope>dlib::Odometry</scope><name>previous_theta</name></member>
+      <member refid="classdlib_1_1_odometry_1a4da18633efe447f97983b0e6594acb95" prot="public" virt="non-virtual"><scope>dlib::Odometry</scope><name>set_position</name></member>
+      <member refid="classdlib_1_1_odometry_1abcff56aca6c963dda38d50d2324916e6" prot="public" virt="non-virtual"><scope>dlib::Odometry</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

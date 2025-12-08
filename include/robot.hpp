@@ -52,21 +52,23 @@ public:
     void move_pid(double inches);
 
     void move_feedforward(double displacement, double max_velocity);
+    void turn_feedforward(double degrees, double max_velocity);
     
     // turn controllers
-    void turn_absolute(au::Quantity<au::Degrees, double> heading, bool precise);
-    void turn_absolute(double degrees);
+    void turn_absolute(au::Quantity<au::Degrees, double> heading, bool precise, double max_time = 1000);
+    void turn_absolute(double degrees, double max_time = 2000);
 
-    void turn_relative(au::Quantity<au::Degrees, double> heading);
-    void turn_relative(double degrees);
+    void turn_relative(au::Quantity<au::Degrees, double> heading, double max_time = 1000);
+    void turn_relative(double degrees, double max_time = 2000);
 
-    void turn_precise(au::Quantity<au::Degrees, double> heading);
-    void turn_precise(double degrees);
+    void turn_precise(au::Quantity<au::Degrees, double> heading, double max_time = 1000);
+    void turn_precise(double degrees, double max_time = 2000);
 
     // primary movements
+    void move_boomerang(double x, double y, double max_move,  double kp_turn=3.75, bool reverse=false, double theta=0, double kp_move=175);
     void move(double x, double y, double max_velocity = 1.6, bool reverse = false, bool precise_turn = false);
-    void turn(double x, double y, bool reverse = false);
-    void turn_with_precision(double x, double y, bool reverse = false);
+    void turn(double x, double y, bool reverse = false,double max_time = 1000);
+    void turn_with_precision(double x, double y, bool reverse = false, double max_time = 1000);
 
     // odometry task
     void start_odom();	

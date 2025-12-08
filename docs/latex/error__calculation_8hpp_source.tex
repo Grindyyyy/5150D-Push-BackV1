@@ -1,0 +1,36 @@
+\doxysection{error\+\_\+calculation.\+hpp}
+\hypertarget{error__calculation_8hpp_source}{}\label{error__calculation_8hpp_source}\index{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/utilities/error\_calculation.hpp@{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/utilities/error\_calculation.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}au/au.hpp"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }dlib\ \{}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ error\_calculation.hpp}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ au::Quantity<au::Meters,\ double>\ linear\_error(}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<au::Meters,\ double>\ target,\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<au::Meters,\ double>\ reading}
+\DoxyCodeLine{00011\ );}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ au::Quantity<au::Degrees,\ double>\ sanitize\_angle(}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<au::Degrees,\ double>\ angle}
+\DoxyCodeLine{00015\ );}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ au::Quantity<au::Degrees,\ double>\ angular\_error(}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<au::Degrees,\ double>\ target,\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<au::Degrees,\ double>\ reading}
+\DoxyCodeLine{00020\ );}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Units>}
+\DoxyCodeLine{00023\ au::Quantity<Units,\ double>\ relative\_target(}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<Units,\ double>\ start,}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<Units,\ double>\ target}
+\DoxyCodeLine{00026\ )\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{return}\ start\ +\ target;}
+\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \}}
+
+\end{DoxyCode}

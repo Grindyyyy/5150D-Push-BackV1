@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structdlib_1_1_pid_config" kind="struct" language="C++" prot="public">
+    <compoundname>dlib::PidConfig</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdlib_1_1_pid_config_1ae9e0934a431b6580ea185a908259db1f" prot="public" static="no" mutable="no">
+        <type><ref refid="structdlib_1_1_pid_gains" kindref="compound">PidGains</ref></type>
+        <definition>PidGains dlib::PidConfig::gains</definition>
+        <argsstring></argsstring>
+        <name>gains</name>
+        <qualifiedname>dlib::PidConfig::gains</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="24" column="14" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdlib_1_1_pid_config_1a6ae29703d7a6461df52dcc0deab3d131" prot="public" static="no" mutable="no">
+        <type>au::Quantity&lt; au::Volts, double &gt;</type>
+        <definition>au::Quantity&lt;au::Volts, double&gt; dlib::PidConfig::max_voltage</definition>
+        <argsstring></argsstring>
+        <name>max_voltage</name>
+        <qualifiedname>dlib::PidConfig::max_voltage</qualifiedname>
+        <initializer>= au::volts(12)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="25" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>dlib::PidConfig</label>
+        <link refid="structdlib_1_1_pid_config"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>gains</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dlib::PidGains</label>
+        <link refid="structdlib_1_1_pid_gains"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="23" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="23" bodyend="26"/>
+    <listofallmembers>
+      <member refid="structdlib_1_1_pid_config_1ae9e0934a431b6580ea185a908259db1f" prot="public" virt="non-virtual"><scope>dlib::PidConfig</scope><name>gains</name></member>
+      <member refid="structdlib_1_1_pid_config_1a6ae29703d7a6461df52dcc0deab3d131" prot="public" virt="non-virtual"><scope>dlib::PidConfig</scope><name>max_voltage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

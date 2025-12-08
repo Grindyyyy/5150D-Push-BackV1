@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structdlib_1_1detail_1_1_pid_gains_with_units" kind="struct" language="C++" prot="public">
+    <compoundname>dlib::detail::PidGainsWithUnits</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename Units</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdlib_1_1detail_1_1_pid_gains_with_units_1adb9f0cf5f616b95574c0d9195882315d" prot="public" static="no" mutable="no">
+        <type>au::Quantity&lt; decltype(au::Volts{}/Units{}), double &gt;</type>
+        <definition>au::Quantity&lt;decltype(au::Volts{} / Units{}), double&gt; dlib::detail::PidGainsWithUnits&lt; Units &gt;::kp</definition>
+        <argsstring></argsstring>
+        <name>kp</name>
+        <qualifiedname>dlib::detail::PidGainsWithUnits::kp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="31" column="22" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdlib_1_1detail_1_1_pid_gains_with_units_1aca5214c5741cd854fe807cc50d8270c5" prot="public" static="no" mutable="no">
+        <type>au::Quantity&lt; decltype(au::Volts{}/au::TimeIntegral&lt; Units &gt;{}), double &gt;</type>
+        <definition>au::Quantity&lt;decltype(au::Volts{} / au::TimeIntegral&lt;Units&gt;{}), double&gt; dlib::detail::PidGainsWithUnits&lt; Units &gt;::ki</definition>
+        <argsstring></argsstring>
+        <name>ki</name>
+        <qualifiedname>dlib::detail::PidGainsWithUnits::ki</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="32" column="22" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdlib_1_1detail_1_1_pid_gains_with_units_1a8325b1152ab7b2304c6386eebf1317f2" prot="public" static="no" mutable="no">
+        <type>au::Quantity&lt; decltype(au::Volts{}/au::TimeDerivative&lt; Units &gt;{}), double &gt;</type>
+        <definition>au::Quantity&lt;decltype(au::Volts{} / au::TimeDerivative&lt;Units&gt;{}), double&gt; dlib::detail::PidGainsWithUnits&lt; Units &gt;::kd</definition>
+        <argsstring></argsstring>
+        <name>kd</name>
+        <qualifiedname>dlib::detail::PidGainsWithUnits::kd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="33" column="22" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structdlib_1_1detail_1_1_pid_gains_with_units_1a7ad0b04d250621520c3d9ad1c052677a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dlib::detail::PidGainsWithUnits&lt; Units &gt;::PidGainsWithUnits</definition>
+        <argsstring>(PidGains gains)</argsstring>
+        <name>PidGainsWithUnits</name>
+        <qualifiedname>dlib::detail::PidGainsWithUnits::PidGainsWithUnits</qualifiedname>
+        <param>
+          <type><ref refid="structdlib_1_1_pid_gains" kindref="compound">PidGains</ref></type>
+          <declname>gains</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="35" column="9" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="35" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="30" column="5" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="30" bodyend="43"/>
+    <listofallmembers>
+      <member refid="structdlib_1_1detail_1_1_pid_gains_with_units_1a8325b1152ab7b2304c6386eebf1317f2" prot="public" virt="non-virtual"><scope>dlib::detail::PidGainsWithUnits</scope><name>kd</name></member>
+      <member refid="structdlib_1_1detail_1_1_pid_gains_with_units_1aca5214c5741cd854fe807cc50d8270c5" prot="public" virt="non-virtual"><scope>dlib::detail::PidGainsWithUnits</scope><name>ki</name></member>
+      <member refid="structdlib_1_1detail_1_1_pid_gains_with_units_1adb9f0cf5f616b95574c0d9195882315d" prot="public" virt="non-virtual"><scope>dlib::detail::PidGainsWithUnits</scope><name>kp</name></member>
+      <member refid="structdlib_1_1detail_1_1_pid_gains_with_units_1a7ad0b04d250621520c3d9ad1c052677a" prot="public" virt="non-virtual"><scope>dlib::detail::PidGainsWithUnits</scope><name>PidGainsWithUnits</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

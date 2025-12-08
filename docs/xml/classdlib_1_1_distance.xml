@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classdlib_1_1_distance" kind="class" language="C++" prot="public">
+    <compoundname>dlib::Distance</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classdlib_1_1_distance_1af6e81c3a6eec51cd4c4a66e4b1fb1162" prot="public" static="no" mutable="no">
+        <type>pros::Distance</type>
+        <definition>pros::Distance dlib::Distance::raw</definition>
+        <argsstring></argsstring>
+        <name>raw</name>
+        <qualifiedname>dlib::Distance::raw</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/distance.hpp" line="26" column="20" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/distance.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdlib_1_1_distance_1ae11c5de7660ae277ef8d1d543d093600" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dlib::Distance::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <qualifiedname>dlib::Distance::initialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/distance.hpp" line="20" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdlib_1_1_distance_1a77930c5ec9edd230a6896393477f2ab2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>au::Quantity&lt; au::Milli&lt; au::Meters &gt;, double &gt;</type>
+        <definition>au::Quantity&lt; au::Milli&lt; au::Meters &gt;, double &gt; dlib::Distance::get_distance</definition>
+        <argsstring>()</argsstring>
+        <name>get_distance</name>
+        <qualifiedname>dlib::Distance::get_distance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/distance.hpp" line="22" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdlib_1_1_distance_1a54c49214c9be799fd736406604405a42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dlib::Distance::Distance</definition>
+        <argsstring>(DistanceConfig config)</argsstring>
+        <name>Distance</name>
+        <qualifiedname>dlib::Distance::Distance</qualifiedname>
+        <param>
+          <type><ref refid="structdlib_1_1_distance_config" kindref="compound">DistanceConfig</ref></type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/distance.hpp" line="24" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/distance.hpp" line="18" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/distance.hpp" bodystart="18" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classdlib_1_1_distance_1a54c49214c9be799fd736406604405a42" prot="public" virt="non-virtual"><scope>dlib::Distance</scope><name>Distance</name></member>
+      <member refid="classdlib_1_1_distance_1a77930c5ec9edd230a6896393477f2ab2" prot="public" virt="non-virtual"><scope>dlib::Distance</scope><name>get_distance</name></member>
+      <member refid="classdlib_1_1_distance_1ae11c5de7660ae277ef8d1d543d093600" prot="public" virt="non-virtual"><scope>dlib::Distance</scope><name>initialize</name></member>
+      <member refid="classdlib_1_1_distance_1af6e81c3a6eec51cd4c4a66e4b1fb1162" prot="public" virt="non-virtual"><scope>dlib::Distance</scope><name>raw</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

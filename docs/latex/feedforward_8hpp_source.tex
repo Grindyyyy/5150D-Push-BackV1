@@ -1,0 +1,71 @@
+\doxysection{feedforward.\+hpp}
+\hypertarget{feedforward_8hpp_source}{}\label{feedforward_8hpp_source}\index{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/controllers/feedforward.hpp@{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/controllers/feedforward.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}au/au.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }dlib\ \{}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ feedforward.hpp}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdlib_1_1_feedforward_gains}{FeedforwardGains}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structdlib_1_1_feedforward_gains_a189cb35d422a4de220fe002b98bff755}{ks}}\ =\ 0;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structdlib_1_1_feedforward_gains_a12719c6d3801277080236f8c096df11d}{kv}}\ =\ 0;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structdlib_1_1_feedforward_gains_a792d62e19c4af373b312f68f8b0babf4}{ka}}\ =\ 0;}
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{namespace\ }detail\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Units>}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdlib_1_1detail_1_1_feedforward_gains_with_units}{FeedforwardGainsWithUnits}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ au::Quantity<au::Volts,\ double>\ ks;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ au::Quantity<\textcolor{keyword}{decltype}(au::Volts\{\}\ /\ au::TimeDerivative<Units>\{\}),\ \textcolor{keywordtype}{double}>\ kv;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ au::Quantity<\textcolor{keyword}{decltype}(au::Volts\{\}\ /\ au::Time2ndDerivative<Units>\{\}),\ \textcolor{keywordtype}{double}>\ ka;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structdlib_1_1detail_1_1_feedforward_gains_with_units}{FeedforwardGainsWithUnits}}(}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_feedforward_gains}{FeedforwardGains}}\ gains}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ )\ :\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ ks(au::volts(gains.\mbox{\hyperlink{structdlib_1_1_feedforward_gains_a189cb35d422a4de220fe002b98bff755}{ks}})),\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ kv(au::make\_quantity<\textcolor{keyword}{decltype}(au::Volts\{\}\ /\ au::TimeDerivative<Units>\{\})>(gains.\mbox{\hyperlink{structdlib_1_1_feedforward_gains_a12719c6d3801277080236f8c096df11d}{kv}})),\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ ka(au::make\_quantity<\textcolor{keyword}{decltype}(au::Volts\{\}\ /\ au::Time2ndDerivative<Units>\{\})>(gains.\mbox{\hyperlink{structdlib_1_1_feedforward_gains_a792d62e19c4af373b312f68f8b0babf4}{ka}}))\ \{}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \};}
+\DoxyCodeLine{00039\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Units>}
+\DoxyCodeLine{00042\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdlib_1_1_feedforward}{Feedforward}}\ \{}
+\DoxyCodeLine{00043\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{classdlib_1_1_feedforward}{Feedforward}}(\mbox{\hyperlink{structdlib_1_1_feedforward_gains}{FeedforwardGains}}\ gains)\ :\ gains(gains)\ \{}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00066\ \ \ \ \ au::Quantity<au::Volts,\ double>\ \mbox{\hyperlink{classdlib_1_1_feedforward_a6197dd2774c291e6d0b4843f22ebf4d9}{calculate}}(}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<au::TimeDerivative<Units>,\ \textcolor{keywordtype}{double}>\ target\_velocity,\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<au::Time2ndDerivative<Units>,\ \textcolor{keywordtype}{double}>\ target\_acceleration}
+\DoxyCodeLine{00069\ \ \ \ \ )\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ s\ =\ au::copysign(gains.\mbox{\hyperlink{structdlib_1_1_feedforward_gains_a189cb35d422a4de220fe002b98bff755}{ks}},\ target\_velocity);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ v\ =\ gains.\mbox{\hyperlink{structdlib_1_1_feedforward_gains_a12719c6d3801277080236f8c096df11d}{kv}}\ *\ target\_velocity;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ a\ =\ gains.\mbox{\hyperlink{structdlib_1_1_feedforward_gains_a792d62e19c4af373b312f68f8b0babf4}{ka}}\ *\ target\_acceleration;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ output\ =\ s\ +\ v\ +\ a;}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ output;}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_feedforward_gains}{FeedforwardGains}}\ \mbox{\hyperlink{classdlib_1_1_feedforward_adf4976c390cbbda70371b71b43d1e1cb}{get\_gains}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>gains;}
+\DoxyCodeLine{00097\ \ \ \ \ \}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdlib_1_1_feedforward_a463de4825810bab936543a7a71d9059e}{set\_gains}}(\mbox{\hyperlink{structdlib_1_1_feedforward_gains}{FeedforwardGains}}\ new\_gains)\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ this-\/>gains\ =\ new\_gains;}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keyword}{using\ }BaseUnits\ =\ au::UnitImpl<au::detail::DimT<Units>>;}
+\DoxyCodeLine{00121\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1detail_1_1_feedforward_gains_with_units}{detail::FeedforwardGainsWithUnits<BaseUnits>}}\ gains;}
+\DoxyCodeLine{00122\ \};}
+\DoxyCodeLine{00123\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="chassis_8hpp" kind="file" language="C++">
+    <compoundname>chassis.hpp</compoundname>
+    <includes refid="motor__group_8hpp" local="yes">motor_group.hpp</includes>
+    <includes local="yes">pros/abstract_motor.hpp</includes>
+    <includes local="no">initializer_list</includes>
+    <includedby refid="dlib_8hpp" local="yes">C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/dlib.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/chassis.hpp</label>
+        <link refid="chassis_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>motor_group.hpp</label>
+        <link refid="motor__group_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>au/au.hpp</label>
+      </node>
+      <node id="5">
+        <label>initializer_list</label>
+      </node>
+      <node id="6">
+        <label>pros/abstract_motor.hpp</label>
+      </node>
+      <node id="3">
+        <label>pros/motor_group.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/dlib.hpp</label>
+        <link refid="dlib_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/chassis.hpp</label>
+        <link refid="chassis_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structdlib_1_1_chassis_config" prot="public">dlib::ChassisConfig</innerclass>
+    <innerclass refid="classdlib_1_1_chassis" prot="public">dlib::Chassis</innerclass>
+    <innernamespace refid="namespacedlib">dlib</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;motor_group.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pros/abstract_motor.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;initializer_list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">dlib<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>chassis.hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="structdlib_1_1_chassis_config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdlib_1_1_chassis_config" kindref="compound">ChassisConfig</ref><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1_motor_group_config" kindref="compound">MotorGroupConfig</ref><sp/>left_motors;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1_motor_group_config" kindref="compound">MotorGroupConfig</ref><sp/>right_motors;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>pros::MotorGearset<sp/>drive_gearset;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Rpm,<sp/>double&gt;<sp/>base_rpm;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Rpm,<sp/>double&gt;<sp/>total_rpm;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/>wheel_diameter;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1_chassis_config" kindref="compound">ChassisConfig</ref>(</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1_motor_group_config" kindref="compound">MotorGroupConfig</ref><sp/>left_motors_config,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1_motor_group_config" kindref="compound">MotorGroupConfig</ref><sp/>right_motors_config,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pros::MotorGearset<sp/>drive_gearset,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Rpm,<sp/>double&gt;<sp/>total_rpm,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/>wheel_diameter</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classdlib_1_1_chassis" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdlib_1_1_chassis" kindref="compound">Chassis</ref><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51" refid="classdlib_1_1_chassis_1ade24173196b00aa280611064c9e6623f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdlib_1_1_chassis_1ade24173196b00aa280611064c9e6623f" kindref="member">initialize</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classdlib_1_1_chassis_1a5eb93891de9b8904cefe1cb48dad8e9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdlib_1_1_chassis_1a5eb93891de9b8904cefe1cb48dad8e9f" kindref="member">move</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>power);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classdlib_1_1_chassis_1aef94afa1f9a56aa672f4b189a464066d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdlib_1_1_chassis_1aef94afa1f9a56aa672f4b189a464066d" kindref="member">move_voltage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>au::Quantity&lt;au::Volts,<sp/>double&gt;<sp/>voltage);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106" refid="classdlib_1_1_chassis_1ae6a50392912d6561535583b4186ae2fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdlib_1_1_chassis_1ae6a50392912d6561535583b4186ae2fb" kindref="member">turn</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/>power);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="classdlib_1_1_chassis_1a6741507c52e908e672a28f50de535308" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdlib_1_1_chassis_1a6741507c52e908e672a28f50de535308" kindref="member">turn_voltage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>au::Quantity&lt;au::Volts,<sp/>double&gt;<sp/>voltage);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="142" refid="classdlib_1_1_chassis_1a42c9da6ea7f5b498a233cd2e4bdc3a5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdlib_1_1_chassis_1a42c9da6ea7f5b498a233cd2e4bdc3a5a" kindref="member">arcade</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/>power,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/><ref refid="classdlib_1_1_chassis_1ae6a50392912d6561535583b4186ae2fb" kindref="member">turn</ref>);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="classdlib_1_1_chassis_1a768de976c86843e151f6db4dbb9d6b7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdlib_1_1_chassis_1a768de976c86843e151f6db4dbb9d6b7f" kindref="member">brake</ref>();</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="156" refid="classdlib_1_1_chassis_1acc41ff6905d823b3c6fd1eed681592b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/><ref refid="classdlib_1_1_chassis_1acc41ff6905d823b3c6fd1eed681592b5" kindref="member">revolutions_to_displacement</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>au::Quantity&lt;au::Revolutions,<sp/>double&gt;<sp/>revolutions)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="164" refid="classdlib_1_1_chassis_1a52d0b24bd41a34d3c7d2bf3514cb3516" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::MetersPerSecond,<sp/>double&gt;<sp/><ref refid="classdlib_1_1_chassis_1a52d0b24bd41a34d3c7d2bf3514cb3516" kindref="member">rpm_to_velocity</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>au::Quantity&lt;au::Rpm,<sp/>double&gt;<sp/>rpm)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="171" refid="classdlib_1_1_chassis_1a130a042aee91f7da49d23791329cd177" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/><ref refid="classdlib_1_1_chassis_1a130a042aee91f7da49d23791329cd177" kindref="member">left_motors_displacement</ref>();</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="classdlib_1_1_chassis_1ab84a7e10b82e2b698cc396deef90443b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/><ref refid="classdlib_1_1_chassis_1ab84a7e10b82e2b698cc396deef90443b" kindref="member">right_motors_displacement</ref>();</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="classdlib_1_1_chassis_1a3c886b2fbd96ec6e285454f08cf32494" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/><ref refid="classdlib_1_1_chassis_1a3c886b2fbd96ec6e285454f08cf32494" kindref="member">forward_motor_displacement</ref>();</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="192" refid="classdlib_1_1_chassis_1aca9fcffbf7f1751d4c3718ecfc74d390" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::MetersPerSecond,<sp/>double&gt;<sp/><ref refid="classdlib_1_1_chassis_1aca9fcffbf7f1751d4c3718ecfc74d390" kindref="member">left_motors_velocity</ref>();</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="classdlib_1_1_chassis_1aa64b3312ed89c9453f5cfb8b8909494c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::MetersPerSecond,<sp/>double&gt;<sp/><ref refid="classdlib_1_1_chassis_1aa64b3312ed89c9453f5cfb8b8909494c" kindref="member">right_motors_velocity</ref>();</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206" refid="classdlib_1_1_chassis_1ad3d3af59c798eaa4953fc7094b6424e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::MetersPerSecond,<sp/>double&gt;<sp/><ref refid="classdlib_1_1_chassis_1ad3d3af59c798eaa4953fc7094b6424e4" kindref="member">forward_motor_velocity</ref>();</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdlib_1_1_chassis" kindref="compound">Chassis</ref>(<ref refid="structdlib_1_1_chassis_config" kindref="compound">ChassisConfig</ref><sp/>config);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdlib_1_1_motor_group" kindref="compound">dlib::MotorGroup</ref><sp/>left_motors;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdlib_1_1_motor_group" kindref="compound">dlib::MotorGroup</ref><sp/>right_motors;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>pros::MotorGearset<sp/>drive_gearset;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Rpm,<sp/>double&gt;<sp/>base_rpm;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Rpm,<sp/>double&gt;<sp/>total_rpm;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/>wheel_diameter;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/chassis.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classdlib_1_1_error_time_settler" kind="class" language="C++" prot="public">
+    <compoundname>dlib::ErrorTimeSettler</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename Units</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classdlib_1_1_error_time_settler_1a43d002c8f2b16c79c96fd282f45556d8" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dlib::ErrorTimeSettler&lt; Units &gt;::is_settling</definition>
+        <argsstring></argsstring>
+        <name>is_settling</name>
+        <qualifiedname>dlib::ErrorTimeSettler::is_settling</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/error_time_settler.hpp" line="84" column="10" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/error_time_settler.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdlib_1_1_error_time_settler_1a9451888a6c2c0cfad7e842c4ac7d04ed" prot="protected" static="no" mutable="no">
+        <type>au::Quantity&lt; au::Seconds, double &gt;</type>
+        <definition>au::Quantity&lt;au::Seconds, double&gt; dlib::ErrorTimeSettler&lt; Units &gt;::time_below_threshold</definition>
+        <argsstring></argsstring>
+        <name>time_below_threshold</name>
+        <qualifiedname>dlib::ErrorTimeSettler::time_below_threshold</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/error_time_settler.hpp" line="85" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/error_time_settler.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdlib_1_1_error_time_settler_1af00b439779da9a0fd18d45d41f590885" prot="protected" static="no" mutable="no">
+        <type>const au::Quantity&lt; Units, double &gt;</type>
+        <definition>const au::Quantity&lt;Units, double&gt; dlib::ErrorTimeSettler&lt; Units &gt;::error_threshold</definition>
+        <argsstring></argsstring>
+        <name>error_threshold</name>
+        <qualifiedname>dlib::ErrorTimeSettler::error_threshold</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/error_time_settler.hpp" line="87" column="24" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/error_time_settler.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdlib_1_1_error_time_settler_1a585365606a3dec7c05d35c97f890e616" prot="protected" static="no" mutable="no">
+        <type>const au::Quantity&lt; au::Seconds, double &gt;</type>
+        <definition>const au::Quantity&lt;au::Seconds, double&gt; dlib::ErrorTimeSettler&lt; Units &gt;::settle_time</definition>
+        <argsstring></argsstring>
+        <name>settle_time</name>
+        <qualifiedname>dlib::ErrorTimeSettler::settle_time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/error_time_settler.hpp" line="88" column="24" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/error_time_settler.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdlib_1_1_error_time_settler_1a2570c6c4c2f93c9da11d352444e70d21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dlib::ErrorTimeSettler&lt; Units &gt;::ErrorTimeSettler</definition>
+        <argsstring>(au::Quantity&lt; Units, double &gt; error_threshold, au::Quantity&lt; au::Seconds, double &gt; settle_time)</argsstring>
+        <name>ErrorTimeSettler</name>
+        <qualifiedname>dlib::ErrorTimeSettler::ErrorTimeSettler</qualifiedname>
+        <param>
+          <type>au::Quantity&lt; Units, double &gt;</type>
+          <declname>error_threshold</declname>
+        </param>
+        <param>
+          <type>au::Quantity&lt; au::Seconds, double &gt;</type>
+          <declname>settle_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/error_time_settler.hpp" line="11" column="5" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/error_time_settler.hpp" bodystart="11" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdlib_1_1_error_time_settler_1a7e74b5131c4647fafc384e8c2823f895" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dlib::ErrorTimeSettler&lt; Units &gt;::is_settled</definition>
+        <argsstring>(au::Quantity&lt; Units, double &gt; error, au::Quantity&lt; au::Seconds, double &gt; period)</argsstring>
+        <name>is_settled</name>
+        <qualifiedname>dlib::ErrorTimeSettler::is_settled</qualifiedname>
+        <param>
+          <type>au::Quantity&lt; Units, double &gt;</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>au::Quantity&lt; au::Seconds, double &gt;</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+<para>Check if controller has settled. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>distance from setpoint </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time since last settle iteration - current time - last time </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>if the controller has settled</para>
+</simplesect>
+<bold>Example</bold> <programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="classdlib_1_1_pid" kindref="compound">dlib::Pid&lt;Meters&gt;</ref><sp/>pid({1,<sp/>2,<sp/>3});</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Construct<sp/>a<sp/>last_period<sp/>period</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">Quantity&lt;Seconds,<sp/>double&gt;<sp/>last_period;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Construct<sp/>an<sp/>TimeErrorSettler<sp/>controller</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">dlib::TimeErrorSettler&lt;Meters&gt;<sp/>pid_settler<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>meters(0.01),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>maximum<sp/>error<sp/>the<sp/>pid<sp/>can<sp/>settle<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>seconds(0.250)<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>time<sp/>the<sp/>Pid<sp/>needs<sp/>to<sp/>remain<sp/>below<sp/>the<sp/>error<sp/>threshold</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>settled<sp/>=<sp/>pid_settler.is_settled(pid.get_error(),<sp/>seconds(0.02));</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/error_time_settler.hpp" line="45" column="10" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/error_time_settler.hpp" bodystart="45" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classdlib_1_1_error_time_settler_1af432f4115d0eff9738f46b8bdc8518ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dlib::ErrorTimeSettler&lt; Units &gt;::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <qualifiedname>dlib::ErrorTimeSettler::reset</qualifiedname>
+        <briefdescription>
+<para>Reset all of the settler state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/error_time_settler.hpp" line="79" column="10" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/error_time_settler.hpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/error_time_settler.hpp" line="9" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/error_time_settler.hpp" bodystart="9" bodyend="90"/>
+    <listofallmembers>
+      <member refid="classdlib_1_1_error_time_settler_1af00b439779da9a0fd18d45d41f590885" prot="protected" virt="non-virtual"><scope>dlib::ErrorTimeSettler</scope><name>error_threshold</name></member>
+      <member refid="classdlib_1_1_error_time_settler_1a2570c6c4c2f93c9da11d352444e70d21" prot="public" virt="non-virtual"><scope>dlib::ErrorTimeSettler</scope><name>ErrorTimeSettler</name></member>
+      <member refid="classdlib_1_1_error_time_settler_1a7e74b5131c4647fafc384e8c2823f895" prot="public" virt="non-virtual"><scope>dlib::ErrorTimeSettler</scope><name>is_settled</name></member>
+      <member refid="classdlib_1_1_error_time_settler_1a43d002c8f2b16c79c96fd282f45556d8" prot="protected" virt="non-virtual"><scope>dlib::ErrorTimeSettler</scope><name>is_settling</name></member>
+      <member refid="classdlib_1_1_error_time_settler_1af432f4115d0eff9738f46b8bdc8518ab" prot="public" virt="non-virtual"><scope>dlib::ErrorTimeSettler</scope><name>reset</name></member>
+      <member refid="classdlib_1_1_error_time_settler_1a585365606a3dec7c05d35c97f890e616" prot="protected" virt="non-virtual"><scope>dlib::ErrorTimeSettler</scope><name>settle_time</name></member>
+      <member refid="classdlib_1_1_error_time_settler_1a9451888a6c2c0cfad7e842c4ac7d04ed" prot="protected" virt="non-virtual"><scope>dlib::ErrorTimeSettler</scope><name>time_below_threshold</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

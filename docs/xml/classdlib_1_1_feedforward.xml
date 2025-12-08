@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classdlib_1_1_feedforward" kind="class" language="C++" prot="public">
+    <compoundname>dlib::Feedforward</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename Units</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="classdlib_1_1_feedforward_1afffb67cc86376ca29ec845f7bf5ffdc4" prot="protected" static="no">
+        <type>au::UnitImpl&lt; au::detail::DimT&lt; Units &gt; &gt;</type>
+        <definition>using dlib::Feedforward&lt; Units &gt;::BaseUnits =  au::UnitImpl&lt;au::detail::DimT&lt;Units&gt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>BaseUnits</name>
+        <qualifiedname>dlib::Feedforward::BaseUnits</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" line="120" column="5" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classdlib_1_1_feedforward_1a479d8bf1ca21cc31f2a2237b2edd0e26" prot="protected" static="no" mutable="no">
+        <type><ref refid="structdlib_1_1detail_1_1_feedforward_gains_with_units" kindref="compound">detail::FeedforwardGainsWithUnits</ref>&lt; BaseUnits &gt;</type>
+        <definition>detail::FeedforwardGainsWithUnits&lt;BaseUnits&gt; dlib::Feedforward&lt; Units &gt;::gains</definition>
+        <argsstring></argsstring>
+        <name>gains</name>
+        <qualifiedname>dlib::Feedforward::gains</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" line="121" column="39" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdlib_1_1_feedforward_1a342b4492c166e28de82bc5da296b2edd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dlib::Feedforward&lt; Units &gt;::Feedforward</definition>
+        <argsstring>(FeedforwardGains gains)</argsstring>
+        <name>Feedforward</name>
+        <qualifiedname>dlib::Feedforward::Feedforward</qualifiedname>
+        <param>
+          <type><ref refid="structdlib_1_1_feedforward_gains" kindref="compound">FeedforwardGains</ref></type>
+          <declname>gains</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" line="44" column="5" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classdlib_1_1_feedforward_1a6197dd2774c291e6d0b4843f22ebf4d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>au::Quantity&lt; au::Volts, double &gt;</type>
+        <definition>au::Quantity&lt; au::Volts, double &gt; dlib::Feedforward&lt; Units &gt;::calculate</definition>
+        <argsstring>(const au::Quantity&lt; au::TimeDerivative&lt; Units &gt;, double &gt; target_velocity, const au::Quantity&lt; au::Time2ndDerivative&lt; Units &gt;, double &gt; target_acceleration)</argsstring>
+        <name>calculate</name>
+        <qualifiedname>dlib::Feedforward::calculate</qualifiedname>
+        <param>
+          <type>const au::Quantity&lt; au::TimeDerivative&lt; Units &gt;, double &gt;</type>
+          <declname>target_velocity</declname>
+        </param>
+        <param>
+          <type>const au::Quantity&lt; au::Time2ndDerivative&lt; Units &gt;, double &gt;</type>
+          <declname>target_acceleration</declname>
+        </param>
+        <briefdescription>
+<para>Calculate <ref refid="classdlib_1_1_feedforward" kindref="compound">Feedforward</ref> voltage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target_velocity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the target velocity </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>target_accleration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the target acceleration </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the voltage required for the mechanism to achieve the target velocity and acceleration</para>
+</simplesect>
+<bold>Example</bold> <programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>Construct<sp/>a<sp/>Feedforward<sp/>controller</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classdlib_1_1_feedforward" kindref="compound">dlib::Feedforward</ref><sp/>ff<sp/>=<sp/><ref refid="classdlib_1_1_feedforward" kindref="compound">dlib::Feedforward</ref>({1,<sp/>2,<sp/>3});</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Calculate<sp/>the<sp/>voltage<sp/>needed<sp/>to<sp/>coast<sp/>at<sp/>1<sp/>m/s</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">Quantity&lt;Volts,<sp/>double&gt;<sp/>voltage<sp/>=<sp/>ff.<ref refid="classdlib_1_1_feedforward_1a6197dd2774c291e6d0b4843f22ebf4d9" kindref="member">calculate</ref>(meters_per_second(1),<sp/>ZERO);<sp/></highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" line="66" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" bodystart="66" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classdlib_1_1_feedforward_1adf4976c390cbbda70371b71b43d1e1cb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structdlib_1_1_feedforward_gains" kindref="compound">FeedforwardGains</ref></type>
+        <definition>FeedforwardGains dlib::Feedforward&lt; Units &gt;::get_gains</definition>
+        <argsstring>() const</argsstring>
+        <name>get_gains</name>
+        <qualifiedname>dlib::Feedforward::get_gains</qualifiedname>
+        <briefdescription>
+<para>Get <ref refid="classdlib_1_1_feedforward" kindref="compound">Feedforward</ref> Gains. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the current gains for the feedforward controller</para>
+</simplesect>
+<bold>Example</bold> <programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>Construct<sp/>a<sp/>Feedforward<sp/>controller</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classdlib_1_1_feedforward" kindref="compound">dlib::Feedforward</ref><sp/>ff<sp/>=<sp/><ref refid="classdlib_1_1_feedforward" kindref="compound">dlib::Feedforward</ref>({1,<sp/>2,<sp/>3});</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>Feedforward<sp/>gains</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="structdlib_1_1_feedforward_gains" kindref="compound">dlib::FeedforwardGains</ref><sp/>gains<sp/>=<sp/>ff.<ref refid="classdlib_1_1_feedforward_1adf4976c390cbbda70371b71b43d1e1cb" kindref="member">get_gains</ref>();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" line="95" column="22" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" bodystart="95" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classdlib_1_1_feedforward_1a463de4825810bab936543a7a71d9059e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dlib::Feedforward&lt; Units &gt;::set_gains</definition>
+        <argsstring>(FeedforwardGains new_gains)</argsstring>
+        <name>set_gains</name>
+        <qualifiedname>dlib::Feedforward::set_gains</qualifiedname>
+        <param>
+          <type><ref refid="structdlib_1_1_feedforward_gains" kindref="compound">FeedforwardGains</ref></type>
+          <declname>new_gains</declname>
+        </param>
+        <briefdescription>
+<para>Set <ref refid="classdlib_1_1_feedforward" kindref="compound">Feedforward</ref> gains. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>new_gains</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new gains for the feedforward controller</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>Example</bold> <programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>Construct<sp/>a<sp/>Feedforward<sp/>controller</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classdlib_1_1_feedforward" kindref="compound">dlib::Feedforward</ref><sp/>ff<sp/>=<sp/><ref refid="classdlib_1_1_feedforward" kindref="compound">dlib::Feedforward</ref>({1,<sp/>2,<sp/>3});</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>Feedforward<sp/>gains</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">ff.<ref refid="classdlib_1_1_feedforward_1a463de4825810bab936543a7a71d9059e" kindref="member">set_gains</ref>({4,<sp/>5,<sp/>6});</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" line="115" column="10" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" bodystart="115" bodyend="117"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>dlib::Feedforward&lt; Units &gt;</label>
+        <link refid="classdlib_1_1_feedforward"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>gains</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dlib::detail::FeedforwardGainsWithUnits&lt; BaseUnits &gt;</label>
+        <link refid="structdlib_1_1detail_1_1_feedforward_gains_with_units"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" line="42" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" bodystart="42" bodyend="122"/>
+    <listofallmembers>
+      <member refid="classdlib_1_1_feedforward_1afffb67cc86376ca29ec845f7bf5ffdc4" prot="protected" virt="non-virtual"><scope>dlib::Feedforward</scope><name>BaseUnits</name></member>
+      <member refid="classdlib_1_1_feedforward_1a6197dd2774c291e6d0b4843f22ebf4d9" prot="public" virt="non-virtual"><scope>dlib::Feedforward</scope><name>calculate</name></member>
+      <member refid="classdlib_1_1_feedforward_1a342b4492c166e28de82bc5da296b2edd" prot="public" virt="non-virtual"><scope>dlib::Feedforward</scope><name>Feedforward</name></member>
+      <member refid="classdlib_1_1_feedforward_1a479d8bf1ca21cc31f2a2237b2edd0e26" prot="protected" virt="non-virtual"><scope>dlib::Feedforward</scope><name>gains</name></member>
+      <member refid="classdlib_1_1_feedforward_1adf4976c390cbbda70371b71b43d1e1cb" prot="public" virt="non-virtual"><scope>dlib::Feedforward</scope><name>get_gains</name></member>
+      <member refid="classdlib_1_1_feedforward_1a463de4825810bab936543a7a71d9059e" prot="public" virt="non-virtual"><scope>dlib::Feedforward</scope><name>set_gains</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

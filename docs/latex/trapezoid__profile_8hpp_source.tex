@@ -1,0 +1,172 @@
+\doxysection{trapezoid\+\_\+profile.\+hpp}
+\hypertarget{trapezoid__profile_8hpp_source}{}\label{trapezoid__profile_8hpp_source}\index{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/trajectories/trapezoid\_profile.hpp@{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/trajectories/trapezoid\_profile.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}au/au.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}dlib/trajectories/profile\_setpoint.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }dlib\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ trapezoid\_profile.hpp}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{enum\ class}\ TrapezoidProfileStage\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ Accelerating,}
+\DoxyCodeLine{00013\ \ \ \ \ Coasting,}
+\DoxyCodeLine{00014\ \ \ \ \ Decelerating,}
+\DoxyCodeLine{00015\ \ \ \ \ Done}
+\DoxyCodeLine{00016\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{template}<}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{typename}\ Units}
+\DoxyCodeLine{00020\ >\ \textcolor{keyword}{requires}\ }
+\DoxyCodeLine{00021\ \ \ \ \ au::HasSameDimension<Units,\ au::Meters>::value\ ||\ }
+\DoxyCodeLine{00022\ \ \ \ \ au::HasSameDimension<Units,\ au::Radians>::value}
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdlib_1_1_trapezoid_profile}{TrapezoidProfile}}\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<au::Time2ndDerivative<Units>,\ \textcolor{keywordtype}{double}>\ m\_max\_acceleration;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<au::Time2ndDerivative<Units>,\textcolor{keywordtype}{double}>\ m\_max\_deceleration;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<au::TimeDerivative<Units>,\ \textcolor{keywordtype}{double}>\ m\_max\_velocity;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<Units,\ double>\ m\_total\_distance;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ au::Quantity<au::Seconds,\ double>\ total\_time;}
+\DoxyCodeLine{00031\ \ \ \ \ au::Quantity<au::Seconds,\ double>\ accel\_cutoff;}
+\DoxyCodeLine{00032\ \ \ \ \ au::Quantity<au::Seconds,\ double>\ coast\_cutoff;}
+\DoxyCodeLine{00033\ \ \ \ \ au::Quantity<au::Seconds,\ double>\ decel\_cutoff;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ invert\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classdlib_1_1_trapezoid_profile}{TrapezoidProfile}}(}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ au::Quantity<au::Time2ndDerivative<Units>,\ \textcolor{keywordtype}{double}>\ max\_acceleration,\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ au::Quantity<au::Time2ndDerivative<Units>,\ \textcolor{keywordtype}{double}>\ max\_deceleration,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ au::Quantity<au::TimeDerivative<Units>,\ \textcolor{keywordtype}{double}>\ max\_velocity,\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ au::Quantity<Units,\ double>\ total\_distance}
+\DoxyCodeLine{00042\ \ \ \ \ )\ \ :\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ m\_max\_acceleration(max\_acceleration),\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ m\_max\_deceleration(max\_deceleration),}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ m\_max\_velocity(max\_velocity),\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ m\_total\_distance(au::abs(total\_distance)),}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ invert(total\_distance\ <\ au::ZERO)}
+\DoxyCodeLine{00048\ \ \ \ \ \{\ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ time\ it\ takes\ to\ accelerate\ to\ max\ velocity}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ accel\_time\ =\ m\_max\_velocity\ /\ m\_max\_acceleration;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ deceleration\ time\ is\ the\ same}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ decel\_time\ =\ accel\_time;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ acceleration\ distance\ via\ x\ =\ 1/2at\string^2}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ accel\_distance\ =\ (m\_max\_acceleration\ *\ au::int\_pow<2>(accel\_time))\ /\ 2;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ deceleration\ distance\ is\ the\ same}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ decel\_distance\ =\ accel\_distance;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ gets\ coast\ distance\ by\ total\ -\/\ (accel\ +\ decel)}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ coast\_distance\ =\ m\_total\_distance\ -\/\ accel\_distance\ -\/\ decel\_distance;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ the\ coast\ distance\ is\ less\ than\ zero,\ compute\ the\ maximum\ acceleration\ we\ can\ reach\ in\ the\ time\ given}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (coast\_distance\ <\ au::ZERO)\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ acquire\ accel\ time\ and\ decel\ time\ using\ transitional\ velocity\ (works\ asymmetrically)}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ transition\_velocity\ =\ au::sqrt((2\ *\ m\_total\_distance\ *\ m\_max\_acceleration\ *\ m\_max\_deceleration)\ /\ (m\_max\_acceleration\ +\ m\_max\_deceleration));}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ accel\_time\ =\ transition\_velocity\ /\ m\_max\_acceleration;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ decel\_time\ =\ transition\_velocity\ /\ m\_max\_deceleration;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ no\ coast\ distance}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ coast\_distance\ =\ au::ZERO;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ std::cout\ <<\ accel\_distance\ <<\ std::endl;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ std::cout\ <<\ coast\_distance\ <<\ std::endl;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ std::cout\ <<\ decel\_distance\ <<\ std::endl;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ compute\ the\ amount\ of\ time\ we\ want\ to\ coast\ for}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ coast\_time\ =\ coast\_distance\ /\ m\_max\_velocity;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ total\ time\ is\ all\ segments\ added\ together}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ total\_time\ =\ accel\_time\ +\ decel\_time\ +\ coast\_time;}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ std::cout\ <<\ m\_max\_velocity\ <<\ std::endl;}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ std::cout\ <<\ total\_time\ <<\ std::endl;}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ accel\_cutoff\ =\ accel\_time;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ coast\_cutoff\ =\ accel\_time\ +\ coast\_time;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ decel\_cutoff\ =\ accel\_time\ +\ coast\_time\ +\ decel\_time;}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{double}\ get\_time()\{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ total\_time.in(au::milli(au::seconds));}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ TrapezoidProfileStage\ stage(\textcolor{keyword}{const}\ au::Quantity<au::Seconds,\ double>\ elapsed\_time)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (elapsed\_time\ <\ this-\/>accel\_cutoff)\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TrapezoidProfileStage::Accelerating;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (elapsed\_time\ <\ this-\/>coast\_cutoff)\ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TrapezoidProfileStage::Coasting;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (elapsed\_time\ <\ this-\/>decel\_cutoff)\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TrapezoidProfileStage::Decelerating;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TrapezoidProfileStage::Done;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_profile_setpoint}{ProfileSetpoint<Units>}}\ calculate(\textcolor{keyword}{const}\ au::Quantity<au::Seconds,\ double>\ elapsed\_time)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ integration\ constant\ for\ the\ coasting\ segment}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ au::Quantity<Units,\ double>\ const\_1\ =\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ -\/m\_max\_velocity\ *\ accel\_cutoff\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ +\ (m\_max\_acceleration\ /\ 2)\ *\ au::int\_pow<2>(accel\_cutoff);}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ integration\ constant\ for\ the\ deceleration\ segment}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ au::Quantity<Units,\ double>\ const\_2\ =\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ -\/m\_max\_acceleration\ *\ total\_time\ *\ coast\_cutoff}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ +\ (m\_max\_acceleration\ /\ 2)\ *\ au::int\_pow<2>(coast\_cutoff)\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ +\ m\_max\_velocity\ *\ coast\_cutoff\ +\ const\_1;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_profile_setpoint}{ProfileSetpoint<Units>}}\ setpoint\ =\ \mbox{\hyperlink{structdlib_1_1_profile_setpoint}{ProfileSetpoint<Units>}}(au::ZERO,\ au::ZERO,\ au::ZERO);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (this-\/>stage(elapsed\_time))\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ TrapezoidProfileStage::Accelerating:}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setpoint\ =\ \mbox{\hyperlink{structdlib_1_1_profile_setpoint}{ProfileSetpoint}}(}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (m\_max\_acceleration\ /\ 2)\ *\ au::int\_pow<2>(elapsed\_time),\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_max\_acceleration\ *\ elapsed\_time,}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_max\_acceleration}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ TrapezoidProfileStage::Coasting:}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setpoint\ =\ \ \mbox{\hyperlink{structdlib_1_1_profile_setpoint}{ProfileSetpoint}}(}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_max\_velocity\ *\ elapsed\_time\ +\ const\_1,}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_max\_velocity,}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_max\_acceleration\ -\/\ m\_max\_acceleration\ \textcolor{comment}{//\ long\ ass\ way\ to\ say\ 0\ bc\ complier\ complains}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ TrapezoidProfileStage::Decelerating:}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setpoint\ =\ \mbox{\hyperlink{structdlib_1_1_profile_setpoint}{ProfileSetpoint}}(}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_max\_acceleration\ *\ total\_time\ *\ elapsed\_time\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/\ (m\_max\_acceleration\ /\ 2)\ *\ au::int\_pow<2>(elapsed\_time)\ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ const\_2,}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_max\_acceleration\ *\ (total\_time\ -\/\ elapsed\_time),}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/m\_max\_acceleration}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ TrapezoidProfileStage::Done:}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setpoint\ =\ \mbox{\hyperlink{structdlib_1_1_profile_setpoint}{ProfileSetpoint<Units>}}(m\_total\_distance,\ au::ZERO,\ au::ZERO);}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ to\ stop\ the\ compiler\ from\ complaining}}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setpoint\ =\ \mbox{\hyperlink{structdlib_1_1_profile_setpoint}{ProfileSetpoint<Units>}}(m\_total\_distance,\ au::ZERO,\ au::ZERO);}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (invert)\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ setpoint.negative();}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ setpoint;}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+\DoxyCodeLine{00165\ \};}
+\DoxyCodeLine{00166\ \}}
+
+\end{DoxyCode}

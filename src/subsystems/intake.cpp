@@ -1,4 +1,10 @@
 #include "subsystems/intake.hpp"
+#include "atomic"
+
+std::atomic<int> spin_bottom{0};
+std::atomic<int> spin_middle{0};
+std::atomic<int> spin_top{0};
+std::atomic<bool> anti_jam{true};
 
 Intake::Intake(
     int8_t motor_port,
@@ -17,9 +23,6 @@ void Intake::set_alliance(Alliance alliance){
 }
 
 void Intake::move(uint8_t power){
-    intake_motor.move(power);
-    intake_motor_2.move(power);
-    middle_motor.move(power);
 }
 
 void Intake::move_voltage(ushort voltage){
@@ -27,44 +30,103 @@ void Intake::move_voltage(ushort voltage){
 }
 
 void Intake::max(void){
-    intake_motor.move_voltage(12000);
-    intake_motor_2.move_voltage(12000);
-    middle_motor.move_voltage(12000);
+    if(spin_bottom != 1){
+        spin_bottom.store(1);
+    }
+    if(spin_middle != 1){
+        spin_middle.store(1);
+    }
+    if(spin_top != 1){
+        spin_top.store(1);
+    }
+    anti_jam.store(true);
 }
 
 void Intake::mid_intake(void){
-    intake_motor.move_voltage(7000);
-    intake_motor_2.move_voltage(7000);
-    middle_motor.move_voltage(7000);
+    anti_jam.store(true);
+    if(spin_bottom != 1){
+        spin_bottom.store(1);
+    }
+    if(spin_middle != 1){
+        spin_middle.store(1);
+    }
+    if(spin_top != 2){
+        spin_top.store(2);
+    }
 }
 
 void Intake::bottom_max_top_rev(void){
-    intake_motor.move_voltage(5500);
-    intake_motor_2.move_voltage(12000);
 }
 
 void Intake::bottom_max_back_rev(void){
-    intake_motor_2.move_voltage(12000);
-    middle_motor.move_voltage(-5000);
+    anti_jam.store(false);
+    if(spin_bottom != 1){
+        spin_bottom.store(1);
+    }
+    if(spin_middle != 3){
+        spin_middle.store(3);
+    }
+    if(spin_top != 0){
+        spin_top.store(0);
+    }
 }
 
 void Intake::bottom_max(){
-    intake_motor_2.move_voltage(12000);
+    anti_jam.store(true);
+    if(spin_bottom != 1){
+        spin_bottom.store(1);
+    }
+    if(spin_middle != 1){
+        spin_middle.store(1);
+    }
+    if(spin_top != 0){
+        spin_top.store(0);
+    }
+}
+
+void Intake::bottom_max_driver(){
+    anti_jam.store(false);
+    if(spin_bottom != 1){
+        spin_bottom.store(1);
+    }
+    if(spin_middle != 1){
+        spin_middle.store(1);
+    }
+    if(spin_top != 0){
+        spin_top.store(0);
+    }
 }
 
 void Intake::bottom_rev(void){
-    intake_motor_2.move_voltage(-12000);
 }
 
 void Intake::reverse(void){
-    intake_motor.move_voltage(-12000);
-    intake_motor_2.move_voltage(-12000);
+    anti_jam.store(false);
+    if(spin_bottom != 3){
+        spin_bottom.store(3);
+    }
+    if(spin_middle != 3){
+        spin_middle.store(3);
+    }
+    if(spin_top != 3){
+        spin_top.store(3);
+    }
+    
 }
 
 void Intake::stop(void){
-    intake_motor.brake();
-    intake_motor_2.brake();
-    middle_motor.brake();
+    
+    if(spin_bottom != 0){
+        spin_bottom.store(0);
+    }
+    if(spin_middle != 0){
+        spin_middle.store(0);
+    }
+    if(spin_top != 0){
+        spin_top.store(0);
+    }
+    
+    anti_jam.store(true);
 }
 
 void Intake::toggle_color_sort(void){

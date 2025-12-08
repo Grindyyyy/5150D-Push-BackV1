@@ -1,0 +1,232 @@
+\doxysection{dlib\+::Pid\texorpdfstring{$<$}{<} Units \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classdlib_1_1_pid}{}\label{classdlib_1_1_pid}\index{dlib::Pid$<$ Units $>$@{dlib::Pid$<$ Units $>$}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdlib_1_1_pid_ac756be64a79e4278d0054bf7302e74fa}\label{classdlib_1_1_pid_ac756be64a79e4278d0054bf7302e74fa} 
+{\bfseries Pid} (\mbox{\hyperlink{structdlib_1_1_pid_config}{Pid\+Config}} config)
+\item 
+\Hypertarget{classdlib_1_1_pid_a8253a9bf3701e13cf5c49814ae57cdb4}\label{classdlib_1_1_pid_a8253a9bf3701e13cf5c49814ae57cdb4} 
+void {\bfseries reset} ()
+\begin{DoxyCompactList}\small\item\em Reset all of the \doxylink{classdlib_1_1_pid}{Pid} state. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ au\+::\+Volts, double $>$ \mbox{\hyperlink{classdlib_1_1_pid_a5bfcf3a44d62bb6fef34689fc0da74f6}{update}} (au\+::\+Quantity$<$ Units, double $>$ error, au\+::\+Quantity$<$ au\+::\+Seconds, double $>$ period)
+\begin{DoxyCompactList}\small\item\em Calculate \doxylink{classdlib_1_1_pid}{Pid} voltage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structdlib_1_1_pid_gains}{Pid\+Gains}} \mbox{\hyperlink{classdlib_1_1_pid_afc0312e900c1ad133d88cec01fbc2dad}{get\+\_\+gains}} () const
+\begin{DoxyCompactList}\small\item\em Get \doxylink{classdlib_1_1_pid}{Pid} gains. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdlib_1_1_pid_a98c02d8fba954028835599a1a7f2993e}{set\+\_\+gains}} (\mbox{\hyperlink{structdlib_1_1_pid_gains}{Pid\+Gains}} gains)
+\begin{DoxyCompactList}\small\item\em Set \doxylink{classdlib_1_1_pid}{Pid} gains. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ Units, double $>$ \mbox{\hyperlink{classdlib_1_1_pid_a6b488b2f3a47ea5f32dcfa32df73dfe4}{get\+\_\+error}} () const
+\begin{DoxyCompactList}\small\item\em Get \doxylink{classdlib_1_1_pid}{Pid} error. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ au\+::\+Time\+Derivative$<$ Units $>$, double $>$ \mbox{\hyperlink{classdlib_1_1_pid_a2a6b072e784aef89243a89517b61a798}{get\+\_\+derivative}} () const
+\begin{DoxyCompactList}\small\item\em Get \doxylink{classdlib_1_1_pid}{Pid} derivative. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ Units, double $>$ \mbox{\hyperlink{classdlib_1_1_pid_affdaffc1e93e448f0c788f746ad51050}{get\+\_\+p}} () const
+\begin{DoxyCompactList}\small\item\em Get the P term of the \doxylink{classdlib_1_1_pid}{Pid}. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ au\+::\+Time\+Integral$<$ Units $>$, double $>$ \mbox{\hyperlink{classdlib_1_1_pid_a5e03e1693412204957f3ad521390cb2b}{get\+\_\+i}} () const
+\begin{DoxyCompactList}\small\item\em Get the I term of the \doxylink{classdlib_1_1_pid}{Pid}. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ au\+::\+Time\+Derivative$<$ Units $>$, double $>$ \mbox{\hyperlink{classdlib_1_1_pid_afab9bdae6dcadf798247f538d7850285}{get\+\_\+d}} () const
+\begin{DoxyCompactList}\small\item\em Get the D term of the \doxylink{classdlib_1_1_pid}{Pid}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdlib_1_1_pid_a47ff3a8598ca82fedc5717f37e9708eb}\label{classdlib_1_1_pid_a47ff3a8598ca82fedc5717f37e9708eb} 
+using {\bfseries Base\+Units} = au\+::\+Unit\+Impl$<$au\+::detail\+::\+DimT$<$Units$>$$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdlib_1_1_pid_a906fb554ccf294d1629c836db9b02326}\label{classdlib_1_1_pid_a906fb554ccf294d1629c836db9b02326} 
+\mbox{\hyperlink{structdlib_1_1detail_1_1_pid_gains_with_units}{detail\+::\+Pid\+Gains\+With\+Units}}$<$ Base\+Units $>$ {\bfseries m\+\_\+gains}
+\item 
+\Hypertarget{classdlib_1_1_pid_a15996e9e121b69c975b21face85d394a}\label{classdlib_1_1_pid_a15996e9e121b69c975b21face85d394a} 
+const au\+::\+Quantity$<$ au\+::\+Volts, double $>$ {\bfseries m\+\_\+max\+\_\+voltage}
+\item 
+\Hypertarget{classdlib_1_1_pid_a2b3073460cbfcae84077774ff6c1f8f5}\label{classdlib_1_1_pid_a2b3073460cbfcae84077774ff6c1f8f5} 
+au\+::\+Quantity$<$ au\+::\+Volts, double $>$ {\bfseries m\+\_\+p} = au\+::\+ZERO
+\item 
+\Hypertarget{classdlib_1_1_pid_a271efb0f55e9bb39483f968b9d06a4ce}\label{classdlib_1_1_pid_a271efb0f55e9bb39483f968b9d06a4ce} 
+au\+::\+Quantity$<$ au\+::\+Volts, double $>$ {\bfseries m\+\_\+i} = au\+::\+ZERO
+\item 
+\Hypertarget{classdlib_1_1_pid_a748feacad68fee031dfcbe4734e9b804}\label{classdlib_1_1_pid_a748feacad68fee031dfcbe4734e9b804} 
+au\+::\+Quantity$<$ au\+::\+Volts, double $>$ {\bfseries m\+\_\+d} = au\+::\+ZERO
+\item 
+\Hypertarget{classdlib_1_1_pid_ac14b7af38d1a72d58c4afb06f98642b6}\label{classdlib_1_1_pid_ac14b7af38d1a72d58c4afb06f98642b6} 
+au\+::\+Quantity$<$ Units, double $>$ {\bfseries m\+\_\+last\+\_\+error}
+\item 
+\Hypertarget{classdlib_1_1_pid_aa10de7ce69126369a70a495c2fe476b5}\label{classdlib_1_1_pid_aa10de7ce69126369a70a495c2fe476b5} 
+au\+::\+Quantity$<$ au\+::\+Time\+Derivative$<$ Units $>$, double $>$ {\bfseries m\+\_\+last\+\_\+derivative}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdlib_1_1_pid_afab9bdae6dcadf798247f538d7850285}\index{dlib::Pid$<$ Units $>$@{dlib::Pid$<$ Units $>$}!get\_d@{get\_d}}
+\index{get\_d@{get\_d}!dlib::Pid$<$ Units $>$@{dlib::Pid$<$ Units $>$}}
+\doxysubsubsection{\texorpdfstring{get\_d()}{get\_d()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_pid_afab9bdae6dcadf798247f538d7850285} 
+template$<$typename Units $>$ \\
+au\+::\+Quantity$<$ au\+::\+Time\+Derivative$<$ Units $>$, double $>$ \mbox{\hyperlink{classdlib_1_1_pid}{dlib\+::\+Pid}}$<$ Units $>$\+::get\+\_\+d (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the D term of the \doxylink{classdlib_1_1_pid}{Pid}. 
+
+\begin{DoxyReturn}{Returns}
+au\+::\+Quantity\texorpdfstring{$<$}{<}au\+::\+Time\+Derivative$<$\+Units$>$, double\texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_pid_a2a6b072e784aef89243a89517b61a798}\index{dlib::Pid$<$ Units $>$@{dlib::Pid$<$ Units $>$}!get\_derivative@{get\_derivative}}
+\index{get\_derivative@{get\_derivative}!dlib::Pid$<$ Units $>$@{dlib::Pid$<$ Units $>$}}
+\doxysubsubsection{\texorpdfstring{get\_derivative()}{get\_derivative()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_pid_a2a6b072e784aef89243a89517b61a798} 
+template$<$typename Units $>$ \\
+au\+::\+Quantity$<$ au\+::\+Time\+Derivative$<$ Units $>$, double $>$ \mbox{\hyperlink{classdlib_1_1_pid}{dlib\+::\+Pid}}$<$ Units $>$\+::get\+\_\+derivative (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get \doxylink{classdlib_1_1_pid}{Pid} derivative. 
+
+\begin{DoxyReturn}{Returns}
+The current derivative (how quickly the error is changing)
+\end{DoxyReturn}
+{\bfseries{Example}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Construct\ a\ Pid\ controller}}
+\DoxyCodeLine{\mbox{\hyperlink{classdlib_1_1_pid}{dlib::Pid<Meters>}}\ pid(\{1,\ 2,\ 3\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Get\ Pid\ derivative}}
+\DoxyCodeLine{Quantity<TimeDerivative<Meters>,\ \textcolor{keywordtype}{double}>\ derivative\ =\ pid.\mbox{\hyperlink{classdlib_1_1_pid_a2a6b072e784aef89243a89517b61a798}{get\_derivative}}();}
+
+\end{DoxyCode}
+ \Hypertarget{classdlib_1_1_pid_a6b488b2f3a47ea5f32dcfa32df73dfe4}\index{dlib::Pid$<$ Units $>$@{dlib::Pid$<$ Units $>$}!get\_error@{get\_error}}
+\index{get\_error@{get\_error}!dlib::Pid$<$ Units $>$@{dlib::Pid$<$ Units $>$}}
+\doxysubsubsection{\texorpdfstring{get\_error()}{get\_error()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_pid_a6b488b2f3a47ea5f32dcfa32df73dfe4} 
+template$<$typename Units $>$ \\
+au\+::\+Quantity$<$ Units, double $>$ \mbox{\hyperlink{classdlib_1_1_pid}{dlib\+::\+Pid}}$<$ Units $>$\+::get\+\_\+error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get \doxylink{classdlib_1_1_pid}{Pid} error. 
+
+\begin{DoxyReturn}{Returns}
+The current error (how far the controller is from the setpoint)
+\end{DoxyReturn}
+{\bfseries{Example}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{v}
+\DoxyCodeLine{\textcolor{comment}{//\ Construct\ a\ Pid\ controller}}
+\DoxyCodeLine{\mbox{\hyperlink{classdlib_1_1_pid}{dlib::Pid<Meters>}}\ pid(\{1,\ 2,\ 3\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Get\ Pid\ error}}
+\DoxyCodeLine{Quantity<Meters,\ double>\ error\ =\ pid.\mbox{\hyperlink{classdlib_1_1_pid_a6b488b2f3a47ea5f32dcfa32df73dfe4}{get\_error}}();}
+
+\end{DoxyCode}
+ \Hypertarget{classdlib_1_1_pid_afc0312e900c1ad133d88cec01fbc2dad}\index{dlib::Pid$<$ Units $>$@{dlib::Pid$<$ Units $>$}!get\_gains@{get\_gains}}
+\index{get\_gains@{get\_gains}!dlib::Pid$<$ Units $>$@{dlib::Pid$<$ Units $>$}}
+\doxysubsubsection{\texorpdfstring{get\_gains()}{get\_gains()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_pid_afc0312e900c1ad133d88cec01fbc2dad} 
+template$<$typename Units $>$ \\
+\mbox{\hyperlink{structdlib_1_1_pid_gains}{Pid\+Gains}} \mbox{\hyperlink{classdlib_1_1_pid}{dlib\+::\+Pid}}$<$ Units $>$\+::get\+\_\+gains (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get \doxylink{classdlib_1_1_pid}{Pid} gains. 
+
+\begin{DoxyReturn}{Returns}
+The current \doxylink{classdlib_1_1_pid}{Pid} gains
+\end{DoxyReturn}
+{\bfseries{Example}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Construct\ a\ Pid\ controller}}
+\DoxyCodeLine{\mbox{\hyperlink{classdlib_1_1_pid}{dlib::Pid<Meters>}}\ pid(\{1,\ 2,\ 3\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Get\ the\ Pid\ gains}}
+\DoxyCodeLine{\mbox{\hyperlink{structdlib_1_1_pid_gains}{dlib::PidGains}}\ gains\ =\ pid.get\_gains();}
+
+\end{DoxyCode}
+ \Hypertarget{classdlib_1_1_pid_a5e03e1693412204957f3ad521390cb2b}\index{dlib::Pid$<$ Units $>$@{dlib::Pid$<$ Units $>$}!get\_i@{get\_i}}
+\index{get\_i@{get\_i}!dlib::Pid$<$ Units $>$@{dlib::Pid$<$ Units $>$}}
+\doxysubsubsection{\texorpdfstring{get\_i()}{get\_i()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_pid_a5e03e1693412204957f3ad521390cb2b} 
+template$<$typename Units $>$ \\
+au\+::\+Quantity$<$ au\+::\+Time\+Integral$<$ Units $>$, double $>$ \mbox{\hyperlink{classdlib_1_1_pid}{dlib\+::\+Pid}}$<$ Units $>$\+::get\+\_\+i (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the I term of the \doxylink{classdlib_1_1_pid}{Pid}. 
+
+\begin{DoxyReturn}{Returns}
+au\+::\+Quantity\texorpdfstring{$<$}{<}au\+::\+Time\+Integral$<$\+Units$>$, double\texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_pid_affdaffc1e93e448f0c788f746ad51050}\index{dlib::Pid$<$ Units $>$@{dlib::Pid$<$ Units $>$}!get\_p@{get\_p}}
+\index{get\_p@{get\_p}!dlib::Pid$<$ Units $>$@{dlib::Pid$<$ Units $>$}}
+\doxysubsubsection{\texorpdfstring{get\_p()}{get\_p()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_pid_affdaffc1e93e448f0c788f746ad51050} 
+template$<$typename Units $>$ \\
+au\+::\+Quantity$<$ Units, double $>$ \mbox{\hyperlink{classdlib_1_1_pid}{dlib\+::\+Pid}}$<$ Units $>$\+::get\+\_\+p (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the P term of the \doxylink{classdlib_1_1_pid}{Pid}. 
+
+\begin{DoxyReturn}{Returns}
+au\+::\+Quantity$<$\+Units, double$>$ 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_pid_a98c02d8fba954028835599a1a7f2993e}\index{dlib::Pid$<$ Units $>$@{dlib::Pid$<$ Units $>$}!set\_gains@{set\_gains}}
+\index{set\_gains@{set\_gains}!dlib::Pid$<$ Units $>$@{dlib::Pid$<$ Units $>$}}
+\doxysubsubsection{\texorpdfstring{set\_gains()}{set\_gains()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_pid_a98c02d8fba954028835599a1a7f2993e} 
+template$<$typename Units $>$ \\
+void \mbox{\hyperlink{classdlib_1_1_pid}{dlib\+::\+Pid}}$<$ Units $>$\+::set\+\_\+gains (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdlib_1_1_pid_gains}{Pid\+Gains}}}]{gains}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set \doxylink{classdlib_1_1_pid}{Pid} gains. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gains} & gains to set the \doxylink{classdlib_1_1_pid}{Pid} constructor to\\
+\hline
+\end{DoxyParams}
+{\bfseries{Example}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Construct\ a\ Pid\ controller}}
+\DoxyCodeLine{\mbox{\hyperlink{classdlib_1_1_pid}{dlib::Pid<Meters>}}\ pid(\{1,\ 2,\ 3\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Set\ the\ Pid\ gains}}
+\DoxyCodeLine{pid.\mbox{\hyperlink{classdlib_1_1_pid_a98c02d8fba954028835599a1a7f2993e}{set\_gains}}(\{4,\ 5,\ 6\});}
+
+\end{DoxyCode}
+ \Hypertarget{classdlib_1_1_pid_a5bfcf3a44d62bb6fef34689fc0da74f6}\index{dlib::Pid$<$ Units $>$@{dlib::Pid$<$ Units $>$}!update@{update}}
+\index{update@{update}!dlib::Pid$<$ Units $>$@{dlib::Pid$<$ Units $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_pid_a5bfcf3a44d62bb6fef34689fc0da74f6} 
+template$<$typename Units $>$ \\
+au\+::\+Quantity$<$ au\+::\+Volts, double $>$ \mbox{\hyperlink{classdlib_1_1_pid}{dlib\+::\+Pid}}$<$ Units $>$\+::update (\begin{DoxyParamCaption}\item[{au\+::\+Quantity$<$ Units, double $>$}]{error}{, }\item[{au\+::\+Quantity$<$ au\+::\+Seconds, double $>$}]{period}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculate \doxylink{classdlib_1_1_pid}{Pid} voltage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reading} & the current sensor reading \\
+\hline
+{\em period} & the interval at which the pid is updated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the voltage to send to your mechanism
+\end{DoxyReturn}
+{\bfseries{Example}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Construct\ a\ Pid\ controller}}
+\DoxyCodeLine{\mbox{\hyperlink{classdlib_1_1_pid}{dlib::Pid<Meters>}}\ pid(\{1,\ 2,\ 3\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Calculate\ voltage\ with\ a\ test\ input}}
+\DoxyCodeLine{Quantity<Volts,\ double>\ voltage\ =\ pid.\mbox{\hyperlink{classdlib_1_1_pid_a5bfcf3a44d62bb6fef34689fc0da74f6}{update}}(meters(0.05),\ seconds(0.02));}
+
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/super/\+Downloads/5150\+D-\/\+Push Back\+V1/include/dlib/controllers/pid.\+hpp\end{DoxyCompactItemize}

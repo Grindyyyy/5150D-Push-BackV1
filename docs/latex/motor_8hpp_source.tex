@@ -1,0 +1,34 @@
+\doxysection{motor.\+hpp}
+\hypertarget{motor_8hpp_source}{}\label{motor_8hpp_source}\index{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/hardware/motor.hpp@{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/hardware/motor.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}pros/motors.hpp"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}au/au.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ motor.hpp}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ TODO:\ definitely\ missing\ some\ methods\ here...}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }dlib\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdlib_1_1_motor_config}{MotorConfig}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ int8\_t\ port;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_motor_config}{MotorConfig}}(int8\_t\ port);}
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdlib_1_1_motor}{Motor}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ au::Quantity<au::Revolutions,\ double>\ \mbox{\hyperlink{classdlib_1_1_motor_a5e4d0b96a569cb857fe76b01142d1c5e}{get\_position}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \ \ \ \ au::Quantity<au::Rpm,\ double>\ \mbox{\hyperlink{classdlib_1_1_motor_a252750c416d73a9cf99da2eef360b1b1}{get\_velocity}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classdlib_1_1_motor}{Motor}}(\mbox{\hyperlink{structdlib_1_1_motor_config}{MotorConfig}}\ config);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ pros::Motor\ raw;}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}

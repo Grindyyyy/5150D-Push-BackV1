@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.12.0" xml:lang="en-US">
+  <compound refid="classdlib_1_1_chassis" kind="class"><name>dlib::Chassis</name>
+    <member refid="classdlib_1_1_chassis_1a590a5dffded23db6163b9ac7e9159d09" kind="variable"><name>left_motors</name></member>
+    <member refid="classdlib_1_1_chassis_1ad37ed0470ce610371f5a42e3020be36a" kind="variable"><name>right_motors</name></member>
+    <member refid="classdlib_1_1_chassis_1a3cd9c64c084f49a9a4728a862ba7b94a" kind="variable"><name>drive_gearset</name></member>
+    <member refid="classdlib_1_1_chassis_1acd0fa498a35bc3e82af1f3d356b55a40" kind="variable"><name>base_rpm</name></member>
+    <member refid="classdlib_1_1_chassis_1a2948bf37242f3d273baafe39d0d4c1a9" kind="variable"><name>total_rpm</name></member>
+    <member refid="classdlib_1_1_chassis_1a48a634f45afef31b1404d89820d7527f" kind="variable"><name>wheel_diameter</name></member>
+    <member refid="classdlib_1_1_chassis_1ade24173196b00aa280611064c9e6623f" kind="function"><name>initialize</name></member>
+    <member refid="classdlib_1_1_chassis_1a5eb93891de9b8904cefe1cb48dad8e9f" kind="function"><name>move</name></member>
+    <member refid="classdlib_1_1_chassis_1aef94afa1f9a56aa672f4b189a464066d" kind="function"><name>move_voltage</name></member>
+    <member refid="classdlib_1_1_chassis_1ae6a50392912d6561535583b4186ae2fb" kind="function"><name>turn</name></member>
+    <member refid="classdlib_1_1_chassis_1a6741507c52e908e672a28f50de535308" kind="function"><name>turn_voltage</name></member>
+    <member refid="classdlib_1_1_chassis_1a42c9da6ea7f5b498a233cd2e4bdc3a5a" kind="function"><name>arcade</name></member>
+    <member refid="classdlib_1_1_chassis_1a768de976c86843e151f6db4dbb9d6b7f" kind="function"><name>brake</name></member>
+    <member refid="classdlib_1_1_chassis_1acc41ff6905d823b3c6fd1eed681592b5" kind="function"><name>revolutions_to_displacement</name></member>
+    <member refid="classdlib_1_1_chassis_1a52d0b24bd41a34d3c7d2bf3514cb3516" kind="function"><name>rpm_to_velocity</name></member>
+    <member refid="classdlib_1_1_chassis_1a130a042aee91f7da49d23791329cd177" kind="function"><name>left_motors_displacement</name></member>
+    <member refid="classdlib_1_1_chassis_1ab84a7e10b82e2b698cc396deef90443b" kind="function"><name>right_motors_displacement</name></member>
+    <member refid="classdlib_1_1_chassis_1a3c886b2fbd96ec6e285454f08cf32494" kind="function"><name>forward_motor_displacement</name></member>
+    <member refid="classdlib_1_1_chassis_1aca9fcffbf7f1751d4c3718ecfc74d390" kind="function"><name>left_motors_velocity</name></member>
+    <member refid="classdlib_1_1_chassis_1aa64b3312ed89c9453f5cfb8b8909494c" kind="function"><name>right_motors_velocity</name></member>
+    <member refid="classdlib_1_1_chassis_1ad3d3af59c798eaa4953fc7094b6424e4" kind="function"><name>forward_motor_velocity</name></member>
+    <member refid="classdlib_1_1_chassis_1a024d3a210420b707b618eecca7f0878b" kind="function"><name>Chassis</name></member>
+  </compound>
+  <compound refid="structdlib_1_1_chassis_config" kind="struct"><name>dlib::ChassisConfig</name>
+    <member refid="structdlib_1_1_chassis_config_1a9c22524cfe1f2cf476757df7b168fc8a" kind="variable"><name>left_motors</name></member>
+    <member refid="structdlib_1_1_chassis_config_1abec2c882d9573fc89cff8f1a75e4f413" kind="variable"><name>right_motors</name></member>
+    <member refid="structdlib_1_1_chassis_config_1a056f0e533eaf43b1ce78156a3c49c8bb" kind="variable"><name>drive_gearset</name></member>
+    <member refid="structdlib_1_1_chassis_config_1a8dc66d1e8368e6ac682f24218666382a" kind="variable"><name>base_rpm</name></member>
+    <member refid="structdlib_1_1_chassis_config_1a4dbd7fbb08c19a0ee0f20ff979c661e0" kind="variable"><name>total_rpm</name></member>
+    <member refid="structdlib_1_1_chassis_config_1a8ea99c0bde5c35fe66ff8811ac12c4f9" kind="variable"><name>wheel_diameter</name></member>
+    <member refid="structdlib_1_1_chassis_config_1a4e1f390f4df733237038468de5766465" kind="function"><name>ChassisConfig</name></member>
+  </compound>
+  <compound refid="classdlib_1_1_distance" kind="class"><name>dlib::Distance</name>
+    <member refid="classdlib_1_1_distance_1af6e81c3a6eec51cd4c4a66e4b1fb1162" kind="variable"><name>raw</name></member>
+    <member refid="classdlib_1_1_distance_1ae11c5de7660ae277ef8d1d543d093600" kind="function"><name>initialize</name></member>
+    <member refid="classdlib_1_1_distance_1a77930c5ec9edd230a6896393477f2ab2" kind="function"><name>get_distance</name></member>
+    <member refid="classdlib_1_1_distance_1a54c49214c9be799fd736406604405a42" kind="function"><name>Distance</name></member>
+  </compound>
+  <compound refid="structdlib_1_1_distance_config" kind="struct"><name>dlib::DistanceConfig</name>
+    <member refid="structdlib_1_1_distance_config_1a283e08a6a98c591a77a638731f3ecad2" kind="variable"><name>port</name></member>
+    <member refid="structdlib_1_1_distance_config_1a4e1b05422025594e2abace92f4d459c7" kind="function"><name>DistanceConfig</name></member>
+  </compound>
+  <compound refid="classdlib_1_1_error_derivative_settler" kind="class"><name>dlib::ErrorDerivativeSettler</name>
+    <member refid="classdlib_1_1_error_derivative_settler_1a0629a54e5e760686dfb39bde5b55f9fb" kind="variable"><name>error_threshold</name></member>
+    <member refid="classdlib_1_1_error_derivative_settler_1a19e2873c47bfc80d7b06b37ffa415663" kind="variable"><name>derivative_threshold</name></member>
+    <member refid="classdlib_1_1_error_derivative_settler_1a0caa9b739f4080a7f09514c6023b0d9e" kind="function"><name>ErrorDerivativeSettler</name></member>
+    <member refid="classdlib_1_1_error_derivative_settler_1abbe49e7f9968b75a515849e391dbb20c" kind="function"><name>is_settled</name></member>
+    <member refid="classdlib_1_1_error_derivative_settler_1a1f9efa480047d9c17e0623f5164a1e0d" kind="function"><name>reset</name></member>
+  </compound>
+  <compound refid="classdlib_1_1_error_time_settler" kind="class"><name>dlib::ErrorTimeSettler</name>
+    <member refid="classdlib_1_1_error_time_settler_1a43d002c8f2b16c79c96fd282f45556d8" kind="variable"><name>is_settling</name></member>
+    <member refid="classdlib_1_1_error_time_settler_1a9451888a6c2c0cfad7e842c4ac7d04ed" kind="variable"><name>time_below_threshold</name></member>
+    <member refid="classdlib_1_1_error_time_settler_1af00b439779da9a0fd18d45d41f590885" kind="variable"><name>error_threshold</name></member>
+    <member refid="classdlib_1_1_error_time_settler_1a585365606a3dec7c05d35c97f890e616" kind="variable"><name>settle_time</name></member>
+    <member refid="classdlib_1_1_error_time_settler_1a2570c6c4c2f93c9da11d352444e70d21" kind="function"><name>ErrorTimeSettler</name></member>
+    <member refid="classdlib_1_1_error_time_settler_1a7e74b5131c4647fafc384e8c2823f895" kind="function"><name>is_settled</name></member>
+    <member refid="classdlib_1_1_error_time_settler_1af432f4115d0eff9738f46b8bdc8518ab" kind="function"><name>reset</name></member>
+  </compound>
+  <compound refid="classdlib_1_1_feedforward" kind="class"><name>dlib::Feedforward</name>
+    <member refid="classdlib_1_1_feedforward_1afffb67cc86376ca29ec845f7bf5ffdc4" kind="typedef"><name>BaseUnits</name></member>
+    <member refid="classdlib_1_1_feedforward_1a479d8bf1ca21cc31f2a2237b2edd0e26" kind="variable"><name>gains</name></member>
+    <member refid="classdlib_1_1_feedforward_1a342b4492c166e28de82bc5da296b2edd" kind="function"><name>Feedforward</name></member>
+    <member refid="classdlib_1_1_feedforward_1a6197dd2774c291e6d0b4843f22ebf4d9" kind="function"><name>calculate</name></member>
+    <member refid="classdlib_1_1_feedforward_1adf4976c390cbbda70371b71b43d1e1cb" kind="function"><name>get_gains</name></member>
+    <member refid="classdlib_1_1_feedforward_1a463de4825810bab936543a7a71d9059e" kind="function"><name>set_gains</name></member>
+  </compound>
+  <compound refid="structdlib_1_1_feedforward_gains" kind="struct"><name>dlib::FeedforwardGains</name>
+    <member refid="structdlib_1_1_feedforward_gains_1a189cb35d422a4de220fe002b98bff755" kind="variable"><name>ks</name></member>
+    <member refid="structdlib_1_1_feedforward_gains_1a12719c6d3801277080236f8c096df11d" kind="variable"><name>kv</name></member>
+    <member refid="structdlib_1_1_feedforward_gains_1a792d62e19c4af373b312f68f8b0babf4" kind="variable"><name>ka</name></member>
+  </compound>
+  <compound refid="structdlib_1_1detail_1_1_feedforward_gains_with_units" kind="struct"><name>dlib::detail::FeedforwardGainsWithUnits</name>
+    <member refid="structdlib_1_1detail_1_1_feedforward_gains_with_units_1adf2b855775437ca043c96e2f705099cb" kind="variable"><name>ks</name></member>
+    <member refid="structdlib_1_1detail_1_1_feedforward_gains_with_units_1a6603a85da10b79e57a8b7148adff00c8" kind="variable"><name>kv</name></member>
+    <member refid="structdlib_1_1detail_1_1_feedforward_gains_with_units_1af5c9cf2d5cd1031099bbb0870df9d2e8" kind="variable"><name>ka</name></member>
+    <member refid="structdlib_1_1detail_1_1_feedforward_gains_with_units_1a2c2f62c695bf18945a7569023bf55074" kind="function"><name>FeedforwardGainsWithUnits</name></member>
+  </compound>
+  <compound refid="classdlib_1_1_imu" kind="class"><name>dlib::Imu</name>
+    <member refid="classdlib_1_1_imu_1a1f1f497d3788072147d256ecf3c0b45a" kind="variable"><name>scalar</name></member>
+    <member refid="classdlib_1_1_imu_1a016639cf1c6f2e9b860571aac6b45c3e" kind="variable"><name>raw</name></member>
+    <member refid="classdlib_1_1_imu_1a3a53eaee11bc5fe6bc6412c6e6bcb1f3" kind="function"><name>initialize</name></member>
+    <member refid="classdlib_1_1_imu_1ab3817bfb6a19032e7cdc1741b66b5835" kind="function"><name>tare_position</name></member>
+    <member refid="classdlib_1_1_imu_1afb9cbe67e7361c52103477da2681fa7a" kind="function"><name>get_rotation</name></member>
+    <member refid="classdlib_1_1_imu_1a8757736af39c9d82de947cb6493b2e7d" kind="function"><name>get_heading</name></member>
+    <member refid="classdlib_1_1_imu_1a18802c5ff259f134741445e04d7f9e35" kind="function"><name>Imu</name></member>
+  </compound>
+  <compound refid="structdlib_1_1_imu_config" kind="struct"><name>dlib::ImuConfig</name>
+    <member refid="structdlib_1_1_imu_config_1a7dfe54117580fc75ded99439bdb4f80c" kind="variable"><name>port</name></member>
+    <member refid="structdlib_1_1_imu_config_1a8ece208114656fa8d6be98b20a267511" kind="variable"><name>scalar</name></member>
+    <member refid="structdlib_1_1_imu_config_1ace2e0793174201f7e8d027a50e681bd8" kind="function"><name>ImuConfig</name></member>
+  </compound>
+  <compound refid="classdlib_1_1_motor" kind="class"><name>dlib::Motor</name>
+    <member refid="classdlib_1_1_motor_1af3acd7f1eeb8079e19fc751d50b0b977" kind="variable"><name>raw</name></member>
+    <member refid="classdlib_1_1_motor_1a5e4d0b96a569cb857fe76b01142d1c5e" kind="function"><name>get_position</name></member>
+    <member refid="classdlib_1_1_motor_1a252750c416d73a9cf99da2eef360b1b1" kind="function"><name>get_velocity</name></member>
+    <member refid="classdlib_1_1_motor_1a829c7a6cd6193cf73d24a7bb592c71c0" kind="function"><name>Motor</name></member>
+  </compound>
+  <compound refid="structdlib_1_1_motor_config" kind="struct"><name>dlib::MotorConfig</name>
+    <member refid="structdlib_1_1_motor_config_1a1908bc375d1c75121655de54b91bd897" kind="variable"><name>port</name></member>
+    <member refid="structdlib_1_1_motor_config_1a0862b58a4f079bbd5e54ca90fe79908f" kind="function"><name>MotorConfig</name></member>
+  </compound>
+  <compound refid="classdlib_1_1_motor_group" kind="class"><name>dlib::MotorGroup</name>
+    <member refid="classdlib_1_1_motor_group_1aa0348ac675ae662023d7c35656437a55" kind="variable"><name>raw</name></member>
+    <member refid="classdlib_1_1_motor_group_1a9baf71907745a7bc220f936b950eb343" kind="function"><name>move</name></member>
+    <member refid="classdlib_1_1_motor_group_1a9ee9433f34c4865dea205c25b0cca1d6" kind="function"><name>move_voltage</name></member>
+    <member refid="classdlib_1_1_motor_group_1ac4bfcc515fadba0f5ba262acf5a367b5" kind="function"><name>get_position</name></member>
+    <member refid="classdlib_1_1_motor_group_1abce7cc77262c1605aa29e0cd40704a09" kind="function"><name>get_velocity</name></member>
+    <member refid="classdlib_1_1_motor_group_1a93f95e6ee976aeae3216769b0c183d45" kind="function"><name>MotorGroup</name></member>
+  </compound>
+  <compound refid="structdlib_1_1_motor_group_config" kind="struct"><name>dlib::MotorGroupConfig</name>
+    <member refid="structdlib_1_1_motor_group_config_1a2ebb85cef2c39dd19c27848a80e310cd" kind="variable"><name>ports</name></member>
+    <member refid="structdlib_1_1_motor_group_config_1a3d51bf4bba32718081e1fdcc041ea118" kind="function"><name>MotorGroupConfig</name></member>
+    <member refid="structdlib_1_1_motor_group_config_1aafceecb284938166f29f0b994e2fde94" kind="function"><name>MotorGroupConfig</name></member>
+  </compound>
+  <compound refid="classdlib_1_1_odometry" kind="class"><name>dlib::Odometry</name>
+    <member refid="classdlib_1_1_odometry_1af6feb429804af618d1a62137e9096ba5" kind="variable"><name>position</name></member>
+    <member refid="classdlib_1_1_odometry_1a38e24c50f810fa9c066324b74af6ba3a" kind="variable"><name>previous_forward</name></member>
+    <member refid="classdlib_1_1_odometry_1ace7d7cf0262dbe7eb7cac2678e7d1273" kind="variable"><name>previous_horizontal</name></member>
+    <member refid="classdlib_1_1_odometry_1a411dfb75318be6becef169a2a5534c37" kind="variable"><name>previous_theta</name></member>
+    <member refid="classdlib_1_1_odometry_1abd405d0ad590faf38d7839d141de0c39" kind="variable"><name>horizontal_wheel_offset</name></member>
+    <member refid="classdlib_1_1_odometry_1a37c96714fdca98cf67c2e8fd5403bf10" kind="variable"><name>mutex</name></member>
+    <member refid="classdlib_1_1_odometry_1acc7cff963d2e5f84f474b338bc4d5e41" kind="function"><name>Odometry</name></member>
+    <member refid="classdlib_1_1_odometry_1abcff56aca6c963dda38d50d2324916e6" kind="function"><name>update</name></member>
+    <member refid="classdlib_1_1_odometry_1aff1bcf403d9f255dbb0a39212779ed0c" kind="function"><name>get_position</name></member>
+    <member refid="classdlib_1_1_odometry_1a4da18633efe447f97983b0e6594acb95" kind="function"><name>set_position</name></member>
+    <member refid="classdlib_1_1_odometry_1a309831aa5e212c91107e43d0c128ad04" kind="function"><name>displacement_to</name></member>
+    <member refid="classdlib_1_1_odometry_1a1f7a238a917a1c464668660c7404983a" kind="function"><name>angle_to</name></member>
+  </compound>
+  <compound refid="classdlib_1_1_pid" kind="class"><name>dlib::Pid</name>
+    <member refid="classdlib_1_1_pid_1a47ff3a8598ca82fedc5717f37e9708eb" kind="typedef"><name>BaseUnits</name></member>
+    <member refid="classdlib_1_1_pid_1a906fb554ccf294d1629c836db9b02326" kind="variable"><name>m_gains</name></member>
+    <member refid="classdlib_1_1_pid_1a15996e9e121b69c975b21face85d394a" kind="variable"><name>m_max_voltage</name></member>
+    <member refid="classdlib_1_1_pid_1a2b3073460cbfcae84077774ff6c1f8f5" kind="variable"><name>m_p</name></member>
+    <member refid="classdlib_1_1_pid_1a271efb0f55e9bb39483f968b9d06a4ce" kind="variable"><name>m_i</name></member>
+    <member refid="classdlib_1_1_pid_1a748feacad68fee031dfcbe4734e9b804" kind="variable"><name>m_d</name></member>
+    <member refid="classdlib_1_1_pid_1ac14b7af38d1a72d58c4afb06f98642b6" kind="variable"><name>m_last_error</name></member>
+    <member refid="classdlib_1_1_pid_1aa10de7ce69126369a70a495c2fe476b5" kind="variable"><name>m_last_derivative</name></member>
+    <member refid="classdlib_1_1_pid_1ac756be64a79e4278d0054bf7302e74fa" kind="function"><name>Pid</name></member>
+    <member refid="classdlib_1_1_pid_1a8253a9bf3701e13cf5c49814ae57cdb4" kind="function"><name>reset</name></member>
+    <member refid="classdlib_1_1_pid_1a5bfcf3a44d62bb6fef34689fc0da74f6" kind="function"><name>update</name></member>
+    <member refid="classdlib_1_1_pid_1afc0312e900c1ad133d88cec01fbc2dad" kind="function"><name>get_gains</name></member>
+    <member refid="classdlib_1_1_pid_1a98c02d8fba954028835599a1a7f2993e" kind="function"><name>set_gains</name></member>
+    <member refid="classdlib_1_1_pid_1a6b488b2f3a47ea5f32dcfa32df73dfe4" kind="function"><name>get_error</name></member>
+    <member refid="classdlib_1_1_pid_1a2a6b072e784aef89243a89517b61a798" kind="function"><name>get_derivative</name></member>
+    <member refid="classdlib_1_1_pid_1affdaffc1e93e448f0c788f746ad51050" kind="function"><name>get_p</name></member>
+    <member refid="classdlib_1_1_pid_1a5e03e1693412204957f3ad521390cb2b" kind="function"><name>get_i</name></member>
+    <member refid="classdlib_1_1_pid_1afab9bdae6dcadf798247f538d7850285" kind="function"><name>get_d</name></member>
+  </compound>
+  <compound refid="structdlib_1_1_pid_config" kind="struct"><name>dlib::PidConfig</name>
+    <member refid="structdlib_1_1_pid_config_1ae9e0934a431b6580ea185a908259db1f" kind="variable"><name>gains</name></member>
+    <member refid="structdlib_1_1_pid_config_1a6ae29703d7a6461df52dcc0deab3d131" kind="variable"><name>max_voltage</name></member>
+  </compound>
+  <compound refid="structdlib_1_1_pid_gains" kind="struct"><name>dlib::PidGains</name>
+    <member refid="structdlib_1_1_pid_gains_1a6dcd1238bcd7c08379f3a1e3b2c08f66" kind="variable"><name>kp</name></member>
+    <member refid="structdlib_1_1_pid_gains_1af68a8c34efb8f25bd55125c3505aad04" kind="variable"><name>ki</name></member>
+    <member refid="structdlib_1_1_pid_gains_1a76360ca3166a6f668589f618e0712844" kind="variable"><name>kd</name></member>
+  </compound>
+  <compound refid="structdlib_1_1detail_1_1_pid_gains_with_units" kind="struct"><name>dlib::detail::PidGainsWithUnits</name>
+    <member refid="structdlib_1_1detail_1_1_pid_gains_with_units_1adb9f0cf5f616b95574c0d9195882315d" kind="variable"><name>kp</name></member>
+    <member refid="structdlib_1_1detail_1_1_pid_gains_with_units_1aca5214c5741cd854fe807cc50d8270c5" kind="variable"><name>ki</name></member>
+    <member refid="structdlib_1_1detail_1_1_pid_gains_with_units_1a8325b1152ab7b2304c6386eebf1317f2" kind="variable"><name>kd</name></member>
+    <member refid="structdlib_1_1detail_1_1_pid_gains_with_units_1a7ad0b04d250621520c3d9ad1c052677a" kind="function"><name>PidGainsWithUnits</name></member>
+  </compound>
+  <compound refid="structdlib_1_1_pose2d" kind="struct"><name>dlib::Pose2d</name>
+    <member refid="structdlib_1_1_pose2d_1a20b1ca94389849bb5ba2a93edfc7129e" kind="variable"><name>x</name></member>
+    <member refid="structdlib_1_1_pose2d_1ab516fb87072b85d8fbf3ae95549f644b" kind="variable"><name>y</name></member>
+    <member refid="structdlib_1_1_pose2d_1a222a9446f8024e980f1d01ccd3086d1a" kind="variable"><name>theta</name></member>
+    <member refid="structdlib_1_1_pose2d_1a93cc298fc4ad46db87a65e7e55078fea" kind="function"><name>Pose2d</name></member>
+  </compound>
+  <compound refid="structdlib_1_1_profile_setpoint" kind="struct"><name>dlib::ProfileSetpoint</name>
+    <member refid="structdlib_1_1_profile_setpoint_1a744272c76128819ff92371b22b362428" kind="variable"><name>position</name></member>
+    <member refid="structdlib_1_1_profile_setpoint_1a8aef38a77723e1706d1b1e40bea91ecf" kind="variable"><name>velocity</name></member>
+    <member refid="structdlib_1_1_profile_setpoint_1af4e88e98d8b5925b8e2a5e8ee8c82b22" kind="variable"><name>acceleration</name></member>
+    <member refid="structdlib_1_1_profile_setpoint_1ab672a81841846dbe48f98690520230df" kind="function"><name>ProfileSetpoint</name></member>
+    <member refid="structdlib_1_1_profile_setpoint_1ab436b1fe0dc2506822b4a7c120d0161a" kind="function"><name>negative</name></member>
+  </compound>
+  <compound refid="classdlib_1_1_rotation" kind="class"><name>dlib::Rotation</name>
+    <member refid="classdlib_1_1_rotation_1a10a5f6e2ae7f7387cb99cc1915810e2f" kind="variable"><name>wheel_diameter</name></member>
+    <member refid="classdlib_1_1_rotation_1a7ecbc1b9a3c55f6070579e934001ba23" kind="variable"><name>gear_ratio</name></member>
+    <member refid="classdlib_1_1_rotation_1abe4b6f62c125e07da979cd9f27a6a71d" kind="variable"><name>raw</name></member>
+    <member refid="classdlib_1_1_rotation_1a6d454d4be43fb1e97c7fa6dff6f4b8f0" kind="function"><name>initialize</name></member>
+    <member refid="classdlib_1_1_rotation_1ad6102faaf125a5190272d337edfb0c0d" kind="function"><name>get_position</name></member>
+    <member refid="classdlib_1_1_rotation_1a5662f95336f9bfea36c4eef61b69820d" kind="function"><name>get_velocity</name></member>
+    <member refid="classdlib_1_1_rotation_1a86faec8f32009f5755b6a8fbb8c2472d" kind="function"><name>get_linear_displacement</name></member>
+    <member refid="classdlib_1_1_rotation_1a5f0fe98bc229290ecda19efa6f73fcee" kind="function"><name>get_linear_velocity</name></member>
+    <member refid="classdlib_1_1_rotation_1acb99a7fadeb90517f44dde30e5286e84" kind="function"><name>Rotation</name></member>
+  </compound>
+  <compound refid="structdlib_1_1_rotation_config" kind="struct"><name>dlib::RotationConfig</name>
+    <member refid="structdlib_1_1_rotation_config_1a1f1e1b100131170ab8d93e292977f72c" kind="variable"><name>port</name></member>
+    <member refid="structdlib_1_1_rotation_config_1a370d9009a9b8dca5adf95e9eb2a1f895" kind="variable"><name>wheel_diameter</name></member>
+    <member refid="structdlib_1_1_rotation_config_1a9738cc24a61512f1b9e1596b22f78f71" kind="variable"><name>gear_ratio</name></member>
+    <member refid="structdlib_1_1_rotation_config_1ac2d3c991c01dc1683205751b50856fdb" kind="function"><name>RotationConfig</name></member>
+  </compound>
+  <compound refid="classdlib_1_1_timer" kind="class"><name>dlib::Timer</name>
+    <member refid="classdlib_1_1_timer_1a9d039d34105061486644d74c728c9e12" kind="variable"><name>start_time</name></member>
+    <member refid="classdlib_1_1_timer_1abb1a015be4fff00f84b8830f3e7dd3fc" kind="function"><name>Timer</name></member>
+    <member refid="classdlib_1_1_timer_1af335f57ec2206ce131e00fd674cac3f7" kind="function"><name>reset</name></member>
+    <member refid="classdlib_1_1_timer_1aa485506793c86914fb3b47f1fd2a3d8e" kind="function"><name>get_start_time</name></member>
+    <member refid="classdlib_1_1_timer_1a2557511ad79815cbc64a0c5af6160b7a" kind="function"><name>get_current_time</name></member>
+    <member refid="classdlib_1_1_timer_1a19427c1e41edd5d9e4c99d9b23eecb6e" kind="function"><name>get_elapsed_time</name></member>
+  </compound>
+  <compound refid="classdlib_1_1_trapezoid_profile" kind="class"><name>dlib::TrapezoidProfile</name>
+    <member refid="classdlib_1_1_trapezoid_profile_1a6ce81102b16067a66401575212062f41" kind="variable"><name>m_max_acceleration</name></member>
+    <member refid="classdlib_1_1_trapezoid_profile_1a8ecff6c7d7cc5e82efd66327466b4158" kind="variable"><name>m_max_deceleration</name></member>
+    <member refid="classdlib_1_1_trapezoid_profile_1a215505b8c240ab16fb3774e00c746bca" kind="variable"><name>m_max_velocity</name></member>
+    <member refid="classdlib_1_1_trapezoid_profile_1a25a4d549238299323a65a0b1005c24fb" kind="variable"><name>m_total_distance</name></member>
+    <member refid="classdlib_1_1_trapezoid_profile_1a83156ce85b27d199562f3dbc0d113b1a" kind="variable"><name>total_time</name></member>
+    <member refid="classdlib_1_1_trapezoid_profile_1a926132285c93fd3b6008f4d1ce6719e1" kind="variable"><name>accel_cutoff</name></member>
+    <member refid="classdlib_1_1_trapezoid_profile_1a4b1790218b26f7e97f89a798b74b4e6d" kind="variable"><name>coast_cutoff</name></member>
+    <member refid="classdlib_1_1_trapezoid_profile_1adcd5acd8a195dfc87f75ce71b58c6b60" kind="variable"><name>decel_cutoff</name></member>
+    <member refid="classdlib_1_1_trapezoid_profile_1ab2c6e550dfc3ff47a6830f59710364b4" kind="variable"><name>invert</name></member>
+    <member refid="classdlib_1_1_trapezoid_profile_1a22e8df0a37ba4a9802fa306193c59bc5" kind="function"><name>TrapezoidProfile</name></member>
+    <member refid="classdlib_1_1_trapezoid_profile_1ad1218d90c7b2e32f61afdebae3d3ee59" kind="function"><name>get_time</name></member>
+    <member refid="classdlib_1_1_trapezoid_profile_1ace059a10af81388384ca86b23fa31653" kind="function"><name>stage</name></member>
+    <member refid="classdlib_1_1_trapezoid_profile_1a37cef8f519992e86fa2694007e63a333" kind="function"><name>calculate</name></member>
+  </compound>
+  <compound refid="structdlib_1_1_vector2d" kind="struct"><name>dlib::Vector2d</name>
+    <member refid="structdlib_1_1_vector2d_1a8524d4cbdb52764417672da2debf29cc" kind="variable"><name>x</name></member>
+    <member refid="structdlib_1_1_vector2d_1a7287c4d6b2b95eae5c455c17a3bb1a87" kind="variable"><name>y</name></member>
+    <member refid="structdlib_1_1_vector2d_1a269acf8ea5bcfaa84af2e53fc58d1494" kind="function"><name>Vector2d</name></member>
+  </compound>
+  <compound refid="namespacedlib" kind="namespace"><name>dlib</name>
+    <member refid="trapezoid__profile_8hpp_1a576fa61ce5659b271554c10063d16dde" kind="enum"><name>TrapezoidProfileStage</name></member>
+    <member refid="trapezoid__profile_8hpp_1a576fa61ce5659b271554c10063d16ddea7154352563d75bfd6db32192c8e706c5" kind="enumvalue"><name>Accelerating</name></member>
+    <member refid="trapezoid__profile_8hpp_1a576fa61ce5659b271554c10063d16ddeaf0706947aed8cf56e13e25ef6348ad6a" kind="enumvalue"><name>Coasting</name></member>
+    <member refid="trapezoid__profile_8hpp_1a576fa61ce5659b271554c10063d16ddea77da5a8a3f64143490ba125dc7704ca7" kind="enumvalue"><name>Decelerating</name></member>
+    <member refid="trapezoid__profile_8hpp_1a576fa61ce5659b271554c10063d16ddeaf92965e2c8a7afb3c1b9a5c09a263636" kind="enumvalue"><name>Done</name></member>
+    <member refid="error__calculation_8hpp_1af21c9bd90fe0ea8d3e9fb241a913f59e" kind="function"><name>linear_error</name></member>
+    <member refid="error__calculation_8hpp_1adf62eb348ff1cf3332882e57e3d2b21f" kind="function"><name>sanitize_angle</name></member>
+    <member refid="error__calculation_8hpp_1a59783fa4b7b94973278c4384454ac69e" kind="function"><name>angular_error</name></member>
+    <member refid="error__calculation_8hpp_1aa0a8ecb744c5933ed70c33673c1f17f4" kind="function"><name>relative_target</name></member>
+  </compound>
+  <compound refid="namespacedlib_1_1detail" kind="namespace"><name>dlib::detail</name>
+  </compound>
+  <compound refid="error__derivative__settler_8hpp" kind="file"><name>error_derivative_settler.hpp</name>
+  </compound>
+  <compound refid="error__time__settler_8hpp" kind="file"><name>error_time_settler.hpp</name>
+  </compound>
+  <compound refid="feedforward_8hpp" kind="file"><name>feedforward.hpp</name>
+  </compound>
+  <compound refid="pid_8hpp" kind="file"><name>pid.hpp</name>
+  </compound>
+  <compound refid="dlib_8hpp" kind="file"><name>dlib.hpp</name>
+  </compound>
+  <compound refid="chassis_8hpp" kind="file"><name>chassis.hpp</name>
+  </compound>
+  <compound refid="distance_8hpp" kind="file"><name>distance.hpp</name>
+  </compound>
+  <compound refid="imu_8hpp" kind="file"><name>imu.hpp</name>
+  </compound>
+  <compound refid="motor_8hpp" kind="file"><name>motor.hpp</name>
+  </compound>
+  <compound refid="motor__group_8hpp" kind="file"><name>motor_group.hpp</name>
+  </compound>
+  <compound refid="rotation_8hpp" kind="file"><name>rotation.hpp</name>
+  </compound>
+  <compound refid="timer_8hpp" kind="file"><name>timer.hpp</name>
+  </compound>
+  <compound refid="odometry_8hpp" kind="file"><name>odometry.hpp</name>
+  </compound>
+  <compound refid="profile__setpoint_8hpp" kind="file"><name>profile_setpoint.hpp</name>
+  </compound>
+  <compound refid="trapezoid__profile_8hpp" kind="file"><name>trapezoid_profile.hpp</name>
+  </compound>
+  <compound refid="error__calculation_8hpp" kind="file"><name>error_calculation.hpp</name>
+  </compound>
+  <compound refid="dir_22307b25e08679f9a1f8d5801be0c1a8" kind="dir"><name>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers</name>
+  </compound>
+  <compound refid="dir_2d4fa00554060efd24509250d8560f7a" kind="dir"><name>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib</name>
+  </compound>
+  <compound refid="dir_db5b2015d26918d278e83bc63df5e100" kind="dir"><name>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>C:/Users/super/Downloads/5150D-Push BackV1/include</name>
+  </compound>
+  <compound refid="dir_964113b87aea141d544f173326de0f77" kind="dir"><name>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics</name>
+  </compound>
+  <compound refid="dir_5fc94203778c74d9d5e6bf4c1619720b" kind="dir"><name>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/trajectories</name>
+  </compound>
+  <compound refid="dir_cf0633bb6f5b45c73bd88af3f1552ff5" kind="dir"><name>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/utilities</name>
+  </compound>
+</doxygenindex>

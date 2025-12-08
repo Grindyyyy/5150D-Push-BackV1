@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structdlib_1_1_motor_group_config" kind="struct" language="C++" prot="public">
+    <compoundname>dlib::MotorGroupConfig</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdlib_1_1_motor_group_config_1a2ebb85cef2c39dd19c27848a80e310cd" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; int8_t &gt;</type>
+        <definition>std::vector&lt;int8_t&gt; dlib::MotorGroupConfig::ports</definition>
+        <argsstring></argsstring>
+        <name>ports</name>
+        <qualifiedname>dlib::MotorGroupConfig::ports</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" line="11" column="17" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structdlib_1_1_motor_group_config_1a3d51bf4bba32718081e1fdcc041ea118" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dlib::MotorGroupConfig::MotorGroupConfig</definition>
+        <argsstring>(std::initializer_list&lt; int8_t &gt; ports)</argsstring>
+        <name>MotorGroupConfig</name>
+        <qualifiedname>dlib::MotorGroupConfig::MotorGroupConfig</qualifiedname>
+        <param>
+          <type>std::initializer_list&lt; int8_t &gt;</type>
+          <declname>ports</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" line="13" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structdlib_1_1_motor_group_config_1aafceecb284938166f29f0b994e2fde94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dlib::MotorGroupConfig::MotorGroupConfig</definition>
+        <argsstring>(std::vector&lt; int8_t &gt; &amp;ports)</argsstring>
+        <name>MotorGroupConfig</name>
+        <qualifiedname>dlib::MotorGroupConfig::MotorGroupConfig</qualifiedname>
+        <param>
+          <type>std::vector&lt; int8_t &gt; &amp;</type>
+          <declname>ports</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" line="14" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" line="10" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" bodystart="10" bodyend="15"/>
+    <listofallmembers>
+      <member refid="structdlib_1_1_motor_group_config_1a3d51bf4bba32718081e1fdcc041ea118" prot="public" virt="non-virtual"><scope>dlib::MotorGroupConfig</scope><name>MotorGroupConfig</name></member>
+      <member refid="structdlib_1_1_motor_group_config_1aafceecb284938166f29f0b994e2fde94" prot="public" virt="non-virtual"><scope>dlib::MotorGroupConfig</scope><name>MotorGroupConfig</name></member>
+      <member refid="structdlib_1_1_motor_group_config_1a2ebb85cef2c39dd19c27848a80e310cd" prot="public" virt="non-virtual"><scope>dlib::MotorGroupConfig</scope><name>ports</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="odometry_8hpp" kind="file" language="C++">
+    <compoundname>odometry.hpp</compoundname>
+    <includes local="yes">au/au.hpp</includes>
+    <includes local="yes">pros/rtos.hpp</includes>
+    <includedby refid="dlib_8hpp" local="yes">C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/dlib.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp</label>
+        <link refid="odometry_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>au/au.hpp</label>
+      </node>
+      <node id="3">
+        <label>pros/rtos.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/dlib.hpp</label>
+        <link refid="dlib_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp</label>
+        <link refid="odometry_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structdlib_1_1_vector2d" prot="public">dlib::Vector2d</innerclass>
+    <innerclass refid="structdlib_1_1_pose2d" prot="public">dlib::Pose2d</innerclass>
+    <innerclass refid="classdlib_1_1_odometry" prot="public">dlib::Odometry</innerclass>
+    <innernamespace refid="namespacedlib">dlib</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;au/au.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pros/rtos.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">dlib<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>odometry.hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="structdlib_1_1_vector2d" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdlib_1_1_vector2d" kindref="compound">Vector2d</ref><sp/>{</highlight></codeline>
+<codeline lineno="15" refid="structdlib_1_1_vector2d_1a8524d4cbdb52764417672da2debf29cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/><ref refid="structdlib_1_1_vector2d_1a8524d4cbdb52764417672da2debf29cc" kindref="member">x</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="structdlib_1_1_vector2d_1a7287c4d6b2b95eae5c455c17a3bb1a87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/><ref refid="structdlib_1_1_vector2d_1a7287c4d6b2b95eae5c455c17a3bb1a87" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1_vector2d" kindref="compound">Vector2d</ref>(</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/><ref refid="structdlib_1_1_vector2d_1a8524d4cbdb52764417672da2debf29cc" kindref="member">x</ref>,<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/><ref refid="structdlib_1_1_vector2d_1a7287c4d6b2b95eae5c455c17a3bb1a87" kindref="member">y</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="structdlib_1_1_pose2d" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdlib_1_1_pose2d" kindref="compound">Pose2d</ref><sp/>{</highlight></codeline>
+<codeline lineno="32" refid="structdlib_1_1_pose2d_1a20b1ca94389849bb5ba2a93edfc7129e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/><ref refid="structdlib_1_1_pose2d_1a20b1ca94389849bb5ba2a93edfc7129e" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="structdlib_1_1_pose2d_1ab516fb87072b85d8fbf3ae95549f644b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/><ref refid="structdlib_1_1_pose2d_1ab516fb87072b85d8fbf3ae95549f644b" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="structdlib_1_1_pose2d_1a222a9446f8024e980f1d01ccd3086d1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Degrees,<sp/>double&gt;<sp/><ref refid="structdlib_1_1_pose2d_1a222a9446f8024e980f1d01ccd3086d1a" kindref="member">theta</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1_pose2d" kindref="compound">Pose2d</ref>(</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/><ref refid="structdlib_1_1_pose2d_1a20b1ca94389849bb5ba2a93edfc7129e" kindref="member">x</ref>,<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/><ref refid="structdlib_1_1_pose2d_1ab516fb87072b85d8fbf3ae95549f644b" kindref="member">y</ref>,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Degrees,<sp/>double&gt;<sp/><ref refid="structdlib_1_1_pose2d_1a222a9446f8024e980f1d01ccd3086d1a" kindref="member">theta</ref></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classdlib_1_1_odometry" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdlib_1_1_odometry" kindref="compound">Odometry</ref><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdlib_1_1_odometry" kindref="compound">Odometry</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/>horizontal_wheel_offset<sp/>=<sp/>au::ZERO);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classdlib_1_1_odometry_1abcff56aca6c963dda38d50d2324916e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdlib_1_1_odometry_1abcff56aca6c963dda38d50d2324916e6" kindref="member">update</ref>(</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/>left_displacement,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/>right_displacement,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/>horizontal_displacement,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>au::Quantity&lt;au::Degrees,<sp/>double&gt;<sp/>heading</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classdlib_1_1_odometry_1aff1bcf403d9f255dbb0a39212779ed0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1_pose2d" kindref="compound">Pose2d</ref><sp/><ref refid="classdlib_1_1_odometry_1aff1bcf403d9f255dbb0a39212779ed0c" kindref="member">get_position</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classdlib_1_1_odometry_1a4da18633efe447f97983b0e6594acb95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdlib_1_1_odometry_1a4da18633efe447f97983b0e6594acb95" kindref="member">set_position</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdlib_1_1_pose2d" kindref="compound">Pose2d</ref><sp/>pose);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="classdlib_1_1_odometry_1a309831aa5e212c91107e43d0c128ad04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/><ref refid="classdlib_1_1_odometry_1a309831aa5e212c91107e43d0c128ad04" kindref="member">displacement_to</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdlib_1_1_vector2d" kindref="compound">Vector2d</ref><sp/>point,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>reverse<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classdlib_1_1_odometry_1a1f7a238a917a1c464668660c7404983a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Degrees,<sp/>double&gt;<sp/><ref refid="classdlib_1_1_odometry_1a1f7a238a917a1c464668660c7404983a" kindref="member">angle_to</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdlib_1_1_vector2d" kindref="compound">Vector2d</ref><sp/>point,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>reverse<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1_pose2d" kindref="compound">Pose2d</ref><sp/>position<sp/>=<sp/><ref refid="structdlib_1_1_pose2d" kindref="compound">Pose2d</ref>(au::ZERO,<sp/>au::ZERO,<sp/>au::ZERO);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/>previous_forward<sp/>=<sp/>au::ZERO;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/>previous_horizontal<sp/>=<sp/>au::ZERO;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Radians,<sp/>double&gt;<sp/>previous_theta<sp/>=<sp/>au::ZERO;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>au::Quantity&lt;au::Meters,<sp/>double&gt;<sp/>horizontal_wheel_offset<sp/>=<sp/>au::ZERO;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>pros::Mutex<sp/>mutex{};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp"/>
+  </compounddef>
+</doxygen>

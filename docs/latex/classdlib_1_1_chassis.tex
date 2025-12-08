@@ -1,0 +1,337 @@
+\doxysection{dlib\+::Chassis Class Reference}
+\hypertarget{classdlib_1_1_chassis}{}\label{classdlib_1_1_chassis}\index{dlib::Chassis@{dlib::Chassis}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classdlib_1_1_chassis_ade24173196b00aa280611064c9e6623f}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the chassis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdlib_1_1_chassis_a5eb93891de9b8904cefe1cb48dad8e9f}{move}} (const double power)
+\begin{DoxyCompactList}\small\item\em Move the \doxylink{classdlib_1_1_chassis}{Chassis} with a joystick input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdlib_1_1_chassis_aef94afa1f9a56aa672f4b189a464066d}{move\+\_\+voltage}} (const au\+::\+Quantity$<$ au\+::\+Volts, double $>$ voltage)
+\begin{DoxyCompactList}\small\item\em Move the \doxylink{classdlib_1_1_chassis}{Chassis} with a given voltage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdlib_1_1_chassis_ae6a50392912d6561535583b4186ae2fb}{turn}} (const int32\+\_\+t power)
+\begin{DoxyCompactList}\small\item\em Turn the \doxylink{classdlib_1_1_chassis}{Chassis} with a joystick input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdlib_1_1_chassis_a6741507c52e908e672a28f50de535308}{turn\+\_\+voltage}} (const au\+::\+Quantity$<$ au\+::\+Volts, double $>$ voltage)
+\begin{DoxyCompactList}\small\item\em Turn the chassis with a given voltage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdlib_1_1_chassis_a42c9da6ea7f5b498a233cd2e4bdc3a5a}{arcade}} (const int32\+\_\+t power, const int32\+\_\+t \mbox{\hyperlink{classdlib_1_1_chassis_ae6a50392912d6561535583b4186ae2fb}{turn}})
+\begin{DoxyCompactList}\small\item\em Turn the \doxylink{classdlib_1_1_chassis}{Chassis}. \end{DoxyCompactList}\item 
+\Hypertarget{classdlib_1_1_chassis_a768de976c86843e151f6db4dbb9d6b7f}\label{classdlib_1_1_chassis_a768de976c86843e151f6db4dbb9d6b7f} 
+void {\bfseries brake} ()
+\begin{DoxyCompactList}\small\item\em Brake the \doxylink{classdlib_1_1_chassis}{Chassis}. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ au\+::\+Meters, double $>$ \mbox{\hyperlink{classdlib_1_1_chassis_acc41ff6905d823b3c6fd1eed681592b5}{revolutions\+\_\+to\+\_\+displacement}} (const au\+::\+Quantity$<$ au\+::\+Revolutions, double $>$ revolutions) const
+\begin{DoxyCompactList}\small\item\em Convert from motor revolutions to linear displacement for the \doxylink{classdlib_1_1_chassis}{Chassis}. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ au\+::\+Meters\+Per\+Second, double $>$ \mbox{\hyperlink{classdlib_1_1_chassis_a52d0b24bd41a34d3c7d2bf3514cb3516}{rpm\+\_\+to\+\_\+velocity}} (const au\+::\+Quantity$<$ au\+::\+Rpm, double $>$ rpm) const
+\begin{DoxyCompactList}\small\item\em Convert from motor rpm to linear velocity for the \doxylink{classdlib_1_1_chassis}{Chassis}. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ au\+::\+Meters, double $>$ \mbox{\hyperlink{classdlib_1_1_chassis_a130a042aee91f7da49d23791329cd177}{left\+\_\+motors\+\_\+displacement}} ()
+\begin{DoxyCompactList}\small\item\em Get the average linear displacement of the left side of the \doxylink{classdlib_1_1_chassis}{Chassis}. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ au\+::\+Meters, double $>$ \mbox{\hyperlink{classdlib_1_1_chassis_ab84a7e10b82e2b698cc396deef90443b}{right\+\_\+motors\+\_\+displacement}} ()
+\begin{DoxyCompactList}\small\item\em Get the average linear displacement of the right side of the \doxylink{classdlib_1_1_chassis}{Chassis}. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ au\+::\+Meters, double $>$ \mbox{\hyperlink{classdlib_1_1_chassis_a3c886b2fbd96ec6e285454f08cf32494}{forward\+\_\+motor\+\_\+displacement}} ()
+\begin{DoxyCompactList}\small\item\em Get the forward linear displacment of the \doxylink{classdlib_1_1_chassis}{Chassis}. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ au\+::\+Meters\+Per\+Second, double $>$ \mbox{\hyperlink{classdlib_1_1_chassis_aca9fcffbf7f1751d4c3718ecfc74d390}{left\+\_\+motors\+\_\+velocity}} ()
+\begin{DoxyCompactList}\small\item\em Get the linear velocity of the left side of the \doxylink{classdlib_1_1_chassis}{Chassis}. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ au\+::\+Meters\+Per\+Second, double $>$ \mbox{\hyperlink{classdlib_1_1_chassis_aa64b3312ed89c9453f5cfb8b8909494c}{right\+\_\+motors\+\_\+velocity}} ()
+\begin{DoxyCompactList}\small\item\em Get the linear velocity of the right side of the \doxylink{classdlib_1_1_chassis}{Chassis}. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ au\+::\+Meters\+Per\+Second, double $>$ \mbox{\hyperlink{classdlib_1_1_chassis_ad3d3af59c798eaa4953fc7094b6424e4}{forward\+\_\+motor\+\_\+velocity}} ()
+\begin{DoxyCompactList}\small\item\em Get the forward linear velocity of the \doxylink{classdlib_1_1_chassis}{Chassis}. \end{DoxyCompactList}\item 
+\Hypertarget{classdlib_1_1_chassis_a024d3a210420b707b618eecca7f0878b}\label{classdlib_1_1_chassis_a024d3a210420b707b618eecca7f0878b} 
+{\bfseries Chassis} (\mbox{\hyperlink{structdlib_1_1_chassis_config}{Chassis\+Config}} config)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdlib_1_1_chassis_a590a5dffded23db6163b9ac7e9159d09}\label{classdlib_1_1_chassis_a590a5dffded23db6163b9ac7e9159d09} 
+\mbox{\hyperlink{classdlib_1_1_motor_group}{dlib\+::\+Motor\+Group}} {\bfseries left\+\_\+motors}
+\item 
+\Hypertarget{classdlib_1_1_chassis_ad37ed0470ce610371f5a42e3020be36a}\label{classdlib_1_1_chassis_ad37ed0470ce610371f5a42e3020be36a} 
+\mbox{\hyperlink{classdlib_1_1_motor_group}{dlib\+::\+Motor\+Group}} {\bfseries right\+\_\+motors}
+\item 
+\Hypertarget{classdlib_1_1_chassis_a3cd9c64c084f49a9a4728a862ba7b94a}\label{classdlib_1_1_chassis_a3cd9c64c084f49a9a4728a862ba7b94a} 
+pros\+::\+Motor\+Gearset {\bfseries drive\+\_\+gearset}
+\item 
+\Hypertarget{classdlib_1_1_chassis_acd0fa498a35bc3e82af1f3d356b55a40}\label{classdlib_1_1_chassis_acd0fa498a35bc3e82af1f3d356b55a40} 
+au\+::\+Quantity$<$ au\+::\+Rpm, double $>$ {\bfseries base\+\_\+rpm}
+\item 
+\Hypertarget{classdlib_1_1_chassis_a2948bf37242f3d273baafe39d0d4c1a9}\label{classdlib_1_1_chassis_a2948bf37242f3d273baafe39d0d4c1a9} 
+au\+::\+Quantity$<$ au\+::\+Rpm, double $>$ {\bfseries total\+\_\+rpm}
+\item 
+\Hypertarget{classdlib_1_1_chassis_a48a634f45afef31b1404d89820d7527f}\label{classdlib_1_1_chassis_a48a634f45afef31b1404d89820d7527f} 
+au\+::\+Quantity$<$ au\+::\+Meters, double $>$ {\bfseries wheel\+\_\+diameter}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdlib_1_1_chassis_a42c9da6ea7f5b498a233cd2e4bdc3a5a}\index{dlib::Chassis@{dlib::Chassis}!arcade@{arcade}}
+\index{arcade@{arcade}!dlib::Chassis@{dlib::Chassis}}
+\doxysubsubsection{\texorpdfstring{arcade()}{arcade()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_chassis_a42c9da6ea7f5b498a233cd2e4bdc3a5a} 
+void dlib\+::\+Chassis\+::arcade (\begin{DoxyParamCaption}\item[{const int32\+\_\+t}]{power}{, }\item[{const int32\+\_\+t}]{turn}{}\end{DoxyParamCaption})}
+
+
+
+Turn the \doxylink{classdlib_1_1_chassis}{Chassis}. 
+
+{\bfseries{Example}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Construct\ a\ ChassisConfig}}
+\DoxyCodeLine{\mbox{\hyperlink{structdlib_1_1_chassis_config}{dlib::ChassisConfig}}\ chassis\_config(\{}
+\DoxyCodeLine{\ \{1,\ 2,\ 3\},\ \textcolor{comment}{//\ left\ motor\ ports}}
+\DoxyCodeLine{\ \{4,\ 5,\ 6\},\ \textcolor{comment}{//\ right\ motor\ ports}}
+\DoxyCodeLine{\ rpm(450),\ \ \textcolor{comment}{//\ the\ drivebase\ rpm}}
+\DoxyCodeLine{\ inches(3.25)\ \ \ \textcolor{comment}{//\ the\ drivebase\ wheel\ diameter}}
+\DoxyCodeLine{\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Construct\ a\ Chassis}}
+\DoxyCodeLine{\mbox{\hyperlink{classdlib_1_1_chassis}{dlib::Chassis}}\ Chassis(chassis\_config);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ a\ controller}}
+\DoxyCodeLine{pros::Controller\ master\ =\ pros::Controller(pros::E\_CONTROLLER\_MASTER);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Instantiate\ power\ \&\ turn}}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ power\ =\ master.get\_analog(ANALOG\_LEFT\_Y);}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdlib_1_1_chassis_ae6a50392912d6561535583b4186ae2fb}{turn}}\ =\ master.get\_analog(ANALOG\_RIGHT\_X);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Move\ the\ chassis\ given\ power\ \&\ turn}}
+\DoxyCodeLine{chassis.arcade(power,\ \mbox{\hyperlink{classdlib_1_1_chassis_ae6a50392912d6561535583b4186ae2fb}{turn}});}
+
+\end{DoxyCode}
+ \Hypertarget{classdlib_1_1_chassis_a3c886b2fbd96ec6e285454f08cf32494}\index{dlib::Chassis@{dlib::Chassis}!forward\_motor\_displacement@{forward\_motor\_displacement}}
+\index{forward\_motor\_displacement@{forward\_motor\_displacement}!dlib::Chassis@{dlib::Chassis}}
+\doxysubsubsection{\texorpdfstring{forward\_motor\_displacement()}{forward\_motor\_displacement()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_chassis_a3c886b2fbd96ec6e285454f08cf32494} 
+au\+::\+Quantity$<$ au\+::\+Meters, double $>$ dlib\+::\+Chassis\+::forward\+\_\+motor\+\_\+displacement (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the forward linear displacment of the \doxylink{classdlib_1_1_chassis}{Chassis}. 
+
+\begin{DoxyReturn}{Returns}
+the forward linear displacement of the \doxylink{classdlib_1_1_chassis}{Chassis} 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_chassis_ad3d3af59c798eaa4953fc7094b6424e4}\index{dlib::Chassis@{dlib::Chassis}!forward\_motor\_velocity@{forward\_motor\_velocity}}
+\index{forward\_motor\_velocity@{forward\_motor\_velocity}!dlib::Chassis@{dlib::Chassis}}
+\doxysubsubsection{\texorpdfstring{forward\_motor\_velocity()}{forward\_motor\_velocity()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_chassis_ad3d3af59c798eaa4953fc7094b6424e4} 
+au\+::\+Quantity$<$ au\+::\+Meters\+Per\+Second, double $>$ dlib\+::\+Chassis\+::forward\+\_\+motor\+\_\+velocity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the forward linear velocity of the \doxylink{classdlib_1_1_chassis}{Chassis}. 
+
+\begin{DoxyReturn}{Returns}
+the forward linear velocity of the \doxylink{classdlib_1_1_chassis}{Chassis} 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_chassis_ade24173196b00aa280611064c9e6623f}\index{dlib::Chassis@{dlib::Chassis}!initialize@{initialize}}
+\index{initialize@{initialize}!dlib::Chassis@{dlib::Chassis}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_chassis_ade24173196b00aa280611064c9e6623f} 
+void dlib\+::\+Chassis\+::initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initialize the chassis. 
+
+{\bfseries{Example}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Construct\ a\ chassis\ config}}
+\DoxyCodeLine{\mbox{\hyperlink{structdlib_1_1_chassis_config}{dlib::ChassisConfig}}\ chassis\_config(\{}
+\DoxyCodeLine{\ \{1,\ 2,\ 3\},\ \textcolor{comment}{//\ left\ motor\ ports}}
+\DoxyCodeLine{\ \{4,\ 5,\ 6\},\ \textcolor{comment}{//\ right\ motor\ ports}}
+\DoxyCodeLine{\ rpm(450),\ \ \textcolor{comment}{//\ the\ drivebase\ rpm}}
+\DoxyCodeLine{\ inches(3.25)\ \ \ \textcolor{comment}{//\ the\ drivebase\ wheel\ diameter}}
+\DoxyCodeLine{\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Construct\ a\ chassis}}
+\DoxyCodeLine{\mbox{\hyperlink{classdlib_1_1_chassis}{dlib::Chassis}}\ chassis(chassis\_config);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Initialize\ the\ chassis}}
+\DoxyCodeLine{chassis.initialize();}
+
+\end{DoxyCode}
+ \Hypertarget{classdlib_1_1_chassis_a130a042aee91f7da49d23791329cd177}\index{dlib::Chassis@{dlib::Chassis}!left\_motors\_displacement@{left\_motors\_displacement}}
+\index{left\_motors\_displacement@{left\_motors\_displacement}!dlib::Chassis@{dlib::Chassis}}
+\doxysubsubsection{\texorpdfstring{left\_motors\_displacement()}{left\_motors\_displacement()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_chassis_a130a042aee91f7da49d23791329cd177} 
+au\+::\+Quantity$<$ au\+::\+Meters, double $>$ dlib\+::\+Chassis\+::left\+\_\+motors\+\_\+displacement (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the average linear displacement of the left side of the \doxylink{classdlib_1_1_chassis}{Chassis}. 
+
+\begin{DoxyReturn}{Returns}
+the linear displacement of the left side of the \doxylink{classdlib_1_1_chassis}{Chassis} 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_chassis_aca9fcffbf7f1751d4c3718ecfc74d390}\index{dlib::Chassis@{dlib::Chassis}!left\_motors\_velocity@{left\_motors\_velocity}}
+\index{left\_motors\_velocity@{left\_motors\_velocity}!dlib::Chassis@{dlib::Chassis}}
+\doxysubsubsection{\texorpdfstring{left\_motors\_velocity()}{left\_motors\_velocity()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_chassis_aca9fcffbf7f1751d4c3718ecfc74d390} 
+au\+::\+Quantity$<$ au\+::\+Meters\+Per\+Second, double $>$ dlib\+::\+Chassis\+::left\+\_\+motors\+\_\+velocity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the linear velocity of the left side of the \doxylink{classdlib_1_1_chassis}{Chassis}. 
+
+\begin{DoxyReturn}{Returns}
+the linear velocity of the left side of the \doxylink{classdlib_1_1_chassis}{Chassis} 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_chassis_a5eb93891de9b8904cefe1cb48dad8e9f}\index{dlib::Chassis@{dlib::Chassis}!move@{move}}
+\index{move@{move}!dlib::Chassis@{dlib::Chassis}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_chassis_a5eb93891de9b8904cefe1cb48dad8e9f} 
+void dlib\+::\+Chassis\+::move (\begin{DoxyParamCaption}\item[{const double}]{power}{}\end{DoxyParamCaption})}
+
+
+
+Move the \doxylink{classdlib_1_1_chassis}{Chassis} with a joystick input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em power} & the joystick input value\\
+\hline
+\end{DoxyParams}
+{\bfseries{Example}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Construct\ a\ ChassisConfig}}
+\DoxyCodeLine{\mbox{\hyperlink{structdlib_1_1_chassis_config}{dlib::ChassisConfig}}\ chassis\_config(\{}
+\DoxyCodeLine{\ \{1,\ 2,\ 3\},\ \textcolor{comment}{//\ left\ motor\ ports}}
+\DoxyCodeLine{\ \{4,\ 5,\ 6\},\ \textcolor{comment}{//\ right\ motor\ ports}}
+\DoxyCodeLine{\ rpm(450),\ \ \textcolor{comment}{//\ the\ drivebase\ rpm}}
+\DoxyCodeLine{\ inches(3.25)\ \ \ \textcolor{comment}{//\ the\ drivebase\ wheel\ diameter}}
+\DoxyCodeLine{\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Construct\ a\ Chassis}}
+\DoxyCodeLine{\mbox{\hyperlink{classdlib_1_1_chassis}{dlib::Chassis}}\ chassis(chassis\_config);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Move\ the\ chassis\ at\ max\ forward\ (127)}}
+\DoxyCodeLine{chassis.move(127);}
+
+\end{DoxyCode}
+ \Hypertarget{classdlib_1_1_chassis_aef94afa1f9a56aa672f4b189a464066d}\index{dlib::Chassis@{dlib::Chassis}!move\_voltage@{move\_voltage}}
+\index{move\_voltage@{move\_voltage}!dlib::Chassis@{dlib::Chassis}}
+\doxysubsubsection{\texorpdfstring{move\_voltage()}{move\_voltage()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_chassis_aef94afa1f9a56aa672f4b189a464066d} 
+void dlib\+::\+Chassis\+::move\+\_\+voltage (\begin{DoxyParamCaption}\item[{const au\+::\+Quantity$<$ au\+::\+Volts, double $>$}]{voltage}{}\end{DoxyParamCaption})}
+
+
+
+Move the \doxylink{classdlib_1_1_chassis}{Chassis} with a given voltage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em voltage} & the voltage to send to the motors \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classdlib_1_1_chassis_acc41ff6905d823b3c6fd1eed681592b5}\index{dlib::Chassis@{dlib::Chassis}!revolutions\_to\_displacement@{revolutions\_to\_displacement}}
+\index{revolutions\_to\_displacement@{revolutions\_to\_displacement}!dlib::Chassis@{dlib::Chassis}}
+\doxysubsubsection{\texorpdfstring{revolutions\_to\_displacement()}{revolutions\_to\_displacement()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_chassis_acc41ff6905d823b3c6fd1eed681592b5} 
+au\+::\+Quantity$<$ au\+::\+Meters, double $>$ dlib\+::\+Chassis\+::revolutions\+\_\+to\+\_\+displacement (\begin{DoxyParamCaption}\item[{const au\+::\+Quantity$<$ au\+::\+Revolutions, double $>$}]{revolutions}{}\end{DoxyParamCaption}) const}
+
+
+
+Convert from motor revolutions to linear displacement for the \doxylink{classdlib_1_1_chassis}{Chassis}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em revolutions} & the number of motor revolutions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+linear displacement 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_chassis_ab84a7e10b82e2b698cc396deef90443b}\index{dlib::Chassis@{dlib::Chassis}!right\_motors\_displacement@{right\_motors\_displacement}}
+\index{right\_motors\_displacement@{right\_motors\_displacement}!dlib::Chassis@{dlib::Chassis}}
+\doxysubsubsection{\texorpdfstring{right\_motors\_displacement()}{right\_motors\_displacement()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_chassis_ab84a7e10b82e2b698cc396deef90443b} 
+au\+::\+Quantity$<$ au\+::\+Meters, double $>$ dlib\+::\+Chassis\+::right\+\_\+motors\+\_\+displacement (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the average linear displacement of the right side of the \doxylink{classdlib_1_1_chassis}{Chassis}. 
+
+\begin{DoxyReturn}{Returns}
+the linear displacement of the right side of the \doxylink{classdlib_1_1_chassis}{Chassis} 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_chassis_aa64b3312ed89c9453f5cfb8b8909494c}\index{dlib::Chassis@{dlib::Chassis}!right\_motors\_velocity@{right\_motors\_velocity}}
+\index{right\_motors\_velocity@{right\_motors\_velocity}!dlib::Chassis@{dlib::Chassis}}
+\doxysubsubsection{\texorpdfstring{right\_motors\_velocity()}{right\_motors\_velocity()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_chassis_aa64b3312ed89c9453f5cfb8b8909494c} 
+au\+::\+Quantity$<$ au\+::\+Meters\+Per\+Second, double $>$ dlib\+::\+Chassis\+::right\+\_\+motors\+\_\+velocity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the linear velocity of the right side of the \doxylink{classdlib_1_1_chassis}{Chassis}. 
+
+\begin{DoxyReturn}{Returns}
+the linear velocity of the right side of the \doxylink{classdlib_1_1_chassis}{Chassis} 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_chassis_a52d0b24bd41a34d3c7d2bf3514cb3516}\index{dlib::Chassis@{dlib::Chassis}!rpm\_to\_velocity@{rpm\_to\_velocity}}
+\index{rpm\_to\_velocity@{rpm\_to\_velocity}!dlib::Chassis@{dlib::Chassis}}
+\doxysubsubsection{\texorpdfstring{rpm\_to\_velocity()}{rpm\_to\_velocity()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_chassis_a52d0b24bd41a34d3c7d2bf3514cb3516} 
+au\+::\+Quantity$<$ au\+::\+Meters\+Per\+Second, double $>$ dlib\+::\+Chassis\+::rpm\+\_\+to\+\_\+velocity (\begin{DoxyParamCaption}\item[{const au\+::\+Quantity$<$ au\+::\+Rpm, double $>$}]{rpm}{}\end{DoxyParamCaption}) const}
+
+
+
+Convert from motor rpm to linear velocity for the \doxylink{classdlib_1_1_chassis}{Chassis}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rpm} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+linear velocity 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_chassis_ae6a50392912d6561535583b4186ae2fb}\index{dlib::Chassis@{dlib::Chassis}!turn@{turn}}
+\index{turn@{turn}!dlib::Chassis@{dlib::Chassis}}
+\doxysubsubsection{\texorpdfstring{turn()}{turn()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_chassis_ae6a50392912d6561535583b4186ae2fb} 
+void dlib\+::\+Chassis\+::turn (\begin{DoxyParamCaption}\item[{const int32\+\_\+t}]{power}{}\end{DoxyParamCaption})}
+
+
+
+Turn the \doxylink{classdlib_1_1_chassis}{Chassis} with a joystick input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em power} & the joystick input value\\
+\hline
+\end{DoxyParams}
+{\bfseries{Example}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Construct\ a\ Chassis\ config}}
+\DoxyCodeLine{\mbox{\hyperlink{structdlib_1_1_chassis_config}{dlib::ChassisConfig}}\ chassis\_config(\{}
+\DoxyCodeLine{\ \{1,\ 2,\ 3\},\ \textcolor{comment}{//\ left\ motor\ ports}}
+\DoxyCodeLine{\ \{4,\ 5,\ 6\},\ \textcolor{comment}{//\ right\ motor\ ports}}
+\DoxyCodeLine{\ rpm(450),\ \ \textcolor{comment}{//\ the\ drivebase\ rpm}}
+\DoxyCodeLine{\ inches(3.25)\ \ \ \textcolor{comment}{//\ the\ drivebase\ wheel\ diameter}}
+\DoxyCodeLine{\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Construct\ a\ chassis}}
+\DoxyCodeLine{\mbox{\hyperlink{classdlib_1_1_chassis}{dlib::Chassis}}\ chassis(chassis\_config);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Turn\ the\ chassis\ at\ max\ forward\ (127)}}
+\DoxyCodeLine{chassis.turn(127);}
+
+\end{DoxyCode}
+ \Hypertarget{classdlib_1_1_chassis_a6741507c52e908e672a28f50de535308}\index{dlib::Chassis@{dlib::Chassis}!turn\_voltage@{turn\_voltage}}
+\index{turn\_voltage@{turn\_voltage}!dlib::Chassis@{dlib::Chassis}}
+\doxysubsubsection{\texorpdfstring{turn\_voltage()}{turn\_voltage()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_chassis_a6741507c52e908e672a28f50de535308} 
+void dlib\+::\+Chassis\+::turn\+\_\+voltage (\begin{DoxyParamCaption}\item[{const au\+::\+Quantity$<$ au\+::\+Volts, double $>$}]{voltage}{}\end{DoxyParamCaption})}
+
+
+
+Turn the chassis with a given voltage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em voltage} & the voltage to send to the motors \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/super/\+Downloads/5150\+D-\/\+Push Back\+V1/include/dlib/hardware/chassis.\+hpp\end{DoxyCompactItemize}

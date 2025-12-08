@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classdlib_1_1_motor_group" kind="class" language="C++" prot="public">
+    <compoundname>dlib::MotorGroup</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classdlib_1_1_motor_group_1aa0348ac675ae662023d7c35656437a55" prot="public" static="no" mutable="no">
+        <type>pros::MotorGroup</type>
+        <definition>pros::MotorGroup dlib::MotorGroup::raw</definition>
+        <argsstring></argsstring>
+        <name>raw</name>
+        <qualifiedname>dlib::MotorGroup::raw</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" line="49" column="22" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdlib_1_1_motor_group_1a9baf71907745a7bc220f936b950eb343" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dlib::MotorGroup::move</definition>
+        <argsstring>(const double power)</argsstring>
+        <name>move</name>
+        <qualifiedname>dlib::MotorGroup::move</qualifiedname>
+        <param>
+          <type>const double</type>
+          <declname>power</declname>
+        </param>
+        <briefdescription>
+<para>Move the motorgroup with a joystick input. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>power</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the joystick input value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" line="24" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdlib_1_1_motor_group_1a9ee9433f34c4865dea205c25b0cca1d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dlib::MotorGroup::move_voltage</definition>
+        <argsstring>(const au::Quantity&lt; au::Volts, double &gt; voltage)</argsstring>
+        <name>move_voltage</name>
+        <qualifiedname>dlib::MotorGroup::move_voltage</qualifiedname>
+        <param>
+          <type>const au::Quantity&lt; au::Volts, double &gt;</type>
+          <declname>voltage</declname>
+        </param>
+        <briefdescription>
+<para>Move the <ref refid="classdlib_1_1_motor_group" kindref="compound">MotorGroup</ref> with a given voltage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>voltage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the voltage to send to the motors </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" line="31" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdlib_1_1_motor_group_1ac4bfcc515fadba0f5ba262acf5a367b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>au::Quantity&lt; au::Revolutions, double &gt;</type>
+        <definition>au::Quantity&lt; au::Revolutions, double &gt; dlib::MotorGroup::get_position</definition>
+        <argsstring>()</argsstring>
+        <name>get_position</name>
+        <qualifiedname>dlib::MotorGroup::get_position</qualifiedname>
+        <briefdescription>
+<para>Get the <ref refid="classdlib_1_1_motor_group" kindref="compound">MotorGroup</ref> average position in revolutions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>revolutions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" line="38" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdlib_1_1_motor_group_1abce7cc77262c1605aa29e0cd40704a09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>au::Quantity&lt; au::Rpm, double &gt;</type>
+        <definition>au::Quantity&lt; au::Rpm, double &gt; dlib::MotorGroup::get_velocity</definition>
+        <argsstring>()</argsstring>
+        <name>get_velocity</name>
+        <qualifiedname>dlib::MotorGroup::get_velocity</qualifiedname>
+        <briefdescription>
+<para>Get the <ref refid="classdlib_1_1_motor_group" kindref="compound">MotorGroup</ref> average velocity in rpm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>rpm </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" line="45" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdlib_1_1_motor_group_1a93f95e6ee976aeae3216769b0c183d45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dlib::MotorGroup::MotorGroup</definition>
+        <argsstring>(MotorGroupConfig config)</argsstring>
+        <name>MotorGroup</name>
+        <qualifiedname>dlib::MotorGroup::MotorGroup</qualifiedname>
+        <param>
+          <type><ref refid="structdlib_1_1_motor_group_config" kindref="compound">MotorGroupConfig</ref></type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" line="47" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" line="17" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" bodystart="17" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classdlib_1_1_motor_group_1ac4bfcc515fadba0f5ba262acf5a367b5" prot="public" virt="non-virtual"><scope>dlib::MotorGroup</scope><name>get_position</name></member>
+      <member refid="classdlib_1_1_motor_group_1abce7cc77262c1605aa29e0cd40704a09" prot="public" virt="non-virtual"><scope>dlib::MotorGroup</scope><name>get_velocity</name></member>
+      <member refid="classdlib_1_1_motor_group_1a93f95e6ee976aeae3216769b0c183d45" prot="public" virt="non-virtual"><scope>dlib::MotorGroup</scope><name>MotorGroup</name></member>
+      <member refid="classdlib_1_1_motor_group_1a9baf71907745a7bc220f936b950eb343" prot="public" virt="non-virtual"><scope>dlib::MotorGroup</scope><name>move</name></member>
+      <member refid="classdlib_1_1_motor_group_1a9ee9433f34c4865dea205c25b0cca1d6" prot="public" virt="non-virtual"><scope>dlib::MotorGroup</scope><name>move_voltage</name></member>
+      <member refid="classdlib_1_1_motor_group_1aa0348ac675ae662023d7c35656437a55" prot="public" virt="non-virtual"><scope>dlib::MotorGroup</scope><name>raw</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

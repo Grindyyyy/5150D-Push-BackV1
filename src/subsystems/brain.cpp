@@ -34,6 +34,7 @@ static lv_obj_t * menu;
 
 static lv_obj_t * coords_x;
 static lv_obj_t * coords_y;
+static lv_obj_t * coords_theta;
 
 // static buttons
 static lv_obj_t * blue_left_elim;
@@ -113,68 +114,35 @@ static void selector_button_manager(lv_event_t * e){
 	lv_event_code_t code = e->code;
     lv_obj_t * btn = lv_event_get_target(e); // Get the button object
     if (code == LV_EVENT_PRESSED) {
-		if(btn == red_ring_elim){
+		if(btn == red_solo_wp){
 			selected = 1;
-			lv_label_set_text(red_selected_label, "Selected Auton: Red 7 Ring Elim");
-			lv_label_set_text(blue_selected_label, "Selected Auton: Red 7 Ring Elim");
-			lv_obj_align_to(red_selected_label,red_selector_page,LV_ALIGN_BOTTOM_MID,0,0);
-			remove_button_style();
-			lv_obj_add_style(red_ring_elim,&button_selected,0);
-		}
-		else if(btn == red_solo_wp){
-			selected = 2;
-			lv_label_set_text(red_selected_label, "Selected Auton: Red Solo WP");
-			lv_label_set_text(blue_selected_label, "Selected Auton: Red Solo WP");
+			lv_label_set_text(red_selected_label, "Selected Auton: Solo WP");
+			lv_label_set_text(blue_selected_label, "Selected Auton: Solo WP");
 			lv_obj_align_to(red_selected_label,red_selector_page,LV_ALIGN_BOTTOM_MID,0,0);
 			remove_button_style();
 			lv_obj_add_style(red_solo_wp,&button_selected,0);
 		}
 		else if(btn == red_goal_elim){
-			selected = 3;
-			lv_label_set_text(red_selected_label, "Selected Auton: Red Goal Elim");
-			lv_label_set_text(blue_selected_label, "Selected Auton: Red Goal Elim");
+			selected = 2;
+			lv_label_set_text(red_selected_label, "Selected Auton: Left Elim");
+			lv_label_set_text(blue_selected_label, "Selected Auton: Left Elim");
 			lv_obj_align_to(red_selected_label,red_selector_page,LV_ALIGN_BOTTOM_MID,0,0);
 			remove_button_style();
 			lv_obj_add_style(red_goal_elim,&button_selected,0);
 		}
-		else if(btn == blue_left_elim){
-			selected = 4;
-			lv_label_set_text(blue_selected_label, "Selected Auton: Blue Ring Elim");
-			lv_label_set_text(red_selected_label, "Selected Auton: Blue Ring Elim");
-			lv_obj_align_to(blue_selected_label,blue_selector_page,LV_ALIGN_BOTTOM_MID,0,0);
-			remove_button_style();
-			lv_obj_add_style(blue_left_elim,&button_selected,0);
-		}
-		else if(btn == blue_solo_wp){
-			selected = 5;
-			lv_label_set_text(blue_selected_label, "Selected Auton: Blue Solo WP");
-			lv_label_set_text(red_selected_label, "Selected Auton: Blue Solo WP");
-			lv_obj_align_to(blue_selected_label,blue_selector_page,LV_ALIGN_BOTTOM_MID,0,0);
-			remove_button_style();
-			lv_obj_add_style(blue_solo_wp,&button_selected,0);
-		}
 		else if(btn == blue_right_elim){
-			selected = 6;
-			lv_label_set_text(blue_selected_label, "Selected Auton: Blue Goal Elim");
-			lv_label_set_text(red_selected_label, "Selected Auton: Blue Goal Elim");
+			selected = 3;
+			lv_label_set_text(blue_selected_label, "Selected Auton: Right Elim");
+			lv_label_set_text(red_selected_label, "Selected Auton: Right Elim");
 			lv_obj_align_to(blue_selected_label,blue_selector_page,LV_ALIGN_BOTTOM_MID,0,0);
 			remove_button_style();
 			lv_obj_add_style(blue_right_elim,&button_selected,0);
 		}
-		else if(btn == risky_skills){
-			selected = 7;
-			lv_label_set_text(skills_selected_label, "Selected Auton: Risky Skills");
-			lv_label_set_text(red_selected_label, "Selected Auton: Risky Skills");
-			lv_label_set_text(blue_selected_label, "Selected Auton: Risky Skills");
-			lv_obj_align_to(skills_selected_label,skills_selector_page,LV_ALIGN_BOTTOM_MID,0,0);
-			remove_button_style();
-			lv_obj_add_style(risky_skills,&button_selected,0);
-		}
 		else if(btn == safe_skills){
-			selected = 8;
-			lv_label_set_text(skills_selected_label, "Selected Auton: Safe Skills");
-			lv_label_set_text(red_selected_label, "Selected Auton: Safe Skills");
-			lv_label_set_text(blue_selected_label, "Selected Auton: Safe Skills");
+			selected = 4;
+			lv_label_set_text(skills_selected_label, "Selected Auton: Skills");
+			lv_label_set_text(red_selected_label, "Selected Auton: Skills");
+			lv_label_set_text(blue_selected_label, "Selected Auton: Skills");
 			lv_obj_align_to(skills_selected_label,skills_selector_page,LV_ALIGN_BOTTOM_MID,0,0);
 			remove_button_style();
 			lv_obj_add_style(safe_skills,&button_selected,0);
@@ -218,6 +186,11 @@ void initialize_brain(){
 	lv_obj_add_style(coords_y,&dynamic_battery,0);
     lv_obj_align_to(coords_y, lv_layer_top(), LV_ALIGN_BOTTOM_MID,10,-15);
 
+	coords_theta = lv_label_create(lv_layer_top());
+	lv_label_set_text(coords_theta, "Odometry coords: NULL");
+	lv_obj_add_style(coords_theta,&dynamic_battery,0);
+    lv_obj_align_to(coords_theta, lv_layer_top(), LV_ALIGN_BOTTOM_MID,10,0);
+
 	menu = lv_menu_create(lv_scr_act());
 	lv_obj_set_size(menu, lv_disp_get_hor_res(NULL) , lv_disp_get_ver_res(NULL));
 	lv_obj_add_style(menu,&background_color,0);
@@ -230,7 +203,7 @@ void initialize_brain(){
 	cont = lv_menu_cont_create(red_selector_page);
 
 	// subpage buttons
-	red_ring_elim = lv_btn_create(cont);
+	/*red_ring_elim = lv_btn_create(cont);
 
 	lv_obj_add_style(red_ring_elim,&button_pressed,LV_STATE_PRESSED);
 	lv_obj_add_style(red_ring_elim,&red_button_released,0);
@@ -241,7 +214,7 @@ void initialize_brain(){
     lv_label_set_text(label, "Red Ring Elim");              
     lv_obj_center(label);
 
-	lv_obj_add_event_cb(red_ring_elim,selector_button_manager, LV_EVENT_PRESSED,NULL);
+	lv_obj_add_event_cb(red_ring_elim,selector_button_manager, LV_EVENT_PRESSED,NULL);*/
 
 	red_solo_wp = lv_btn_create(cont);
 
@@ -251,7 +224,7 @@ void initialize_brain(){
 	lv_obj_align(red_solo_wp, LV_ALIGN_CENTER, 10, 10);
 
 	label = lv_label_create(red_solo_wp);      
-    lv_label_set_text(label, "Red Solo WP");          
+    lv_label_set_text(label, "Solo WP");          
     lv_obj_center(label);
 
 	lv_obj_add_event_cb(red_solo_wp,selector_button_manager, LV_EVENT_PRESSED,NULL);
@@ -264,7 +237,7 @@ void initialize_brain(){
 	lv_obj_align(red_goal_elim, LV_ALIGN_CENTER, 10, 10);
 
 	label = lv_label_create(red_goal_elim);  
-    lv_label_set_text(label, "Red Goal Elim");  
+    lv_label_set_text(label, "Left Elim");  
     lv_obj_center(label);
 
 	lv_obj_add_event_cb(red_goal_elim,selector_button_manager, LV_EVENT_PRESSED,NULL);
@@ -281,7 +254,7 @@ void initialize_brain(){
 	// blue container
 	cont = lv_menu_cont_create(blue_selector_page);
 
-	// subpage buttons
+	/*// subpage buttons
 	blue_left_elim = lv_btn_create(cont);
 
 	lv_obj_add_style(blue_left_elim,&button_pressed,LV_STATE_PRESSED);
@@ -293,9 +266,9 @@ void initialize_brain(){
     lv_label_set_text(label, "Blue Left Elim");              
     lv_obj_center(label);
 
-	lv_obj_add_event_cb(blue_left_elim,selector_button_manager, LV_EVENT_PRESSED,NULL);
+	lv_obj_add_event_cb(blue_left_elim,selector_button_manager, LV_EVENT_PRESSED,NULL);*/
 
-	blue_solo_wp = lv_btn_create(cont);
+	/*blue_solo_wp = lv_btn_create(cont);
 
 	lv_obj_add_style(blue_solo_wp,&button_pressed,LV_STATE_PRESSED);
 	lv_obj_add_style(blue_solo_wp,&blue_button_released,0);
@@ -306,7 +279,7 @@ void initialize_brain(){
     lv_label_set_text(label, "Blue Solo WP");          
     lv_obj_center(label);
 
-	lv_obj_add_event_cb(blue_solo_wp,selector_button_manager, LV_EVENT_PRESSED,NULL);
+	lv_obj_add_event_cb(blue_solo_wp,selector_button_manager, LV_EVENT_PRESSED,NULL);*/
 
 	blue_right_elim = lv_btn_create(cont);
 
@@ -316,7 +289,7 @@ void initialize_brain(){
 	lv_obj_align(blue_right_elim, LV_ALIGN_CENTER, 10, 10);
 
 	label = lv_label_create(blue_right_elim);  
-    lv_label_set_text(label, "Blue Right Elim");  
+    lv_label_set_text(label, "Right Elim");  
     lv_obj_center(label);
 
 	lv_obj_add_event_cb(blue_right_elim,selector_button_manager, LV_EVENT_PRESSED,NULL);
@@ -332,20 +305,6 @@ void initialize_brain(){
 	// skills container
 	cont = lv_menu_cont_create(skills_selector_page);
 
-	// subpage buttons
-	risky_skills = lv_btn_create(cont);
-
-	lv_obj_add_style(risky_skills,&button_pressed,LV_STATE_PRESSED);
-	lv_obj_add_style(risky_skills,&skills_button_released,0);
-	lv_obj_set_size(risky_skills, 140, 50);
-	lv_obj_align(risky_skills, LV_ALIGN_CENTER, 10, 10);
-
-	label = lv_label_create(risky_skills);     
-    lv_label_set_text(label, "Risky Skills");              
-    lv_obj_center(label);
-
-	lv_obj_add_event_cb(risky_skills,selector_button_manager, LV_EVENT_PRESSED,NULL);
-
 	safe_skills = lv_btn_create(cont);
 
 	lv_obj_add_style(safe_skills,&button_pressed,LV_STATE_PRESSED);
@@ -354,7 +313,7 @@ void initialize_brain(){
 	lv_obj_align(safe_skills, LV_ALIGN_CENTER, 10, 10);
 
 	label = lv_label_create(safe_skills);      
-    lv_label_set_text(label, "Safe Skills");          
+    lv_label_set_text(label, "Skills");          
     lv_obj_center(label);
 
 	lv_obj_add_event_cb(safe_skills,selector_button_manager, LV_EVENT_PRESSED,NULL);
@@ -385,12 +344,12 @@ void initialize_brain(){
 
 	cont = lv_menu_cont_create(main_menu);
 	menu_label = lv_label_create(cont);
-	lv_label_set_text(menu_label, "Red Autons");
+	lv_label_set_text(menu_label, "Left Autons");
 	lv_menu_set_load_page_event(menu, cont, red_selector_page);
 
 	cont = lv_menu_cont_create(main_menu);
 	menu_label = lv_label_create(cont);
-	lv_label_set_text(menu_label, "Blue Autons");
+	lv_label_set_text(menu_label, "Right Autons");
 	lv_menu_set_load_page_event(menu, cont, blue_selector_page);
 
 	cont = lv_menu_cont_create(main_menu);
@@ -425,4 +384,5 @@ void print_coords(Robot& robot){
 
 	lv_label_set_text(coords_x, std::format("X: {:.3f}", pose.x.in(meters)).c_str());
 	lv_label_set_text(coords_y, std::format("Y: {:.3f}", pose.y.in(meters)).c_str());
+	lv_label_set_text(coords_theta, std::format("Heading: {:.3f}", pose.theta.in(degrees)).c_str());
 }

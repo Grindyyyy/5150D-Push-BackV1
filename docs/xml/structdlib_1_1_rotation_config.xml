@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structdlib_1_1_rotation_config" kind="struct" language="C++" prot="public">
+    <compoundname>dlib::RotationConfig</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdlib_1_1_rotation_config_1a1f1e1b100131170ab8d93e292977f72c" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t dlib::RotationConfig::port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <qualifiedname>dlib::RotationConfig::port</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" line="11" column="12" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdlib_1_1_rotation_config_1a370d9009a9b8dca5adf95e9eb2a1f895" prot="public" static="no" mutable="no">
+        <type>au::Quantity&lt; au::Meters, double &gt;</type>
+        <definition>au::Quantity&lt;au::Meters, double&gt; dlib::RotationConfig::wheel_diameter</definition>
+        <argsstring></argsstring>
+        <name>wheel_diameter</name>
+        <qualifiedname>dlib::RotationConfig::wheel_diameter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" line="12" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdlib_1_1_rotation_config_1a9738cc24a61512f1b9e1596b22f78f71" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double dlib::RotationConfig::gear_ratio</definition>
+        <argsstring></argsstring>
+        <name>gear_ratio</name>
+        <qualifiedname>dlib::RotationConfig::gear_ratio</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" line="13" column="12" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structdlib_1_1_rotation_config_1ac2d3c991c01dc1683205751b50856fdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dlib::RotationConfig::RotationConfig</definition>
+        <argsstring>(int8_t port, au::Quantity&lt; au::Meters, double &gt; wheel_diameter, double gear_ratio)</argsstring>
+        <name>RotationConfig</name>
+        <qualifiedname>dlib::RotationConfig::RotationConfig</qualifiedname>
+        <param>
+          <type>int8_t</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>au::Quantity&lt; au::Meters, double &gt;</type>
+          <declname>wheel_diameter</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>gear_ratio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" line="15" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" line="10" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" bodystart="10" bodyend="16"/>
+    <listofallmembers>
+      <member refid="structdlib_1_1_rotation_config_1a9738cc24a61512f1b9e1596b22f78f71" prot="public" virt="non-virtual"><scope>dlib::RotationConfig</scope><name>gear_ratio</name></member>
+      <member refid="structdlib_1_1_rotation_config_1a1f1e1b100131170ab8d93e292977f72c" prot="public" virt="non-virtual"><scope>dlib::RotationConfig</scope><name>port</name></member>
+      <member refid="structdlib_1_1_rotation_config_1ac2d3c991c01dc1683205751b50856fdb" prot="public" virt="non-virtual"><scope>dlib::RotationConfig</scope><name>RotationConfig</name></member>
+      <member refid="structdlib_1_1_rotation_config_1a370d9009a9b8dca5adf95e9eb2a1f895" prot="public" virt="non-virtual"><scope>dlib::RotationConfig</scope><name>wheel_diameter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

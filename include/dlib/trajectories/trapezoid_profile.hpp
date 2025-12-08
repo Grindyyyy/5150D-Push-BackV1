@@ -94,6 +94,10 @@ public:
         decel_cutoff = accel_time + coast_time + decel_time;
     }
 
+    double get_time(){
+        return total_time.in(au::milli(au::seconds));
+    }
+
     TrapezoidProfileStage stage(const au::Quantity<au::Seconds, double> elapsed_time) const {
         if (elapsed_time < this->accel_cutoff) {
         return TrapezoidProfileStage::Accelerating;

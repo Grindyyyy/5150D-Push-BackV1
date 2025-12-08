@@ -1,0 +1,69 @@
+\doxysection{error\+\_\+time\+\_\+settler.\+hpp}
+\hypertarget{error__time__settler_8hpp_source}{}\label{error__time__settler_8hpp_source}\index{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/controllers/error\_time\_settler.hpp@{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/controllers/error\_time\_settler.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}au/au.hpp"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }dlib\ \{}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ error\_time\_settler.hpp}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Units>}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdlib_1_1_error_time_settler}{ErrorTimeSettler}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{classdlib_1_1_error_time_settler}{ErrorTimeSettler}}(}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ au::Quantity<Units,\ double>\ error\_threshold,\ \ \ \ \textcolor{comment}{//\ the\ maximum\ error\ at\ which\ we\ can\ settle}}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ au::Quantity<au::Seconds,\ double>\ settle\_time\ \ \ \textcolor{comment}{//\ the\ minimum\ time\ below\ the\ error\ threshold\ to\ settle}}
+\DoxyCodeLine{00014\ \ \ \ \ )\ :}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ error\_threshold(error\_threshold),}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ settle\_time(settle\_time)\ \{}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classdlib_1_1_error_time_settler_a7e74b5131c4647fafc384e8c2823f895}{is\_settled}}(au::Quantity<Units,\ double>\ error,\ au::Quantity<au::Seconds,\ double>\ period)\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ absolute\_error\ =\ au::abs(error);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>is\_settling)\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ we\ are\ settling,\ and\ we\ are\ still\ below\ the\ error\ add\ the\ period\ to\ the\ elapsed\ time\ }}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (absolute\_error\ <=\ this-\/>error\_threshold)\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>time\_below\_threshold\ +=\ period;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ we\ went\ outside\ the\ error\ threshold;\ stop\ settling}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>is\_settling\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>time\_below\_threshold\ =\ au::ZERO;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ we\ aren't\ settling\ yet,\ and\ we\ are\ below\ the\ error\ threshold,\ start\ settling}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!this-\/>is\_settling\ \&\&\ absolute\_error\ <=\ this-\/>error\_threshold)\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>is\_settling\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ we\ are\ settled\ iff:}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/\ we\ have\ started\ settling}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/\ we\ are\ below\ the\ error\ threshold}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/\ we\ have\ been\ below\ the\ threshold\ for\ the\ settle\ time}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>is\_settling\ \&\&\ this-\/>time\_below\_threshold\ >=\ this-\/>settle\_time\ \&\&\ absolute\_error\ <=\ this-\/>error\_threshold)\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdlib_1_1_error_time_settler_af432f4115d0eff9738f46b8bdc8518ab}{reset}}()\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ this-\/>is\_settling\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ this-\/>time\_below\_threshold\ =\ au::ZERO;}
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_settling;}
+\DoxyCodeLine{00085\ \ \ \ \ au::Quantity<au::Seconds,\ double>\ time\_below\_threshold;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<Units,\ double>\ error\_threshold;}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<au::Seconds,\ double>\ settle\_time;}
+\DoxyCodeLine{00089\ \ \ \ \ }
+\DoxyCodeLine{00090\ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \}}
+
+\end{DoxyCode}

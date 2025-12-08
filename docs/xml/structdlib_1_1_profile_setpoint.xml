@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structdlib_1_1_profile_setpoint" kind="struct" language="C++" prot="public">
+    <compoundname>dlib::ProfileSetpoint</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename Units</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdlib_1_1_profile_setpoint_1a744272c76128819ff92371b22b362428" prot="public" static="no" mutable="no">
+        <type>au::Quantity&lt; Units, double &gt;</type>
+        <definition>au::Quantity&lt;Units, double&gt; dlib::ProfileSetpoint&lt; Units &gt;::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <qualifiedname>dlib::ProfileSetpoint::position</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/trajectories/profile_setpoint.hpp" line="14" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/trajectories/profile_setpoint.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdlib_1_1_profile_setpoint_1a8aef38a77723e1706d1b1e40bea91ecf" prot="public" static="no" mutable="no">
+        <type>au::Quantity&lt; au::TimeDerivative&lt; Units &gt;, double &gt;</type>
+        <definition>au::Quantity&lt;au::TimeDerivative&lt;Units&gt;, double&gt; dlib::ProfileSetpoint&lt; Units &gt;::velocity</definition>
+        <argsstring></argsstring>
+        <name>velocity</name>
+        <qualifiedname>dlib::ProfileSetpoint::velocity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/trajectories/profile_setpoint.hpp" line="15" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/trajectories/profile_setpoint.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdlib_1_1_profile_setpoint_1af4e88e98d8b5925b8e2a5e8ee8c82b22" prot="public" static="no" mutable="no">
+        <type>au::Quantity&lt; au::Time2ndDerivative&lt; Units &gt;, double &gt;</type>
+        <definition>au::Quantity&lt;au::Time2ndDerivative&lt;Units&gt;, double&gt; dlib::ProfileSetpoint&lt; Units &gt;::acceleration</definition>
+        <argsstring></argsstring>
+        <name>acceleration</name>
+        <qualifiedname>dlib::ProfileSetpoint::acceleration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/trajectories/profile_setpoint.hpp" line="16" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/trajectories/profile_setpoint.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structdlib_1_1_profile_setpoint_1ab672a81841846dbe48f98690520230df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dlib::ProfileSetpoint&lt; Units &gt;::ProfileSetpoint</definition>
+        <argsstring>(au::Quantity&lt; Units, double &gt; position, au::Quantity&lt; au::TimeDerivative&lt; Units &gt;, double &gt; velocity, au::Quantity&lt; au::Time2ndDerivative&lt; Units &gt;, double &gt; acceleration)</argsstring>
+        <name>ProfileSetpoint</name>
+        <qualifiedname>dlib::ProfileSetpoint::ProfileSetpoint</qualifiedname>
+        <param>
+          <type>au::Quantity&lt; Units, double &gt;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>au::Quantity&lt; au::TimeDerivative&lt; Units &gt;, double &gt;</type>
+          <declname>velocity</declname>
+        </param>
+        <param>
+          <type>au::Quantity&lt; au::Time2ndDerivative&lt; Units &gt;, double &gt;</type>
+          <declname>acceleration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/trajectories/profile_setpoint.hpp" line="18" column="5" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/trajectories/profile_setpoint.hpp" bodystart="18" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="structdlib_1_1_profile_setpoint_1ab436b1fe0dc2506822b4a7c120d0161a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structdlib_1_1_profile_setpoint" kindref="compound">ProfileSetpoint</ref></type>
+        <definition>ProfileSetpoint dlib::ProfileSetpoint&lt; Units &gt;::negative</definition>
+        <argsstring>()</argsstring>
+        <name>negative</name>
+        <qualifiedname>dlib::ProfileSetpoint::negative</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/trajectories/profile_setpoint.hpp" line="29" column="21" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/trajectories/profile_setpoint.hpp" bodystart="29" bodyend="31"/>
+      </memberdef>
+    </sectiondef>
+    <requiresclause>au::HasSameDimension&lt;Units, au::Meters&gt;::value || au::HasSameDimension&lt;Units, au::Radians&gt;::value    </requiresclause>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/trajectories/profile_setpoint.hpp" line="13" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/trajectories/profile_setpoint.hpp" bodystart="13" bodyend="32"/>
+    <listofallmembers>
+      <member refid="structdlib_1_1_profile_setpoint_1af4e88e98d8b5925b8e2a5e8ee8c82b22" prot="public" virt="non-virtual"><scope>dlib::ProfileSetpoint</scope><name>acceleration</name></member>
+      <member refid="structdlib_1_1_profile_setpoint_1ab436b1fe0dc2506822b4a7c120d0161a" prot="public" virt="non-virtual"><scope>dlib::ProfileSetpoint</scope><name>negative</name></member>
+      <member refid="structdlib_1_1_profile_setpoint_1a744272c76128819ff92371b22b362428" prot="public" virt="non-virtual"><scope>dlib::ProfileSetpoint</scope><name>position</name></member>
+      <member refid="structdlib_1_1_profile_setpoint_1ab672a81841846dbe48f98690520230df" prot="public" virt="non-virtual"><scope>dlib::ProfileSetpoint</scope><name>ProfileSetpoint</name></member>
+      <member refid="structdlib_1_1_profile_setpoint_1a8aef38a77723e1706d1b1e40bea91ecf" prot="public" virt="non-virtual"><scope>dlib::ProfileSetpoint</scope><name>velocity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

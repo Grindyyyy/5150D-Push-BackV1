@@ -1,0 +1,136 @@
+\doxysection{dlib\+::Odometry Class Reference}
+\hypertarget{classdlib_1_1_odometry}{}\label{classdlib_1_1_odometry}\index{dlib::Odometry@{dlib::Odometry}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdlib_1_1_odometry_acc7cff963d2e5f84f474b338bc4d5e41}\label{classdlib_1_1_odometry_acc7cff963d2e5f84f474b338bc4d5e41} 
+{\bfseries Odometry} (const au\+::\+Quantity$<$ au\+::\+Meters, double $>$ horizontal\+\_\+wheel\+\_\+offset=au\+::\+ZERO)
+\item 
+void \mbox{\hyperlink{classdlib_1_1_odometry_abcff56aca6c963dda38d50d2324916e6}{update}} (const au\+::\+Quantity$<$ au\+::\+Meters, double $>$ left\+\_\+displacement, const au\+::\+Quantity$<$ au\+::\+Meters, double $>$ right\+\_\+displacement, const au\+::\+Quantity$<$ au\+::\+Meters, double $>$ horizontal\+\_\+displacement, const au\+::\+Quantity$<$ au\+::\+Degrees, double $>$ heading)
+\begin{DoxyCompactList}\small\item\em Update the odometry tracking state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structdlib_1_1_pose2d}{Pose2d}} \mbox{\hyperlink{classdlib_1_1_odometry_aff1bcf403d9f255dbb0a39212779ed0c}{get\+\_\+position}} ()
+\begin{DoxyCompactList}\small\item\em Get the current position of the robot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdlib_1_1_odometry_a4da18633efe447f97983b0e6594acb95}{set\+\_\+position}} (const \mbox{\hyperlink{structdlib_1_1_pose2d}{Pose2d}} pose)
+\begin{DoxyCompactList}\small\item\em Set the current position of the robot. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ au\+::\+Meters, double $>$ \mbox{\hyperlink{classdlib_1_1_odometry_a309831aa5e212c91107e43d0c128ad04}{displacement\+\_\+to}} (const \mbox{\hyperlink{structdlib_1_1_vector2d}{Vector2d}} point, const bool reverse=false)
+\begin{DoxyCompactList}\small\item\em Calculate the displacement from the current position of the robot to a point. \end{DoxyCompactList}\item 
+au\+::\+Quantity$<$ au\+::\+Degrees, double $>$ \mbox{\hyperlink{classdlib_1_1_odometry_a1f7a238a917a1c464668660c7404983a}{angle\+\_\+to}} (const \mbox{\hyperlink{structdlib_1_1_vector2d}{Vector2d}} point, const bool reverse=false)
+\begin{DoxyCompactList}\small\item\em Calculate the angle from the current position of the robot to a point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdlib_1_1_odometry_af6feb429804af618d1a62137e9096ba5}\label{classdlib_1_1_odometry_af6feb429804af618d1a62137e9096ba5} 
+\mbox{\hyperlink{structdlib_1_1_pose2d}{Pose2d}} {\bfseries position} = \mbox{\hyperlink{structdlib_1_1_pose2d}{Pose2d}}(au\+::\+ZERO, au\+::\+ZERO, au\+::\+ZERO)
+\item 
+\Hypertarget{classdlib_1_1_odometry_a38e24c50f810fa9c066324b74af6ba3a}\label{classdlib_1_1_odometry_a38e24c50f810fa9c066324b74af6ba3a} 
+au\+::\+Quantity$<$ au\+::\+Meters, double $>$ {\bfseries previous\+\_\+forward} = au\+::\+ZERO
+\item 
+\Hypertarget{classdlib_1_1_odometry_ace7d7cf0262dbe7eb7cac2678e7d1273}\label{classdlib_1_1_odometry_ace7d7cf0262dbe7eb7cac2678e7d1273} 
+au\+::\+Quantity$<$ au\+::\+Meters, double $>$ {\bfseries previous\+\_\+horizontal} = au\+::\+ZERO
+\item 
+\Hypertarget{classdlib_1_1_odometry_a411dfb75318be6becef169a2a5534c37}\label{classdlib_1_1_odometry_a411dfb75318be6becef169a2a5534c37} 
+au\+::\+Quantity$<$ au\+::\+Radians, double $>$ {\bfseries previous\+\_\+theta} = au\+::\+ZERO
+\item 
+\Hypertarget{classdlib_1_1_odometry_abd405d0ad590faf38d7839d141de0c39}\label{classdlib_1_1_odometry_abd405d0ad590faf38d7839d141de0c39} 
+const au\+::\+Quantity$<$ au\+::\+Meters, double $>$ {\bfseries horizontal\+\_\+wheel\+\_\+offset} = au\+::\+ZERO
+\item 
+\Hypertarget{classdlib_1_1_odometry_a37c96714fdca98cf67c2e8fd5403bf10}\label{classdlib_1_1_odometry_a37c96714fdca98cf67c2e8fd5403bf10} 
+pros\+::\+Mutex {\bfseries mutex} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdlib_1_1_odometry_a1f7a238a917a1c464668660c7404983a}\index{dlib::Odometry@{dlib::Odometry}!angle\_to@{angle\_to}}
+\index{angle\_to@{angle\_to}!dlib::Odometry@{dlib::Odometry}}
+\doxysubsubsection{\texorpdfstring{angle\_to()}{angle\_to()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_odometry_a1f7a238a917a1c464668660c7404983a} 
+au\+::\+Quantity$<$ au\+::\+Degrees, double $>$ dlib\+::\+Odometry\+::angle\+\_\+to (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdlib_1_1_vector2d}{Vector2d}}}]{point}{, }\item[{const bool}]{reverse}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Calculate the angle from the current position of the robot to a point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & the end point \\
+\hline
+{\em reverse} & if the robot will move in reverse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the angle to the point 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_odometry_a309831aa5e212c91107e43d0c128ad04}\index{dlib::Odometry@{dlib::Odometry}!displacement\_to@{displacement\_to}}
+\index{displacement\_to@{displacement\_to}!dlib::Odometry@{dlib::Odometry}}
+\doxysubsubsection{\texorpdfstring{displacement\_to()}{displacement\_to()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_odometry_a309831aa5e212c91107e43d0c128ad04} 
+au\+::\+Quantity$<$ au\+::\+Meters, double $>$ dlib\+::\+Odometry\+::displacement\+\_\+to (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdlib_1_1_vector2d}{Vector2d}}}]{point}{, }\item[{const bool}]{reverse}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Calculate the displacement from the current position of the robot to a point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & the end point \\
+\hline
+{\em reverse} & if the robot will move in reverse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the displacement to the point 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_odometry_aff1bcf403d9f255dbb0a39212779ed0c}\index{dlib::Odometry@{dlib::Odometry}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!dlib::Odometry@{dlib::Odometry}}
+\doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_odometry_aff1bcf403d9f255dbb0a39212779ed0c} 
+\mbox{\hyperlink{structdlib_1_1_pose2d}{Pose2d}} dlib\+::\+Odometry\+::get\+\_\+position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the current position of the robot. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structdlib_1_1_pose2d}{Pose2d} 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_odometry_a4da18633efe447f97983b0e6594acb95}\index{dlib::Odometry@{dlib::Odometry}!set\_position@{set\_position}}
+\index{set\_position@{set\_position}!dlib::Odometry@{dlib::Odometry}}
+\doxysubsubsection{\texorpdfstring{set\_position()}{set\_position()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_odometry_a4da18633efe447f97983b0e6594acb95} 
+void dlib\+::\+Odometry\+::set\+\_\+position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdlib_1_1_pose2d}{Pose2d}}}]{pose}{}\end{DoxyParamCaption})}
+
+
+
+Set the current position of the robot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pose} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classdlib_1_1_odometry_abcff56aca6c963dda38d50d2324916e6}\index{dlib::Odometry@{dlib::Odometry}!update@{update}}
+\index{update@{update}!dlib::Odometry@{dlib::Odometry}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_odometry_abcff56aca6c963dda38d50d2324916e6} 
+void dlib\+::\+Odometry\+::update (\begin{DoxyParamCaption}\item[{const au\+::\+Quantity$<$ au\+::\+Meters, double $>$}]{left\+\_\+displacement}{, }\item[{const au\+::\+Quantity$<$ au\+::\+Meters, double $>$}]{right\+\_\+displacement}{, }\item[{const au\+::\+Quantity$<$ au\+::\+Meters, double $>$}]{horizontal\+\_\+displacement}{, }\item[{const au\+::\+Quantity$<$ au\+::\+Degrees, double $>$}]{heading}{}\end{DoxyParamCaption})}
+
+
+
+Update the odometry tracking state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left\+\_\+displacement} & the linear displacement of the left side of the \doxylink{classdlib_1_1_chassis}{Chassis} \\
+\hline
+{\em right\+\_\+displacement} & the linear displacement of the right side of the \doxylink{classdlib_1_1_chassis}{Chassis} \\
+\hline
+{\em horizontal\+\_\+displacement} & the linear displacement from any horizontal tracking \\
+\hline
+{\em heading} & the current heading \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/super/\+Downloads/5150\+D-\/\+Push Back\+V1/include/dlib/kinematics/odometry.\+hpp\end{DoxyCompactItemize}
