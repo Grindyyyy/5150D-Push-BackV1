@@ -9,3 +9,4 @@ API
     control
     kinematics
     trajectories
+    utilities

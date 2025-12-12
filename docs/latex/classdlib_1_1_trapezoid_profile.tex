@@ -1,52 +1,125 @@
-\doxysection{dlib\+::Trapezoid\+Profile\texorpdfstring{$<$}{<} Units \texorpdfstring{$>$}{>} Class Template Reference}
-\hypertarget{classdlib_1_1_trapezoid_profile}{}\label{classdlib_1_1_trapezoid_profile}\index{dlib::TrapezoidProfile$<$ Units $>$@{dlib::TrapezoidProfile$<$ Units $>$}}
+\doxysection{dlib\+::Trapezoid\+Profile Class Reference}
+\hypertarget{classdlib_1_1_trapezoid_profile}{}\label{classdlib_1_1_trapezoid_profile}\index{dlib::TrapezoidProfile@{dlib::TrapezoidProfile}}
+
+
+Calculate the angle from the current position of the robot to a point class for trapezoid profile methods.  
+
+
+
+
+{\ttfamily \#include $<$trapezoid\+\_\+profile.\+hpp$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classdlib_1_1_trapezoid_profile_a22e8df0a37ba4a9802fa306193c59bc5}\label{classdlib_1_1_trapezoid_profile_a22e8df0a37ba4a9802fa306193c59bc5} 
-{\bfseries Trapezoid\+Profile} (au\+::\+Quantity$<$ au\+::\+Time2nd\+Derivative$<$ Units $>$, double $>$ max\+\_\+acceleration, au\+::\+Quantity$<$ au\+::\+Time2nd\+Derivative$<$ Units $>$, double $>$ max\+\_\+deceleration, au\+::\+Quantity$<$ au\+::\+Time\+Derivative$<$ Units $>$, double $>$ max\+\_\+velocity, au\+::\+Quantity$<$ Units, double $>$ total\+\_\+distance)
+Trapezoid\+Profile\+Stage \mbox{\hyperlink{classdlib_1_1_trapezoid_profile_aa3a37e279e4f4f0fd19384eaed61a457}{stage}} (double elapsed\+\_\+time) const
+\begin{DoxyCompactList}\small\item\em Find the state of the robot during a motion profile movement. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structdlib_1_1_profile_setpoint}{Profile\+Setpoint}} \mbox{\hyperlink{classdlib_1_1_trapezoid_profile_a64158110a702afa376cfbe25a0599054}{calculate}} (double elapsed\+\_\+time) const
+\begin{DoxyCompactList}\small\item\em Find the state of the robot during a motion profile movement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classdlib_1_1_trapezoid_profile_ad1218d90c7b2e32f61afdebae3d3ee59}\label{classdlib_1_1_trapezoid_profile_ad1218d90c7b2e32f61afdebae3d3ee59} 
-double {\bfseries get\+\_\+time} ()
+static \mbox{\hyperlink{classdlib_1_1_trapezoid_profile}{Trapezoid\+Profile}} \mbox{\hyperlink{classdlib_1_1_trapezoid_profile_a4cc42340ee9cd3961bdc0741eebc5549}{from\+\_\+constraints}} (double total\+\_\+distance, double max\+\_\+velocity, double max\+\_\+acceleration)
+\begin{DoxyCompactList}\small\item\em create a trapezoid profile based on constraints \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classdlib_1_1_trapezoid_profile_ace059a10af81388384ca86b23fa31653}\label{classdlib_1_1_trapezoid_profile_ace059a10af81388384ca86b23fa31653} 
-Trapezoid\+Profile\+Stage {\bfseries stage} (const au\+::\+Quantity$<$ au\+::\+Seconds, double $>$ elapsed\+\_\+time) const
-\item 
-\Hypertarget{classdlib_1_1_trapezoid_profile_a37cef8f519992e86fa2694007e63a333}\label{classdlib_1_1_trapezoid_profile_a37cef8f519992e86fa2694007e63a333} 
-\mbox{\hyperlink{structdlib_1_1_profile_setpoint}{Profile\+Setpoint}}$<$ Units $>$ {\bfseries calculate} (const au\+::\+Quantity$<$ au\+::\+Seconds, double $>$ elapsed\+\_\+time) const
+\Hypertarget{classdlib_1_1_trapezoid_profile_af486fd496bd8bb737bccc669faf85133}\label{classdlib_1_1_trapezoid_profile_af486fd496bd8bb737bccc669faf85133} 
+{\bfseries Trapezoid\+Profile} (double total\+\_\+distance, double max\+\_\+velocity, double max\+\_\+acceleration, double total\+\_\+time, double accel\+\_\+cutoff, double coast\+\_\+cutoff, double decel\+\_\+cutoff, bool invert)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classdlib_1_1_trapezoid_profile_a6ce81102b16067a66401575212062f41}\label{classdlib_1_1_trapezoid_profile_a6ce81102b16067a66401575212062f41} 
-const au\+::\+Quantity$<$ au\+::\+Time2nd\+Derivative$<$ Units $>$, double $>$ {\bfseries m\+\_\+max\+\_\+acceleration}
+\Hypertarget{classdlib_1_1_trapezoid_profile_a866f497e67d7003e08fedc677a3336ac}\label{classdlib_1_1_trapezoid_profile_a866f497e67d7003e08fedc677a3336ac} 
+const double {\bfseries m\+\_\+max\+\_\+acceleration}
 \item 
-\Hypertarget{classdlib_1_1_trapezoid_profile_a8ecff6c7d7cc5e82efd66327466b4158}\label{classdlib_1_1_trapezoid_profile_a8ecff6c7d7cc5e82efd66327466b4158} 
-const au\+::\+Quantity$<$ au\+::\+Time2nd\+Derivative$<$ Units $>$, double $>$ {\bfseries m\+\_\+max\+\_\+deceleration}
+\Hypertarget{classdlib_1_1_trapezoid_profile_a8dd74a1a201c4f73a13a86375f736184}\label{classdlib_1_1_trapezoid_profile_a8dd74a1a201c4f73a13a86375f736184} 
+const double {\bfseries m\+\_\+max\+\_\+velocity}
 \item 
-\Hypertarget{classdlib_1_1_trapezoid_profile_a215505b8c240ab16fb3774e00c746bca}\label{classdlib_1_1_trapezoid_profile_a215505b8c240ab16fb3774e00c746bca} 
-const au\+::\+Quantity$<$ au\+::\+Time\+Derivative$<$ Units $>$, double $>$ {\bfseries m\+\_\+max\+\_\+velocity}
+\Hypertarget{classdlib_1_1_trapezoid_profile_a56bd04fe07b799ab7b32fa907df0d325}\label{classdlib_1_1_trapezoid_profile_a56bd04fe07b799ab7b32fa907df0d325} 
+const double {\bfseries m\+\_\+total\+\_\+distance}
 \item 
-\Hypertarget{classdlib_1_1_trapezoid_profile_a25a4d549238299323a65a0b1005c24fb}\label{classdlib_1_1_trapezoid_profile_a25a4d549238299323a65a0b1005c24fb} 
-const au\+::\+Quantity$<$ Units, double $>$ {\bfseries m\+\_\+total\+\_\+distance}
+\Hypertarget{classdlib_1_1_trapezoid_profile_a45d4ffb5cc11cce9fb0c8b326740fdc7}\label{classdlib_1_1_trapezoid_profile_a45d4ffb5cc11cce9fb0c8b326740fdc7} 
+const double {\bfseries m\+\_\+total\+\_\+time}
 \item 
-\Hypertarget{classdlib_1_1_trapezoid_profile_a83156ce85b27d199562f3dbc0d113b1a}\label{classdlib_1_1_trapezoid_profile_a83156ce85b27d199562f3dbc0d113b1a} 
-au\+::\+Quantity$<$ au\+::\+Seconds, double $>$ {\bfseries total\+\_\+time}
+\Hypertarget{classdlib_1_1_trapezoid_profile_a452264cf5c4344be9b300b3d6c4a4f36}\label{classdlib_1_1_trapezoid_profile_a452264cf5c4344be9b300b3d6c4a4f36} 
+const double {\bfseries m\+\_\+accel\+\_\+cutoff}
 \item 
-\Hypertarget{classdlib_1_1_trapezoid_profile_a926132285c93fd3b6008f4d1ce6719e1}\label{classdlib_1_1_trapezoid_profile_a926132285c93fd3b6008f4d1ce6719e1} 
-au\+::\+Quantity$<$ au\+::\+Seconds, double $>$ {\bfseries accel\+\_\+cutoff}
+\Hypertarget{classdlib_1_1_trapezoid_profile_ab90a8135ab495e5863183ce9c184dc85}\label{classdlib_1_1_trapezoid_profile_ab90a8135ab495e5863183ce9c184dc85} 
+const double {\bfseries m\+\_\+coast\+\_\+cutoff}
 \item 
-\Hypertarget{classdlib_1_1_trapezoid_profile_a4b1790218b26f7e97f89a798b74b4e6d}\label{classdlib_1_1_trapezoid_profile_a4b1790218b26f7e97f89a798b74b4e6d} 
-au\+::\+Quantity$<$ au\+::\+Seconds, double $>$ {\bfseries coast\+\_\+cutoff}
+\Hypertarget{classdlib_1_1_trapezoid_profile_a5aa87b015f6e07f95513623c62b2809e}\label{classdlib_1_1_trapezoid_profile_a5aa87b015f6e07f95513623c62b2809e} 
+const double {\bfseries m\+\_\+decel\+\_\+cutoff}
 \item 
-\Hypertarget{classdlib_1_1_trapezoid_profile_adcd5acd8a195dfc87f75ce71b58c6b60}\label{classdlib_1_1_trapezoid_profile_adcd5acd8a195dfc87f75ce71b58c6b60} 
-au\+::\+Quantity$<$ au\+::\+Seconds, double $>$ {\bfseries decel\+\_\+cutoff}
-\item 
-\Hypertarget{classdlib_1_1_trapezoid_profile_ab2c6e550dfc3ff47a6830f59710364b4}\label{classdlib_1_1_trapezoid_profile_ab2c6e550dfc3ff47a6830f59710364b4} 
-bool {\bfseries invert} = false
+\Hypertarget{classdlib_1_1_trapezoid_profile_a82b497ef1b8a2a37862ee5492456a96b}\label{classdlib_1_1_trapezoid_profile_a82b497ef1b8a2a37862ee5492456a96b} 
+const bool {\bfseries m\+\_\+invert}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Calculate the angle from the current position of the robot to a point class for trapezoid profile methods. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdlib_1_1_trapezoid_profile_a64158110a702afa376cfbe25a0599054}\index{dlib::TrapezoidProfile@{dlib::TrapezoidProfile}!calculate@{calculate}}
+\index{calculate@{calculate}!dlib::TrapezoidProfile@{dlib::TrapezoidProfile}}
+\doxysubsubsection{\texorpdfstring{calculate()}{calculate()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_trapezoid_profile_a64158110a702afa376cfbe25a0599054} 
+\mbox{\hyperlink{structdlib_1_1_profile_setpoint}{Profile\+Setpoint}} dlib\+::\+Trapezoid\+Profile\+::calculate (\begin{DoxyParamCaption}\item[{double}]{elapsed\+\_\+time}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Find the state of the robot during a motion profile movement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elapsed\+\_\+time} & the elapsed time of the movement\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+current state of the motion profile 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_trapezoid_profile_a4cc42340ee9cd3961bdc0741eebc5549}\index{dlib::TrapezoidProfile@{dlib::TrapezoidProfile}!from\_constraints@{from\_constraints}}
+\index{from\_constraints@{from\_constraints}!dlib::TrapezoidProfile@{dlib::TrapezoidProfile}}
+\doxysubsubsection{\texorpdfstring{from\_constraints()}{from\_constraints()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_trapezoid_profile_a4cc42340ee9cd3961bdc0741eebc5549} 
+static \mbox{\hyperlink{classdlib_1_1_trapezoid_profile}{Trapezoid\+Profile}} dlib\+::\+Trapezoid\+Profile\+::from\+\_\+constraints (\begin{DoxyParamCaption}\item[{double}]{total\+\_\+distance}{, }\item[{double}]{max\+\_\+velocity}{, }\item[{double}]{max\+\_\+acceleration}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+create a trapezoid profile based on constraints 
+
+
+\begin{DoxyParams}{Parameters}
+{\em total\+\_\+distance} & \\
+\hline
+{\em max\+\_\+velocity} & \\
+\hline
+{\em max\+\_\+acceleration} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classdlib_1_1_trapezoid_profile}{Trapezoid\+Profile} 
+\end{DoxyReturn}
+\Hypertarget{classdlib_1_1_trapezoid_profile_aa3a37e279e4f4f0fd19384eaed61a457}\index{dlib::TrapezoidProfile@{dlib::TrapezoidProfile}!stage@{stage}}
+\index{stage@{stage}!dlib::TrapezoidProfile@{dlib::TrapezoidProfile}}
+\doxysubsubsection{\texorpdfstring{stage()}{stage()}}
+{\footnotesize\ttfamily \label{classdlib_1_1_trapezoid_profile_aa3a37e279e4f4f0fd19384eaed61a457} 
+Trapezoid\+Profile\+Stage dlib\+::\+Trapezoid\+Profile\+::stage (\begin{DoxyParamCaption}\item[{double}]{elapsed\+\_\+time}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Find the state of the robot during a motion profile movement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elapsed\+\_\+time} & the elapsed time of the movement\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+current state of the motion profile 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/super/\+Downloads/5150\+D-\/\+Push Back\+V1/include/dlib/trajectories/trapezoid\+\_\+profile.\+hpp\end{DoxyCompactItemize}
+C\+:/\+Users/super/\+Downloads/dlib\+\_\+bugfix/dlib2/include/dlib/trajectories/trapezoid\+\_\+profile.\+hpp\end{DoxyCompactItemize}

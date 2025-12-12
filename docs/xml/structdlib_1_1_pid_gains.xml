@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="16" column="12" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="16" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="13" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="13" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdlib_1_1_pid_gains_1af68a8c34efb8f25bd55125c3505aad04" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="18" column="12" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="18" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="15" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="15" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdlib_1_1_pid_gains_1a76360ca3166a6f668589f618e0712844" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="20" column="12" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="20" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="17" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="17" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -58,7 +58,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="14" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="14" bodyend="21"/>
+    <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="11" column="1" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="11" bodyend="18"/>
     <listofallmembers>
       <member refid="structdlib_1_1_pid_gains_1a76360ca3166a6f668589f618e0712844" prot="public" virt="non-virtual"><scope>dlib::PidGains</scope><name>kd</name></member>
       <member refid="structdlib_1_1_pid_gains_1af68a8c34efb8f25bd55125c3505aad04" prot="public" virt="non-virtual"><scope>dlib::PidGains</scope><name>ki</name></member>

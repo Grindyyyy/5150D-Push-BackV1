@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/kinematics/odometry.hpp Source File</title>
+<title>My Project: C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/kinematics/odometry.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,89 +92,86 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;au/au.hpp&quot;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;pros/rtos.hpp&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span>dlib {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// odometry.hpp</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structdlib_1_1_vector2d.html">   13</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdlib_1_1_vector2d.html">Vector2d</a> {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structdlib_1_1_vector2d.html#a8524d4cbdb52764417672da2debf29cc">   15</a></span>    au::Quantity&lt;au::Meters, double&gt; <a class="code hl_variable" href="structdlib_1_1_vector2d.html#a8524d4cbdb52764417672da2debf29cc">x</a>;  </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;pros/rtos.hpp&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span>dlib {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structdlib_1_1_vector2d.html">   10</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdlib_1_1_vector2d.html">Vector2d</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structdlib_1_1_vector2d.html#a89e1f17009ffdc96570b7cbb2fca99a8">   12</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structdlib_1_1_vector2d.html#a89e1f17009ffdc96570b7cbb2fca99a8">x</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structdlib_1_1_vector2d.html#a1d16fd98d0512a69b63636bbbc06b898">   15</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structdlib_1_1_vector2d.html#a1d16fd98d0512a69b63636bbbc06b898">y</a>;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structdlib_1_1_vector2d.html#a7287c4d6b2b95eae5c455c17a3bb1a87">   18</a></span>    au::Quantity&lt;au::Meters, double&gt; <a class="code hl_variable" href="structdlib_1_1_vector2d.html#a7287c4d6b2b95eae5c455c17a3bb1a87">y</a>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_struct" href="structdlib_1_1_vector2d.html">Vector2d</a>(</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        au::Quantity&lt;au::Meters, double&gt; <a class="code hl_variable" href="structdlib_1_1_vector2d.html#a8524d4cbdb52764417672da2debf29cc">x</a>, </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        au::Quantity&lt;au::Meters, double&gt; <a class="code hl_variable" href="structdlib_1_1_vector2d.html#a7287c4d6b2b95eae5c455c17a3bb1a87">y</a></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    );</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>};</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_struct" href="structdlib_1_1_vector2d.html">Vector2d</a>(</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="structdlib_1_1_vector2d.html#a89e1f17009ffdc96570b7cbb2fca99a8">x</a>, </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="structdlib_1_1_vector2d.html#a1d16fd98d0512a69b63636bbbc06b898">y</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    );</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
 </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structdlib_1_1_pose2d.html">   30</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdlib_1_1_pose2d.html">Pose2d</a> {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structdlib_1_1_pose2d.html#a20b1ca94389849bb5ba2a93edfc7129e">   32</a></span>    au::Quantity&lt;au::Meters, double&gt; <a class="code hl_variable" href="structdlib_1_1_pose2d.html#a20b1ca94389849bb5ba2a93edfc7129e">x</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structdlib_1_1_pose2d.html">   27</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdlib_1_1_pose2d.html">Pose2d</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structdlib_1_1_pose2d.html#a263a933e55ef293b3e6f57fa758eee9c">   29</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structdlib_1_1_pose2d.html#a263a933e55ef293b3e6f57fa758eee9c">x</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structdlib_1_1_pose2d.html#a04dfa7f3e6011a7e5f2e5d8715ad7490">   32</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structdlib_1_1_pose2d.html#a04dfa7f3e6011a7e5f2e5d8715ad7490">y</a>;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structdlib_1_1_pose2d.html#ab516fb87072b85d8fbf3ae95549f644b">   35</a></span>    au::Quantity&lt;au::Meters, double&gt; <a class="code hl_variable" href="structdlib_1_1_pose2d.html#ab516fb87072b85d8fbf3ae95549f644b">y</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structdlib_1_1_pose2d.html#ab78973c1a0645ab538cb97cc1f7a14bd">   35</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structdlib_1_1_pose2d.html#ab78973c1a0645ab538cb97cc1f7a14bd">theta</a>;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structdlib_1_1_pose2d.html#a222a9446f8024e980f1d01ccd3086d1a">   38</a></span>    au::Quantity&lt;au::Degrees, double&gt; <a class="code hl_variable" href="structdlib_1_1_pose2d.html#a222a9446f8024e980f1d01ccd3086d1a">theta</a>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_struct" href="structdlib_1_1_pose2d.html">Pose2d</a>(</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        au::Quantity&lt;au::Meters, double&gt; <a class="code hl_variable" href="structdlib_1_1_pose2d.html#a20b1ca94389849bb5ba2a93edfc7129e">x</a>, </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        au::Quantity&lt;au::Meters, double&gt; <a class="code hl_variable" href="structdlib_1_1_pose2d.html#ab516fb87072b85d8fbf3ae95549f644b">y</a>,</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        au::Quantity&lt;au::Degrees, double&gt; <a class="code hl_variable" href="structdlib_1_1_pose2d.html#a222a9446f8024e980f1d01ccd3086d1a">theta</a></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    );</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_struct" href="structdlib_1_1_pose2d.html">Pose2d</a>(</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="structdlib_1_1_pose2d.html#a263a933e55ef293b3e6f57fa758eee9c">x</a>, </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="structdlib_1_1_pose2d.html#a04dfa7f3e6011a7e5f2e5d8715ad7490">y</a>,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="structdlib_1_1_pose2d.html#ab78973c1a0645ab538cb97cc1f7a14bd">theta</a></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    );</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
 </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classdlib_1_1_odometry.html">   47</a></span><span class="keyword">class </span><a class="code hl_class" href="classdlib_1_1_odometry.html">Odometry</a> {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_class" href="classdlib_1_1_odometry.html">Odometry</a>(<span class="keyword">const</span> au::Quantity&lt;au::Meters, double&gt; horizontal_wheel_offset = au::ZERO);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classdlib_1_1_odometry.html#abcff56aca6c963dda38d50d2324916e6">   59</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classdlib_1_1_odometry.html#abcff56aca6c963dda38d50d2324916e6">update</a>(</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">const</span> au::Quantity&lt;au::Meters, double&gt; left_displacement,</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">const</span> au::Quantity&lt;au::Meters, double&gt; right_displacement,</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">const</span> au::Quantity&lt;au::Meters, double&gt; horizontal_displacement,</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">const</span> au::Quantity&lt;au::Degrees, double&gt; heading</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    );</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classdlib_1_1_odometry.html#aff1bcf403d9f255dbb0a39212779ed0c">   71</a></span>    <a class="code hl_struct" href="structdlib_1_1_pose2d.html">Pose2d</a> <a class="code hl_function" href="classdlib_1_1_odometry.html#aff1bcf403d9f255dbb0a39212779ed0c">get_position</a>();</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classdlib_1_1_odometry.html#a4da18633efe447f97983b0e6594acb95">   78</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classdlib_1_1_odometry.html#a4da18633efe447f97983b0e6594acb95">set_position</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structdlib_1_1_pose2d.html">Pose2d</a> pose);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classdlib_1_1_odometry.html#a309831aa5e212c91107e43d0c128ad04">   87</a></span>    au::Quantity&lt;au::Meters, double&gt; <a class="code hl_function" href="classdlib_1_1_odometry.html#a309831aa5e212c91107e43d0c128ad04">displacement_to</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structdlib_1_1_vector2d.html">Vector2d</a> point, <span class="keyword">const</span> <span class="keywordtype">bool</span> reverse = <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classdlib_1_1_odometry.html#a1f7a238a917a1c464668660c7404983a">   96</a></span>    au::Quantity&lt;au::Degrees, double&gt; <a class="code hl_function" href="classdlib_1_1_odometry.html#a1f7a238a917a1c464668660c7404983a">angle_to</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structdlib_1_1_vector2d.html">Vector2d</a> point, <span class="keyword">const</span> <span class="keywordtype">bool</span> reverse = <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_struct" href="structdlib_1_1_pose2d.html">Pose2d</a> position = <a class="code hl_struct" href="structdlib_1_1_pose2d.html">Pose2d</a>(au::ZERO, au::ZERO, au::ZERO);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    au::Quantity&lt;au::Meters, double&gt; previous_forward = au::ZERO;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    au::Quantity&lt;au::Meters, double&gt; previous_horizontal = au::ZERO;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    au::Quantity&lt;au::Radians, double&gt; previous_theta = au::ZERO;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">const</span> au::Quantity&lt;au::Meters, double&gt; horizontal_wheel_offset = au::ZERO;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classdlib_1_1_odometry.html">   44</a></span><span class="keyword">class </span><a class="code hl_class" href="classdlib_1_1_odometry.html">Odometry</a> {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_class" href="classdlib_1_1_odometry.html">Odometry</a>(<span class="keywordtype">double</span> horizontal_wheel_offset = 0);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classdlib_1_1_odometry.html#ad0687131566bd33c478dd2c77ed77280">   56</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classdlib_1_1_odometry.html#ad0687131566bd33c478dd2c77ed77280">update</a>(</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordtype">double</span> left_displacement,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordtype">double</span> right_displacement,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordtype">double</span> horizontal_displacement,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">double</span> heading</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    );</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classdlib_1_1_odometry.html#afc0dcd92d6d4ffa1e2b0e5845457d0b9">   68</a></span>    <a class="code hl_struct" href="structdlib_1_1_pose2d.html">Pose2d</a> <a class="code hl_function" href="classdlib_1_1_odometry.html#afc0dcd92d6d4ffa1e2b0e5845457d0b9">get_position</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classdlib_1_1_odometry.html#a5801fa35c62bf3a3840e2948e1a6a8d5">   75</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classdlib_1_1_odometry.html#a5801fa35c62bf3a3840e2948e1a6a8d5">set_position</a>(<a class="code hl_struct" href="structdlib_1_1_pose2d.html">Pose2d</a> pose);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classdlib_1_1_odometry.html#af0e995f24a4ba9137291fdf6511fd601">   84</a></span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classdlib_1_1_odometry.html#af0e995f24a4ba9137291fdf6511fd601">displacement_to</a>(<a class="code hl_struct" href="structdlib_1_1_vector2d.html">Vector2d</a> point, <span class="keywordtype">bool</span> reverse = <span class="keyword">false</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classdlib_1_1_odometry.html#aae5592f89d46b79a0e3291e012dc0c4d">   93</a></span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classdlib_1_1_odometry.html#aae5592f89d46b79a0e3291e012dc0c4d">angle_to</a>(<a class="code hl_struct" href="structdlib_1_1_vector2d.html">Vector2d</a> point, <span class="keywordtype">bool</span> reverse = <span class="keyword">false</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_struct" href="structdlib_1_1_pose2d.html">Pose2d</a> m_position = <a class="code hl_struct" href="structdlib_1_1_pose2d.html">Pose2d</a>(0, 0, 0);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">double</span> m_prev_forward = 0;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">double</span> m_prev_horizontal = 0;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">double</span> m_prev_theta = 0;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> m_horizontal_wheel_offset = 0;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    pros::Mutex m_mutex{};</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>};</div>
+</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    pros::Mutex mutex{};</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>};</div>
-</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>}</div>
-<div class="ttc" id="aclassdlib_1_1_odometry_html"><div class="ttname"><a href="classdlib_1_1_odometry.html">dlib::Odometry</a></div><div class="ttdef"><b>Definition</b> odometry.hpp:47</div></div>
-<div class="ttc" id="aclassdlib_1_1_odometry_html_a1f7a238a917a1c464668660c7404983a"><div class="ttname"><a href="classdlib_1_1_odometry.html#a1f7a238a917a1c464668660c7404983a">dlib::Odometry::angle_to</a></div><div class="ttdeci">au::Quantity&lt; au::Degrees, double &gt; angle_to(const Vector2d point, const bool reverse=false)</div><div class="ttdoc">Calculate the angle from the current position of the robot to a point.</div></div>
-<div class="ttc" id="aclassdlib_1_1_odometry_html_a309831aa5e212c91107e43d0c128ad04"><div class="ttname"><a href="classdlib_1_1_odometry.html#a309831aa5e212c91107e43d0c128ad04">dlib::Odometry::displacement_to</a></div><div class="ttdeci">au::Quantity&lt; au::Meters, double &gt; displacement_to(const Vector2d point, const bool reverse=false)</div><div class="ttdoc">Calculate the displacement from the current position of the robot to a point.</div></div>
-<div class="ttc" id="aclassdlib_1_1_odometry_html_a4da18633efe447f97983b0e6594acb95"><div class="ttname"><a href="classdlib_1_1_odometry.html#a4da18633efe447f97983b0e6594acb95">dlib::Odometry::set_position</a></div><div class="ttdeci">void set_position(const Pose2d pose)</div><div class="ttdoc">Set the current position of the robot.</div></div>
-<div class="ttc" id="aclassdlib_1_1_odometry_html_abcff56aca6c963dda38d50d2324916e6"><div class="ttname"><a href="classdlib_1_1_odometry.html#abcff56aca6c963dda38d50d2324916e6">dlib::Odometry::update</a></div><div class="ttdeci">void update(const au::Quantity&lt; au::Meters, double &gt; left_displacement, const au::Quantity&lt; au::Meters, double &gt; right_displacement, const au::Quantity&lt; au::Meters, double &gt; horizontal_displacement, const au::Quantity&lt; au::Degrees, double &gt; heading)</div><div class="ttdoc">Update the odometry tracking state.</div></div>
-<div class="ttc" id="aclassdlib_1_1_odometry_html_aff1bcf403d9f255dbb0a39212779ed0c"><div class="ttname"><a href="classdlib_1_1_odometry.html#aff1bcf403d9f255dbb0a39212779ed0c">dlib::Odometry::get_position</a></div><div class="ttdeci">Pose2d get_position()</div><div class="ttdoc">Get the current position of the robot.</div></div>
-<div class="ttc" id="astructdlib_1_1_pose2d_html"><div class="ttname"><a href="structdlib_1_1_pose2d.html">dlib::Pose2d</a></div><div class="ttdoc">A pose in 2d space.</div><div class="ttdef"><b>Definition</b> odometry.hpp:30</div></div>
-<div class="ttc" id="astructdlib_1_1_pose2d_html_a20b1ca94389849bb5ba2a93edfc7129e"><div class="ttname"><a href="structdlib_1_1_pose2d.html#a20b1ca94389849bb5ba2a93edfc7129e">dlib::Pose2d::x</a></div><div class="ttdeci">au::Quantity&lt; au::Meters, double &gt; x</div><div class="ttdef"><b>Definition</b> odometry.hpp:32</div></div>
-<div class="ttc" id="astructdlib_1_1_pose2d_html_a222a9446f8024e980f1d01ccd3086d1a"><div class="ttname"><a href="structdlib_1_1_pose2d.html#a222a9446f8024e980f1d01ccd3086d1a">dlib::Pose2d::theta</a></div><div class="ttdeci">au::Quantity&lt; au::Degrees, double &gt; theta</div><div class="ttdef"><b>Definition</b> odometry.hpp:38</div></div>
-<div class="ttc" id="astructdlib_1_1_pose2d_html_ab516fb87072b85d8fbf3ae95549f644b"><div class="ttname"><a href="structdlib_1_1_pose2d.html#ab516fb87072b85d8fbf3ae95549f644b">dlib::Pose2d::y</a></div><div class="ttdeci">au::Quantity&lt; au::Meters, double &gt; y</div><div class="ttdef"><b>Definition</b> odometry.hpp:35</div></div>
-<div class="ttc" id="astructdlib_1_1_vector2d_html"><div class="ttname"><a href="structdlib_1_1_vector2d.html">dlib::Vector2d</a></div><div class="ttdoc">A point in 2d space.</div><div class="ttdef"><b>Definition</b> odometry.hpp:13</div></div>
-<div class="ttc" id="astructdlib_1_1_vector2d_html_a7287c4d6b2b95eae5c455c17a3bb1a87"><div class="ttname"><a href="structdlib_1_1_vector2d.html#a7287c4d6b2b95eae5c455c17a3bb1a87">dlib::Vector2d::y</a></div><div class="ttdeci">au::Quantity&lt; au::Meters, double &gt; y</div><div class="ttdef"><b>Definition</b> odometry.hpp:18</div></div>
-<div class="ttc" id="astructdlib_1_1_vector2d_html_a8524d4cbdb52764417672da2debf29cc"><div class="ttname"><a href="structdlib_1_1_vector2d.html#a8524d4cbdb52764417672da2debf29cc">dlib::Vector2d::x</a></div><div class="ttdeci">au::Quantity&lt; au::Meters, double &gt; x</div><div class="ttdef"><b>Definition</b> odometry.hpp:15</div></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
+<div class="ttc" id="aclassdlib_1_1_odometry_html"><div class="ttname"><a href="classdlib_1_1_odometry.html">dlib::Odometry</a></div><div class="ttdef"><b>Definition</b> odometry.hpp:44</div></div>
+<div class="ttc" id="aclassdlib_1_1_odometry_html_a5801fa35c62bf3a3840e2948e1a6a8d5"><div class="ttname"><a href="classdlib_1_1_odometry.html#a5801fa35c62bf3a3840e2948e1a6a8d5">dlib::Odometry::set_position</a></div><div class="ttdeci">void set_position(Pose2d pose)</div><div class="ttdoc">Set the current position of the robot.</div></div>
+<div class="ttc" id="aclassdlib_1_1_odometry_html_aae5592f89d46b79a0e3291e012dc0c4d"><div class="ttname"><a href="classdlib_1_1_odometry.html#aae5592f89d46b79a0e3291e012dc0c4d">dlib::Odometry::angle_to</a></div><div class="ttdeci">double angle_to(Vector2d point, bool reverse=false) const</div><div class="ttdoc">Calculate the angle from the current position of the robot to a point.</div></div>
+<div class="ttc" id="aclassdlib_1_1_odometry_html_ad0687131566bd33c478dd2c77ed77280"><div class="ttname"><a href="classdlib_1_1_odometry.html#ad0687131566bd33c478dd2c77ed77280">dlib::Odometry::update</a></div><div class="ttdeci">void update(double left_displacement, double right_displacement, double horizontal_displacement, double heading)</div><div class="ttdoc">Update the odometry tracking state.</div></div>
+<div class="ttc" id="aclassdlib_1_1_odometry_html_af0e995f24a4ba9137291fdf6511fd601"><div class="ttname"><a href="classdlib_1_1_odometry.html#af0e995f24a4ba9137291fdf6511fd601">dlib::Odometry::displacement_to</a></div><div class="ttdeci">double displacement_to(Vector2d point, bool reverse=false) const</div><div class="ttdoc">Calculate the displacement from the current position of the robot to a point.</div></div>
+<div class="ttc" id="aclassdlib_1_1_odometry_html_afc0dcd92d6d4ffa1e2b0e5845457d0b9"><div class="ttname"><a href="classdlib_1_1_odometry.html#afc0dcd92d6d4ffa1e2b0e5845457d0b9">dlib::Odometry::get_position</a></div><div class="ttdeci">Pose2d get_position() const</div><div class="ttdoc">Get the current position of the robot.</div></div>
+<div class="ttc" id="astructdlib_1_1_pose2d_html"><div class="ttname"><a href="structdlib_1_1_pose2d.html">dlib::Pose2d</a></div><div class="ttdoc">A pose in 2d space.</div><div class="ttdef"><b>Definition</b> odometry.hpp:27</div></div>
+<div class="ttc" id="astructdlib_1_1_pose2d_html_a04dfa7f3e6011a7e5f2e5d8715ad7490"><div class="ttname"><a href="structdlib_1_1_pose2d.html#a04dfa7f3e6011a7e5f2e5d8715ad7490">dlib::Pose2d::y</a></div><div class="ttdeci">double y</div><div class="ttdef"><b>Definition</b> odometry.hpp:32</div></div>
+<div class="ttc" id="astructdlib_1_1_pose2d_html_a263a933e55ef293b3e6f57fa758eee9c"><div class="ttname"><a href="structdlib_1_1_pose2d.html#a263a933e55ef293b3e6f57fa758eee9c">dlib::Pose2d::x</a></div><div class="ttdeci">double x</div><div class="ttdef"><b>Definition</b> odometry.hpp:29</div></div>
+<div class="ttc" id="astructdlib_1_1_pose2d_html_ab78973c1a0645ab538cb97cc1f7a14bd"><div class="ttname"><a href="structdlib_1_1_pose2d.html#ab78973c1a0645ab538cb97cc1f7a14bd">dlib::Pose2d::theta</a></div><div class="ttdeci">double theta</div><div class="ttdef"><b>Definition</b> odometry.hpp:35</div></div>
+<div class="ttc" id="astructdlib_1_1_vector2d_html"><div class="ttname"><a href="structdlib_1_1_vector2d.html">dlib::Vector2d</a></div><div class="ttdoc">A point in 2d space.</div><div class="ttdef"><b>Definition</b> odometry.hpp:10</div></div>
+<div class="ttc" id="astructdlib_1_1_vector2d_html_a1d16fd98d0512a69b63636bbbc06b898"><div class="ttname"><a href="structdlib_1_1_vector2d.html#a1d16fd98d0512a69b63636bbbc06b898">dlib::Vector2d::y</a></div><div class="ttdeci">double y</div><div class="ttdef"><b>Definition</b> odometry.hpp:15</div></div>
+<div class="ttc" id="astructdlib_1_1_vector2d_html_a89e1f17009ffdc96570b7cbb2fca99a8"><div class="ttname"><a href="structdlib_1_1_vector2d.html#a89e1f17009ffdc96570b7cbb2fca99a8">dlib::Vector2d::x</a></div><div class="ttdeci">double x</div><div class="ttdef"><b>Definition</b> odometry.hpp:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

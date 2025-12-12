@@ -6,7 +6,7 @@
     <includes local="yes">au/au.hpp</includes>
     <incdepgraph>
       <node id="1">
-        <label>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/distance.hpp</label>
+        <label>C:/Users/super/Downloads/5150D-PushBackV1/include/dlib/hardware/distance.hpp</label>
         <link refid="distance_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -58,6 +58,6 @@
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/distance.hpp"/>
+    <location file="C:/Users/super/Downloads/5150D-PushBackV1/include/dlib/hardware/distance.hpp"/>
   </compounddef>
 </doxygen>

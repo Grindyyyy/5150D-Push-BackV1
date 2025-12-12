@@ -15,8 +15,14 @@ release = '0.0.1'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
+    'myst_parser',
     "breathe"
 ]
+
+source_suffix = {
+    '.md': 'markdown',
+    '.rst': 'restructuredtext',
+}
 
 # Breathe Configuration
 breathe_default_project = "dlib"
@@ -39,4 +45,8 @@ cpp_maximum_signature_line_length = 100
 
 
 html_theme = 'furo'
+html_baseurl = ""
 html_static_path = ['_static']
+html_css_files = []
+
+

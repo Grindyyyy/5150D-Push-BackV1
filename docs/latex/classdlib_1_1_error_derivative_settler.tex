@@ -1,34 +1,33 @@
-\doxysection{dlib\+::Error\+Derivative\+Settler\texorpdfstring{$<$}{<} Units \texorpdfstring{$>$}{>} Class Template Reference}
-\hypertarget{classdlib_1_1_error_derivative_settler}{}\label{classdlib_1_1_error_derivative_settler}\index{dlib::ErrorDerivativeSettler$<$ Units $>$@{dlib::ErrorDerivativeSettler$<$ Units $>$}}
+\doxysection{dlib\+::Error\+Derivative\+Settler Class Reference}
+\hypertarget{classdlib_1_1_error_derivative_settler}{}\label{classdlib_1_1_error_derivative_settler}\index{dlib::ErrorDerivativeSettler@{dlib::ErrorDerivativeSettler}}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classdlib_1_1_error_derivative_settler_a0caa9b739f4080a7f09514c6023b0d9e}\label{classdlib_1_1_error_derivative_settler_a0caa9b739f4080a7f09514c6023b0d9e} 
-{\bfseries Error\+Derivative\+Settler} (au\+::\+Quantity$<$ Units, double $>$ error\+\_\+threshold, au\+::\+Quantity$<$ au\+::\+Time\+Derivative$<$ Units $>$, double $>$ derivative\+\_\+threshold)
+\Hypertarget{classdlib_1_1_error_derivative_settler_a9cd5b6fd592b41775ec1d9d165bf8843}\label{classdlib_1_1_error_derivative_settler_a9cd5b6fd592b41775ec1d9d165bf8843} 
+{\bfseries Error\+Derivative\+Settler} (double error\+\_\+threshold, double derivative\+\_\+threshold)
 \item 
-bool \mbox{\hyperlink{classdlib_1_1_error_derivative_settler_abbe49e7f9968b75a515849e391dbb20c}{is\+\_\+settled}} (au\+::\+Quantity$<$ Units, double $>$ error, au\+::\+Quantity$<$ au\+::\+Time\+Derivative$<$ Units $>$, double $>$ derivative) const
+bool \mbox{\hyperlink{classdlib_1_1_error_derivative_settler_a6425e7ae0773356f3f2c1016c9cb9daf}{is\+\_\+settled}} (double error, double derivative)
 \begin{DoxyCompactList}\small\item\em Check if controller has settled. \end{DoxyCompactList}\item 
-\Hypertarget{classdlib_1_1_error_derivative_settler_a1f9efa480047d9c17e0623f5164a1e0d}\label{classdlib_1_1_error_derivative_settler_a1f9efa480047d9c17e0623f5164a1e0d} 
+\Hypertarget{classdlib_1_1_error_derivative_settler_adc0162bf3776a40fd7abc4f65a508d25}\label{classdlib_1_1_error_derivative_settler_adc0162bf3776a40fd7abc4f65a508d25} 
 void {\bfseries reset} ()
 \begin{DoxyCompactList}\small\item\em Reset all of the settler state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classdlib_1_1_error_derivative_settler_a0629a54e5e760686dfb39bde5b55f9fb}\label{classdlib_1_1_error_derivative_settler_a0629a54e5e760686dfb39bde5b55f9fb} 
-const au\+::\+Quantity$<$ Units, double $>$ {\bfseries error\+\_\+threshold}
+\Hypertarget{classdlib_1_1_error_derivative_settler_a42c6d8df3b39156f1677544d93e8a732}\label{classdlib_1_1_error_derivative_settler_a42c6d8df3b39156f1677544d93e8a732} 
+double {\bfseries m\+\_\+error\+\_\+threshold}
 \item 
-\Hypertarget{classdlib_1_1_error_derivative_settler_a19e2873c47bfc80d7b06b37ffa415663}\label{classdlib_1_1_error_derivative_settler_a19e2873c47bfc80d7b06b37ffa415663} 
-const au\+::\+Quantity$<$ au\+::\+Time\+Derivative$<$ Units $>$, double $>$ {\bfseries derivative\+\_\+threshold}
+\Hypertarget{classdlib_1_1_error_derivative_settler_ad06829e3cfcde36c15b345e5176af97e}\label{classdlib_1_1_error_derivative_settler_ad06829e3cfcde36c15b345e5176af97e} 
+double {\bfseries m\+\_\+derivative\+\_\+threshold}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classdlib_1_1_error_derivative_settler_abbe49e7f9968b75a515849e391dbb20c}\index{dlib::ErrorDerivativeSettler$<$ Units $>$@{dlib::ErrorDerivativeSettler$<$ Units $>$}!is\_settled@{is\_settled}}
-\index{is\_settled@{is\_settled}!dlib::ErrorDerivativeSettler$<$ Units $>$@{dlib::ErrorDerivativeSettler$<$ Units $>$}}
+\Hypertarget{classdlib_1_1_error_derivative_settler_a6425e7ae0773356f3f2c1016c9cb9daf}\index{dlib::ErrorDerivativeSettler@{dlib::ErrorDerivativeSettler}!is\_settled@{is\_settled}}
+\index{is\_settled@{is\_settled}!dlib::ErrorDerivativeSettler@{dlib::ErrorDerivativeSettler}}
 \doxysubsubsection{\texorpdfstring{is\_settled()}{is\_settled()}}
-{\footnotesize\ttfamily \label{classdlib_1_1_error_derivative_settler_abbe49e7f9968b75a515849e391dbb20c} 
-template$<$typename Units $>$ \\
-bool \mbox{\hyperlink{classdlib_1_1_error_derivative_settler}{dlib\+::\+Error\+Derivative\+Settler}}$<$ Units $>$\+::is\+\_\+settled (\begin{DoxyParamCaption}\item[{au\+::\+Quantity$<$ Units, double $>$}]{error}{, }\item[{au\+::\+Quantity$<$ au\+::\+Time\+Derivative$<$ Units $>$, double $>$}]{derivative}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classdlib_1_1_error_derivative_settler_a6425e7ae0773356f3f2c1016c9cb9daf} 
+bool dlib\+::\+Error\+Derivative\+Settler\+::is\+\_\+settled (\begin{DoxyParamCaption}\item[{double}]{error}{, }\item[{double}]{derivative}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -47,19 +46,19 @@ if the controller has settled
 {\bfseries{Example}} 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{comment}{//\ Construct\ a\ PID\ controller}}
-\DoxyCodeLine{\mbox{\hyperlink{classdlib_1_1_pid}{dlib::Pid<Meters>}}\ pid(\{1,\ 2,\ 3\});}
+\DoxyCodeLine{\mbox{\hyperlink{classdlib_1_1_pid}{dlib::Pid}}\ pid(\{1,\ 2,\ 3\});}
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{comment}{//\ Construct\ an\ ErrorDerivativeSettler\ controller}}
-\DoxyCodeLine{\mbox{\hyperlink{classdlib_1_1_error_derivative_settler}{dlib::ErrorDerivativeSettler<Meters>}}\ pid\_settler\ \{}
-\DoxyCodeLine{\ \ \ \ meters(0.01),\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ error\ threshold,\ the\ maximum\ error\ the\ pid\ can\ settle\ at}}
-\DoxyCodeLine{\ \ \ \ meters\_per\_second(0.01)\ \ \textcolor{comment}{//\ derivative\ threshold,\ the\ maximum\ instantaneous\ error\ over\ time\ the\ pid\ can\ settle\ at}}
+\DoxyCodeLine{\mbox{\hyperlink{classdlib_1_1_error_derivative_settler}{dlib::ErrorDerivativeSettler}}\ pid\_settler\ \{}
+\DoxyCodeLine{\ \ \ \ 0.1,\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ error\ threshold,\ the\ maximum\ error\ the\ pid\ can\ settle\ at}}
+\DoxyCodeLine{\ \ \ \ 0.01\ \ \textcolor{comment}{//\ derivative\ threshold,\ the\ maximum\ instantaneous\ error\ over\ time\ the\ pid\ can\ settle\ at}}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{bool}\ settled\ =\ pid\_settler.\mbox{\hyperlink{classdlib_1_1_error_derivative_settler_abbe49e7f9968b75a515849e391dbb20c}{is\_settled}}(pid.get\_error(),\ pid.get\_derivative());}
+\DoxyCodeLine{\textcolor{keywordtype}{bool}\ settled\ =\ pid\_settler.\mbox{\hyperlink{classdlib_1_1_error_derivative_settler_a6425e7ae0773356f3f2c1016c9cb9daf}{is\_settled}}(pid.get\_error(),\ pid.get\_derivative());}
 
 \end{DoxyCode}
  
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/super/\+Downloads/5150\+D-\/\+Push Back\+V1/include/dlib/controllers/error\+\_\+derivative\+\_\+settler.\+hpp\end{DoxyCompactItemize}
+C\+:/\+Users/super/\+Downloads/dlib\+\_\+bugfix/dlib2/include/dlib/controllers/error\+\_\+derivative\+\_\+settler.\+hpp\end{DoxyCompactItemize}

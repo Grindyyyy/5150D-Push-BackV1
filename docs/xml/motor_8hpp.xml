@@ -3,19 +3,13 @@
   <compounddef id="motor_8hpp" kind="file" language="C++">
     <compoundname>motor.hpp</compoundname>
     <includes local="yes">pros/motors.hpp</includes>
-    <includes local="yes">au/au.hpp</includes>
-    <includedby refid="dlib_8hpp" local="yes">C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/dlib.hpp</includedby>
+    <includedby refid="dlib_8hpp" local="yes">C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/dlib.hpp</includedby>
     <incdepgraph>
       <node id="1">
-        <label>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor.hpp</label>
+        <label>C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/motor.hpp</label>
         <link refid="motor_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>au/au.hpp</label>
       </node>
       <node id="2">
         <label>pros/motors.hpp</label>
@@ -23,11 +17,11 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/dlib.hpp</label>
+        <label>C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/dlib.hpp</label>
         <link refid="dlib_8hpp_source"/>
       </node>
       <node id="1">
-        <label>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor.hpp</label>
+        <label>C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/motor.hpp</label>
         <link refid="motor_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -43,33 +37,30 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pros/motors.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;au/au.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>motor.hpp</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>definitely<sp/>missing<sp/>some<sp/>methods<sp/>here...</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">dlib<sp/>{</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>definitely<sp/>missing<sp/>some<sp/>methods<sp/>here...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">dlib<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="structdlib_1_1_motor_config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdlib_1_1_motor_config" kindref="compound">MotorConfig</ref><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int8_t<sp/>port;</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11" refid="structdlib_1_1_motor_config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdlib_1_1_motor_config" kindref="compound">MotorConfig</ref><sp/>{</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/>port;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1_motor_config" kindref="compound">MotorConfig</ref>(int8_t<sp/>port);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdlib_1_1_motor_config" kindref="compound">MotorConfig</ref>(int8_t<sp/>port);</highlight></codeline>
-<codeline lineno="15"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17" refid="classdlib_1_1_motor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdlib_1_1_motor" kindref="compound">Motor</ref><sp/>{</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="24" refid="classdlib_1_1_motor_1a5e4d0b96a569cb857fe76b01142d1c5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Revolutions,<sp/>double&gt;<sp/><ref refid="classdlib_1_1_motor_1a5e4d0b96a569cb857fe76b01142d1c5e" kindref="member">get_position</ref>();</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31" refid="classdlib_1_1_motor_1a252750c416d73a9cf99da2eef360b1b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>au::Quantity&lt;au::Rpm,<sp/>double&gt;<sp/><ref refid="classdlib_1_1_motor_1a252750c416d73a9cf99da2eef360b1b1" kindref="member">get_velocity</ref>();</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdlib_1_1_motor" kindref="compound">Motor</ref>(<ref refid="structdlib_1_1_motor_config" kindref="compound">MotorConfig</ref><sp/>config);</highlight></codeline>
+<codeline lineno="14" refid="classdlib_1_1_motor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdlib_1_1_motor" kindref="compound">Motor</ref><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21" refid="classdlib_1_1_motor_1a9ba008014fd185f9ca820d4182b0721c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classdlib_1_1_motor_1a9ba008014fd185f9ca820d4182b0721c" kindref="member">get_position</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classdlib_1_1_motor_1aa1986310db0e0829ca5f98b88729c6a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classdlib_1_1_motor_1aa1986310db0e0829ca5f98b88729c6a1" kindref="member">get_velocity</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdlib_1_1_motor" kindref="compound">Motor</ref>(<ref refid="structdlib_1_1_motor_config" kindref="compound">MotorConfig</ref><sp/>config);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>pros::Motor<sp/>raw;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>pros::Motor<sp/>raw;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor.hpp"/>
+    <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/motor.hpp"/>
   </compounddef>
 </doxygen>

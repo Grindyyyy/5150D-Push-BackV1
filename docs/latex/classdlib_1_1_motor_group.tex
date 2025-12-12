@@ -3,13 +3,13 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classdlib_1_1_motor_group_a9baf71907745a7bc220f936b950eb343}{move}} (const double power)
+void \mbox{\hyperlink{classdlib_1_1_motor_group_a2f95d7fbf2b6ca5a9a43a0463896ddf1}{move}} (double power)
 \begin{DoxyCompactList}\small\item\em Move the motorgroup with a joystick input. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classdlib_1_1_motor_group_a9ee9433f34c4865dea205c25b0cca1d6}{move\+\_\+voltage}} (const au\+::\+Quantity$<$ au\+::\+Volts, double $>$ voltage)
+void \mbox{\hyperlink{classdlib_1_1_motor_group_ae78c8e28f35f22ad501035dc905dd69c}{move\+\_\+voltage}} (double voltage)
 \begin{DoxyCompactList}\small\item\em Move the \doxylink{classdlib_1_1_motor_group}{Motor\+Group} with a given voltage. \end{DoxyCompactList}\item 
-au\+::\+Quantity$<$ au\+::\+Revolutions, double $>$ \mbox{\hyperlink{classdlib_1_1_motor_group_ac4bfcc515fadba0f5ba262acf5a367b5}{get\+\_\+position}} ()
+double \mbox{\hyperlink{classdlib_1_1_motor_group_a77d6f424685e21a985a49868affeb451}{get\+\_\+position}} () const
 \begin{DoxyCompactList}\small\item\em Get the \doxylink{classdlib_1_1_motor_group}{Motor\+Group} average position in revolutions. \end{DoxyCompactList}\item 
-au\+::\+Quantity$<$ au\+::\+Rpm, double $>$ \mbox{\hyperlink{classdlib_1_1_motor_group_abce7cc77262c1605aa29e0cd40704a09}{get\+\_\+velocity}} ()
+double \mbox{\hyperlink{classdlib_1_1_motor_group_a87267006ac6ae16a50a7d5b0dcc414a1}{get\+\_\+velocity}} () const
 \begin{DoxyCompactList}\small\item\em Get the \doxylink{classdlib_1_1_motor_group}{Motor\+Group} average velocity in rpm. \end{DoxyCompactList}\item 
 \Hypertarget{classdlib_1_1_motor_group_a93f95e6ee976aeae3216769b0c183d45}\label{classdlib_1_1_motor_group_a93f95e6ee976aeae3216769b0c183d45} 
 {\bfseries Motor\+Group} (\mbox{\hyperlink{structdlib_1_1_motor_group_config}{Motor\+Group\+Config}} config)
@@ -23,11 +23,11 @@ pros\+::\+Motor\+Group {\bfseries raw}
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classdlib_1_1_motor_group_ac4bfcc515fadba0f5ba262acf5a367b5}\index{dlib::MotorGroup@{dlib::MotorGroup}!get\_position@{get\_position}}
+\Hypertarget{classdlib_1_1_motor_group_a77d6f424685e21a985a49868affeb451}\index{dlib::MotorGroup@{dlib::MotorGroup}!get\_position@{get\_position}}
 \index{get\_position@{get\_position}!dlib::MotorGroup@{dlib::MotorGroup}}
 \doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
-{\footnotesize\ttfamily \label{classdlib_1_1_motor_group_ac4bfcc515fadba0f5ba262acf5a367b5} 
-au\+::\+Quantity$<$ au\+::\+Revolutions, double $>$ dlib\+::\+Motor\+Group\+::get\+\_\+position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classdlib_1_1_motor_group_a77d6f424685e21a985a49868affeb451} 
+double dlib\+::\+Motor\+Group\+::get\+\_\+position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
 
 
 
@@ -36,11 +36,11 @@ Get the \doxylink{classdlib_1_1_motor_group}{Motor\+Group} average position in r
 \begin{DoxyReturn}{Returns}
 revolutions 
 \end{DoxyReturn}
-\Hypertarget{classdlib_1_1_motor_group_abce7cc77262c1605aa29e0cd40704a09}\index{dlib::MotorGroup@{dlib::MotorGroup}!get\_velocity@{get\_velocity}}
+\Hypertarget{classdlib_1_1_motor_group_a87267006ac6ae16a50a7d5b0dcc414a1}\index{dlib::MotorGroup@{dlib::MotorGroup}!get\_velocity@{get\_velocity}}
 \index{get\_velocity@{get\_velocity}!dlib::MotorGroup@{dlib::MotorGroup}}
 \doxysubsubsection{\texorpdfstring{get\_velocity()}{get\_velocity()}}
-{\footnotesize\ttfamily \label{classdlib_1_1_motor_group_abce7cc77262c1605aa29e0cd40704a09} 
-au\+::\+Quantity$<$ au\+::\+Rpm, double $>$ dlib\+::\+Motor\+Group\+::get\+\_\+velocity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classdlib_1_1_motor_group_a87267006ac6ae16a50a7d5b0dcc414a1} 
+double dlib\+::\+Motor\+Group\+::get\+\_\+velocity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
 
 
 
@@ -49,11 +49,11 @@ Get the \doxylink{classdlib_1_1_motor_group}{Motor\+Group} average velocity in r
 \begin{DoxyReturn}{Returns}
 rpm 
 \end{DoxyReturn}
-\Hypertarget{classdlib_1_1_motor_group_a9baf71907745a7bc220f936b950eb343}\index{dlib::MotorGroup@{dlib::MotorGroup}!move@{move}}
+\Hypertarget{classdlib_1_1_motor_group_a2f95d7fbf2b6ca5a9a43a0463896ddf1}\index{dlib::MotorGroup@{dlib::MotorGroup}!move@{move}}
 \index{move@{move}!dlib::MotorGroup@{dlib::MotorGroup}}
 \doxysubsubsection{\texorpdfstring{move()}{move()}}
-{\footnotesize\ttfamily \label{classdlib_1_1_motor_group_a9baf71907745a7bc220f936b950eb343} 
-void dlib\+::\+Motor\+Group\+::move (\begin{DoxyParamCaption}\item[{const double}]{power}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classdlib_1_1_motor_group_a2f95d7fbf2b6ca5a9a43a0463896ddf1} 
+void dlib\+::\+Motor\+Group\+::move (\begin{DoxyParamCaption}\item[{double}]{power}{}\end{DoxyParamCaption})}
 
 
 
@@ -64,11 +64,11 @@ Move the motorgroup with a joystick input.
 {\em power} & the joystick input value \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classdlib_1_1_motor_group_a9ee9433f34c4865dea205c25b0cca1d6}\index{dlib::MotorGroup@{dlib::MotorGroup}!move\_voltage@{move\_voltage}}
+\Hypertarget{classdlib_1_1_motor_group_ae78c8e28f35f22ad501035dc905dd69c}\index{dlib::MotorGroup@{dlib::MotorGroup}!move\_voltage@{move\_voltage}}
 \index{move\_voltage@{move\_voltage}!dlib::MotorGroup@{dlib::MotorGroup}}
 \doxysubsubsection{\texorpdfstring{move\_voltage()}{move\_voltage()}}
-{\footnotesize\ttfamily \label{classdlib_1_1_motor_group_a9ee9433f34c4865dea205c25b0cca1d6} 
-void dlib\+::\+Motor\+Group\+::move\+\_\+voltage (\begin{DoxyParamCaption}\item[{const au\+::\+Quantity$<$ au\+::\+Volts, double $>$}]{voltage}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classdlib_1_1_motor_group_ae78c8e28f35f22ad501035dc905dd69c} 
+void dlib\+::\+Motor\+Group\+::move\+\_\+voltage (\begin{DoxyParamCaption}\item[{double}]{voltage}{}\end{DoxyParamCaption})}
 
 
 
@@ -83,4 +83,4 @@ Move the \doxylink{classdlib_1_1_motor_group}{Motor\+Group} with a given voltage
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/super/\+Downloads/5150\+D-\/\+Push Back\+V1/include/dlib/hardware/motor\+\_\+group.\+hpp\end{DoxyCompactItemize}
+C\+:/\+Users/super/\+Downloads/dlib\+\_\+bugfix/dlib2/include/dlib/hardware/motor\+\_\+group.\+hpp\end{DoxyCompactItemize}

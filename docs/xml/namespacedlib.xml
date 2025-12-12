@@ -4,8 +4,6 @@
     <compoundname>dlib</compoundname>
     <innerclass refid="classdlib_1_1_chassis" prot="public">dlib::Chassis</innerclass>
     <innerclass refid="structdlib_1_1_chassis_config" prot="public">dlib::ChassisConfig</innerclass>
-    <innerclass refid="classdlib_1_1_distance" prot="public">dlib::Distance</innerclass>
-    <innerclass refid="structdlib_1_1_distance_config" prot="public">dlib::DistanceConfig</innerclass>
     <innerclass refid="classdlib_1_1_error_derivative_settler" prot="public">dlib::ErrorDerivativeSettler</innerclass>
     <innerclass refid="classdlib_1_1_error_time_settler" prot="public">dlib::ErrorTimeSettler</innerclass>
     <innerclass refid="classdlib_1_1_feedforward" prot="public">dlib::Feedforward</innerclass>
@@ -27,7 +25,6 @@
     <innerclass refid="classdlib_1_1_timer" prot="public">dlib::Timer</innerclass>
     <innerclass refid="classdlib_1_1_trapezoid_profile" prot="public">dlib::TrapezoidProfile</innerclass>
     <innerclass refid="structdlib_1_1_vector2d" prot="public">dlib::Vector2d</innerclass>
-    <innernamespace refid="namespacedlib_1_1detail">dlib::detail</innernamespace>
     <sectiondef kind="enum">
       <memberdef kind="enum" id="trapezoid__profile_8hpp_1a576fa61ce5659b271554c10063d16dde" prot="public" static="no" strong="yes">
         <type></type>
@@ -62,109 +59,212 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
+<para>a class of trapezoid profile stages </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/trajectories/trapezoid_profile.hpp" line="11" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/trajectories/trapezoid_profile.hpp" bodystart="11" bodyend="16"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/trajectories/trapezoid_profile.hpp" line="12" column="1" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/trajectories/trapezoid_profile.hpp" bodystart="12" bodyend="17"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
-      <memberdef kind="function" id="error__calculation_8hpp_1af21c9bd90fe0ea8d3e9fb241a913f59e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>au::Quantity&lt; au::Meters, double &gt;</type>
-        <definition>au::Quantity&lt; au::Meters, double &gt; dlib::linear_error</definition>
-        <argsstring>(const au::Quantity&lt; au::Meters, double &gt; target, const au::Quantity&lt; au::Meters, double &gt; reading)</argsstring>
+      <memberdef kind="function" id="error__calculation_8hpp_1a9c87b072ff87f026fd598936534a2865" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::linear_error</definition>
+        <argsstring>(double target, double reading)</argsstring>
         <name>linear_error</name>
         <qualifiedname>dlib::linear_error</qualifiedname>
         <param>
-          <type>const au::Quantity&lt; au::Meters, double &gt;</type>
+          <type>double</type>
           <declname>target</declname>
         </param>
         <param>
-          <type>const au::Quantity&lt; au::Meters, double &gt;</type>
+          <type>double</type>
           <declname>reading</declname>
         </param>
         <briefdescription>
+<para>Calculate linear error. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>setpoint; where you want to end up </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reading</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current displacement of your robot</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>error </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/utilities/error_calculation.hpp" line="8" column="14" declfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/utilities/error_calculation.hpp" declline="8" declcolumn="14"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/utilities/error_calculation.hpp" line="14" column="8" declfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/utilities/error_calculation.hpp" declline="14" declcolumn="8"/>
       </memberdef>
-      <memberdef kind="function" id="error__calculation_8hpp_1adf62eb348ff1cf3332882e57e3d2b21f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>au::Quantity&lt; au::Degrees, double &gt;</type>
-        <definition>au::Quantity&lt; au::Degrees, double &gt; dlib::sanitize_angle</definition>
-        <argsstring>(const au::Quantity&lt; au::Degrees, double &gt; angle)</argsstring>
+      <memberdef kind="function" id="error__calculation_8hpp_1ae2a5305ae514093c188a63f70398bc35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::sanitize_angle</definition>
+        <argsstring>(double angle)</argsstring>
         <name>sanitize_angle</name>
         <qualifiedname>dlib::sanitize_angle</qualifiedname>
         <param>
-          <type>const au::Quantity&lt; au::Degrees, double &gt;</type>
+          <type>double</type>
           <declname>angle</declname>
         </param>
         <briefdescription>
+<para>Make a clean angle that is more accurate. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unsanitized angle</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>sanitized angle </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/utilities/error_calculation.hpp" line="13" column="14" declfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/utilities/error_calculation.hpp" declline="13" declcolumn="14"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/utilities/error_calculation.hpp" line="26" column="8" declfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/utilities/error_calculation.hpp" declline="26" declcolumn="8"/>
       </memberdef>
-      <memberdef kind="function" id="error__calculation_8hpp_1a59783fa4b7b94973278c4384454ac69e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>au::Quantity&lt; au::Degrees, double &gt;</type>
-        <definition>au::Quantity&lt; au::Degrees, double &gt; dlib::angular_error</definition>
-        <argsstring>(const au::Quantity&lt; au::Degrees, double &gt; target, const au::Quantity&lt; au::Degrees, double &gt; reading)</argsstring>
+      <memberdef kind="function" id="error__calculation_8hpp_1a039874324d47ba7b4df46d93416c0ae1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::angular_error</definition>
+        <argsstring>(double target, double reading)</argsstring>
         <name>angular_error</name>
         <qualifiedname>dlib::angular_error</qualifiedname>
         <param>
-          <type>const au::Quantity&lt; au::Degrees, double &gt;</type>
+          <type>double</type>
           <declname>target</declname>
         </param>
         <param>
-          <type>const au::Quantity&lt; au::Degrees, double &gt;</type>
+          <type>double</type>
           <declname>reading</declname>
         </param>
         <briefdescription>
+<para>Calculate angular error. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>target heading </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reading</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current heading of your robot</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>error </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/utilities/error_calculation.hpp" line="17" column="14" declfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/utilities/error_calculation.hpp" declline="17" declcolumn="14"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/utilities/error_calculation.hpp" line="38" column="8" declfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/utilities/error_calculation.hpp" declline="38" declcolumn="8"/>
       </memberdef>
-      <memberdef kind="function" id="error__calculation_8hpp_1aa0a8ecb744c5933ed70c33673c1f17f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename Units</type>
-          </param>
-        </templateparamlist>
-        <type>au::Quantity&lt; Units, double &gt;</type>
-        <definition>au::Quantity&lt; Units, double &gt; dlib::relative_target</definition>
-        <argsstring>(const au::Quantity&lt; Units, double &gt; start, const au::Quantity&lt; Units, double &gt; target)</argsstring>
+      <memberdef kind="function" id="error__calculation_8hpp_1a2b6b93a993c2b0b75a536334eefa195f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::relative_target</definition>
+        <argsstring>(double start, double target)</argsstring>
         <name>relative_target</name>
         <qualifiedname>dlib::relative_target</qualifiedname>
         <param>
-          <type>const au::Quantity&lt; Units, double &gt;</type>
+          <type>double</type>
           <declname>start</declname>
         </param>
         <param>
-          <type>const au::Quantity&lt; Units, double &gt;</type>
+          <type>double</type>
           <declname>target</declname>
         </param>
         <briefdescription>
+<para>Set a relative target. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start displacement of your robot </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>target displacement of your robot</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>error </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/utilities/error_calculation.hpp" line="23" column="14" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/utilities/error_calculation.hpp" bodystart="23" bodyend="28"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/utilities/error_calculation.hpp" line="51" column="8" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/utilities/error_calculation.hpp" bodystart="51" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="gearing__calculation_8hpp_1a964a0e921b6b3c6879641cfc4c44113f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::gearset_rpm</definition>
+        <argsstring>(pros::MotorGearset gearset)</argsstring>
+        <name>gearset_rpm</name>
+        <qualifiedname>dlib::gearset_rpm</qualifiedname>
+        <param>
+          <type>pros::MotorGearset</type>
+          <declname>gearset</declname>
+        </param>
+        <briefdescription>
+<para>Get the RPM of the robot. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gearset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the gearset of the robot</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RPM </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/utilities/gearing_calculation.hpp" line="14" column="8" declfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/utilities/gearing_calculation.hpp" declline="14" declcolumn="8"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/error_derivative_settler.hpp" line="6" column="1"/>
+    <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/error_derivative_settler.hpp" line="3" column="1"/>
   </compounddef>
 </doxygen>

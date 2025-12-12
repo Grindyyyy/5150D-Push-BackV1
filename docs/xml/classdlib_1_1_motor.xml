@@ -15,14 +15,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor.hpp" line="35" column="17" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor.hpp" bodystart="35" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/motor.hpp" line="32" column="17" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/motor.hpp" bodystart="32" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classdlib_1_1_motor_1a5e4d0b96a569cb857fe76b01142d1c5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>au::Quantity&lt; au::Revolutions, double &gt;</type>
-        <definition>au::Quantity&lt; au::Revolutions, double &gt; dlib::Motor::get_position</definition>
-        <argsstring>()</argsstring>
+      <memberdef kind="function" id="classdlib_1_1_motor_1a9ba008014fd185f9ca820d4182b0721c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::Motor::get_position</definition>
+        <argsstring>() const</argsstring>
         <name>get_position</name>
         <qualifiedname>dlib::Motor::get_position</qualifiedname>
         <briefdescription>
@@ -35,12 +35,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor.hpp" line="24" column="18"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/motor.hpp" line="21" column="12"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_motor_1a252750c416d73a9cf99da2eef360b1b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>au::Quantity&lt; au::Rpm, double &gt;</type>
-        <definition>au::Quantity&lt; au::Rpm, double &gt; dlib::Motor::get_velocity</definition>
-        <argsstring>()</argsstring>
+      <memberdef kind="function" id="classdlib_1_1_motor_1aa1986310db0e0829ca5f98b88729c6a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::Motor::get_velocity</definition>
+        <argsstring>() const</argsstring>
         <name>get_velocity</name>
         <qualifiedname>dlib::Motor::get_velocity</qualifiedname>
         <briefdescription>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor.hpp" line="31" column="18"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/motor.hpp" line="28" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classdlib_1_1_motor_1a829c7a6cd6193cf73d24a7bb592c71c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -71,17 +71,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor.hpp" line="33" column="5"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/motor.hpp" line="30" column="5"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor.hpp" line="17" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor.hpp" bodystart="17" bodyend="36"/>
+    <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/motor.hpp" line="14" column="1" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/motor.hpp" bodystart="14" bodyend="33"/>
     <listofallmembers>
-      <member refid="classdlib_1_1_motor_1a5e4d0b96a569cb857fe76b01142d1c5e" prot="public" virt="non-virtual"><scope>dlib::Motor</scope><name>get_position</name></member>
-      <member refid="classdlib_1_1_motor_1a252750c416d73a9cf99da2eef360b1b1" prot="public" virt="non-virtual"><scope>dlib::Motor</scope><name>get_velocity</name></member>
+      <member refid="classdlib_1_1_motor_1a9ba008014fd185f9ca820d4182b0721c" prot="public" virt="non-virtual"><scope>dlib::Motor</scope><name>get_position</name></member>
+      <member refid="classdlib_1_1_motor_1aa1986310db0e0829ca5f98b88729c6a1" prot="public" virt="non-virtual"><scope>dlib::Motor</scope><name>get_velocity</name></member>
       <member refid="classdlib_1_1_motor_1a829c7a6cd6193cf73d24a7bb592c71c0" prot="public" virt="non-virtual"><scope>dlib::Motor</scope><name>Motor</name></member>
       <member refid="classdlib_1_1_motor_1af3acd7f1eeb8079e19fc751d50b0b977" prot="public" virt="non-virtual"><scope>dlib::Motor</scope><name>raw</name></member>
     </listofallmembers>

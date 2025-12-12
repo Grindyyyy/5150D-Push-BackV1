@@ -3,9 +3,9 @@
   <compounddef id="classdlib_1_1_imu" kind="class" language="C++" prot="public">
     <compoundname>dlib::Imu</compoundname>
     <sectiondef kind="protected-attrib">
-      <memberdef kind="variable" id="classdlib_1_1_imu_1a1f1f497d3788072147d256ecf3c0b45a" prot="protected" static="no" mutable="no">
-        <type>double</type>
-        <definition>double dlib::Imu::scalar</definition>
+      <memberdef kind="variable" id="classdlib_1_1_imu_1ace0422d0697e5720cb716b0aa3f1e33b" prot="protected" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double dlib::Imu::scalar</definition>
         <argsstring></argsstring>
         <name>scalar</name>
         <qualifiedname>dlib::Imu::scalar</qualifiedname>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/imu.hpp" line="19" column="12" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/imu.hpp" bodystart="19" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/imu.hpp" line="16" column="18" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/imu.hpp" bodystart="16" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-attrib">
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/imu.hpp" line="79" column="15" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/imu.hpp" bodystart="79" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/imu.hpp" line="74" column="15" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/imu.hpp" bodystart="74" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -58,26 +58,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/imu.hpp" line="37" column="10"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/imu.hpp" line="34" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_imu_1ab3817bfb6a19032e7cdc1741b66b5835" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void dlib::Imu::tare_position</definition>
-        <argsstring>()</argsstring>
-        <name>tare_position</name>
-        <qualifiedname>dlib::Imu::tare_position</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/imu.hpp" line="39" column="10"/>
-      </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_imu_1afb9cbe67e7361c52103477da2681fa7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>au::Quantity&lt; au::Degrees, double &gt;</type>
-        <definition>au::Quantity&lt; au::Degrees, double &gt; dlib::Imu::get_rotation</definition>
-        <argsstring>()</argsstring>
+      <memberdef kind="function" id="classdlib_1_1_imu_1a7dbe99c94ea88888b31a196d62f123af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::Imu::get_rotation</definition>
+        <argsstring>() const</argsstring>
         <name>get_rotation</name>
         <qualifiedname>dlib::Imu::get_rotation</qualifiedname>
         <briefdescription>
@@ -92,17 +78,17 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><ref refid="classdlib_1_1_imu" kindref="compound">dlib::Imu</ref><sp/>imu(imu_config);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal">au::Quantity&lt;au::Degrees,<sp/>double&gt;<sp/>degrees<sp/>=<sp/>imu.get_rotation();</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>degrees<sp/>=<sp/>imu.get_rotation();</highlight></codeline>
 </programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/imu.hpp" line="57" column="18"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/imu.hpp" line="52" column="12"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_imu_1a8757736af39c9d82de947cb6493b2e7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>au::Quantity&lt; au::Degrees, double &gt;</type>
-        <definition>au::Quantity&lt; au::Degrees, double &gt; dlib::Imu::get_heading</definition>
-        <argsstring>()</argsstring>
+      <memberdef kind="function" id="classdlib_1_1_imu_1af8590e83df76c863a3b2555210ed41f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::Imu::get_heading</definition>
+        <argsstring>() const</argsstring>
         <name>get_heading</name>
         <qualifiedname>dlib::Imu::get_heading</qualifiedname>
         <briefdescription>
@@ -117,12 +103,12 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><ref refid="classdlib_1_1_imu" kindref="compound">dlib::Imu</ref><sp/>imu(imu_config);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal">au::Quantity&lt;au::Degrees,<sp/>double&gt;<sp/>degrees<sp/>=<sp/>imu.get_heading();</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>degrees<sp/>=<sp/>imu.get_heading();</highlight></codeline>
 </programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/imu.hpp" line="75" column="18"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/imu.hpp" line="70" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classdlib_1_1_imu_1a18802c5ff259f134741445e04d7f9e35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -140,22 +126,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/imu.hpp" line="77" column="5"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/imu.hpp" line="72" column="5"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/imu.hpp" line="17" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/imu.hpp" bodystart="17" bodyend="80"/>
+    <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/imu.hpp" line="14" column="1" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/imu.hpp" bodystart="14" bodyend="75"/>
     <listofallmembers>
-      <member refid="classdlib_1_1_imu_1a8757736af39c9d82de947cb6493b2e7d" prot="public" virt="non-virtual"><scope>dlib::Imu</scope><name>get_heading</name></member>
-      <member refid="classdlib_1_1_imu_1afb9cbe67e7361c52103477da2681fa7a" prot="public" virt="non-virtual"><scope>dlib::Imu</scope><name>get_rotation</name></member>
+      <member refid="classdlib_1_1_imu_1af8590e83df76c863a3b2555210ed41f6" prot="public" virt="non-virtual"><scope>dlib::Imu</scope><name>get_heading</name></member>
+      <member refid="classdlib_1_1_imu_1a7dbe99c94ea88888b31a196d62f123af" prot="public" virt="non-virtual"><scope>dlib::Imu</scope><name>get_rotation</name></member>
       <member refid="classdlib_1_1_imu_1a18802c5ff259f134741445e04d7f9e35" prot="public" virt="non-virtual"><scope>dlib::Imu</scope><name>Imu</name></member>
       <member refid="classdlib_1_1_imu_1a3a53eaee11bc5fe6bc6412c6e6bcb1f3" prot="public" virt="non-virtual"><scope>dlib::Imu</scope><name>initialize</name></member>
       <member refid="classdlib_1_1_imu_1a016639cf1c6f2e9b860571aac6b45c3e" prot="public" virt="non-virtual"><scope>dlib::Imu</scope><name>raw</name></member>
-      <member refid="classdlib_1_1_imu_1a1f1f497d3788072147d256ecf3c0b45a" prot="protected" virt="non-virtual"><scope>dlib::Imu</scope><name>scalar</name></member>
-      <member refid="classdlib_1_1_imu_1ab3817bfb6a19032e7cdc1741b66b5835" prot="public" virt="non-virtual"><scope>dlib::Imu</scope><name>tare_position</name></member>
+      <member refid="classdlib_1_1_imu_1ace0422d0697e5720cb716b0aa3f1e33b" prot="protected" virt="non-virtual"><scope>dlib::Imu</scope><name>scalar</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

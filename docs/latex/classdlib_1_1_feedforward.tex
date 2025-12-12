@@ -6,33 +6,27 @@
 \Hypertarget{classdlib_1_1_feedforward_a342b4492c166e28de82bc5da296b2edd}\label{classdlib_1_1_feedforward_a342b4492c166e28de82bc5da296b2edd} 
 {\bfseries Feedforward} (\mbox{\hyperlink{structdlib_1_1_feedforward_gains}{Feedforward\+Gains}} gains)
 \item 
-au\+::\+Quantity$<$ au\+::\+Volts, double $>$ \mbox{\hyperlink{classdlib_1_1_feedforward_a6197dd2774c291e6d0b4843f22ebf4d9}{calculate}} (const au\+::\+Quantity$<$ au\+::\+Time\+Derivative$<$ Units $>$, double $>$ target\+\_\+velocity, const au\+::\+Quantity$<$ au\+::\+Time2nd\+Derivative$<$ Units $>$, double $>$ target\+\_\+acceleration)
+double \mbox{\hyperlink{classdlib_1_1_feedforward_a511368548788f98e05cacc8147a9a250}{calculate}} (double target\+\_\+velocity, double target\+\_\+acceleration) const
 \begin{DoxyCompactList}\small\item\em Calculate \doxylink{classdlib_1_1_feedforward}{Feedforward} voltage. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structdlib_1_1_feedforward_gains}{Feedforward\+Gains}} \mbox{\hyperlink{classdlib_1_1_feedforward_adf4976c390cbbda70371b71b43d1e1cb}{get\+\_\+gains}} () const
 \begin{DoxyCompactList}\small\item\em Get \doxylink{classdlib_1_1_feedforward}{Feedforward} Gains. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classdlib_1_1_feedforward_a463de4825810bab936543a7a71d9059e}{set\+\_\+gains}} (\mbox{\hyperlink{structdlib_1_1_feedforward_gains}{Feedforward\+Gains}} new\+\_\+gains)
 \begin{DoxyCompactList}\small\item\em Set \doxylink{classdlib_1_1_feedforward}{Feedforward} gains. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Types}
-\begin{DoxyCompactItemize}
-\item 
-\Hypertarget{classdlib_1_1_feedforward_afffb67cc86376ca29ec845f7bf5ffdc4}\label{classdlib_1_1_feedforward_afffb67cc86376ca29ec845f7bf5ffdc4} 
-using {\bfseries Base\+Units} = au\+::\+Unit\+Impl$<$au\+::detail\+::\+DimT$<$Units$>$$>$
-\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classdlib_1_1_feedforward_a479d8bf1ca21cc31f2a2237b2edd0e26}\label{classdlib_1_1_feedforward_a479d8bf1ca21cc31f2a2237b2edd0e26} 
-\mbox{\hyperlink{structdlib_1_1detail_1_1_feedforward_gains_with_units}{detail\+::\+Feedforward\+Gains\+With\+Units}}$<$ Base\+Units $>$ {\bfseries gains}
+\Hypertarget{classdlib_1_1_feedforward_aa673c5e1e1f3a4362b8b206ef6ce6db6}\label{classdlib_1_1_feedforward_aa673c5e1e1f3a4362b8b206ef6ce6db6} 
+\mbox{\hyperlink{structdlib_1_1_feedforward_gains}{Feedforward\+Gains}} {\bfseries m\+\_\+gains}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classdlib_1_1_feedforward_a6197dd2774c291e6d0b4843f22ebf4d9}\index{dlib::Feedforward$<$ Units $>$@{dlib::Feedforward$<$ Units $>$}!calculate@{calculate}}
+\Hypertarget{classdlib_1_1_feedforward_a511368548788f98e05cacc8147a9a250}\index{dlib::Feedforward$<$ Units $>$@{dlib::Feedforward$<$ Units $>$}!calculate@{calculate}}
 \index{calculate@{calculate}!dlib::Feedforward$<$ Units $>$@{dlib::Feedforward$<$ Units $>$}}
 \doxysubsubsection{\texorpdfstring{calculate()}{calculate()}}
-{\footnotesize\ttfamily \label{classdlib_1_1_feedforward_a6197dd2774c291e6d0b4843f22ebf4d9} 
+{\footnotesize\ttfamily \label{classdlib_1_1_feedforward_a511368548788f98e05cacc8147a9a250} 
 template$<$typename Units $>$ \\
-au\+::\+Quantity$<$ au\+::\+Volts, double $>$ \mbox{\hyperlink{classdlib_1_1_feedforward}{dlib\+::\+Feedforward}}$<$ Units $>$\+::calculate (\begin{DoxyParamCaption}\item[{const au\+::\+Quantity$<$ au\+::\+Time\+Derivative$<$ Units $>$, double $>$}]{target\+\_\+velocity}{, }\item[{const au\+::\+Quantity$<$ au\+::\+Time2nd\+Derivative$<$ Units $>$, double $>$}]{target\+\_\+acceleration}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+double \mbox{\hyperlink{classdlib_1_1_feedforward}{dlib\+::\+Feedforward}}$<$ Units $>$\+::calculate (\begin{DoxyParamCaption}\item[{double}]{target\+\_\+velocity}{, }\item[{double}]{target\+\_\+acceleration}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -54,7 +48,7 @@ the voltage required for the mechanism to achieve the target velocity and accele
 \DoxyCodeLine{\mbox{\hyperlink{classdlib_1_1_feedforward}{dlib::Feedforward}}\ ff\ =\ \mbox{\hyperlink{classdlib_1_1_feedforward}{dlib::Feedforward}}(\{1,\ 2,\ 3\});}
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{comment}{//\ Calculate\ the\ voltage\ needed\ to\ coast\ at\ 1\ m/s}}
-\DoxyCodeLine{Quantity<Volts,\ double>\ voltage\ =\ ff.\mbox{\hyperlink{classdlib_1_1_feedforward_a6197dd2774c291e6d0b4843f22ebf4d9}{calculate}}(meters\_per\_second(1),\ ZERO);\ }
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ voltage\ =\ ff.\mbox{\hyperlink{classdlib_1_1_feedforward_a511368548788f98e05cacc8147a9a250}{calculate}}(meters\_per\_second(1),\ ZERO);\ }
 
 \end{DoxyCode}
  \Hypertarget{classdlib_1_1_feedforward_adf4976c390cbbda70371b71b43d1e1cb}\index{dlib::Feedforward$<$ Units $>$@{dlib::Feedforward$<$ Units $>$}!get\_gains@{get\_gains}}
@@ -109,4 +103,4 @@ Set \doxylink{classdlib_1_1_feedforward}{Feedforward} gains.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/super/\+Downloads/5150\+D-\/\+Push Back\+V1/include/dlib/controllers/feedforward.\+hpp\end{DoxyCompactItemize}
+C\+:/\+Users/super/\+Downloads/dlib\+\_\+bugfix/dlib2/include/dlib/controllers/feedforward.\+hpp\end{DoxyCompactItemize}

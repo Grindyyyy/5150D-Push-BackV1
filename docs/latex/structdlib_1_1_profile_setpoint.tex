@@ -1,28 +1,60 @@
-\doxysection{dlib\+::Profile\+Setpoint\texorpdfstring{$<$}{<} Units \texorpdfstring{$>$}{>} Struct Template Reference}
-\hypertarget{structdlib_1_1_profile_setpoint}{}\label{structdlib_1_1_profile_setpoint}\index{dlib::ProfileSetpoint$<$ Units $>$@{dlib::ProfileSetpoint$<$ Units $>$}}
+\doxysection{dlib\+::Profile\+Setpoint Struct Reference}
+\hypertarget{structdlib_1_1_profile_setpoint}{}\label{structdlib_1_1_profile_setpoint}\index{dlib::ProfileSetpoint@{dlib::ProfileSetpoint}}
+
+
+a setpoint during a given time  
+
+
+
+
+{\ttfamily \#include $<$profile\+\_\+setpoint.\+hpp$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{structdlib_1_1_profile_setpoint_ab672a81841846dbe48f98690520230df}\label{structdlib_1_1_profile_setpoint_ab672a81841846dbe48f98690520230df} 
-{\bfseries Profile\+Setpoint} (au\+::\+Quantity$<$ Units, double $>$ position, au\+::\+Quantity$<$ au\+::\+Time\+Derivative$<$ Units $>$, double $>$ velocity, au\+::\+Quantity$<$ au\+::\+Time2nd\+Derivative$<$ Units $>$, double $>$ acceleration)
+\Hypertarget{structdlib_1_1_profile_setpoint_a8806c59472a80d3a346ff91f09ab019d}\label{structdlib_1_1_profile_setpoint_a8806c59472a80d3a346ff91f09ab019d} 
+{\bfseries Profile\+Setpoint} (double position, double velocity, double acceleration)
 \item 
-\Hypertarget{structdlib_1_1_profile_setpoint_ab436b1fe0dc2506822b4a7c120d0161a}\label{structdlib_1_1_profile_setpoint_ab436b1fe0dc2506822b4a7c120d0161a} 
-\mbox{\hyperlink{structdlib_1_1_profile_setpoint}{Profile\+Setpoint}} {\bfseries negative} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{structdlib_1_1_profile_setpoint}{Profile\+Setpoint}} \mbox{\hyperlink{structdlib_1_1_profile_setpoint_adfcf58f0d820cfa4d0a90055ab149bb9}{direct}} (bool invert) const
+\begin{DoxyCompactList}\small\item\em Calculate the angle from the current position of the robot to a point. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{structdlib_1_1_profile_setpoint_a744272c76128819ff92371b22b362428}\label{structdlib_1_1_profile_setpoint_a744272c76128819ff92371b22b362428} 
-au\+::\+Quantity$<$ Units, double $>$ {\bfseries position}
+\Hypertarget{structdlib_1_1_profile_setpoint_af968fff4e9e3e482a8c0cdb7c9bada66}\label{structdlib_1_1_profile_setpoint_af968fff4e9e3e482a8c0cdb7c9bada66} 
+double {\bfseries position}
 \item 
-\Hypertarget{structdlib_1_1_profile_setpoint_a8aef38a77723e1706d1b1e40bea91ecf}\label{structdlib_1_1_profile_setpoint_a8aef38a77723e1706d1b1e40bea91ecf} 
-au\+::\+Quantity$<$ au\+::\+Time\+Derivative$<$ Units $>$, double $>$ {\bfseries velocity}
+\Hypertarget{structdlib_1_1_profile_setpoint_a7d4f84902a92f039801680400a7b3407}\label{structdlib_1_1_profile_setpoint_a7d4f84902a92f039801680400a7b3407} 
+double {\bfseries velocity}
 \item 
-\Hypertarget{structdlib_1_1_profile_setpoint_af4e88e98d8b5925b8e2a5e8ee8c82b22}\label{structdlib_1_1_profile_setpoint_af4e88e98d8b5925b8e2a5e8ee8c82b22} 
-au\+::\+Quantity$<$ au\+::\+Time2nd\+Derivative$<$ Units $>$, double $>$ {\bfseries acceleration}
+\Hypertarget{structdlib_1_1_profile_setpoint_a9f0b7a3334ba2655e4c7245b4ad47853}\label{structdlib_1_1_profile_setpoint_a9f0b7a3334ba2655e4c7245b4ad47853} 
+double {\bfseries acceleration}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+a setpoint during a given time 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structdlib_1_1_profile_setpoint_adfcf58f0d820cfa4d0a90055ab149bb9}\index{dlib::ProfileSetpoint@{dlib::ProfileSetpoint}!direct@{direct}}
+\index{direct@{direct}!dlib::ProfileSetpoint@{dlib::ProfileSetpoint}}
+\doxysubsubsection{\texorpdfstring{direct()}{direct()}}
+{\footnotesize\ttfamily \label{structdlib_1_1_profile_setpoint_adfcf58f0d820cfa4d0a90055ab149bb9} 
+\mbox{\hyperlink{structdlib_1_1_profile_setpoint}{Profile\+Setpoint}} dlib\+::\+Profile\+Setpoint\+::direct (\begin{DoxyParamCaption}\item[{bool}]{invert}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculate the angle from the current position of the robot to a point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em invert} & reverse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the setpoint at the given point 
+\end{DoxyReturn}
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/super/\+Downloads/5150\+D-\/\+Push Back\+V1/include/dlib/trajectories/profile\+\_\+setpoint.\+hpp\end{DoxyCompactItemize}
+C\+:/\+Users/super/\+Downloads/dlib\+\_\+bugfix/dlib2/include/dlib/trajectories/profile\+\_\+setpoint.\+hpp\end{DoxyCompactItemize}

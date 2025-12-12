@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: dlib::ProfileSetpoint&lt; Units &gt; Struct Template Reference</title>
+<title>My Project: dlib::ProfileSetpoint Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,33 +92,75 @@ $(function(){ initResizable(false); });
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structdlib_1_1_profile_setpoint-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">dlib::ProfileSetpoint&lt; Units &gt; Struct Template Reference</div></div>
+  <div class="headertitle"><div class="title">dlib::ProfileSetpoint Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>a setpoint during a given time  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="profile__setpoint_8hpp_source.html">profile_setpoint.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab672a81841846dbe48f98690520230df" id="r_ab672a81841846dbe48f98690520230df"><td class="memItemLeft" align="right" valign="top"><a id="ab672a81841846dbe48f98690520230df" name="ab672a81841846dbe48f98690520230df"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ProfileSetpoint</b> (au::Quantity&lt; Units, double &gt; position, au::Quantity&lt; au::TimeDerivative&lt; Units &gt;, double &gt; velocity, au::Quantity&lt; au::Time2ndDerivative&lt; Units &gt;, double &gt; acceleration)</td></tr>
-<tr class="separator:ab672a81841846dbe48f98690520230df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab436b1fe0dc2506822b4a7c120d0161a" id="r_ab436b1fe0dc2506822b4a7c120d0161a"><td class="memItemLeft" align="right" valign="top"><a id="ab436b1fe0dc2506822b4a7c120d0161a" name="ab436b1fe0dc2506822b4a7c120d0161a"></a>
-<a class="el" href="structdlib_1_1_profile_setpoint.html">ProfileSetpoint</a>&#160;</td><td class="memItemRight" valign="bottom"><b>negative</b> ()</td></tr>
-<tr class="separator:ab436b1fe0dc2506822b4a7c120d0161a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8806c59472a80d3a346ff91f09ab019d" id="r_a8806c59472a80d3a346ff91f09ab019d"><td class="memItemLeft" align="right" valign="top"><a id="a8806c59472a80d3a346ff91f09ab019d" name="a8806c59472a80d3a346ff91f09ab019d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ProfileSetpoint</b> (double position, double velocity, double acceleration)</td></tr>
+<tr class="separator:a8806c59472a80d3a346ff91f09ab019d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfcf58f0d820cfa4d0a90055ab149bb9" id="r_adfcf58f0d820cfa4d0a90055ab149bb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdlib_1_1_profile_setpoint.html">ProfileSetpoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfcf58f0d820cfa4d0a90055ab149bb9">direct</a> (bool invert) const</td></tr>
+<tr class="memdesc:adfcf58f0d820cfa4d0a90055ab149bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the angle from the current position of the robot to a point.  <br /></td></tr>
+<tr class="separator:adfcf58f0d820cfa4d0a90055ab149bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a744272c76128819ff92371b22b362428" id="r_a744272c76128819ff92371b22b362428"><td class="memItemLeft" align="right" valign="top"><a id="a744272c76128819ff92371b22b362428" name="a744272c76128819ff92371b22b362428"></a>
-au::Quantity&lt; Units, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>position</b></td></tr>
-<tr class="separator:a744272c76128819ff92371b22b362428"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8aef38a77723e1706d1b1e40bea91ecf" id="r_a8aef38a77723e1706d1b1e40bea91ecf"><td class="memItemLeft" align="right" valign="top"><a id="a8aef38a77723e1706d1b1e40bea91ecf" name="a8aef38a77723e1706d1b1e40bea91ecf"></a>
-au::Quantity&lt; au::TimeDerivative&lt; Units &gt;, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>velocity</b></td></tr>
-<tr class="separator:a8aef38a77723e1706d1b1e40bea91ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4e88e98d8b5925b8e2a5e8ee8c82b22" id="r_af4e88e98d8b5925b8e2a5e8ee8c82b22"><td class="memItemLeft" align="right" valign="top"><a id="af4e88e98d8b5925b8e2a5e8ee8c82b22" name="af4e88e98d8b5925b8e2a5e8ee8c82b22"></a>
-au::Quantity&lt; au::Time2ndDerivative&lt; Units &gt;, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>acceleration</b></td></tr>
-<tr class="separator:af4e88e98d8b5925b8e2a5e8ee8c82b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af968fff4e9e3e482a8c0cdb7c9bada66" id="r_af968fff4e9e3e482a8c0cdb7c9bada66"><td class="memItemLeft" align="right" valign="top"><a id="af968fff4e9e3e482a8c0cdb7c9bada66" name="af968fff4e9e3e482a8c0cdb7c9bada66"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>position</b></td></tr>
+<tr class="separator:af968fff4e9e3e482a8c0cdb7c9bada66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d4f84902a92f039801680400a7b3407" id="r_a7d4f84902a92f039801680400a7b3407"><td class="memItemLeft" align="right" valign="top"><a id="a7d4f84902a92f039801680400a7b3407" name="a7d4f84902a92f039801680400a7b3407"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>velocity</b></td></tr>
+<tr class="separator:a7d4f84902a92f039801680400a7b3407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f0b7a3334ba2655e4c7245b4ad47853" id="r_a9f0b7a3334ba2655e4c7245b4ad47853"><td class="memItemLeft" align="right" valign="top"><a id="a9f0b7a3334ba2655e4c7245b4ad47853" name="a9f0b7a3334ba2655e4c7245b4ad47853"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>acceleration</b></td></tr>
+<tr class="separator:a9f0b7a3334ba2655e4c7245b4ad47853"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>a setpoint during a given time </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="adfcf58f0d820cfa4d0a90055ab149bb9" name="adfcf58f0d820cfa4d0a90055ab149bb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfcf58f0d820cfa4d0a90055ab149bb9">&#9670;&#160;</a></span>direct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdlib_1_1_profile_setpoint.html">ProfileSetpoint</a> dlib::ProfileSetpoint::direct </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>invert</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the angle from the current position of the robot to a point. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">invert</td><td>reverse </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the setpoint at the given point </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/trajectories/<a class="el" href="profile__setpoint_8hpp_source.html">profile_setpoint.hpp</a></li>
+<li>C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/trajectories/<a class="el" href="profile__setpoint_8hpp_source.html">profile_setpoint.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

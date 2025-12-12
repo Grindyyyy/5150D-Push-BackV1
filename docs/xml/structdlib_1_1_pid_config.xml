@@ -16,22 +16,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="24" column="14" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="24" bodyend="24"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="21" column="14" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="21" bodyend="21"/>
       </memberdef>
-      <memberdef kind="variable" id="structdlib_1_1_pid_config_1a6ae29703d7a6461df52dcc0deab3d131" prot="public" static="no" mutable="no">
-        <type>au::Quantity&lt; au::Volts, double &gt;</type>
-        <definition>au::Quantity&lt;au::Volts, double&gt; dlib::PidConfig::max_voltage</definition>
+      <memberdef kind="variable" id="structdlib_1_1_pid_config_1a8745f96b230afe2d73ddcb5369a096f7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double dlib::PidConfig::max_voltage</definition>
         <argsstring></argsstring>
         <name>max_voltage</name>
         <qualifiedname>dlib::PidConfig::max_voltage</qualifiedname>
-        <initializer>= au::volts(12)</initializer>
+        <initializer>= 12000</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="25" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="25" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="22" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="22" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -51,10 +51,10 @@
         <link refid="structdlib_1_1_pid_gains"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="23" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="23" bodyend="26"/>
+    <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="20" column="1" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="20" bodyend="23"/>
     <listofallmembers>
       <member refid="structdlib_1_1_pid_config_1ae9e0934a431b6580ea185a908259db1f" prot="public" virt="non-virtual"><scope>dlib::PidConfig</scope><name>gains</name></member>
-      <member refid="structdlib_1_1_pid_config_1a6ae29703d7a6461df52dcc0deab3d131" prot="public" virt="non-virtual"><scope>dlib::PidConfig</scope><name>max_voltage</name></member>
+      <member refid="structdlib_1_1_pid_config_1a8745f96b230afe2d73ddcb5369a096f7" prot="public" virt="non-virtual"><scope>dlib::PidConfig</scope><name>max_voltage</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

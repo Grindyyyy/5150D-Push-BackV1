@@ -3,9 +3,9 @@
   <compounddef id="structdlib_1_1_motor_group_config" kind="struct" language="C++" prot="public">
     <compoundname>dlib::MotorGroupConfig</compoundname>
     <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="structdlib_1_1_motor_group_config_1a2ebb85cef2c39dd19c27848a80e310cd" prot="public" static="no" mutable="no">
-        <type>std::vector&lt; int8_t &gt;</type>
-        <definition>std::vector&lt;int8_t&gt; dlib::MotorGroupConfig::ports</definition>
+      <memberdef kind="variable" id="structdlib_1_1_motor_group_config_1a2259281a9652bd5505f82b46105a0f70" prot="public" static="no" mutable="no">
+        <type>const std::vector&lt; int8_t &gt;</type>
+        <definition>const std::vector&lt;int8_t&gt; dlib::MotorGroupConfig::ports</definition>
         <argsstring></argsstring>
         <name>ports</name>
         <qualifiedname>dlib::MotorGroupConfig::ports</qualifiedname>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" line="11" column="17" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" bodystart="11" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/motor_group.hpp" line="8" column="23" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/motor_group.hpp" bodystart="8" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -35,16 +35,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" line="13" column="5"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/motor_group.hpp" line="10" column="5"/>
       </memberdef>
-      <memberdef kind="function" id="structdlib_1_1_motor_group_config_1aafceecb284938166f29f0b994e2fde94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="structdlib_1_1_motor_group_config_1a6c2db7e506d0fbd88051501951bef93c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>dlib::MotorGroupConfig::MotorGroupConfig</definition>
-        <argsstring>(std::vector&lt; int8_t &gt; &amp;ports)</argsstring>
+        <argsstring>(const std::vector&lt; int8_t &gt; &amp;ports)</argsstring>
         <name>MotorGroupConfig</name>
         <qualifiedname>dlib::MotorGroupConfig::MotorGroupConfig</qualifiedname>
         <param>
-          <type>std::vector&lt; int8_t &gt; &amp;</type>
+          <type>const std::vector&lt; int8_t &gt; &amp;</type>
           <declname>ports</declname>
         </param>
         <briefdescription>
@@ -53,18 +53,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" line="14" column="5"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/motor_group.hpp" line="11" column="5"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" line="10" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/motor_group.hpp" bodystart="10" bodyend="15"/>
+    <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/motor_group.hpp" line="7" column="1" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/motor_group.hpp" bodystart="7" bodyend="12"/>
     <listofallmembers>
       <member refid="structdlib_1_1_motor_group_config_1a3d51bf4bba32718081e1fdcc041ea118" prot="public" virt="non-virtual"><scope>dlib::MotorGroupConfig</scope><name>MotorGroupConfig</name></member>
-      <member refid="structdlib_1_1_motor_group_config_1aafceecb284938166f29f0b994e2fde94" prot="public" virt="non-virtual"><scope>dlib::MotorGroupConfig</scope><name>MotorGroupConfig</name></member>
-      <member refid="structdlib_1_1_motor_group_config_1a2ebb85cef2c39dd19c27848a80e310cd" prot="public" virt="non-virtual"><scope>dlib::MotorGroupConfig</scope><name>ports</name></member>
+      <member refid="structdlib_1_1_motor_group_config_1a6c2db7e506d0fbd88051501951bef93c" prot="public" virt="non-virtual"><scope>dlib::MotorGroupConfig</scope><name>MotorGroupConfig</name></member>
+      <member refid="structdlib_1_1_motor_group_config_1a2259281a9652bd5505f82b46105a0f70" prot="public" virt="non-virtual"><scope>dlib::MotorGroupConfig</scope><name>ports</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

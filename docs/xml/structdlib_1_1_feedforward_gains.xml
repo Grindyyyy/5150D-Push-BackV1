@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" line="15" column="12" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" bodystart="15" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/feedforward.hpp" line="13" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/feedforward.hpp" bodystart="13" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdlib_1_1_feedforward_gains_1a12719c6d3801277080236f8c096df11d" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" line="18" column="12" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" bodystart="18" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/feedforward.hpp" line="16" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/feedforward.hpp" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdlib_1_1_feedforward_gains_1a792d62e19c4af373b312f68f8b0babf4" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" line="20" column="12" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" bodystart="20" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/feedforward.hpp" line="18" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/feedforward.hpp" bodystart="18" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -58,7 +58,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" line="13" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/feedforward.hpp" bodystart="13" bodyend="21"/>
+    <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/feedforward.hpp" line="11" column="1" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/feedforward.hpp" bodystart="11" bodyend="19"/>
     <listofallmembers>
       <member refid="structdlib_1_1_feedforward_gains_1a792d62e19c4af373b312f68f8b0babf4" prot="public" virt="non-virtual"><scope>dlib::FeedforwardGains</scope><name>ka</name></member>
       <member refid="structdlib_1_1_feedforward_gains_1a189cb35d422a4de220fe002b98bff755" prot="public" virt="non-virtual"><scope>dlib::FeedforwardGains</scope><name>ks</name></member>

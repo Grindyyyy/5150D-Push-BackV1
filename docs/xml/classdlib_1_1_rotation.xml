@@ -3,9 +3,9 @@
   <compounddef id="classdlib_1_1_rotation" kind="class" language="C++" prot="public">
     <compoundname>dlib::Rotation</compoundname>
     <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="classdlib_1_1_rotation_1a10a5f6e2ae7f7387cb99cc1915810e2f" prot="public" static="no" mutable="no">
-        <type>const au::Quantity&lt; au::Meters, double &gt;</type>
-        <definition>const au::Quantity&lt;au::Meters, double&gt; dlib::Rotation::wheel_diameter</definition>
+      <memberdef kind="variable" id="classdlib_1_1_rotation_1a3a4eb4155d31dda572ed6a5fe46256bd" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double dlib::Rotation::wheel_diameter</definition>
         <argsstring></argsstring>
         <name>wheel_diameter</name>
         <qualifiedname>dlib::Rotation::wheel_diameter</qualifiedname>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" line="56" column="24" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" bodystart="56" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/rotation.hpp" line="57" column="18" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/rotation.hpp" bodystart="57" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdlib_1_1_rotation_1a7ecbc1b9a3c55f6070579e934001ba23" prot="public" static="no" mutable="no">
         <type>const double</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" line="57" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" bodystart="57" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/rotation.hpp" line="58" column="18" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/rotation.hpp" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdlib_1_1_rotation_1abe4b6f62c125e07da979cd9f27a6a71d" prot="public" static="no" mutable="no">
         <type>pros::Rotation</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" line="59" column="20" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" bodystart="59" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/rotation.hpp" line="60" column="20" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/rotation.hpp" bodystart="60" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -60,12 +60,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" line="24" column="10"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/rotation.hpp" line="25" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_rotation_1ad6102faaf125a5190272d337edfb0c0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>au::Quantity&lt; au::Revolutions, double &gt;</type>
-        <definition>au::Quantity&lt; au::Revolutions, double &gt; dlib::Rotation::get_position</definition>
-        <argsstring>()</argsstring>
+      <memberdef kind="function" id="classdlib_1_1_rotation_1a08794e3e88bf8c0ce267482caad82371" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::Rotation::get_position</definition>
+        <argsstring>() const</argsstring>
         <name>get_position</name>
         <qualifiedname>dlib::Rotation::get_position</qualifiedname>
         <briefdescription>
@@ -78,12 +78,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" line="31" column="18"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/rotation.hpp" line="32" column="12"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_rotation_1a5662f95336f9bfea36c4eef61b69820d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>au::Quantity&lt; au::Rpm, double &gt;</type>
-        <definition>au::Quantity&lt; au::Rpm, double &gt; dlib::Rotation::get_velocity</definition>
-        <argsstring>()</argsstring>
+      <memberdef kind="function" id="classdlib_1_1_rotation_1a1dd05d344669fb3725c4be02e131ef6c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::Rotation::get_velocity</definition>
+        <argsstring>() const</argsstring>
         <name>get_velocity</name>
         <qualifiedname>dlib::Rotation::get_velocity</qualifiedname>
         <briefdescription>
@@ -96,12 +96,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" line="38" column="18"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/rotation.hpp" line="39" column="12"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_rotation_1a86faec8f32009f5755b6a8fbb8c2472d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>au::Quantity&lt; au::Meters, double &gt;</type>
-        <definition>au::Quantity&lt; au::Meters, double &gt; dlib::Rotation::get_linear_displacement</definition>
-        <argsstring>()</argsstring>
+      <memberdef kind="function" id="classdlib_1_1_rotation_1a556b4bb8ee3889c354e3f62298b86ead" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::Rotation::get_linear_displacement</definition>
+        <argsstring>() const</argsstring>
         <name>get_linear_displacement</name>
         <qualifiedname>dlib::Rotation::get_linear_displacement</qualifiedname>
         <briefdescription>
@@ -114,12 +114,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" line="45" column="18"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/rotation.hpp" line="46" column="12"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_rotation_1a5f0fe98bc229290ecda19efa6f73fcee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>au::Quantity&lt; au::MetersPerSecond, double &gt;</type>
-        <definition>au::Quantity&lt; au::MetersPerSecond, double &gt; dlib::Rotation::get_linear_velocity</definition>
-        <argsstring>()</argsstring>
+      <memberdef kind="function" id="classdlib_1_1_rotation_1a1b2d21ec1d143f120bf16ca84058c836" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::Rotation::get_linear_velocity</definition>
+        <argsstring>() const</argsstring>
         <name>get_linear_velocity</name>
         <qualifiedname>dlib::Rotation::get_linear_velocity</qualifiedname>
         <briefdescription>
@@ -132,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" line="52" column="18"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/rotation.hpp" line="53" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classdlib_1_1_rotation_1acb99a7fadeb90517f44dde30e5286e84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -150,24 +150,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" line="54" column="5"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/rotation.hpp" line="55" column="5"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" line="18" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/rotation.hpp" bodystart="18" bodyend="60"/>
+    <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/rotation.hpp" line="19" column="1" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/rotation.hpp" bodystart="19" bodyend="61"/>
     <listofallmembers>
       <member refid="classdlib_1_1_rotation_1a7ecbc1b9a3c55f6070579e934001ba23" prot="public" virt="non-virtual"><scope>dlib::Rotation</scope><name>gear_ratio</name></member>
-      <member refid="classdlib_1_1_rotation_1a86faec8f32009f5755b6a8fbb8c2472d" prot="public" virt="non-virtual"><scope>dlib::Rotation</scope><name>get_linear_displacement</name></member>
-      <member refid="classdlib_1_1_rotation_1a5f0fe98bc229290ecda19efa6f73fcee" prot="public" virt="non-virtual"><scope>dlib::Rotation</scope><name>get_linear_velocity</name></member>
-      <member refid="classdlib_1_1_rotation_1ad6102faaf125a5190272d337edfb0c0d" prot="public" virt="non-virtual"><scope>dlib::Rotation</scope><name>get_position</name></member>
-      <member refid="classdlib_1_1_rotation_1a5662f95336f9bfea36c4eef61b69820d" prot="public" virt="non-virtual"><scope>dlib::Rotation</scope><name>get_velocity</name></member>
+      <member refid="classdlib_1_1_rotation_1a556b4bb8ee3889c354e3f62298b86ead" prot="public" virt="non-virtual"><scope>dlib::Rotation</scope><name>get_linear_displacement</name></member>
+      <member refid="classdlib_1_1_rotation_1a1b2d21ec1d143f120bf16ca84058c836" prot="public" virt="non-virtual"><scope>dlib::Rotation</scope><name>get_linear_velocity</name></member>
+      <member refid="classdlib_1_1_rotation_1a08794e3e88bf8c0ce267482caad82371" prot="public" virt="non-virtual"><scope>dlib::Rotation</scope><name>get_position</name></member>
+      <member refid="classdlib_1_1_rotation_1a1dd05d344669fb3725c4be02e131ef6c" prot="public" virt="non-virtual"><scope>dlib::Rotation</scope><name>get_velocity</name></member>
       <member refid="classdlib_1_1_rotation_1a6d454d4be43fb1e97c7fa6dff6f4b8f0" prot="public" virt="non-virtual"><scope>dlib::Rotation</scope><name>initialize</name></member>
       <member refid="classdlib_1_1_rotation_1abe4b6f62c125e07da979cd9f27a6a71d" prot="public" virt="non-virtual"><scope>dlib::Rotation</scope><name>raw</name></member>
       <member refid="classdlib_1_1_rotation_1acb99a7fadeb90517f44dde30e5286e84" prot="public" virt="non-virtual"><scope>dlib::Rotation</scope><name>Rotation</name></member>
-      <member refid="classdlib_1_1_rotation_1a10a5f6e2ae7f7387cb99cc1915810e2f" prot="public" virt="non-virtual"><scope>dlib::Rotation</scope><name>wheel_diameter</name></member>
+      <member refid="classdlib_1_1_rotation_1a3a4eb4155d31dda572ed6a5fe46256bd" prot="public" virt="non-virtual"><scope>dlib::Rotation</scope><name>wheel_diameter</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -98,12 +98,12 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2570c6c4c2f93c9da11d352444e70d21" id="r_a2570c6c4c2f93c9da11d352444e70d21"><td class="memItemLeft" align="right" valign="top"><a id="a2570c6c4c2f93c9da11d352444e70d21" name="a2570c6c4c2f93c9da11d352444e70d21"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ErrorTimeSettler</b> (au::Quantity&lt; Units, double &gt; error_threshold, au::Quantity&lt; au::Seconds, double &gt; settle_time)</td></tr>
-<tr class="separator:a2570c6c4c2f93c9da11d352444e70d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e74b5131c4647fafc384e8c2823f895" id="r_a7e74b5131c4647fafc384e8c2823f895"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e74b5131c4647fafc384e8c2823f895">is_settled</a> (au::Quantity&lt; Units, double &gt; error, au::Quantity&lt; au::Seconds, double &gt; period)</td></tr>
-<tr class="memdesc:a7e74b5131c4647fafc384e8c2823f895"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if controller has settled.  <br /></td></tr>
-<tr class="separator:a7e74b5131c4647fafc384e8c2823f895"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd7cb7e03ed5309664dfeecc01d8923f" id="r_afd7cb7e03ed5309664dfeecc01d8923f"><td class="memItemLeft" align="right" valign="top"><a id="afd7cb7e03ed5309664dfeecc01d8923f" name="afd7cb7e03ed5309664dfeecc01d8923f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ErrorTimeSettler</b> (double error_threshold, double settle_time)</td></tr>
+<tr class="separator:afd7cb7e03ed5309664dfeecc01d8923f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab58e65e16fd617eb3cb590e6741bbb5e" id="r_ab58e65e16fd617eb3cb590e6741bbb5e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab58e65e16fd617eb3cb590e6741bbb5e">is_settled</a> (double error, double period)</td></tr>
+<tr class="memdesc:ab58e65e16fd617eb3cb590e6741bbb5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if controller has settled.  <br /></td></tr>
+<tr class="separator:ab58e65e16fd617eb3cb590e6741bbb5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af432f4115d0eff9738f46b8bdc8518ab" id="r_af432f4115d0eff9738f46b8bdc8518ab"><td class="memItemLeft" align="right" valign="top"><a id="af432f4115d0eff9738f46b8bdc8518ab" name="af432f4115d0eff9738f46b8bdc8518ab"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
 <tr class="memdesc:af432f4115d0eff9738f46b8bdc8518ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset all of the settler state. <br /></td></tr>
@@ -111,22 +111,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a43d002c8f2b16c79c96fd282f45556d8" id="r_a43d002c8f2b16c79c96fd282f45556d8"><td class="memItemLeft" align="right" valign="top"><a id="a43d002c8f2b16c79c96fd282f45556d8" name="a43d002c8f2b16c79c96fd282f45556d8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_settling</b></td></tr>
-<tr class="separator:a43d002c8f2b16c79c96fd282f45556d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9451888a6c2c0cfad7e842c4ac7d04ed" id="r_a9451888a6c2c0cfad7e842c4ac7d04ed"><td class="memItemLeft" align="right" valign="top"><a id="a9451888a6c2c0cfad7e842c4ac7d04ed" name="a9451888a6c2c0cfad7e842c4ac7d04ed"></a>
-au::Quantity&lt; au::Seconds, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>time_below_threshold</b></td></tr>
-<tr class="separator:a9451888a6c2c0cfad7e842c4ac7d04ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af00b439779da9a0fd18d45d41f590885" id="r_af00b439779da9a0fd18d45d41f590885"><td class="memItemLeft" align="right" valign="top"><a id="af00b439779da9a0fd18d45d41f590885" name="af00b439779da9a0fd18d45d41f590885"></a>
-const au::Quantity&lt; Units, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>error_threshold</b></td></tr>
-<tr class="separator:af00b439779da9a0fd18d45d41f590885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a585365606a3dec7c05d35c97f890e616" id="r_a585365606a3dec7c05d35c97f890e616"><td class="memItemLeft" align="right" valign="top"><a id="a585365606a3dec7c05d35c97f890e616" name="a585365606a3dec7c05d35c97f890e616"></a>
-const au::Quantity&lt; au::Seconds, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>settle_time</b></td></tr>
-<tr class="separator:a585365606a3dec7c05d35c97f890e616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2ef7b2c8d5f7a2dc9b1de940c2d4800" id="r_af2ef7b2c8d5f7a2dc9b1de940c2d4800"><td class="memItemLeft" align="right" valign="top"><a id="af2ef7b2c8d5f7a2dc9b1de940c2d4800" name="af2ef7b2c8d5f7a2dc9b1de940c2d4800"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>m_error_threshold</b></td></tr>
+<tr class="separator:af2ef7b2c8d5f7a2dc9b1de940c2d4800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e4e38eb6f8f94aeadc04884cc134912" id="r_a5e4e38eb6f8f94aeadc04884cc134912"><td class="memItemLeft" align="right" valign="top"><a id="a5e4e38eb6f8f94aeadc04884cc134912" name="a5e4e38eb6f8f94aeadc04884cc134912"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>m_settle_time</b></td></tr>
+<tr class="separator:a5e4e38eb6f8f94aeadc04884cc134912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2afc886dc2ac866ebf3e8bfd7e92040" id="r_aa2afc886dc2ac866ebf3e8bfd7e92040"><td class="memItemLeft" align="right" valign="top"><a id="aa2afc886dc2ac866ebf3e8bfd7e92040" name="aa2afc886dc2ac866ebf3e8bfd7e92040"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_is_settling</b></td></tr>
+<tr class="separator:aa2afc886dc2ac866ebf3e8bfd7e92040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dd6866c38a52fa0acf01c28eece5e83" id="r_a6dd6866c38a52fa0acf01c28eece5e83"><td class="memItemLeft" align="right" valign="top"><a id="a6dd6866c38a52fa0acf01c28eece5e83" name="a6dd6866c38a52fa0acf01c28eece5e83"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>m_time_below_threshold</b></td></tr>
+<tr class="separator:a6dd6866c38a52fa0acf01c28eece5e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7e74b5131c4647fafc384e8c2823f895" name="a7e74b5131c4647fafc384e8c2823f895"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e74b5131c4647fafc384e8c2823f895">&#9670;&#160;</a></span>is_settled()</h2>
+<a id="ab58e65e16fd617eb3cb590e6741bbb5e" name="ab58e65e16fd617eb3cb590e6741bbb5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab58e65e16fd617eb3cb590e6741bbb5e">&#9670;&#160;</a></span>is_settled()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -139,12 +139,12 @@ template&lt;typename Units &gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classdlib_1_1_error_time_settler.html">dlib::ErrorTimeSettler</a>&lt; Units &gt;::is_settled </td>
           <td>(</td>
-          <td class="paramtype">au::Quantity&lt; Units, double &gt;</td>          <td class="paramname"><span class="paramname"><em>error</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>error</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">au::Quantity&lt; au::Seconds, double &gt;</td>          <td class="paramname"><span class="paramname"><em>period</em></span>&#160;)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>period</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -163,24 +163,24 @@ template&lt;typename Units &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>if the controller has settled</dd></dl>
-<p><b>Example</b> </p><div class="fragment"><div class="line"><a class="code hl_class" href="classdlib_1_1_pid.html">dlib::Pid&lt;Meters&gt;</a> pid({1, 2, 3});</div>
+<p><b>Example</b> </p><div class="fragment"><div class="line"><a class="code hl_class" href="classdlib_1_1_pid.html">dlib::Pid</a> pid({1, 2, 3});</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Construct a last_period period</span></div>
-<div class="line">Quantity&lt;Seconds, double&gt; last_period;</div>
+<div class="line"><span class="keywordtype">double</span> last_period;</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Construct an TimeErrorSettler controller</span></div>
-<div class="line">dlib::TimeErrorSettler&lt;Meters&gt; pid_settler {</div>
-<div class="line">   meters(0.01),        <span class="comment">// the maximum error the pid can settle at</span></div>
-<div class="line">   seconds(0.250)    <span class="comment">// the time the Pid needs to remain below the error threshold</span></div>
+<div class="line">dlib::TimeErrorSettler pid_settler {</div>
+<div class="line">   0.01,        <span class="comment">// the maximum error the pid can settle at</span></div>
+<div class="line">   0.250    <span class="comment">// the time the Pid needs to remain below the error threshold</span></div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">bool</span> settled = pid_settler.is_settled(pid.get_error(), seconds(0.02));</div>
-<div class="ttc" id="aclassdlib_1_1_pid_html"><div class="ttname"><a href="classdlib_1_1_pid.html">dlib::Pid</a></div><div class="ttdef"><b>Definition</b> pid.hpp:47</div></div>
+<div class="ttc" id="aclassdlib_1_1_pid_html"><div class="ttname"><a href="classdlib_1_1_pid.html">dlib::Pid</a></div><div class="ttdef"><b>Definition</b> pid.hpp:25</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/<a class="el" href="error__time__settler_8hpp_source.html">error_time_settler.hpp</a></li>
+<li>C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/<a class="el" href="error__time__settler_8hpp_source.html">error_time_settler.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

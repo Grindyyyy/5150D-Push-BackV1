@@ -3,9 +3,9 @@
   <compounddef id="classdlib_1_1_timer" kind="class" language="C++" prot="public">
     <compoundname>dlib::Timer</compoundname>
     <sectiondef kind="protected-attrib">
-      <memberdef kind="variable" id="classdlib_1_1_timer_1a9d039d34105061486644d74c728c9e12" prot="protected" static="no" mutable="no">
-        <type>au::Quantity&lt; au::Seconds, double &gt;</type>
-        <definition>au::Quantity&lt;au::Seconds, double&gt; dlib::Timer::start_time</definition>
+      <memberdef kind="variable" id="classdlib_1_1_timer_1a95173f9d76fc36ccf7af4b07b28ed0be" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double dlib::Timer::start_time</definition>
         <argsstring></argsstring>
         <name>start_time</name>
         <qualifiedname>dlib::Timer::start_time</qualifiedname>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/timer.hpp" line="40" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/timer.hpp" bodystart="40" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/timer.hpp" line="39" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/timer.hpp" bodystart="39" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/timer.hpp" line="10" column="5"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/timer.hpp" line="9" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classdlib_1_1_timer_1af335f57ec2206ce131e00fd674cac3f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -46,11 +46,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/timer.hpp" line="16" column="10"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/timer.hpp" line="15" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_timer_1aa485506793c86914fb3b47f1fd2a3d8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>au::Quantity&lt; au::Seconds, double &gt;</type>
-        <definition>au::Quantity&lt; au::Seconds, double &gt; dlib::Timer::get_start_time</definition>
+      <memberdef kind="function" id="classdlib_1_1_timer_1ae950eb873b1acccca6f7075827a4dccc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::Timer::get_start_time</definition>
         <argsstring>()</argsstring>
         <name>get_start_time</name>
         <qualifiedname>dlib::Timer::get_start_time</qualifiedname>
@@ -64,11 +64,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/timer.hpp" line="23" column="18"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/timer.hpp" line="22" column="12"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_timer_1a2557511ad79815cbc64a0c5af6160b7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>au::Quantity&lt; au::Seconds, double &gt;</type>
-        <definition>au::Quantity&lt; au::Seconds, double &gt; dlib::Timer::get_current_time</definition>
+      <memberdef kind="function" id="classdlib_1_1_timer_1a9070cf6cf57093134fd8e6c409f04686" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::Timer::get_current_time</definition>
         <argsstring>()</argsstring>
         <name>get_current_time</name>
         <qualifiedname>dlib::Timer::get_current_time</qualifiedname>
@@ -82,11 +82,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/timer.hpp" line="30" column="18"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/timer.hpp" line="29" column="12"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_timer_1a19427c1e41edd5d9e4c99d9b23eecb6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>au::Quantity&lt; au::Seconds, double &gt;</type>
-        <definition>au::Quantity&lt; au::Seconds, double &gt; dlib::Timer::get_elapsed_time</definition>
+      <memberdef kind="function" id="classdlib_1_1_timer_1a9ccde586349329d21c4622aa518c9731" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::Timer::get_elapsed_time</definition>
         <argsstring>()</argsstring>
         <name>get_elapsed_time</name>
         <qualifiedname>dlib::Timer::get_elapsed_time</qualifiedname>
@@ -100,20 +100,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/timer.hpp" line="37" column="18"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/timer.hpp" line="36" column="12"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/timer.hpp" line="8" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/hardware/timer.hpp" bodystart="8" bodyend="41"/>
+    <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/timer.hpp" line="7" column="1" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/hardware/timer.hpp" bodystart="7" bodyend="40"/>
     <listofallmembers>
-      <member refid="classdlib_1_1_timer_1a2557511ad79815cbc64a0c5af6160b7a" prot="public" virt="non-virtual"><scope>dlib::Timer</scope><name>get_current_time</name></member>
-      <member refid="classdlib_1_1_timer_1a19427c1e41edd5d9e4c99d9b23eecb6e" prot="public" virt="non-virtual"><scope>dlib::Timer</scope><name>get_elapsed_time</name></member>
-      <member refid="classdlib_1_1_timer_1aa485506793c86914fb3b47f1fd2a3d8e" prot="public" virt="non-virtual"><scope>dlib::Timer</scope><name>get_start_time</name></member>
+      <member refid="classdlib_1_1_timer_1a9070cf6cf57093134fd8e6c409f04686" prot="public" virt="non-virtual"><scope>dlib::Timer</scope><name>get_current_time</name></member>
+      <member refid="classdlib_1_1_timer_1a9ccde586349329d21c4622aa518c9731" prot="public" virt="non-virtual"><scope>dlib::Timer</scope><name>get_elapsed_time</name></member>
+      <member refid="classdlib_1_1_timer_1ae950eb873b1acccca6f7075827a4dccc" prot="public" virt="non-virtual"><scope>dlib::Timer</scope><name>get_start_time</name></member>
       <member refid="classdlib_1_1_timer_1af335f57ec2206ce131e00fd674cac3f7" prot="public" virt="non-virtual"><scope>dlib::Timer</scope><name>reset</name></member>
-      <member refid="classdlib_1_1_timer_1a9d039d34105061486644d74c728c9e12" prot="protected" virt="non-virtual"><scope>dlib::Timer</scope><name>start_time</name></member>
+      <member refid="classdlib_1_1_timer_1a95173f9d76fc36ccf7af4b07b28ed0be" prot="protected" virt="non-virtual"><scope>dlib::Timer</scope><name>start_time</name></member>
       <member refid="classdlib_1_1_timer_1abb1a015be4fff00f84b8830f3e7dd3fc" prot="public" virt="non-virtual"><scope>dlib::Timer</scope><name>Timer</name></member>
     </listofallmembers>
   </compounddef>

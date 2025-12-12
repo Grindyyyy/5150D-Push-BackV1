@@ -10,7 +10,12 @@ Actual docs goes crazy
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 6
    :caption: Contents:
 
    api
+   tutorials/installation
+   tutorials/config
+   tutorials/driver
+   tutorials/pid
+   

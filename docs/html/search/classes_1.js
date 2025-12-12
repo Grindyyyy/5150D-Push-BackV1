@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['distance_0',['Distance',['../classdlib_1_1_distance.html',1,'dlib']]],
-  ['distanceconfig_1',['DistanceConfig',['../structdlib_1_1_distance_config.html',1,'dlib']]]
+  ['errorderivativesettler_0',['ErrorDerivativeSettler',['../classdlib_1_1_error_derivative_settler.html',1,'dlib']]],
+  ['errortimesettler_1',['ErrorTimeSettler',['../classdlib_1_1_error_time_settler.html',1,'dlib']]]
 ];

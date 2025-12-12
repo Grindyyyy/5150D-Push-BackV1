@@ -1,40 +1,35 @@
 \doxysection{imu.\+hpp}
-\hypertarget{imu_8hpp_source}{}\label{imu_8hpp_source}\index{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/hardware/imu.hpp@{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/hardware/imu.hpp}}
+\hypertarget{imu_8hpp_source}{}\label{imu_8hpp_source}\index{C:/Users/super/Downloads/dlib\_bugfix/dlib2/include/dlib/hardware/imu.hpp@{C:/Users/super/Downloads/dlib\_bugfix/dlib2/include/dlib/hardware/imu.hpp}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}pros/imu.hpp"{}}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}au/au.hpp"{}}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{comment}{//\ imu.hpp}}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }dlib\ \{}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdlib_1_1_imu_config}{ImuConfig}}\ \{}
-\DoxyCodeLine{00011\ \ \ \ \ int8\_t\ port;}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{double}\ scalar;}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }dlib\ \{}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdlib_1_1_imu_config}{ImuConfig}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{const}\ int8\_t\ port;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ scalar;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_imu_config}{ImuConfig}}(int8\_t\ port,\ \textcolor{keywordtype}{double}\ scalar\ =\ 1);}
+\DoxyCodeLine{00012\ \};}
 \DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_imu_config}{ImuConfig}}(int8\_t\ port,\ \textcolor{keywordtype}{double}\ scalar\ =\ 1);}
-\DoxyCodeLine{00015\ \};}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdlib_1_1_imu}{Imu}}\ \{}
-\DoxyCodeLine{00018\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{double}\ scalar;}
-\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdlib_1_1_imu_a3a53eaee11bc5fe6bc6412c6e6bcb1f3}{initialize}}();}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ tare\_position();}
-\DoxyCodeLine{00040\ \ \ \ \ }
-\DoxyCodeLine{00057\ \ \ \ \ au::Quantity<au::Degrees,\ double>\ \mbox{\hyperlink{classdlib_1_1_imu_afb9cbe67e7361c52103477da2681fa7a}{get\_rotation}}();}
-\DoxyCodeLine{00058\ }
-\DoxyCodeLine{00075\ \ \ \ \ au::Quantity<au::Degrees,\ double>\ \mbox{\hyperlink{classdlib_1_1_imu_a8757736af39c9d82de947cb6493b2e7d}{get\_heading}}();}
-\DoxyCodeLine{00076\ \ \ \ \ }
-\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{classdlib_1_1_imu}{Imu}}(\mbox{\hyperlink{structdlib_1_1_imu_config}{ImuConfig}}\ config);}
-\DoxyCodeLine{00078\ }
-\DoxyCodeLine{00079\ \ \ \ \ pros::Imu\ raw;}
-\DoxyCodeLine{00080\ \};}
-\DoxyCodeLine{00081\ }
-\DoxyCodeLine{00082\ \}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdlib_1_1_imu}{Imu}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ scalar;}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdlib_1_1_imu_a3a53eaee11bc5fe6bc6412c6e6bcb1f3}{initialize}}();}
+\DoxyCodeLine{00035\ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdlib_1_1_imu_a7dbe99c94ea88888b31a196d62f123af}{get\_rotation}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdlib_1_1_imu_af8590e83df76c863a3b2555210ed41f6}{get\_heading}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{classdlib_1_1_imu}{Imu}}(\mbox{\hyperlink{structdlib_1_1_imu_config}{ImuConfig}}\ config);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ pros::Imu\ raw;}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \}}
 
 \end{DoxyCode}

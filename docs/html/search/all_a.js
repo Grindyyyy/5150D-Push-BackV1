@@ -4,6 +4,6 @@ var searchData=
   ['motorconfig_1',['MotorConfig',['../structdlib_1_1_motor_config.html',1,'dlib']]],
   ['motorgroup_2',['MotorGroup',['../classdlib_1_1_motor_group.html',1,'dlib']]],
   ['motorgroupconfig_3',['MotorGroupConfig',['../structdlib_1_1_motor_group_config.html',1,'dlib']]],
-  ['move_4',['move',['../classdlib_1_1_chassis.html#a5eb93891de9b8904cefe1cb48dad8e9f',1,'dlib::Chassis::move()'],['../classdlib_1_1_motor_group.html#a9baf71907745a7bc220f936b950eb343',1,'dlib::MotorGroup::move()']]],
-  ['move_5fvoltage_5',['move_voltage',['../classdlib_1_1_chassis.html#aef94afa1f9a56aa672f4b189a464066d',1,'dlib::Chassis::move_voltage()'],['../classdlib_1_1_motor_group.html#a9ee9433f34c4865dea205c25b0cca1d6',1,'dlib::MotorGroup::move_voltage()']]]
+  ['move_4',['move',['../classdlib_1_1_chassis.html#a8b19e32ed19ae711e085d1ebc1c8527b',1,'dlib::Chassis::move()'],['../classdlib_1_1_motor_group.html#a2f95d7fbf2b6ca5a9a43a0463896ddf1',1,'dlib::MotorGroup::move()']]],
+  ['move_5fvoltage_5',['move_voltage',['../classdlib_1_1_chassis.html#a68de3fde7ee4c11976d7daa251969f23',1,'dlib::Chassis::move_voltage()'],['../classdlib_1_1_motor_group.html#ae78c8e28f35f22ad501035dc905dd69c',1,'dlib::MotorGroup::move_voltage()']]]
 ];

@@ -1,44 +1,45 @@
 \doxysection{rotation.\+hpp}
-\hypertarget{rotation_8hpp_source}{}\label{rotation_8hpp_source}\index{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/hardware/rotation.hpp@{C:/Users/super/Downloads/5150D-\/Push BackV1/include/dlib/hardware/rotation.hpp}}
+\hypertarget{rotation_8hpp_source}{}\label{rotation_8hpp_source}\index{C:/Users/super/Downloads/dlib\_bugfix/dlib2/include/dlib/hardware/rotation.hpp@{C:/Users/super/Downloads/dlib\_bugfix/dlib2/include/dlib/hardware/rotation.hpp}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}pros/rotation.hpp"{}}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}au/au.hpp"{}}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{comment}{//\ rotation.hpp}}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }dlib\ \{}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdlib_1_1_rotation_config}{RotationConfig}}\ \{}
-\DoxyCodeLine{00011\ \ \ \ \ int8\_t\ port;}
-\DoxyCodeLine{00012\ \ \ \ \ au::Quantity<au::Meters,\ double>\ wheel\_diameter;}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{double}\ gear\_ratio;}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_rotation_config}{RotationConfig}}(int8\_t\ port,\ au::Quantity<au::Meters,\ double>\ wheel\_diameter,\ \textcolor{keywordtype}{double}\ gear\_ratio);}
-\DoxyCodeLine{00016\ \};}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdlib_1_1_rotation}{Rotation}}\ \{}
-\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdlib_1_1_rotation_a6d454d4be43fb1e97c7fa6dff6f4b8f0}{initialize}}();}
-\DoxyCodeLine{00025\ \ \ \ \ }
-\DoxyCodeLine{00031\ \ \ \ \ au::Quantity<au::Revolutions,\ double>\ \mbox{\hyperlink{classdlib_1_1_rotation_ad6102faaf125a5190272d337edfb0c0d}{get\_position}}();}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00038\ \ \ \ \ au::Quantity<au::Rpm,\ double>\ \mbox{\hyperlink{classdlib_1_1_rotation_a5662f95336f9bfea36c4eef61b69820d}{get\_velocity}}();}
-\DoxyCodeLine{00039\ \ \ \ \ }
-\DoxyCodeLine{00045\ \ \ \ \ au::Quantity<au::Meters,\ double>\ \mbox{\hyperlink{classdlib_1_1_rotation_a86faec8f32009f5755b6a8fbb8c2472d}{get\_linear\_displacement}}();}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00052\ \ \ \ \ au::Quantity<au::MetersPerSecond,\ double>\ \mbox{\hyperlink{classdlib_1_1_rotation_a5f0fe98bc229290ecda19efa6f73fcee}{get\_linear\_velocity}}();}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{classdlib_1_1_rotation}{Rotation}}(\mbox{\hyperlink{structdlib_1_1_rotation_config}{RotationConfig}}\ config);}
-\DoxyCodeLine{00055\ \ \ \ \ }
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{const}\ au::Quantity<au::Meters,\ double>\ wheel\_diameter;}
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ gear\_ratio;}
-\DoxyCodeLine{00058\ }
-\DoxyCodeLine{00059\ \ \ \ \ pros::Rotation\ raw;}
-\DoxyCodeLine{00060\ \};}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ \}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }dlib\ \{}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdlib_1_1_rotation_config}{RotationConfig}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{const}\ int8\_t\ port;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ wheel\_diameter;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ gear\_ratio;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{structdlib_1_1_rotation_config}{RotationConfig}}(}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ int8\_t\ port,\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ wheel\_diameter,\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ gear\_ratio}
+\DoxyCodeLine{00016\ \ \ \ \ );}
+\DoxyCodeLine{00017\ \};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdlib_1_1_rotation}{Rotation}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdlib_1_1_rotation_a6d454d4be43fb1e97c7fa6dff6f4b8f0}{initialize}}();}
+\DoxyCodeLine{00026\ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdlib_1_1_rotation_a08794e3e88bf8c0ce267482caad82371}{get\_position}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdlib_1_1_rotation_a1dd05d344669fb3725c4be02e131ef6c}{get\_velocity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdlib_1_1_rotation_a556b4bb8ee3889c354e3f62298b86ead}{get\_linear\_displacement}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdlib_1_1_rotation_a1b2d21ec1d143f120bf16ca84058c836}{get\_linear\_velocity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{classdlib_1_1_rotation}{Rotation}}(\mbox{\hyperlink{structdlib_1_1_rotation_config}{RotationConfig}}\ config);}
+\DoxyCodeLine{00056\ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ wheel\_diameter;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ gear\_ratio;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ pros::Rotation\ raw;}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \}}
 
 \end{DoxyCode}

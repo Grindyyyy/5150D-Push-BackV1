@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rotation_0',['Rotation',['../classdlib_1_1_rotation.html',1,'dlib']]],
-  ['rotationconfig_1',['RotationConfig',['../structdlib_1_1_rotation_config.html',1,'dlib']]]
+  ['timer_0',['Timer',['../classdlib_1_1_timer.html',1,'dlib']]],
+  ['trapezoidprofile_1',['TrapezoidProfile',['../classdlib_1_1_trapezoid_profile.html',1,'dlib']]]
 ];

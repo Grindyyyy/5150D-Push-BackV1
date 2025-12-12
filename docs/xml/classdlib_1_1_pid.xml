@@ -2,31 +2,10 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="classdlib_1_1_pid" kind="class" language="C++" prot="public">
     <compoundname>dlib::Pid</compoundname>
-    <templateparamlist>
-      <param>
-        <type>typename Units</type>
-      </param>
-    </templateparamlist>
-    <sectiondef kind="protected-type">
-      <memberdef kind="typedef" id="classdlib_1_1_pid_1a47ff3a8598ca82fedc5717f37e9708eb" prot="protected" static="no">
-        <type>au::UnitImpl&lt; au::detail::DimT&lt; Units &gt; &gt;</type>
-        <definition>using dlib::Pid&lt; Units &gt;::BaseUnits =  au::UnitImpl&lt;au::detail::DimT&lt;Units&gt;&gt;</definition>
-        <argsstring></argsstring>
-        <name>BaseUnits</name>
-        <qualifiedname>dlib::Pid::BaseUnits</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="227" column="5" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="227" bodyend="-1"/>
-      </memberdef>
-    </sectiondef>
     <sectiondef kind="protected-attrib">
-      <memberdef kind="variable" id="classdlib_1_1_pid_1a906fb554ccf294d1629c836db9b02326" prot="protected" static="no" mutable="no">
-        <type><ref refid="structdlib_1_1detail_1_1_pid_gains_with_units" kindref="compound">detail::PidGainsWithUnits</ref>&lt; BaseUnits &gt;</type>
-        <definition>detail::PidGainsWithUnits&lt;BaseUnits&gt; dlib::Pid&lt; Units &gt;::m_gains</definition>
+      <memberdef kind="variable" id="classdlib_1_1_pid_1a0f49618456a3273c9391fefce1c244c3" prot="protected" static="no" mutable="no">
+        <type><ref refid="structdlib_1_1_pid_gains" kindref="compound">PidGains</ref></type>
+        <definition>PidGains dlib::Pid::m_gains</definition>
         <argsstring></argsstring>
         <name>m_gains</name>
         <qualifiedname>dlib::Pid::m_gains</qualifiedname>
@@ -36,11 +15,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="229" column="31" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="229" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="208" column="14" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="208" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classdlib_1_1_pid_1a15996e9e121b69c975b21face85d394a" prot="protected" static="no" mutable="no">
-        <type>const au::Quantity&lt; au::Volts, double &gt;</type>
-        <definition>const au::Quantity&lt;au::Volts, double&gt; dlib::Pid&lt; Units &gt;::m_max_voltage</definition>
+      <memberdef kind="variable" id="classdlib_1_1_pid_1a20681c690ef38cc78ced7c396891228c" prot="protected" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double dlib::Pid::m_max_voltage</definition>
         <argsstring></argsstring>
         <name>m_max_voltage</name>
         <qualifiedname>dlib::Pid::m_max_voltage</qualifiedname>
@@ -50,56 +29,56 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="230" column="24" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="230" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="209" column="18" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="209" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classdlib_1_1_pid_1a2b3073460cbfcae84077774ff6c1f8f5" prot="protected" static="no" mutable="no">
-        <type>au::Quantity&lt; au::Volts, double &gt;</type>
-        <definition>au::Quantity&lt;au::Volts, double&gt; dlib::Pid&lt; Units &gt;::m_p</definition>
+      <memberdef kind="variable" id="classdlib_1_1_pid_1a85599f66f8f46d6af6a852135853395c" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double dlib::Pid::m_p</definition>
         <argsstring></argsstring>
         <name>m_p</name>
         <qualifiedname>dlib::Pid::m_p</qualifiedname>
-        <initializer>= au::ZERO</initializer>
+        <initializer>= 0</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="232" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="232" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="211" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="211" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classdlib_1_1_pid_1a271efb0f55e9bb39483f968b9d06a4ce" prot="protected" static="no" mutable="no">
-        <type>au::Quantity&lt; au::Volts, double &gt;</type>
-        <definition>au::Quantity&lt;au::Volts, double&gt; dlib::Pid&lt; Units &gt;::m_i</definition>
+      <memberdef kind="variable" id="classdlib_1_1_pid_1a968bd44faea2113f76f879a48734ab91" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double dlib::Pid::m_i</definition>
         <argsstring></argsstring>
         <name>m_i</name>
         <qualifiedname>dlib::Pid::m_i</qualifiedname>
-        <initializer>= au::ZERO</initializer>
+        <initializer>= 0</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="233" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="233" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="212" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="212" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classdlib_1_1_pid_1a748feacad68fee031dfcbe4734e9b804" prot="protected" static="no" mutable="no">
-        <type>au::Quantity&lt; au::Volts, double &gt;</type>
-        <definition>au::Quantity&lt;au::Volts, double&gt; dlib::Pid&lt; Units &gt;::m_d</definition>
+      <memberdef kind="variable" id="classdlib_1_1_pid_1acc1dd7e6865e154aa20ad7176d256e12" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double dlib::Pid::m_d</definition>
         <argsstring></argsstring>
         <name>m_d</name>
         <qualifiedname>dlib::Pid::m_d</qualifiedname>
-        <initializer>= au::ZERO</initializer>
+        <initializer>= 0</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="234" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="234" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="213" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="213" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classdlib_1_1_pid_1ac14b7af38d1a72d58c4afb06f98642b6" prot="protected" static="no" mutable="no">
-        <type>au::Quantity&lt; Units, double &gt;</type>
-        <definition>au::Quantity&lt;Units, double&gt; dlib::Pid&lt; Units &gt;::m_last_error</definition>
+      <memberdef kind="variable" id="classdlib_1_1_pid_1a522750184d353a294e59b574a5629251" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double dlib::Pid::m_last_error</definition>
         <argsstring></argsstring>
         <name>m_last_error</name>
         <qualifiedname>dlib::Pid::m_last_error</qualifiedname>
@@ -109,11 +88,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="236" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="236" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="215" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="215" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classdlib_1_1_pid_1aa10de7ce69126369a70a495c2fe476b5" prot="protected" static="no" mutable="no">
-        <type>au::Quantity&lt; au::TimeDerivative&lt; Units &gt;, double &gt;</type>
-        <definition>au::Quantity&lt;au::TimeDerivative&lt;Units&gt;, double&gt; dlib::Pid&lt; Units &gt;::m_last_derivative</definition>
+      <memberdef kind="variable" id="classdlib_1_1_pid_1a0728856ec28963e16986322c1f6735d2" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double dlib::Pid::m_last_derivative</definition>
         <argsstring></argsstring>
         <name>m_last_derivative</name>
         <qualifiedname>dlib::Pid::m_last_derivative</qualifiedname>
@@ -123,13 +102,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="237" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="237" bodyend="-1"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="216" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="216" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classdlib_1_1_pid_1ac756be64a79e4278d0054bf7302e74fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classdlib_1_1_pid_1a8216a69d8662757189a3b423584b6871" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
-        <definition>dlib::Pid&lt; Units &gt;::Pid</definition>
+        <definition>dlib::Pid::Pid</definition>
         <argsstring>(PidConfig config)</argsstring>
         <name>Pid</name>
         <qualifiedname>dlib::Pid::Pid</qualifiedname>
@@ -143,35 +122,35 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="49" column="5" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="49" bodyend="49"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="27" column="5" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="27" bodyend="27"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_pid_1a8253a9bf3701e13cf5c49814ae57cdb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classdlib_1_1_pid_1a935939a19c11f1314a274de417000886" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void dlib::Pid&lt; Units &gt;::reset</definition>
+        <definition>void dlib::Pid::reset</definition>
         <argsstring>()</argsstring>
         <name>reset</name>
         <qualifiedname>dlib::Pid::reset</qualifiedname>
         <briefdescription>
-<para>Reset all of the <ref refid="classdlib_1_1_pid" kindref="compound">Pid</ref> state. </para>
+<para>Reset the PID states. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="55" column="10" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="55" bodyend="62"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="33" column="10" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="33" bodyend="40"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_pid_1a5bfcf3a44d62bb6fef34689fc0da74f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>au::Quantity&lt; au::Volts, double &gt;</type>
-        <definition>au::Quantity&lt; au::Volts, double &gt; dlib::Pid&lt; Units &gt;::update</definition>
-        <argsstring>(au::Quantity&lt; Units, double &gt; error, au::Quantity&lt; au::Seconds, double &gt; period)</argsstring>
+      <memberdef kind="function" id="classdlib_1_1_pid_1a22a457afccbcab40c10cf2017f7390db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::Pid::update</definition>
+        <argsstring>(double error, double period)</argsstring>
         <name>update</name>
         <qualifiedname>dlib::Pid::update</qualifiedname>
         <param>
-          <type>au::Quantity&lt; Units, double &gt;</type>
+          <type>double</type>
           <declname>error</declname>
         </param>
         <param>
-          <type>au::Quantity&lt; au::Seconds, double &gt;</type>
+          <type>double</type>
           <declname>period</declname>
         </param>
         <briefdescription>
@@ -198,19 +177,19 @@
 <simplesect kind="return"><para>the voltage to send to your mechanism</para>
 </simplesect>
 <bold>Example</bold> <programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>Construct<sp/>a<sp/>Pid<sp/>controller</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><ref refid="classdlib_1_1_pid" kindref="compound">dlib::Pid&lt;Meters&gt;</ref><sp/>pid({1,<sp/>2,<sp/>3});</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classdlib_1_1_pid" kindref="compound">dlib::Pid</ref><sp/>pid({1,<sp/>2,<sp/>3});</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Calculate<sp/>voltage<sp/>with<sp/>a<sp/>test<sp/>input</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal">Quantity&lt;Volts,<sp/>double&gt;<sp/>voltage<sp/>=<sp/>pid.<ref refid="classdlib_1_1_pid_1a5bfcf3a44d62bb6fef34689fc0da74f6" kindref="member">update</ref>(meters(0.05),<sp/>seconds(0.02));</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>voltage<sp/>=<sp/>pid.<ref refid="classdlib_1_1_pid_1a22a457afccbcab40c10cf2017f7390db" kindref="member">update</ref>(meters(0.05),<sp/>seconds(0.02));</highlight></codeline>
 </programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="82" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="82" bodyend="118"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="60" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="60" bodyend="98"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_pid_1afc0312e900c1ad133d88cec01fbc2dad" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classdlib_1_1_pid_1a505065a15a252087f68da09c247c5765" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structdlib_1_1_pid_gains" kindref="compound">PidGains</ref></type>
-        <definition>PidGains dlib::Pid&lt; Units &gt;::get_gains</definition>
+        <definition>PidGains dlib::Pid::get_gains</definition>
         <argsstring>() const</argsstring>
         <name>get_gains</name>
         <qualifiedname>dlib::Pid::get_gains</qualifiedname>
@@ -221,7 +200,7 @@
 <para><simplesect kind="return"><para>The current <ref refid="classdlib_1_1_pid" kindref="compound">Pid</ref> gains</para>
 </simplesect>
 <bold>Example</bold> <programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>Construct<sp/>a<sp/>Pid<sp/>controller</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><ref refid="classdlib_1_1_pid" kindref="compound">dlib::Pid&lt;Meters&gt;</ref><sp/>pid({1,<sp/>2,<sp/>3});</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classdlib_1_1_pid" kindref="compound">dlib::Pid</ref><sp/>pid({1,<sp/>2,<sp/>3});</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>Pid<sp/>gains</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><ref refid="structdlib_1_1_pid_gains" kindref="compound">dlib::PidGains</ref><sp/>gains<sp/>=<sp/>pid.get_gains();</highlight></codeline>
@@ -229,11 +208,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="136" column="14" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="136" bodyend="138"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="116" column="14" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="116" bodyend="118"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_pid_1a98c02d8fba954028835599a1a7f2993e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classdlib_1_1_pid_1a112ffdae162ea832f7a900a04ef58f65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void dlib::Pid&lt; Units &gt;::set_gains</definition>
+        <definition>void dlib::Pid::set_gains</definition>
         <argsstring>(PidGains gains)</argsstring>
         <name>set_gains</name>
         <qualifiedname>dlib::Pid::set_gains</qualifiedname>
@@ -255,19 +234,19 @@
 </parameteritem>
 </parameterlist>
 <bold>Example</bold> <programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>Construct<sp/>a<sp/>Pid<sp/>controller</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><ref refid="classdlib_1_1_pid" kindref="compound">dlib::Pid&lt;Meters&gt;</ref><sp/>pid({1,<sp/>2,<sp/>3});</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classdlib_1_1_pid" kindref="compound">dlib::Pid</ref><sp/>pid({1,<sp/>2,<sp/>3});</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>Pid<sp/>gains</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal">pid.<ref refid="classdlib_1_1_pid_1a98c02d8fba954028835599a1a7f2993e" kindref="member">set_gains</ref>({4,<sp/>5,<sp/>6});</highlight></codeline>
+<codeline><highlight class="normal">pid.<ref refid="classdlib_1_1_pid_1a112ffdae162ea832f7a900a04ef58f65" kindref="member">set_gains</ref>({4,<sp/>5,<sp/>6});</highlight></codeline>
 </programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="156" column="10" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="156" bodyend="158"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="136" column="10" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="136" bodyend="138"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_pid_1a6b488b2f3a47ea5f32dcfa32df73dfe4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>au::Quantity&lt; Units, double &gt;</type>
-        <definition>au::Quantity&lt; Units, double &gt; dlib::Pid&lt; Units &gt;::get_error</definition>
+      <memberdef kind="function" id="classdlib_1_1_pid_1abea931189abd7e41712a5eda9070d775" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::Pid::get_error</definition>
         <argsstring>() const</argsstring>
         <name>get_error</name>
         <qualifiedname>dlib::Pid::get_error</qualifiedname>
@@ -279,19 +258,19 @@
 </simplesect>
 <bold>Example</bold> <programlisting filename=".cpp"><codeline><highlight class="normal">v</highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Construct<sp/>a<sp/>Pid<sp/>controller</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><ref refid="classdlib_1_1_pid" kindref="compound">dlib::Pid&lt;Meters&gt;</ref><sp/>pid({1,<sp/>2,<sp/>3});</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classdlib_1_1_pid" kindref="compound">dlib::Pid</ref><sp/>pid({1,<sp/>2,<sp/>3});</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Get<sp/>Pid<sp/>error</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal">Quantity&lt;Meters,<sp/>double&gt;<sp/>error<sp/>=<sp/>pid.<ref refid="classdlib_1_1_pid_1a6b488b2f3a47ea5f32dcfa32df73dfe4" kindref="member">get_error</ref>();</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>error<sp/>=<sp/>pid.<ref refid="classdlib_1_1_pid_1abea931189abd7e41712a5eda9070d775" kindref="member">get_error</ref>();</highlight></codeline>
 </programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="176" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="176" bodyend="178"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="156" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="156" bodyend="158"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_pid_1a2a6b072e784aef89243a89517b61a798" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>au::Quantity&lt; au::TimeDerivative&lt; Units &gt;, double &gt;</type>
-        <definition>au::Quantity&lt; au::TimeDerivative&lt; Units &gt;, double &gt; dlib::Pid&lt; Units &gt;::get_derivative</definition>
+      <memberdef kind="function" id="classdlib_1_1_pid_1a1f91f35e97416b3069aa1bd097a53057" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::Pid::get_derivative</definition>
         <argsstring>() const</argsstring>
         <name>get_derivative</name>
         <qualifiedname>dlib::Pid::get_derivative</qualifiedname>
@@ -302,19 +281,19 @@
 <para><simplesect kind="return"><para>The current derivative (how quickly the error is changing)</para>
 </simplesect>
 <bold>Example</bold> <programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>Construct<sp/>a<sp/>Pid<sp/>controller</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><ref refid="classdlib_1_1_pid" kindref="compound">dlib::Pid&lt;Meters&gt;</ref><sp/>pid({1,<sp/>2,<sp/>3});</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classdlib_1_1_pid" kindref="compound">dlib::Pid</ref><sp/>pid({1,<sp/>2,<sp/>3});</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Get<sp/>Pid<sp/>derivative</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal">Quantity&lt;TimeDerivative&lt;Meters&gt;,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;<sp/>derivative<sp/>=<sp/>pid.<ref refid="classdlib_1_1_pid_1a2a6b072e784aef89243a89517b61a798" kindref="member">get_derivative</ref>();</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>derivative<sp/>=<sp/>pid.<ref refid="classdlib_1_1_pid_1a1f91f35e97416b3069aa1bd097a53057" kindref="member">get_derivative</ref>();</highlight></codeline>
 </programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="196" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="196" bodyend="198"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="176" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="176" bodyend="178"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_pid_1affdaffc1e93e448f0c788f746ad51050" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>au::Quantity&lt; Units, double &gt;</type>
-        <definition>au::Quantity&lt; Units, double &gt; dlib::Pid&lt; Units &gt;::get_p</definition>
+      <memberdef kind="function" id="classdlib_1_1_pid_1a78ee0b871731f6d5e83b6166f383f68b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::Pid::get_p</definition>
         <argsstring>() const</argsstring>
         <name>get_p</name>
         <qualifiedname>dlib::Pid::get_p</qualifiedname>
@@ -322,17 +301,17 @@
 <para>Get the P term of the <ref refid="classdlib_1_1_pid" kindref="compound">Pid</ref>. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>au::Quantity&lt;Units, double&gt; </para>
+<para><simplesect kind="return"><para>double </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="205" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="205" bodyend="207"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="185" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="185" bodyend="187"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_pid_1a5e03e1693412204957f3ad521390cb2b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>au::Quantity&lt; au::TimeIntegral&lt; Units &gt;, double &gt;</type>
-        <definition>au::Quantity&lt; au::TimeIntegral&lt; Units &gt;, double &gt; dlib::Pid&lt; Units &gt;::get_i</definition>
+      <memberdef kind="function" id="classdlib_1_1_pid_1a521c80b2a6a9fe1f5560e3a07b41db5d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::Pid::get_i</definition>
         <argsstring>() const</argsstring>
         <name>get_i</name>
         <qualifiedname>dlib::Pid::get_i</qualifiedname>
@@ -340,17 +319,17 @@
 <para>Get the I term of the <ref refid="classdlib_1_1_pid" kindref="compound">Pid</ref>. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>au::Quantity&lt;au::TimeIntegral&lt;Units&gt;, double&gt; </para>
+<para><simplesect kind="return"><para>double </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="214" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="214" bodyend="216"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="194" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="194" bodyend="196"/>
       </memberdef>
-      <memberdef kind="function" id="classdlib_1_1_pid_1afab9bdae6dcadf798247f538d7850285" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>au::Quantity&lt; au::TimeDerivative&lt; Units &gt;, double &gt;</type>
-        <definition>au::Quantity&lt; au::TimeDerivative&lt; Units &gt;, double &gt; dlib::Pid&lt; Units &gt;::get_d</definition>
+      <memberdef kind="function" id="classdlib_1_1_pid_1a535de7be1e6b71943b9d841715909361" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double dlib::Pid::get_d</definition>
         <argsstring>() const</argsstring>
         <name>get_d</name>
         <qualifiedname>dlib::Pid::get_d</qualifiedname>
@@ -358,13 +337,13 @@
 <para>Get the D term of the <ref refid="classdlib_1_1_pid" kindref="compound">Pid</ref>. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>au::Quantity&lt;au::TimeDerivative&lt;Units&gt;, double&gt; </para>
+<para><simplesect kind="return"><para>double </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="223" column="18" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="223" bodyend="225"/>
+        <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="203" column="12" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="203" bodyend="205"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -373,37 +352,36 @@
     </detaileddescription>
     <collaborationgraph>
       <node id="1">
-        <label>dlib::Pid&lt; Units &gt;</label>
+        <label>dlib::Pid</label>
         <link refid="classdlib_1_1_pid"/>
         <childnode refid="2" relation="usage">
           <edgelabel>m_gains</edgelabel>
         </childnode>
       </node>
       <node id="2">
-        <label>dlib::detail::PidGainsWithUnits&lt; BaseUnits &gt;</label>
-        <link refid="structdlib_1_1detail_1_1_pid_gains_with_units"/>
+        <label>dlib::PidGains</label>
+        <link refid="structdlib_1_1_pid_gains"/>
       </node>
     </collaborationgraph>
-    <location file="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" line="47" column="1" bodyfile="C:/Users/super/Downloads/5150D-Push BackV1/include/dlib/controllers/pid.hpp" bodystart="47" bodyend="238"/>
+    <location file="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" line="25" column="1" bodyfile="C:/Users/super/Downloads/dlib_bugfix/dlib2/include/dlib/controllers/pid.hpp" bodystart="25" bodyend="217"/>
     <listofallmembers>
-      <member refid="classdlib_1_1_pid_1a47ff3a8598ca82fedc5717f37e9708eb" prot="protected" virt="non-virtual"><scope>dlib::Pid</scope><name>BaseUnits</name></member>
-      <member refid="classdlib_1_1_pid_1afab9bdae6dcadf798247f538d7850285" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>get_d</name></member>
-      <member refid="classdlib_1_1_pid_1a2a6b072e784aef89243a89517b61a798" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>get_derivative</name></member>
-      <member refid="classdlib_1_1_pid_1a6b488b2f3a47ea5f32dcfa32df73dfe4" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>get_error</name></member>
-      <member refid="classdlib_1_1_pid_1afc0312e900c1ad133d88cec01fbc2dad" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>get_gains</name></member>
-      <member refid="classdlib_1_1_pid_1a5e03e1693412204957f3ad521390cb2b" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>get_i</name></member>
-      <member refid="classdlib_1_1_pid_1affdaffc1e93e448f0c788f746ad51050" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>get_p</name></member>
-      <member refid="classdlib_1_1_pid_1a748feacad68fee031dfcbe4734e9b804" prot="protected" virt="non-virtual"><scope>dlib::Pid</scope><name>m_d</name></member>
-      <member refid="classdlib_1_1_pid_1a906fb554ccf294d1629c836db9b02326" prot="protected" virt="non-virtual"><scope>dlib::Pid</scope><name>m_gains</name></member>
-      <member refid="classdlib_1_1_pid_1a271efb0f55e9bb39483f968b9d06a4ce" prot="protected" virt="non-virtual"><scope>dlib::Pid</scope><name>m_i</name></member>
-      <member refid="classdlib_1_1_pid_1aa10de7ce69126369a70a495c2fe476b5" prot="protected" virt="non-virtual"><scope>dlib::Pid</scope><name>m_last_derivative</name></member>
-      <member refid="classdlib_1_1_pid_1ac14b7af38d1a72d58c4afb06f98642b6" prot="protected" virt="non-virtual"><scope>dlib::Pid</scope><name>m_last_error</name></member>
-      <member refid="classdlib_1_1_pid_1a15996e9e121b69c975b21face85d394a" prot="protected" virt="non-virtual"><scope>dlib::Pid</scope><name>m_max_voltage</name></member>
-      <member refid="classdlib_1_1_pid_1a2b3073460cbfcae84077774ff6c1f8f5" prot="protected" virt="non-virtual"><scope>dlib::Pid</scope><name>m_p</name></member>
-      <member refid="classdlib_1_1_pid_1ac756be64a79e4278d0054bf7302e74fa" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>Pid</name></member>
-      <member refid="classdlib_1_1_pid_1a8253a9bf3701e13cf5c49814ae57cdb4" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>reset</name></member>
-      <member refid="classdlib_1_1_pid_1a98c02d8fba954028835599a1a7f2993e" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>set_gains</name></member>
-      <member refid="classdlib_1_1_pid_1a5bfcf3a44d62bb6fef34689fc0da74f6" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>update</name></member>
+      <member refid="classdlib_1_1_pid_1a535de7be1e6b71943b9d841715909361" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>get_d</name></member>
+      <member refid="classdlib_1_1_pid_1a1f91f35e97416b3069aa1bd097a53057" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>get_derivative</name></member>
+      <member refid="classdlib_1_1_pid_1abea931189abd7e41712a5eda9070d775" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>get_error</name></member>
+      <member refid="classdlib_1_1_pid_1a505065a15a252087f68da09c247c5765" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>get_gains</name></member>
+      <member refid="classdlib_1_1_pid_1a521c80b2a6a9fe1f5560e3a07b41db5d" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>get_i</name></member>
+      <member refid="classdlib_1_1_pid_1a78ee0b871731f6d5e83b6166f383f68b" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>get_p</name></member>
+      <member refid="classdlib_1_1_pid_1acc1dd7e6865e154aa20ad7176d256e12" prot="protected" virt="non-virtual"><scope>dlib::Pid</scope><name>m_d</name></member>
+      <member refid="classdlib_1_1_pid_1a0f49618456a3273c9391fefce1c244c3" prot="protected" virt="non-virtual"><scope>dlib::Pid</scope><name>m_gains</name></member>
+      <member refid="classdlib_1_1_pid_1a968bd44faea2113f76f879a48734ab91" prot="protected" virt="non-virtual"><scope>dlib::Pid</scope><name>m_i</name></member>
+      <member refid="classdlib_1_1_pid_1a0728856ec28963e16986322c1f6735d2" prot="protected" virt="non-virtual"><scope>dlib::Pid</scope><name>m_last_derivative</name></member>
+      <member refid="classdlib_1_1_pid_1a522750184d353a294e59b574a5629251" prot="protected" virt="non-virtual"><scope>dlib::Pid</scope><name>m_last_error</name></member>
+      <member refid="classdlib_1_1_pid_1a20681c690ef38cc78ced7c396891228c" prot="protected" virt="non-virtual"><scope>dlib::Pid</scope><name>m_max_voltage</name></member>
+      <member refid="classdlib_1_1_pid_1a85599f66f8f46d6af6a852135853395c" prot="protected" virt="non-virtual"><scope>dlib::Pid</scope><name>m_p</name></member>
+      <member refid="classdlib_1_1_pid_1a8216a69d8662757189a3b423584b6871" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>Pid</name></member>
+      <member refid="classdlib_1_1_pid_1a935939a19c11f1314a274de417000886" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>reset</name></member>
+      <member refid="classdlib_1_1_pid_1a112ffdae162ea832f7a900a04ef58f65" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>set_gains</name></member>
+      <member refid="classdlib_1_1_pid_1a22a457afccbcab40c10cf2017f7390db" prot="public" virt="non-virtual"><scope>dlib::Pid</scope><name>update</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

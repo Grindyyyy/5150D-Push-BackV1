@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['update_0',['update',['../classdlib_1_1_pid.html#a5bfcf3a44d62bb6fef34689fc0da74f6',1,'dlib::Pid::update()'],['../classdlib_1_1_odometry.html#abcff56aca6c963dda38d50d2324916e6',1,'dlib::Odometry::update()']]]
+  ['update_0',['update',['../classdlib_1_1_pid.html#a22a457afccbcab40c10cf2017f7390db',1,'dlib::Pid::update()'],['../classdlib_1_1_odometry.html#ad0687131566bd33c478dd2c77ed77280',1,'dlib::Odometry::update()']]]
 ];
